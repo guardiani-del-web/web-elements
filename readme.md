@@ -4,4 +4,7 @@
 
 Web Elements is a library of cross components that works with framework or technology.
 
+## Authors
+- [Gabriel Mayta](https://github.com/grandemayta)
+
 Keep calm and code!
