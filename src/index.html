@@ -3,15 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>Web Elements</title>
 
   <script type="module" src="/build/web-elements.esm.js"></script>
   <script nomodule src="/build/web-elements.js"></script>
 
 </head>
 <body>
+  
+  <div id="root"></div>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <script type="text/babel">
+    class WebElementsIntegration extends React.Component {
+      handleChange(event) {
+        const { value, checked } = event.target;
+        console.log('Checkbok status', value, checked);
+      }
 
+      render() {
+        return (
+          <div>
+            <we-checkbox value="Banana" checked={true} on-change={this.handleChange}>Banana</we-checkbox>
+            <we-checkbox value="Orange" disabled={true}>Orange</we-checkbox>
+            <we-checkbox value="Apple" on-change={this.handleChange}>Apple</we-checkbox>
+          </div>
+        );
+      }
+    }
+    ReactDOM.render(
+      <WebElementsIntegration />, document.getElementById('root')
+    );
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
 </body>
 </html>

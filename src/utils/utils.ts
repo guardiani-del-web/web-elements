@@ -1,8 +1,9 @@
-
-export function format(first: string, middle: string, last: string): string {
-  return (
-    (first || '') +
-    (middle ? ` ${middle}` : '') +
-    (last ? ` ${last}` : '')
-  );
+export function parseFunction(fn) {
+  if (typeof fn === "string") {
+    return new Function(`return ${fn}`)();
+  } else if (typeof fn === "function") {
+    return fn;
+  } else {
+    return new Function();
+  }
 }
