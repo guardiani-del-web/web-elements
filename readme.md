@@ -18,6 +18,16 @@ Thanks goes to these wonderful people:
           <b>Gabriel Mayta</b>
         </sub>
       </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/G1anpierre">
+        <img src="https://avatars.githubusercontent.com/u/22327132?v=3" width="100px;" alt=""/>
+        <br />
+        <sub>
+          <b>Gianpierre Fernandez</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
