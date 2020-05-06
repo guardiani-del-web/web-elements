@@ -4,7 +4,21 @@
 
 Web Elements is a library of cross components that works with framework or technology.
 
-## Authors
-- [Gabriel Mayta](https://github.com/grandemayta)
+## Contributors ✨
+
+Thanks goes to these wonderful people:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/grandemayta">
+        <img src="https://avatars.githubusercontent.com/u/6887120?v=3" width="100px;" alt=""/>
+        <br />
+        <sub>
+          <b>Gabriel Mayta</b>
+        </sub>
+      </a>
+  </tr>
+</table>
 
 Keep calm and code!
