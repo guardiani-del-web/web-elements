@@ -10,18 +10,18 @@ Thanks goes to these wonderful people:
 
 <table>
   <tr>
-    <td align="center">
+    <td align="center" style="width: 150px;">
       <a href="https://github.com/grandemayta">
-        <img src="https://avatars.githubusercontent.com/u/6887120?v=3" width="100px;" alt=""/>
+        <img src="https://avatars.githubusercontent.com/u/6887120?v=3" width="100px" style="border-radius:50%;" />
         <br />
         <sub>
           <b>Gabriel Mayta</b>
         </sub>
       </a>
     </td>
-    <td align="center">
+    <td align="center" style="width: 150px;">
       <a href="https://github.com/G1anpierre">
-        <img src="https://avatars.githubusercontent.com/u/22327132?v=3" width="100px;" alt=""/>
+        <img src="https://avatars.githubusercontent.com/u/22327132?v=3" width="100px" style="border-radius:50%;" />
         <br />
         <sub>
           <b>Gianpierre Fernandez</b>
