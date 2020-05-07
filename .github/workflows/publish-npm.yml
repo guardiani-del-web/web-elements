@@ -1,9 +1,0 @@
-- name: Publish to npm
-  uses: pascalgn/npm-publish-action@1.2.0
-  with:
-    # The pattern that matches version update commits.
-    commit_pattern: # optional
-    # The name of the tag that you want to create for the version.
-    tag_name: # optional
-    # The message of the tag that you want to create for the version.
-    tag_message: # optional
