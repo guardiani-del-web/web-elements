@@ -37,5 +37,8 @@
       "url": "https://github.com/G1anpierre"
     }
   ],
+  "publishConfig": { 
+    "registry": "https://registry.npmjs.org/"
+  },
   "license": "MIT"
 }
