@@ -1,6 +1,6 @@
 {
   "name": "web-elements",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Web Elements is a library of cross components that works with any framework or library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -36,6 +36,6 @@
       "email": "fgianpierre@gmail.com",
       "url": "https://github.com/G1anpierre"
     }
-  ],
+  ]
   "license": "MIT"
 }
