@@ -30,7 +30,12 @@
       "name": "Gabriel Mayta",
       "email": "grandemayta@gmail.com",
       "url": "https://github.com/grandemayta"
+    },
+    {
+      "name": "Gianpierre Fernandez",
+      "email": "fgianpierre@gmail.com",
+      "url": "https://github.com/G1anpierre"
     }
-  ],
+  ]
   "license": "MIT"
 }

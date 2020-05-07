@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
-import { parseFunction } from '../../utils/utils';
+import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-checkbox',
