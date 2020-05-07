@@ -11,10 +11,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
+          registry-url: 'https://npm.pkg.github.com'
       - run: npm install
       - run: npm run build
       - name: Publish to npm
-        uses: pascalgn/npm-publish-action@1.2.0
+        uses: mikeal/merge-release@v4.0.7
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # You need to set this in your repo settings
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
