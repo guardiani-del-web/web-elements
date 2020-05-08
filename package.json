@@ -1,35 +1,35 @@
 {
-    "name": "web-elements-project",
-    "version": "1.0.0",
-    "workspaces": [
-      "storybook",
-      "web-elements"
-    ],
-    "scripts": {
-      "start:web-elements": "yarn workspace web-elements run start",
-      "build:web-elements": "yarn workspace web-elements run build"
+  "name": "web-elements-project",
+  "version": "1.0.0",
+  "workspaces": [
+    "storybook",
+    "web-elements"
+  ],
+  "scripts": {
+    "start:web-elements": "yarn workspace web-elements run start",
+    "build:web-elements": "yarn workspace web-elements run build"
+  },
+  "contributors": [
+    {
+      "name": "Gabriel Mayta",
+      "email": "grandemayta@gmail.com",
+      "url": "https://github.com/grandemayta"
     },
-    "contributors": [
-        {
-          "name": "Gabriel Mayta",
-          "email": "grandemayta@gmail.com",
-          "url": "https://github.com/grandemayta"
-        },
-        {
-          "name": "Gianpierre Fernandez",
-          "email": "fgianpierre@gmail.com",
-          "url": "https://github.com/G1anpierre"
-        },
-        {
-          "name": "Ferdinando Danise",
-          "email": "fdanise@icloud.com",
-          "url": "https://github.com/fdanise"
-        },
-        {
-          "name": "Gabriel Sosa",
-          "email": "gabe.dev.web@gmail.com",
-          "url": "https://github.com/gsosa2000"
-        }
-    ],
-    "private": true
+    {
+      "name": "Gianpierre Fernandez",
+      "email": "fgianpierre@gmail.com",
+      "url": "https://github.com/G1anpierre"
+    },
+    {
+      "name": "Ferdinando Danise",
+      "email": "fdanise@icloud.com",
+      "url": "https://github.com/fdanise"
+    },
+    {
+      "name": "Gabriel Sosa",
+      "email": "gabe.dev.web@gmail.com",
+      "url": "https://github.com/gsosa2000"
+    }
+  ],
+  "private": true
 }
