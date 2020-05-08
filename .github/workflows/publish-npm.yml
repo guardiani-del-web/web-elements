@@ -7,10 +7,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: web-elements
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
