@@ -4,6 +4,8 @@
 
 Web Elements is a library of cross components that works with any framework or library.
 
+**THIS PROJECT IS AN ALPHA STAGE**
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people:
@@ -25,6 +27,24 @@ Thanks goes to these wonderful people:
         <br />
         <sub>
           <b>Gianpierre Fernandez</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fdanise">
+        <img src="https://avatars.githubusercontent.com/u/29681015?v=3" width="100px" />
+        <br />
+        <sub>
+          <b>Ferdinando Danise</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/gsosa2000">
+        <img src="https://avatars.githubusercontent.com/u/44258309?v=3" width="100px" />
+        <br />
+        <sub>
+          <b>Gabriel Sosa</b>
         </sub>
       </a>
     </td>
