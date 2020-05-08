@@ -1,6 +1,6 @@
 {
   "name": "web-elements",
-  "version": "0.0.3",
+  "version": "0.0.4.beta.0",
   "description": "Web Elements is a library of cross components that works with any framework or library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -35,6 +35,16 @@
       "name": "Gianpierre Fernandez",
       "email": "fgianpierre@gmail.com",
       "url": "https://github.com/G1anpierre"
+    },
+    {
+      "name": "Ferdinando Danise",
+      "email": "fdanise@icloud.com",
+      "url": "https://github.com/fdanise"
+    },
+    {
+      "name": "Gabriel Sosa",
+      "email": "gabe.dev.web@gmail.com",
+      "url": "https://github.com/gsosa2000"
     }
   ],
   "publishConfig": { 
