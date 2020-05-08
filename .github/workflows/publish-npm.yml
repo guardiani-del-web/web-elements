@@ -6,13 +6,15 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: web-elements
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: 10
-      - run:
-        working-directory: web-elements
       - run: npm i
       - run: npm run build
       - name: Publish to npm
