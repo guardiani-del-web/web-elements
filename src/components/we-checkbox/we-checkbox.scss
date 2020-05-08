@@ -1,50 +1,41 @@
+@import '../../scss/index.scss';
+
 :host {
   display: block;
 }
 
-input[type=checkbox] + label {
-  display: block;
-  margin: 0.2em;
-  cursor: pointer;
-  padding: 0.2em;
-}
-
 input[type=checkbox] {
   display: none;
-}
+  + label {
+    display: flex;
+    align-items: center;
+    margin: var(--label-margin, 0.2em);
+    cursor: pointer;
+    padding: var(--label-padding, 0.2em);
 
-input[type=checkbox] + label:before {
-  content: "\2714";
-  border: 0.1em solid #000;
-  border-radius: 0.2em;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding-left: 0.2em;
-  padding-bottom: 0.3em;
-  margin-right: 0.2em;
-  vertical-align: bottom;
-  color: transparent;
-  transition: .2s;
-}
-
-input[type=checkbox] + label:active:before {
-  transform: scale(0);
-}
-
-input[type=checkbox]:checked + label:before {
-  background-color: MediumSeaGreen;
-  border-color: MediumSeaGreen;
-  color: #fff;
-}
-
-input[type=checkbox]:disabled + label:before {
-  transform: scale(1);
-  border-color: #aaa;
-}
-
-input[type=checkbox]:checked:disabled + label:before {
-  transform: scale(1);
-  background-color: #bfb;
-  border-color: #bfb;
+    &:before {
+      content: var(--icon-content, "\2714");
+      border: var(--icon-border, 1px solid $primary-text);
+      border-radius: var(--icon-border-radius, 0.2em);
+      display: inline-block;
+      width: var(--icon-width, 1em);
+      height: var(--icon-heigth, 1em);
+      padding-left: var(--icon-padding-left, 0.2em);
+      padding-bottom: var(--icon-padding-bottom, 0.3em);
+      margin-right: var(--icon-margin-rigth, 0.3em);
+      color: transparent;
+    }
+  }
+  &:checked + label:before {
+    background-color: var(--checked-background-color, $primary_color);
+    border-color: var(--checked-border-color, $primary_color);
+    color: var(--checked-color, $text_icons);
+  }
+  &:disabled + label:before {
+    border-color: var(--disabled-border-color, $disabled);
+  }
+  &:checked:disabled + label:before {
+    background-color: var(--checked-disabled-background-color, $disabled);
+    border-color: var(--checked-disabled-border-color, $disabled);
+  }
 }
