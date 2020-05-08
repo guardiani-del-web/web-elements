@@ -1,6 +1,6 @@
 {
     "name": "web-elements-project",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "workspaces": [
       "storybook",
       "web-elements"
