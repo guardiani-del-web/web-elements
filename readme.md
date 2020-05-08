@@ -4,7 +4,7 @@
 
 Web Elements is a library of cross components that works with any framework or library.
 
-**This project is an alpha stage**
+**THIS PROJECT IS AN ALPHA STAGE**
 
 ## Contributors ✨
 
