@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: 10
       - name: Move to WebElements directory
-        working-directory: web-elements
+        run:
+          working-directory: web-elements
       - run: npm i
       - run: npm run build
       - name: Publish to npm
