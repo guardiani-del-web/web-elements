@@ -20,7 +20,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook",
+    "storybook": "concurrently \"npm run start\" \"start-storybook\"",
     "storybook:build": "build-storybook -c .storybook -o dist"
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/html": "^5.3.18",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
     "storybook-addon-paddings": "^2.0.2"
   },
   "contributors": [

@@ -7,7 +7,7 @@ export default {
 
 export const Basic = () => {
   return `
-    <we-checkbox></we-checkbox>
+    <we-checkbox value="Banana">Banana</we-checkbox>
   `;
 }
 
