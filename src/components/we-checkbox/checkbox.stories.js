@@ -1,25 +1,21 @@
-import { withKnobs } from '@storybook/addon-knobs';
+import { html } from 'lit-html';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-export default { 
+export default {
   title: 'Components|Checkbox',
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 export const Basic = () => {
-  return `
-    <we-checkbox checked value="banana">Banana</we-checkbox>
-    <we-checkbox checked disabled value="apple">Apple</we-checkbox>
-    <we-checkbox disabled value="pear">Pear</we-checkbox>
-  `;
-}
+  const label = text('Label', 'Banana');
+  const checked = boolean('Checked', false);
+  const disabled = boolean('Disabled', false);
 
-export const WithCustomTheme = () => {
-  return `
-    <we-checkbox checked value="banana">Banana</we-checkbox>
-    <we-checkbox checked disabled value="apple">Apple</we-checkbox>
-    <we-checkbox disabled value="pear">Pear</we-checkbox>
+  return html`
+    <we-checkbox checked=${checked} disabled=${disabled} value="Banana">
+      ${label}
+    </we-checkbox>
   `;
-}
+};
 
 Basic.story = { name: 'Basic' };
-WithCustomTheme.story = { name: 'WithCustomTheme'};
