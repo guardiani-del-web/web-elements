@@ -19,9 +19,10 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
+    "copy": "cpx \"dist/**/*\" \"dist-storybook/dist\"",
     "generate": "stencil generate",
     "storybook": "concurrently \"npm run start\" \"start-storybook -p  4666\"",
-    "storybook:build": "build-storybook -c .storybook -o dist"
+    "storybook:build": "concurrently \"npm run build\"  \"build-storybook -c .storybook -o dist-storybook\" && npm run copy"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -36,6 +37,7 @@
     "@storybook/web-components": "6.0.0-beta.4",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
+    "cpx": "^1.5.0",
     "lit-html": "^1.2.1",
     "storybook-addon-paddings": "^2.0.2"
   },

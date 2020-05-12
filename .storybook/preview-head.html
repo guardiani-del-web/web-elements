@@ -1,2 +1,20 @@
-<script type="module" src="http://localhost:3333/build/web-elements.esm.js"></script>
-<script nomodule="" src="http://localhost:3333/build/web-elements.js"></script>
+<script>
+  if (location.host.includes('localhost')) {
+    injectScriptTag('http://localhost:3333/build/web-elements.esm.js', 'module');
+    injectScriptTag('http://localhost:3333/build/web-elements.js', 'nomodule');
+  } else {
+    injectScriptTag('./dist/web-elements/web-elements.esm.js', 'module');
+    injectScriptTag('./dist/web-elements/web-elements.js', 'nomodule');
+  }
+
+  function injectScriptTag(url, type) {
+    const script = document.createElement('script');
+    script.src = url;
+    if (type === 'module') {
+      script.type = "module";
+    } else {
+      script.noModule = true;
+    }
+    document.head.appendChild(script);
+  }
+</script>
