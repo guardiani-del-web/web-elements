@@ -1,8 +1,12 @@
 import { html } from 'lit-html';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import readme from "./readme.md";
 
 export default {
   title: 'Components|Checkbox',
+  parameters: {
+    notes: readme
+  },
   decorators: [withKnobs],
 };
 
@@ -17,5 +21,3 @@ export const Basic = () => {
     </we-checkbox>
   `;
 };
-
-Basic.story = { name: 'Basic' };

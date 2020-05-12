@@ -1,7 +1,9 @@
 # we-checkbox
 
-
-
+```html
+<we-checkbox value="banana">Banana</we-checkbox>
+```
+<br>
 <!-- Auto Generated Below -->
 
 
@@ -38,4 +40,4 @@
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+
