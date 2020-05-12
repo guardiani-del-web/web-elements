@@ -10,33 +10,6 @@
 
 </head>
 <body>
-  
-  <div id="root"></div>
-
-  <script type="text/babel">
-    class WebElementsIntegration extends React.Component {
-      handleChange(event) {
-        const { value, checked } = event.target;
-        console.log('Checkbok status', value, checked);
-      }
-
-      render() {
-        return (
-          <div>
-            <we-checkbox value="Banana" checked={true} on-change={this.handleChange}>Banana</we-checkbox>
-            <we-checkbox value="Orange" disabled={true}>Orange</we-checkbox>
-            <we-checkbox value="Apple" on-change={this.handleChange}>Apple</we-checkbox>
-          </div>
-        );
-      }
-    }
-    ReactDOM.render(
-      <WebElementsIntegration />, document.getElementById('root')
-    );
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+  <we-checkbox value="banan">Banana</we-checkbox>
 </body>
 </html>
