@@ -1,0 +1,52 @@
+@import '../../scss/index.scss';
+
+:host {
+  display: block;
+}
+
+label {
+  display: flex;
+  margin: var(--label-margin, 0.2em);
+  padding: var(--label-padding, 0.2em);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--slider-background-color, $background-color);
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--thumb-color, $dark-primary-color);
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  &::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--thumb-color, $dark-primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 5px 5px $primary-color;
+  }
+
+  &:disabled::-webkit-slider-thumb {
+    background: var(--disabled-slider-color, $disabled);
+  }
+
+  &:disabled::-moz-range-thumb {
+    background: var(--disabled-slider-color, $disabled);
+  }
+}
+
