@@ -14,6 +14,10 @@ export const config: Config = {
       footer: '',
     },
     {
+      type: 'docs-json',
+      file: 'custom-elements.json'
+    },
+    {
       type: 'www',
       serviceWorker: null // disable service workers
     }
