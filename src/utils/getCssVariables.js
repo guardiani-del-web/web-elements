@@ -13,5 +13,6 @@ export function getCssVariables (tag, color, text) {
         } else if (!defaultValue.includes('\\')) {
           return `${acc} \n ${name}: ${text(name, defaultValue)};`;
         }
+        return acc;
     }, '');
 }
