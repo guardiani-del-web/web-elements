@@ -22,7 +22,7 @@ export const Basic = () => {
     </we-checkbox>
     <style>
       html {
-        ${getCssVariables('we-checkbox', color, text)}
+        ${getCssVariables('we-checkbox', color, text)};
       }
     </style>
   `;
