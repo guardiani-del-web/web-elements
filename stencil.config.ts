@@ -10,7 +10,12 @@ export const config: Config = {
       esmLoaderPath: '../loader'
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
+      footer: '',
+    },
+    {
+      type: 'docs-json',
+      file: 'custom-elements.json'
     },
     {
       type: 'www',

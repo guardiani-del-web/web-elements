@@ -1,8 +1,13 @@
 import { html } from 'lit-html';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
+import readme from "./readme.md";
+import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {
   title: 'Components|Checkbox',
+  parameters: {
+    notes: readme
+  },
   decorators: [withKnobs],
 };
 
@@ -15,7 +20,10 @@ export const Basic = () => {
     <we-checkbox checked=${checked} disabled=${disabled} value="Banana">
       ${label}
     </we-checkbox>
+    <style>
+      html {
+        ${getCssVariables('we-checkbox', color, text)};
+      }
+    </style>
   `;
 };
-
-Basic.story = { name: 'Basic' };

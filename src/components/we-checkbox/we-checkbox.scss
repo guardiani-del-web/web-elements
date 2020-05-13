@@ -1,5 +1,23 @@
 @import '../../scss/index.scss';
 
+/**
+ * @prop --label-margin: Margin label <br> Default: 0.2em
+ * @prop --label-padding: Padding label <br> Default: 0.2em
+ * @prop --icon-content: Icon content <br> Default: "\2714"
+ * @prop --icon-border: Icon border <br> Default: 1px solid #212121
+ * @prop --icon-border-radius: Icon border radius <br> Default: 0.2em
+ * @prop --icon-width: Icon width <br> Default: 1em
+ * @prop --icon-heigth: Icon heigth <br> Default: 1em
+ * @prop --icon-padding: Icon padding <br> Default: 0 0 0.3em 0.2em
+ * @prop --icon-margin: Icon margin <br> Default: 0 0.3em 0 0
+ * @prop --checked-background-color: Checked background color <br> Default: #3F51B5
+ * @prop --checked-border-color: Checked border color <br> Default: #3F51B5
+ * @prop --checked-color: Checked color <br> Default: #fff
+ * @prop --disabled-border-color: Checked disabled color <br> Default: #aaa
+ * @prop --checked-disabled-background-color: Checked and disabled background color <br> Default: #aaa
+ * @prop --checked-disabled-border-color: Checked and disabled border color <br> Default: #aaa
+ */
+
 :host {
   display: block;
 }
@@ -20,9 +38,8 @@ input[type=checkbox] {
       display: inline-block;
       width: var(--icon-width, 1em);
       height: var(--icon-heigth, 1em);
-      padding-left: var(--icon-padding-left, 0.2em);
-      padding-bottom: var(--icon-padding-bottom, 0.3em);
-      margin-right: var(--icon-margin-rigth, 0.3em);
+      padding: var(--icon-padding, 0 0 0.3em 0.2em);
+      margin: var(--icon-margin, 0 0.3em 0 0);
       color: transparent;
     }
   }

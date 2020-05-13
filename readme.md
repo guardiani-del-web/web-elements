@@ -52,6 +52,15 @@ Thanks goes to these wonderful people:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/FAngelo94">
+        <img src="https://avatars.githubusercontent.com/u/17097656?v=3" width="100px" />
+        <br />
+        <sub>
+          <b>Angelo Falci</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
