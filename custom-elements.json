@@ -1,0 +1,169 @@
+{
+  "timestamp": "2020-05-13T05:55:59",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.12.7",
+    "typescriptVersion": "3.8.3"
+  },
+  "components": [
+    {
+      "filePath": "./src/components/we-checkbox/we-checkbox.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-checkbox",
+      "readme": "# we-checkbox\n\n```html\n<we-checkbox value=\"banana\">Banana</we-checkbox>\n```\n<br>",
+      "docs": "```html\n<we-checkbox value=\"banana\">Banana</we-checkbox>\n```\n<br>",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "onChange",
+          "type": "any",
+          "mutable": false,
+          "attr": "on-change",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--checked-background-color",
+          "annotation": "prop",
+          "docs": "Checked background color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-border-color",
+          "annotation": "prop",
+          "docs": "Checked border color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-color",
+          "annotation": "prop",
+          "docs": "Checked color <br> Default: #fff"
+        },
+        {
+          "name": "--checked-disabled-background-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled background color <br> Default: #aaa"
+        },
+        {
+          "name": "--checked-disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled border color <br> Default: #aaa"
+        },
+        {
+          "name": "--disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--icon-border",
+          "annotation": "prop",
+          "docs": "Icon border <br> Default: 1px solid #212121"
+        },
+        {
+          "name": "--icon-border-radius",
+          "annotation": "prop",
+          "docs": "Icon border radius <br> Default: 0.2em"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: \"\\2714\""
+        },
+        {
+          "name": "--icon-heigth",
+          "annotation": "prop",
+          "docs": "Icon heigth <br> Default: 1em"
+        },
+        {
+          "name": "--icon-margin",
+          "annotation": "prop",
+          "docs": "Icon margin <br> Default: 0 0.3em 0 0"
+        },
+        {
+          "name": "--icon-padding",
+          "annotation": "prop",
+          "docs": "Icon padding <br> Default: 0 0 0.3em 0.2em"
+        },
+        {
+          "name": "--icon-width",
+          "annotation": "prop",
+          "docs": "Icon width <br> Default: 1em"
+        },
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}
