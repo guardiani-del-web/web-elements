@@ -1,5 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
-import { parseFunction } from '@utils';
+import { Component, ComponentInterface, Host, h, Prop, EventEmitter, Event } from '@stencil/core';
 
 @Component({
   tag: 'we-checkbox',
@@ -11,17 +10,10 @@ export class WeCheckbox implements ComponentInterface {
   @Prop() disabled: boolean;
   @Prop() checked: boolean;
   @Prop() onChange: any;
+  @Event() onCheckboxChange: EventEmitter;
 
-  connectedCallback() {
-    if (this.onChange) {
-      this.onChange = parseFunction(this.onChange);
-    }
-  }
-
-  handleChange(event: UIEvent) {
-    if (this.onChange) {
-      this.onChange(event);
-    }
+  handleChange(event: any) {
+    this.onCheckboxChange.emit(event);
   }
 
   render() {
@@ -29,7 +21,7 @@ export class WeCheckbox implements ComponentInterface {
       <Host>
         <input 
           type="checkbox" 
-          id="wecheckbox" 
+          id="wecheckbox"
           value={this.value} 
           disabled={this.disabled} 
           checked={this.checked}

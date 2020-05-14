@@ -1,6 +1,6 @@
 {
   "name": "web-elements",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Web Elements is a library of cross components that works with any framework or library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -64,9 +64,15 @@
     },
     {
       "name": "Angelo Falci",
+      "email": "a.falci@live.it",
       "url": "https://github.com/FAngelo94"
     }
   ],
+  "readme": "https://github.com/grandemayta/web-elements/blob/develop/readme.md",
+  "homepage": "https://web-elements-260917.web.app",
+  "repository": {
+    "url": "https://github.com/grandemayta/web-elements"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
