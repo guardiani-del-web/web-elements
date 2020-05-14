@@ -12,13 +12,17 @@ export namespace Components {
         "onChange": any;
         "value": string;
     }
+    interface WeCheckboxGroup {
+        "name": any;
+        "onChange": any;
+    }
     interface WeRadio {
         "checked": boolean;
         "disabled": boolean;
-        "name": string;
         "value": string;
     }
     interface WeRadioGroup {
+        "name": string;
         "onChange": any;
     }
     interface WeSlider {
@@ -35,6 +39,12 @@ declare global {
     var HTMLWeCheckboxElement: {
         prototype: HTMLWeCheckboxElement;
         new (): HTMLWeCheckboxElement;
+    };
+    interface HTMLWeCheckboxGroupElement extends Components.WeCheckboxGroup, HTMLStencilElement {
+    }
+    var HTMLWeCheckboxGroupElement: {
+        prototype: HTMLWeCheckboxGroupElement;
+        new (): HTMLWeCheckboxGroupElement;
     };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
@@ -56,6 +66,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "we-checkbox": HTMLWeCheckboxElement;
+        "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
@@ -66,16 +77,21 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "disabled"?: boolean;
         "onChange"?: any;
+        "onOnCheckboxChange"?: (event: CustomEvent<any>) => void;
         "value": string;
+    }
+    interface WeCheckboxGroup {
+        "name": any;
+        "onChange"?: any;
     }
     interface WeRadio {
         "checked"?: boolean;
         "disabled"?: boolean;
-        "name": string;
         "onOnRadioChange"?: (event: CustomEvent<any>) => void;
         "value": string;
     }
     interface WeRadioGroup {
+        "name": string;
         "onChange"?: any;
     }
     interface WeSlider {
@@ -87,6 +103,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "we-checkbox": WeCheckbox;
+        "we-checkbox-group": WeCheckboxGroup;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
@@ -97,6 +114,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
+            "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;

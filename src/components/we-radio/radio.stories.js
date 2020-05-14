@@ -1,11 +1,12 @@
 import { html } from 'lit-html';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import readme from "./readme.md";
+import { withKnobs, text } from '@storybook/addon-knobs';
+import readmeRadio from "./readme.md";
+import readmeRadioGroup from "../we-radio-group/readme.md";
 
 export default {
   title: 'Components|Radio',
   parameters: {
-    notes: readme
+    notes: readmeRadio.concat(readmeRadioGroup)
   },
   decorators: [withKnobs],
 };
@@ -14,17 +15,17 @@ export const Basic = () => {
   const radio1 = text('Label radio1', 'Peru');
   const radio2 = text('Label radio2', 'Italia');
   const radio3 = text('Label radio3', 'Germany');
-  const name = text('Name', 'country');
+  const name = text('Name', 'Country');
     
-   const radioHandler = value => {
-     console.log('currentSelection', value);
-   }
+  const radioHandler = value => {
+    console.log('currentSelection', value);
+  }
 
   return html`
-    <we-radio-group on-change=${radioHandler}>
-      <we-radio name=${name} checked="true" value=${radio1}>${radio1}</we-radio>
-      <we-radio name=${name} value=${radio2}>${radio2}</we-radio>
-      <we-radio name=${name} value=${radio3}>${radio3}</we-radio>
+    <we-radio-group name=${name} on-change=${radioHandler}>
+      <we-radio checked="true" value=${radio1}>${radio1}</we-radio>
+      <we-radio value=${radio2}>${radio2}</we-radio>
+      <we-radio value=${radio3}>${radio3}</we-radio>
     </we-radio-group>
   `;
 };

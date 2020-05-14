@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-14T22:54:33",
+  "timestamp": "2020-05-14T23:43:47",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -10,8 +10,8 @@
       "filePath": "./src/components/we-checkbox/we-checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox",
-      "readme": "# we-checkbox\n\n```html\n<we-checkbox value=\"banana\">Banana</we-checkbox>\n```\n<br>",
-      "docs": "```html\n<we-checkbox value=\"banana\">Banana</we-checkbox>\n```\n<br>",
+      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" on-change=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "docs": "```html\n<we-checkbox-group name=\"fruits\" on-change=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -81,7 +81,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "onCheckboxChange",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "listeners": [],
       "styles": [
         {
@@ -167,6 +177,64 @@
       "dependencyGraph": {}
     },
     {
+      "filePath": "./src/components/we-checkbox-group/we-checkbox-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-checkbox-group",
+      "readme": "# we-checkbox-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "name",
+          "type": "any",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "onChange",
+          "type": "any",
+          "mutable": false,
+          "attr": "on-change",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [
+        {
+          "event": "onCheckboxChange",
+          "capture": false,
+          "passive": false
+        }
+      ],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
       "filePath": "./src/components/we-radio/we-radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
@@ -206,22 +274,6 @@
           ],
           "optional": false,
           "required": false
-        },
-        {
-          "name": "name",
-          "type": "string",
-          "mutable": false,
-          "attr": "name",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": true
         },
         {
           "name": "value",
@@ -269,6 +321,22 @@
       "docsTags": [],
       "usage": {},
       "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
         {
           "name": "onChange",
           "type": "any",

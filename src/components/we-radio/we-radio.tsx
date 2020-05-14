@@ -6,7 +6,6 @@ import { Component, ComponentInterface, Host, h, Prop, Event, EventEmitter } fro
   shadow: true,
 })
 export class WeRadio implements ComponentInterface {
-  @Prop() name!: string;
   @Prop() value!: string;
   @Prop() disabled: boolean;
   @Prop() checked: boolean;
@@ -22,7 +21,6 @@ export class WeRadio implements ComponentInterface {
         <input
           type="radio" 
           id="weradio"
-          name={this.name} 
           value={this.value} 
           disabled={this.disabled} 
           checked={this.checked}

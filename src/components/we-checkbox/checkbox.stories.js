@@ -1,25 +1,33 @@
 import { html } from 'lit-html';
 import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
-import readme from "./readme.md";
+import readmeCheckbox from "./readme.md";
+import readmeCheckboxGroup from "../we-checkbox-group/readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {
   title: 'Components|Checkbox',
   parameters: {
-    notes: readme
+    notes: readmeCheckbox.concat(readmeCheckboxGroup)
   },
   decorators: [withKnobs],
 };
 
 export const Basic = () => {
-  const label = text('Label', 'Banana');
-  const checked = boolean('Checked', false);
-  const disabled = boolean('Disabled', false);
+  const name = text('Name', 'Fruits');
+  const checkbox1 = text('Label checkbox1', 'Banana');
+  const checkbox2 = text('Label checkbox2', 'Apple');
+  const checkbox3 = text('Label checkbox3', 'Pear');
+
+  const checkboxHandler = value => {
+    console.log('currentSelection', value);
+  }
 
   return html`
-    <we-checkbox checked=${checked} disabled=${disabled} value="Banana">
-      ${label}
-    </we-checkbox>
+    <we-checkbox-group name=${name} on-change=${checkboxHandler}>
+      <we-checkbox value=${checkbox1}>${checkbox1}</we-checkbox>
+      <we-checkbox value=${checkbox2}>${checkbox2}</we-checkbox>
+      <we-checkbox value=${checkbox3}>${checkbox3}</we-checkbox>
+    </we-checkbox-group>
     <style>
       html {
         ${getCssVariables('we-checkbox', color, text)};
