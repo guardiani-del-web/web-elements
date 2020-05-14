@@ -12,6 +12,11 @@ export namespace Components {
         "onChange": any;
         "value": string;
     }
+    interface WeRadio {
+        "checked": boolean;
+        "disabled": boolean;
+        "value": string;
+    }
 }
 declare global {
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
@@ -20,8 +25,15 @@ declare global {
         prototype: HTMLWeCheckboxElement;
         new (): HTMLWeCheckboxElement;
     };
+    interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
+    }
+    var HTMLWeRadioElement: {
+        prototype: HTMLWeRadioElement;
+        new (): HTMLWeRadioElement;
+    };
     interface HTMLElementTagNameMap {
         "we-checkbox": HTMLWeCheckboxElement;
+        "we-radio": HTMLWeRadioElement;
     }
 }
 declare namespace LocalJSX {
@@ -31,8 +43,14 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value": string;
     }
+    interface WeRadio {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "value": string;
+    }
     interface IntrinsicElements {
         "we-checkbox": WeCheckbox;
+        "we-radio": WeRadio;
     }
 }
 export { LocalJSX as JSX };
@@ -40,6 +58,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
+            "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
         }
     }
 }

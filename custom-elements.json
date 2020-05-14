@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-13T05:55:59",
+  "timestamp": "2020-05-14T18:33:49",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.12.7",
@@ -160,6 +160,73 @@
           "docs": "Padding label <br> Default: 0.2em"
         }
       ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/we-radio/we-radio.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-radio",
+      "readme": "# we-radio\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],

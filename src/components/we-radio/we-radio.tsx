@@ -1,18 +1,29 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'we-radio',
-  styleUrl: 'we-radio.css',
+  styleUrl: 'we-radio.scss',
   shadow: true,
 })
-export class WeRadio {
+export class WeRadio implements ComponentInterface {
+  @Prop() value!: string;
+  @Prop() disabled: boolean;
+  @Prop() checked: boolean;
 
   render() {
     return (
       <Host>
-        <slot></slot>
+        <input
+          type="radio" 
+          id="weradio"
+          value={this.value} 
+          disabled={this.disabled} 
+          checked={this.checked}
+        />
+        <label htmlFor="weradio" class="radio-label">
+          <slot></slot>
+        </label>
       </Host>
     );
   }
-
 }
