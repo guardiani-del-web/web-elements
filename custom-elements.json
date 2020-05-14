@@ -1,8 +1,8 @@
 {
-  "timestamp": "2020-05-14T18:33:49",
+  "timestamp": "2020-05-14T22:49:12",
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.12.7",
+    "version": "1.13.0",
     "typescriptVersion": "3.8.3"
   },
   "components": [
@@ -161,6 +161,7 @@
         }
       ],
       "slots": [],
+      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
@@ -169,8 +170,8 @@
       "filePath": "./src/components/we-radio/we-radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
-      "readme": "# we-radio\n\n\n",
-      "docs": "",
+      "readme": "# we-radio\n\n```html\n<we-radio-group on-change=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>\n",
+      "docs": "```html\n<we-radio-group on-change=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -207,6 +208,22 @@
           "required": false
         },
         {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
           "name": "value",
           "type": "string",
           "mutable": false,
@@ -224,10 +241,62 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "onRadioChange",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "listeners": [],
       "styles": [],
       "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/we-radio-group/we-radio-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-radio-group",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "onChange",
+          "type": "any",
+          "mutable": false,
+          "attr": "on-change",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [
+        {
+          "event": "onRadioChange",
+          "capture": false,
+          "passive": false
+        }
+      ],
+      "styles": [],
+      "slots": [],
+      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
