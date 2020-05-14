@@ -18,7 +18,6 @@
 | -------------------- | ---------- | ----------- | --------- | ----------- |
 | `checked`            | `checked`  |             | `boolean` | `undefined` |
 | `disabled`           | `disabled` |             | `boolean` | `undefined` |
-| `name` _(required)_  | `name`     |             | `string`  | `undefined` |
 | `value` _(required)_ | `value`    |             | `string`  | `undefined` |
 
 

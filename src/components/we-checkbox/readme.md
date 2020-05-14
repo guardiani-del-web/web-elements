@@ -1,7 +1,11 @@
 # we-checkbox
 
 ```html
-<we-checkbox value="banana">Banana</we-checkbox>
+<we-checkbox-group name="fruits" on-change=checkboxHandler>
+  <we-checkbox value="banana">Banana</we-checkbox>
+  <we-checkbox value="apple">Apple</we-checkbox>
+  <we-checkbox value="pear">Pear</we-checkbox>
+</we-checkbox-group>
 ```
 <br>
 <!-- Auto Generated Below -->
@@ -15,6 +19,13 @@
 | `disabled`           | `disabled`  |             | `boolean` | `undefined` |
 | `onChange`           | `on-change` |             | `any`     | `undefined` |
 | `value` _(required)_ | `value`     |             | `string`  | `undefined` |
+
+
+## Events
+
+| Event              | Description | Type               |
+| ------------------ | ----------- | ------------------ |
+| `onCheckboxChange` |             | `CustomEvent<any>` |
 
 
 ## CSS Custom Properties
