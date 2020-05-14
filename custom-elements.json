@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-13T05:55:59",
+  "timestamp": "2020-05-14T19:07:43",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.12.7",
@@ -160,6 +160,106 @@
           "docs": "Padding label <br> Default: 0.2em"
         }
       ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/we-slider/we-slider.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-slider",
+      "readme": "# we-slider\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "mutable": false,
+          "attr": "max",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "mutable": false,
+          "attr": "min",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "onChange",
+          "type": "any",
+          "mutable": false,
+          "attr": "on-change",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],

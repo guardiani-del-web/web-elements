@@ -1,5 +1,21 @@
 @import '../../scss/index.scss';
 
+/**
+ * @prop --label-margin: Margin label <br> Default: 0.2em
+ * @prop --label-padding: Padding label <br> Default: 0.2em
+ * @prop --slider-height: Slider height <br> Default: 5px
+ * @prop --slider-width: Slider width <br> Default: 100%
+ * @prop --slider-padding: Slider padding <br> Default: 0
+ * @prop --slider-margin: Slider margin <br> Default: 0
+ * @prop --slider-thumb-width: Slider thumb width <br> Default: 2em
+ * @prop --slider-thumb-height: Slider thumb height <br> Default: 2em
+ * @prop --slider-thumb-radius: Slider thumb radius <br> Default: 50%
+ * @prop --slider-thumb-color: Slider thumb color <br> Default: #3F51B5
+ * @prop --slider-background-color: Slider background color <br> Default: #D7DCDF
+ * @prop --slider-thumb-color: Slider Thumb color <br> Default: #D7DCDF
+ * @prop --slider-disabled-color: Slider disabled color <br> Default: #aaa
+ */
+
 :host {
   display: block;
 }
@@ -12,41 +28,37 @@ label {
 
 input[type=range] {
   -webkit-appearance: none;
-  height: 5px;
-  border-radius: 5px;
+  height: var(--slider-height, 5px);
+  width: var(--slider-width, 100%);
+  border-radius: var(--slider-border-radius, 5px);
   background: var(--slider-background-color, $background-color);
   outline: none;
-  padding: 0;
-  margin: 0;
+  padding: var(--slider-padding, 0);
+  margin: var(--slider-margin, 0);
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--thumb-color, $dark-primary-color);
+    width: var(--slider-thumb-width, 2em);
+    height: var(--slider-thumb-height, 2em);
+    border-radius: var(--slider-thumb-radius, 50%);
+    background: var(--slider-thumb-color, $primary-color);
     cursor: pointer;
-    opacity: 1;
   }
 
   &::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: var(--thumb-color, $dark-primary-color);
-    border-radius: 50%;
+    width: var(--slider-thumb-width, 2em);
+    height: var(--slider-thumb-height, 2em);
+    background: var(--slider-thumb-color, $primary-color);
+    border-radius: var(--slider-thumb-radius, 50%);
     cursor: pointer;
   }
 
-  &:hover::-webkit-slider-thumb {
-    box-shadow: 0 0 5px 5px $primary-color;
-  }
-
   &:disabled::-webkit-slider-thumb {
-    background: var(--disabled-slider-color, $disabled);
+    background: var(--slider-disabled-color, $disabled);
   }
 
   &:disabled::-moz-range-thumb {
-    background: var(--disabled-slider-color, $disabled);
+    background: var(--slider-disabled-color, $disabled);
   }
 }
 
