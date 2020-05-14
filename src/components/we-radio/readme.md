@@ -1,6 +1,13 @@
 # we-radio
 
-
+```html
+<we-radio-group on-change=myFuncion>
+  <we-radio name="country" checked="true" value="pe">Peru</we-radio>
+  <we-radio name="country" value="it">Italia</we-radio>
+  <we-radio name="country" value="de">Germany</we-radio>
+</we-radio-group>
+```
+<br>
 
 <!-- Auto Generated Below -->
 
