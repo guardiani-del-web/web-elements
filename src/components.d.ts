@@ -21,6 +21,13 @@ export namespace Components {
     interface WeRadioGroup {
         "onChange": any;
     }
+    interface WeSlider {
+        "disabled": boolean;
+        "max": number;
+        "min": number;
+        "onChange": any;
+        "value": number;
+    }
 }
 declare global {
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
@@ -41,10 +48,17 @@ declare global {
         prototype: HTMLWeRadioGroupElement;
         new (): HTMLWeRadioGroupElement;
     };
+    interface HTMLWeSliderElement extends Components.WeSlider, HTMLStencilElement {
+    }
+    var HTMLWeSliderElement: {
+        prototype: HTMLWeSliderElement;
+        new (): HTMLWeSliderElement;
+    };
     interface HTMLElementTagNameMap {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
+        "we-slider": HTMLWeSliderElement;
     }
 }
 declare namespace LocalJSX {
@@ -64,10 +78,18 @@ declare namespace LocalJSX {
     interface WeRadioGroup {
         "onChange"?: any;
     }
+    interface WeSlider {
+        "disabled"?: boolean;
+        "max"?: number;
+        "min"?: number;
+        "onChange"?: any;
+        "value"?: number;
+    }
     interface IntrinsicElements {
         "we-checkbox": WeCheckbox;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
+        "we-slider": WeSlider;
     }
 }
 export { LocalJSX as JSX };
@@ -77,6 +99,7 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
+            "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
         }
     }
 }
