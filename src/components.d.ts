@@ -12,6 +12,13 @@ export namespace Components {
         "onChange": any;
         "value": string;
     }
+    interface WeSlider {
+        "disabled": boolean;
+        "max": number;
+        "min": number;
+        "onChange": any;
+        "value": number;
+    }
 }
 declare global {
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
@@ -20,8 +27,15 @@ declare global {
         prototype: HTMLWeCheckboxElement;
         new (): HTMLWeCheckboxElement;
     };
+    interface HTMLWeSliderElement extends Components.WeSlider, HTMLStencilElement {
+    }
+    var HTMLWeSliderElement: {
+        prototype: HTMLWeSliderElement;
+        new (): HTMLWeSliderElement;
+    };
     interface HTMLElementTagNameMap {
         "we-checkbox": HTMLWeCheckboxElement;
+        "we-slider": HTMLWeSliderElement;
     }
 }
 declare namespace LocalJSX {
@@ -31,8 +45,16 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value": string;
     }
+    interface WeSlider {
+        "disabled"?: boolean;
+        "max"?: number;
+        "min"?: number;
+        "onChange"?: any;
+        "value"?: number;
+    }
     interface IntrinsicElements {
         "we-checkbox": WeCheckbox;
+        "we-slider": WeSlider;
     }
 }
 export { LocalJSX as JSX };
@@ -40,6 +62,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
+            "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
         }
     }
 }
