@@ -7,8 +7,45 @@ Web Elements is a library of cross components that works with any framework or l
 **THIS PROJECT IS AN ALPHA STAGE**
 
 ## Demo
-For more information about our project look at our demo.
-[Web Elements Demo](https://web-elements-260917.web.app)
+For more information about our project see our Storybook.
+[Web Elements Storybook](https://web-elements-260917.web.app)
+
+## Getting started
+### Npm
+
+```sh
+npm install --save web-elements
+```
+
+### Cdn
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <we-checkbox-group name="fruits" on-change-callback=checkboxHandler>
+      <we-checkbox value="banana">Banana</we-checkbox>
+      <we-checkbox value="apple">Apple</we-checkbox>
+      <we-checkbox value="pear">Pear</we-checkbox>
+    </we-checkbox-group>
+
+    <script type="module" src="https://web-elements-260917.web.app/dist/web-elements/web-elements.esm.js"></script>
+    <script nomodule src="https://web-elements-260917.web.app/dist/web-elements/web-elements.js"></script>
+  </body>
+</html>
+```
+
+## Browsers support
+
+:white_check_mark: Chrome
+<br/>
+:white_check_mark: Firefox
+<br/>
+:white_check_mark: Safari
+<br/>
+:white_check_mark: Edge
+<br/>
+:white_check_mark: IE11
 
 
 ## Contributors ✨
