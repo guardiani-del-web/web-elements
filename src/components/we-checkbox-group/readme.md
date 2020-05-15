@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property            | Attribute   | Description | Type  | Default     |
-| ------------------- | ----------- | ----------- | ----- | ----------- |
-| `name` _(required)_ | `name`      |             | `any` | `undefined` |
-| `onChange`          | `on-change` |             | `any` | `undefined` |
+| Property            | Attribute            | Description | Type  | Default     |
+| ------------------- | -------------------- | ----------- | ----- | ----------- |
+| `name` _(required)_ | `name`               |             | `any` | `undefined` |
+| `onChangeCallback`  | `on-change-callback` |             | `any` | `undefined` |
 
 
 ----------------------------------------------

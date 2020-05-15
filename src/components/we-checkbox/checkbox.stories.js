@@ -23,7 +23,7 @@ export const Basic = () => {
   }
 
   return html`
-    <we-checkbox-group name=${name} on-change=${checkboxHandler}>
+    <we-checkbox-group name=${name} on-change-callback=${checkboxHandler}>
       <we-checkbox value=${checkbox1}>${checkbox1}</we-checkbox>
       <we-checkbox value=${checkbox2}>${checkbox2}</we-checkbox>
       <we-checkbox value=${checkbox3}>${checkbox3}</we-checkbox>

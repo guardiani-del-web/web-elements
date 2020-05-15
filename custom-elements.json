@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-14T23:43:47",
+  "timestamp": "2020-05-15T23:37:30",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -10,8 +10,8 @@
       "filePath": "./src/components/we-checkbox/we-checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox",
-      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" on-change=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
-      "docs": "```html\n<we-checkbox-group name=\"fruits\" on-change=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" on-change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "docs": "```html\n<we-checkbox-group name=\"fruits\" on-change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -202,10 +202,10 @@
           "required": true
         },
         {
-          "name": "onChange",
+          "name": "onChangeCallback",
           "type": "any",
           "mutable": false,
-          "attr": "on-change",
+          "attr": "on-change-callback",
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
@@ -238,8 +238,8 @@
       "filePath": "./src/components/we-radio/we-radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
-      "readme": "# we-radio\n\n```html\n<we-radio-group on-change=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>\n",
-      "docs": "```html\n<we-radio-group on-change=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>",
+      "readme": "# we-radio\n\n```html\n<we-radio-group on-change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>\n",
+      "docs": "```html\n<we-radio-group on-change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -338,10 +338,10 @@
           "required": true
         },
         {
-          "name": "onChange",
+          "name": "onChangeCallback",
           "type": "any",
           "mutable": false,
-          "attr": "on-change",
+          "attr": "on-change-callback",
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
