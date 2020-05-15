@@ -14,7 +14,7 @@ export namespace Components {
     }
     interface WeCheckboxGroup {
         "name": any;
-        "onChange": any;
+        "onChangeCallback": any;
     }
     interface WeRadio {
         "checked": boolean;
@@ -23,7 +23,7 @@ export namespace Components {
     }
     interface WeRadioGroup {
         "name": string;
-        "onChange": any;
+        "onChangeCallback": any;
     }
     interface WeSlider {
         "disabled": boolean;
@@ -82,7 +82,7 @@ declare namespace LocalJSX {
     }
     interface WeCheckboxGroup {
         "name": any;
-        "onChange"?: any;
+        "onChangeCallback"?: any;
     }
     interface WeRadio {
         "checked"?: boolean;
@@ -92,7 +92,7 @@ declare namespace LocalJSX {
     }
     interface WeRadioGroup {
         "name": string;
-        "onChange"?: any;
+        "onChangeCallback"?: any;
     }
     interface WeSlider {
         "disabled"?: boolean;

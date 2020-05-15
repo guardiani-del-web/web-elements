@@ -1,6 +1,6 @@
 {
   "name": "web-elements",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Web Elements is a library of cross components that works with any framework or library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

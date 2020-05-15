@@ -1,7 +1,7 @@
 # we-checkbox
 
 ```html
-<we-checkbox-group name="fruits" on-change=checkboxHandler>
+<we-checkbox-group name="fruits" on-change-callback=checkboxHandler>
   <we-checkbox value="banana">Banana</we-checkbox>
   <we-checkbox value="apple">Apple</we-checkbox>
   <we-checkbox value="pear">Pear</we-checkbox>

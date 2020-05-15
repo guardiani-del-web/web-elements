@@ -22,7 +22,7 @@ export const Basic = () => {
   }
 
   return html`
-    <we-radio-group name=${name} on-change=${radioHandler}>
+    <we-radio-group name=${name} on-change-callback=${radioHandler}>
       <we-radio checked="true" value=${radio1}>${radio1}</we-radio>
       <we-radio value=${radio2}>${radio2}</we-radio>
       <we-radio value=${radio3}>${radio3}</we-radio>
