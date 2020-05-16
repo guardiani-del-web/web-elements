@@ -31,9 +31,7 @@ npm install --save web-elements
 
     <script type="module">
       import { applyPolyfills, defineCustomElements } from 'https://unpkg.com/web-elements@0.0.6/loader';
-      applyPolyfills().then(() => {
-        defineCustomElements();
-      });
+      applyPolyfills().then(() => defineCustomElements());
     </script>
   </body>
 </html>
