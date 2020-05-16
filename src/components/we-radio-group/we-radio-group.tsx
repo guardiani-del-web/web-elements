@@ -8,13 +8,13 @@ import { parseFunction } from '@utils';
 export class WeRadioGroup implements ComponentInterface {
   @Element() el: HTMLElement;
   @Prop() name!: string;
-  @Prop() onChangeCallback: any;
+  @Prop() changeCallback: any;
 
   @Listen('onRadioChange')
   onRadioChangeHandler(event: any) {
     const { value } = event.target;
     const radios = this.el.querySelectorAll('we-radio');
-    this.onChangeCallback = parseFunction(this.onChangeCallback);
+    this.changeCallback = parseFunction(this.changeCallback);
 
     radios.forEach(radio => {
       if (radio.getAttribute('value') === value) {
@@ -23,7 +23,7 @@ export class WeRadioGroup implements ComponentInterface {
         radio.setAttribute('checked', 'false');
       }
     });
-    this.onChangeCallback({ name: this.name, value });
+    this.changeCallback({ name: this.name, value });
   }
 
   render() {
