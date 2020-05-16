@@ -1,7 +1,7 @@
 # we-radio
 
 ```html
-<we-radio-group on-change-callback=myFuncion>
+<we-radio-group change-callback=myFuncion>
   <we-radio name="country" checked="true" value="pe">Peru</we-radio>
   <we-radio name="country" value="it">Italia</we-radio>
   <we-radio name="country" value="de">Germany</we-radio>
