@@ -29,10 +29,8 @@ npm install --save web-elements
       <we-checkbox value="pear">Pear</we-checkbox>
     </we-checkbox-group>
 
-    <script type="module">
-      import { applyPolyfills, defineCustomElements } from 'https://unpkg.com/web-elements@0.0.6/loader';
-      applyPolyfills().then(() => defineCustomElements());
-    </script>
+    <script type="module" src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.esm.js"></script>
+    <script nomodule src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.js"></script>
   </body>
 </html>
 ```
