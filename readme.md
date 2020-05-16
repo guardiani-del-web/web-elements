@@ -1,7 +1,7 @@
 # Web Elements 💎
 ![Built With Stencil](https://bit.ly/35Ak8QP)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-![Publish on NPM](https://github.com/grandemayta/web-elements/workflows/Publish%20on%20NPM/badge.svg?branch=master)
+![Publish NPM](https://github.com/grandemayta/web-elements/workflows/Publish%20on%20NPM/badge.svg?branch=master)
 ![Deploy Storybook](https://github.com/grandemayta/web-elements/workflows/Deploy%20Storybook/badge.svg?branch=master)
 
 Web Elements is a library of cross components that works with any framework or library.
