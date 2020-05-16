@@ -8,7 +8,7 @@ import { parseFunction } from '@utils';
 export class WeCheckboxGroup implements ComponentInterface {
   @Element() el: HTMLElement;
   @Prop() name!: any;
-  @Prop() onChangeCallback: any;
+  @Prop() changeCallback: any;
   @State() checkedItems: Array<any>;
 
   constructor() {
@@ -18,7 +18,7 @@ export class WeCheckboxGroup implements ComponentInterface {
   @Listen('onCheckboxChange')
   onRadioChangeHandler(event: any) {
     const { value } = event.target;
-    this.onChangeCallback = parseFunction(this.onChangeCallback);
+    this.changeCallback = parseFunction(this.changeCallback);
 
     const getCheckedIndex = this.checkedItems.findIndex(item => item.value === value);
 
@@ -28,7 +28,7 @@ export class WeCheckboxGroup implements ComponentInterface {
       this.checkedItems.splice(getCheckedIndex, 1);
     }
   
-    this.onChangeCallback(this.checkedItems);
+    this.changeCallback(this.checkedItems);
   }
 
   render() {
