@@ -71,7 +71,7 @@
   "readme": "https://github.com/grandemayta/web-elements/blob/develop/readme.md",
   "homepage": "https://web-elements-260917.web.app",
   "repository": {
-    "url": "https://github.com/grandemayta/web-elements"
+    "url": "https://github.com/guardiani-del-web/web-elements.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
