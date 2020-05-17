@@ -1,6 +1,6 @@
 {
   "name": "web-elements",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Web Elements is a set of components that works with any framework or library, 100% customizable using Css Variables and 100% reusable using Web Components.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
