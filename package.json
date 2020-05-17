@@ -78,6 +78,7 @@
   },
   "license": "MIT",
   "keywords": [
+    "Web Standards",
     "Web Components",
     "StencilJS",
     "Css Variables"
