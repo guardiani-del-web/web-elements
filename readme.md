@@ -1,14 +1,12 @@
 # Web Elements 💎
-![Built With Stencil](https://bit.ly/35Ak8QP)
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-Web Elements is a library of cross components that works with any framework or library.
+[![Npm Version](https://img.shields.io/npm/v/web-elements.svg)](https://www.npmjs.com/package/web-elements)
+[![Npm Downloads](https://img.shields.io/npm/dm/web-elements.svg)](https://www.npmjs.com/package/web-elements)
+[![Npm Publish](https://github.com/grandemayta/web-elements/workflows/Publish%20on%20NPM/badge.svg?branch=master)](https://github.com/grandemayta/web-elements/actions?query=workflow%3A%22Publish+on+NPM%22)
+[![Deploy Storybook](https://github.com/grandemayta/web-elements/workflows/Deploy%20Storybook/badge.svg?branch=master)](https://github.com/grandemayta/web-elements/actions?query=workflow%3A%22Deploy+Storybook%22)
+[![Mit License](https://img.shields.io/npm/l/web-elements.svg)](https://github.com/grandemayta/web-elements/blob/develop/LICENSE)
 
-**THIS PROJECT IS AN ALPHA STAGE**
-
-## Demo
-For more information about our project see our Storybook.
-[Web Elements Storybook](https://web-elements-260917.web.app)
+Web Elements is a set of components that works with any framework or library, 100% customizable using [Css Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and 100% reusable using [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
 ## Getting started
 ### Npm
@@ -29,11 +27,15 @@ npm install --save web-elements
       <we-checkbox value="pear">Pear</we-checkbox>
     </we-checkbox-group>
 
-    <script type="module" src="https://web-elements-260917.web.app/dist/web-elements/web-elements.esm.js"></script>
-    <script nomodule src="https://web-elements-260917.web.app/dist/web-elements/web-elements.js"></script>
+    <script type="module" src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.esm.js"></script>
+    <script nomodule src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.js"></script>
   </body>
 </html>
 ```
+
+## Demo
+For more information see our project on Storybook.
+[Web Elements Storybook](https://web-elements-260917.web.app)
 
 ## Browsers support
 

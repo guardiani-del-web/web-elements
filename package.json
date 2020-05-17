@@ -1,7 +1,7 @@
 {
   "name": "web-elements",
-  "version": "0.0.6",
-  "description": "Web Elements is a library of cross components that works with any framework or library",
+  "version": "0.0.7",
+  "description": "Web Elements is a set of components that works with any framework or library, 100% customizable using Css Variables and 100% reusable using Web Components.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -71,10 +71,15 @@
   "readme": "https://github.com/grandemayta/web-elements/blob/develop/readme.md",
   "homepage": "https://web-elements-260917.web.app",
   "repository": {
-    "url": "https://github.com/grandemayta/web-elements"
+    "url": "https://github.com/guardiani-del-web/web-elements.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "Web Components",
+    "StencilJS",
+    "Css Variables"
+  ]
 }
