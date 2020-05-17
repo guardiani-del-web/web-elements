@@ -3,9 +3,10 @@
 [![Npm Version](https://img.shields.io/npm/v/web-elements.svg)](https://www.npmjs.com/package/web-elements)
 [![Npm Downloads](https://img.shields.io/npm/dm/web-elements.svg)](https://www.npmjs.com/package/web-elements)
 [![Npm Publish](https://github.com/grandemayta/web-elements/workflows/Publish%20on%20NPM/badge.svg?branch=master)](https://github.com/grandemayta/web-elements/actions?query=workflow%3A%22Publish+on+NPM%22)
-![Deploy Storybook](https://github.com/grandemayta/web-elements/workflows/Deploy%20Storybook/badge.svg?branch=master)
+[![Deploy Storybook](https://github.com/grandemayta/web-elements/workflows/Deploy%20Storybook/badge.svg?branch=master)](https://github.com/grandemayta/web-elements/actions?query=workflow%3A%22Deploy+Storybook%22)
+[![Mit License](https://img.shields.io/npm/l/web-elements.svg)](https://github.com/grandemayta/web-elements/blob/develop/LICENSE)
 
-Web Elements is a library of cross components that works with any framework or library.
+Web Elements is a set of components that works with any framework or library, 100% customizable using [Css Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and 100% reusable using [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
 ## Getting started
 ### Npm
