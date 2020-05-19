@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface WeAccordion {
+        "title": string;
+    }
+    interface WeAccordionGroup {
+        "multiple": boolean;
+    }
     interface WeCheckbox {
         "checked": boolean;
         "disabled": boolean;
@@ -34,6 +40,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
+    }
+    var HTMLWeAccordionElement: {
+        prototype: HTMLWeAccordionElement;
+        new (): HTMLWeAccordionElement;
+    };
+    interface HTMLWeAccordionGroupElement extends Components.WeAccordionGroup, HTMLStencilElement {
+    }
+    var HTMLWeAccordionGroupElement: {
+        prototype: HTMLWeAccordionGroupElement;
+        new (): HTMLWeAccordionGroupElement;
+    };
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
     }
     var HTMLWeCheckboxElement: {
@@ -65,6 +83,8 @@ declare global {
         new (): HTMLWeSliderElement;
     };
     interface HTMLElementTagNameMap {
+        "we-accordion": HTMLWeAccordionElement;
+        "we-accordion-group": HTMLWeAccordionGroupElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-radio": HTMLWeRadioElement;
@@ -73,6 +93,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface WeAccordion {
+        "title"?: string;
+    }
+    interface WeAccordionGroup {
+        "multiple"?: boolean;
+    }
     interface WeCheckbox {
         "checked"?: boolean;
         "disabled"?: boolean;
@@ -102,6 +128,8 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface IntrinsicElements {
+        "we-accordion": WeAccordion;
+        "we-accordion-group": WeAccordionGroup;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-radio": WeRadio;
@@ -113,6 +141,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "we-accordion": LocalJSX.WeAccordion & JSXBase.HTMLAttributes<HTMLWeAccordionElement>;
+            "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;

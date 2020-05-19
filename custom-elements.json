@@ -1,11 +1,83 @@
 {
-  "timestamp": "2020-05-17T14:30:20",
+  "timestamp": "2020-05-18T23:20:39",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
     "typescriptVersion": "3.8.3"
   },
   "components": [
+    {
+      "filePath": "./src/components/we-accordion/we-accordion.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion",
+      "readme": "# we-accordion\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "mutable": false,
+          "attr": "title",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/we-accordion-group/we-accordion-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion-group",
+      "readme": "# we-accordion-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "multiple",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
     {
       "filePath": "./src/components/we-checkbox/we-checkbox.tsx",
       "encapsulation": "shadow",
