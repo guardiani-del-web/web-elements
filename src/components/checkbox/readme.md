@@ -13,19 +13,18 @@
 
 ## Properties
 
-| Property             | Attribute   | Description | Type      | Default     |
-| -------------------- | ----------- | ----------- | --------- | ----------- |
-| `checked`            | `checked`   |             | `boolean` | `undefined` |
-| `disabled`           | `disabled`  |             | `boolean` | `undefined` |
-| `onChange`           | `on-change` |             | `any`     | `undefined` |
-| `value` _(required)_ | `value`     |             | `string`  | `undefined` |
+| Property             | Attribute  | Description | Type      | Default     |
+| -------------------- | ---------- | ----------- | --------- | ----------- |
+| `checked`            | `checked`  |             | `boolean` | `undefined` |
+| `disabled`           | `disabled` |             | `boolean` | `undefined` |
+| `value` _(required)_ | `value`    |             | `string`  | `undefined` |
 
 
 ## Events
 
 | Event              | Description | Type               |
 | ------------------ | ----------- | ------------------ |
-| `onCheckboxChange` |             | `CustomEvent<any>` |
+| `checkboxCallback` |             | `CustomEvent<any>` |
 
 
 ## CSS Custom Properties

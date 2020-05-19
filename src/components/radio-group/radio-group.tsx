@@ -5,13 +5,13 @@ import { parseFunction } from '@utils';
   tag: 'we-radio-group',
   shadow: true,
 })
-export class WeRadioGroup implements ComponentInterface {
+export class RadioGroup implements ComponentInterface {
   @Element() el: HTMLElement;
   @Prop() name!: string;
   @Prop() changeCallback: any;
 
-  @Listen('onRadioChange')
-  onRadioChangeHandler(event: any) {
+  @Listen('radioCallback')
+  radioCallbackHandler(event: any) {
     const { value } = event.target;
     const radios = this.el.querySelectorAll('we-radio');
     this.changeCallback = parseFunction(this.changeCallback);

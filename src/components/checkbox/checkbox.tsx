@@ -1,32 +1,32 @@
-import { Component, ComponentInterface, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, Prop, EventEmitter, Event } from '@stencil/core';
 
 @Component({
-  tag: 'we-radio',
-  styleUrl: 'we-radio.scss',
+  tag: 'we-checkbox',
+  styleUrl: 'checkbox.scss',
   shadow: true,
 })
-export class WeRadio implements ComponentInterface {
+export class Checkbox implements ComponentInterface {
   @Prop() value!: string;
   @Prop() disabled: boolean;
   @Prop() checked: boolean;
-  @Event() onRadioChange: EventEmitter;
+  @Event() checkboxCallback: EventEmitter;
 
   handleChange(event: any) {
-    this.onRadioChange.emit(event);
+    this.checkboxCallback.emit(event);
   }
 
   render() {
     return (
       <Host>
-        <input
-          type="radio" 
-          id="weradio"
+        <input 
+          type="checkbox" 
+          id="wecheckbox"
           value={this.value} 
           disabled={this.disabled} 
           checked={this.checked}
           onChange={this.handleChange.bind(this)}
         />
-        <label htmlFor="weradio">
+        <label htmlFor="wecheckbox">
           <slot></slot>
         </label>
       </Host>

@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import readmeRadio from "./readme.md";
-import readmeRadioGroup from "../we-radio-group/readme.md";
+import readmeRadioGroup from "../radio-group/readme.md";
 
 export default {
   title: 'Components|Radio',
