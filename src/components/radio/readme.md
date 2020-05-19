@@ -25,7 +25,7 @@
 
 | Event           | Description | Type               |
 | --------------- | ----------- | ------------------ |
-| `onRadioChange` |             | `CustomEvent<any>` |
+| `radioCallback` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

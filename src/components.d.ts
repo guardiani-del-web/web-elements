@@ -6,10 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface WeAccordion {
+    }
+    interface WeAccordionGroup {
+        "multiple": boolean;
+    }
     interface WeCheckbox {
         "checked": boolean;
         "disabled": boolean;
-        "onChange": any;
         "value": string;
     }
     interface WeCheckboxGroup {
@@ -34,6 +38,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
+    }
+    var HTMLWeAccordionElement: {
+        prototype: HTMLWeAccordionElement;
+        new (): HTMLWeAccordionElement;
+    };
+    interface HTMLWeAccordionGroupElement extends Components.WeAccordionGroup, HTMLStencilElement {
+    }
+    var HTMLWeAccordionGroupElement: {
+        prototype: HTMLWeAccordionGroupElement;
+        new (): HTMLWeAccordionGroupElement;
+    };
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
     }
     var HTMLWeCheckboxElement: {
@@ -65,6 +81,8 @@ declare global {
         new (): HTMLWeSliderElement;
     };
     interface HTMLElementTagNameMap {
+        "we-accordion": HTMLWeAccordionElement;
+        "we-accordion-group": HTMLWeAccordionGroupElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-radio": HTMLWeRadioElement;
@@ -73,11 +91,15 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface WeAccordion {
+    }
+    interface WeAccordionGroup {
+        "multiple"?: boolean;
+    }
     interface WeCheckbox {
         "checked"?: boolean;
         "disabled"?: boolean;
-        "onChange"?: any;
-        "onOnCheckboxChange"?: (event: CustomEvent<any>) => void;
+        "onCheckboxCallback"?: (event: CustomEvent<any>) => void;
         "value": string;
     }
     interface WeCheckboxGroup {
@@ -87,7 +109,7 @@ declare namespace LocalJSX {
     interface WeRadio {
         "checked"?: boolean;
         "disabled"?: boolean;
-        "onOnRadioChange"?: (event: CustomEvent<any>) => void;
+        "onRadioCallback"?: (event: CustomEvent<any>) => void;
         "value": string;
     }
     interface WeRadioGroup {
@@ -102,6 +124,8 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface IntrinsicElements {
+        "we-accordion": WeAccordion;
+        "we-accordion-group": WeAccordionGroup;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-radio": WeRadio;
@@ -113,6 +137,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "we-accordion": LocalJSX.WeAccordion & JSXBase.HTMLAttributes<HTMLWeAccordionElement>;
+            "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
