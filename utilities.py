@@ -10,13 +10,14 @@ URL = '%cd%' if platform.system() == 'Windows' else '${PWD}'
 
 def setup_client():
     os.system('docker build -t ' + NAME_CLIENT_IMAGE + ' .')
-    os.system('docker run --name ' + NAME_CLIENT_CONTAINER + ' -i -d -v ' + URL + ':/srv/app -p 3000:3000 ' + NAME_CLIENT_IMAGE)
+    os.system('docker run --name ' + NAME_CLIENT_CONTAINER + ' -i -d -v ' + URL + ':/srv/app -p 3333:3333 -p 4666:4666 ' + NAME_CLIENT_IMAGE)
+    os.system('docker exec -w /srv/app ' + NAME_CLIENT_CONTAINER + ' npm install')
     os.system('docker exec -it -w /srv/app ' + NAME_CLIENT_CONTAINER + ' /bin/bash')
 
 def start_client():
     print('Starting client...')
     os.system('docker start ' + NAME_CLIENT_CONTAINER)
-    os.system('docker exec -it /srv/app ' + NAME_CLIENT_CONTAINER + ' /bin/bash')
+    os.system('docker exec -it -w /srv/app ' + NAME_CLIENT_CONTAINER + ' /bin/bash')
 
 def stop_client():
     print('Stopping client...')
@@ -29,14 +30,13 @@ def delete_client():
 
 def print_help(command):
     print('Welcome to the Jungle!')
-    print('Thanks to this script you can manage easly docker containers for client and server')
-    print('This is the listo of commands you can use:')
-    print('-d, --delete [all | client | server] remove client, servr or both (all is the default option if no parameter is passed)')
+    print('Thanks to this script you can manage easly docker container where you already have the environment you need to run the application')
+    print('This is the list of commands you can use:')
+    print('-d, --delete docker container and image')
     print('-h, --help list of available commands')
-    print('-i, --init initialize the environmnet creating and running docker container for client and server')
-    print('-r, --restart client and server container')
-    print('-s, --start [all | client | server] start client, servr or both (all is the default option if no parameter is passed)')
-    print('-t, --terminate [all | client | server] stop one or more container (all is the default option if no parameter is passed)')
+    print('-i, --init initialize the environmnet creating and running docker image, container and running npm install')
+    print('-s, --start start docker container and open a terminal inside it')
+    print('-t, --terminate stop docker container')
 
 def identify_command(command, parameter):
     if command == '-d' or command == '--delete':
