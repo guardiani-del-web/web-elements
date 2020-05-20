@@ -1,7 +1,8 @@
 import { html } from 'lit-html';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, text, color } from '@storybook/addon-knobs';
 import readmeAccordion from "./readme.md";
 import readmeAccordionGroup from "../accordion-group/readme.md";
+import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {
   title: 'Components|Accordion',
@@ -12,26 +13,34 @@ export default {
 };
 
 export const Basic = () => {
+  const accordionData = [
+    {
+      title: 'Lorem ipsum dolor sit amet',
+      content: 'Maecenas id finibus massa, mattis blandit nunc. Maecenas a turpis at massa viverra volutpat lacinia sit amet neque.'
+    },
+    {
+      title: 'Nulla sodales nunc eu lorem',
+      content: 'Curabitur in commodo velit, congue interdum nisi. Morbi congue purus elit, non tincidunt eros lobortis at. Nulla a odio ligula.'
+    },
+    {
+      title: 'Etiam fringilla mi in lectus',
+      content: 'Nulla eget tincidunt dui. Maecenas aliquet nec velit ut mattis. Nulla sagittis ligula in ex placerat lacinia. Praesent ac dui quis augue sollicitudin dictum sit amet cursus neque. Sed posuere libero at lobortis semper.'
+    },
+  ]
+  
   return html`
     <we-accordion-group>
-      <we-accordion>
-        <div slot="title">Accordion 1</div>
-        <div slot="content">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-      </we-accordion>
-      <we-accordion>
-        <div slot="title">Accordion 2</div>
-        <div slot="content">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-      </we-accordion>
-      <we-accordion>
-        <div slot="title">Accordion 3</div>
-        <div slot="content">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-      </we-accordion>
+      ${accordionData.map((accordion, i) => html`
+        <we-accordion>
+          <div slot="title">${text(`Title ${i + 1}`, accordion.title)}</div>
+          <div slot="content">${text(`Content ${i + 1}`, accordion.content)}</div>
+        </we-accordion>
+      `)}
     </we-accordion-group>
+    <style>
+      html {
+        ${getCssVariables('we-accordion', color, text)};
+      }
+    </style>
   `;
 };

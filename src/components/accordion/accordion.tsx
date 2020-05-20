@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, h } from '@stencil/core';
+import { ComponentInterface, Component, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'we-accordion',
@@ -8,19 +8,19 @@ import { ComponentInterface, Component, h } from '@stencil/core';
 export class Accordion implements ComponentInterface {
   render() {
     return (
-      <div class="accordion arrows">
-        <input type="radio" name="accordion" id="cb1" />
-        <section class="box">
-          <label class="box-title" htmlFor="cb1">
+      <Host>
+        <input type="radio" name="accordion" id="acc-open" />
+        <section class="accordion">
+          <label class="accordion-title" htmlFor="acc-open">
             <slot name="title" />
           </label>
-          <label class="box-close" htmlFor="acc-close"></label>
-          <div class="box-content">
+          <label class="accordion-close" htmlFor="acc-close"></label>
+          <div class="accordion-content">
             <slot name="content" />
           </div>
         </section>
         <input type="radio" name="accordion" id="acc-close" />
-      </div>
+      </Host>
     );
   }
 }

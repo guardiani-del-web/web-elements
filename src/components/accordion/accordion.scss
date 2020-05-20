@@ -1,66 +1,78 @@
+/**
+ * @prop --container-position: Container position <br> Default: relative
+ * @prop --container-background: Container background <br> Default: #fff
+ * @prop --container-height: Container height <br> Default: 54px
+ * @prop --container-transition: Container transition <br> Default: all .15s ease-in-out
+ * @prop --container-box-shadow: Container shadow <br> Default: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24)
+ * @prop --title-width: Title width <br> Default: calc(100% - 64px)
+ * @prop --title-height: Title height <br> Default: 54px
+ * @prop --title-line-height: Title line height <br> Default: 54px
+ * @prop --title-padding: Title padding <br> Default: 0 44px 0 20px
+ * @prop --title-display: Title display <br> Default: inline-block
+ * @prop --title-cursor: Title cursor <br> Default: pointer
+ * @prop --title-user-select: Title user select <br> Default: none
+ * @prop --icon-position: Icon position <br> Default: absolute
+ * @prop --icon-display: Icon display <br> Default: block
+ * @prop --icon-content: Icon content <br> Default: '\203a'
+ * @prop --icon-font-size: Icon font size <br> Default: 18pt
+ * @prop --icon-top: Icon top <br> Default: -2px
+ * @prop --icon-bottom: Icon bottom <br> Default: initial
+ * @prop --icon-right: Icon right <br> Default: 20px
+ * @prop --icon-left: Icon left <br> Default: initial
+ * @prop --icon-transition: Icon transition <br> Default: transform .15s ease-in-out
+ * @prop --icon-color: Icon color <br> Default: rgba(0,0,0,.54)
+ * @prop --icon-transform: Icon color <br> Default: rotate(0deg)
+ * @prop --content-width: Content width <br> Default: calc(100% - 40px)
+ * @prop --content-padding: Content padding <br> Default: 20px
+ * @prop --content-font-size: Content font size <br> Default: 11pt
+ * @prop --content-color: Content color <br> Default: rgba(0,0,0,.54)
+ * @prop --title-border-bottom-opened: Title border bottom opened <br> Default: 1px solid rgba(0,0,0,.18)
+ * @prop --title-transform-opened: Title transform opened <br> Default: rotate(90deg)
+ */
+
 :host {
   display: block;
-}
-
-.accordion  {
   input {
     display: none;
   }
-
-  &.arrows {
-    section {
-      .box-title {
-        padding-right: 44px;
-        width: calc(100% - 64px);
-        &:before {
-          position: absolute;
-          display: block;
-          content: '\203a';
-          font-size: 18pt;
-          right: 20px;
-          top: -2px;
-          transition: transform .15s ease-in-out;
-          color: rgba(0,0,0,.54);
-        }
+  .accordion {
+    position: var(--container-position, relative);
+    background: var(--container-background, #fff);
+    height: var(--container-height, 54px);
+    transition: var(--container-transition, all .15s ease-in-out);
+    box-shadow: var(--container-box-shadow, 0 -1px 0 #e5e5e5, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24));
+    .accordion-title {
+      width: var(--title-width, calc(100% - 64px));
+      height: var(--title-height, 54px);
+      line-height: var(--title-line-height, 54px);
+      padding: var(--title-padding, 0 44px 0 20px);
+      display: var(--title-display, inline-block);
+      cursor: var(--title-cursor, pointer);
+      user-select: var(--title-user-select, none);
+      &:before {
+        position: var(--icon-position, absolute);
+        display: var(--icon-display, block);
+        content: var(--icon-content, '\203a');
+        font-size: var(--icon-font-size, 18pt);
+        top: var(--icon-top, -2px);
+        bottom: var(--icon-bottom, initial);
+        left: var(--icon-initial, initial);
+        right: var(--icon-right, 20px);
+        transition: var(--icon-transition, transform .15s ease-in-out);
+        color: var(--icon-color, rgba(0,0,0,.54));
+        transform: var(--icon-transform, rotate(0deg));
       }
     }
-  }
-
-  .box {
-    position: relative;
-    background: white;
-    height: 64px;
-    transition: all .15s ease-in-out;
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      pointer-events: none;
-      box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-    }
-    .box-title {
-      width: calc(100% - 40px);
-      height: 64px;
-      line-height: 64px;
-      padding: 0 20px;
-      display: inline-block;
-      cursor: pointer;
-      -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
-    }
-    .box-content {
-      width: calc(100% - 40px);
-      padding: 30px 20px;
-      font-size: 11pt;
-      color: rgba(0,0,0,.54);
+    .accordion-content {
+      width: var(--content-width, calc(100% - 40px));
+      padding: var(--content-padding, 20px);
+      font-size: var(--content-font-size, 11pt);
+      color: var(--content-color, rgba(0,0,0,.54));
       display: none;
     }
-    .box-close {
+    .accordion-close {
       position: absolute;
-      height: 64px;
+      height: 54px;
       width: 100%;
       top: 0;
       left: 0;
@@ -68,18 +80,19 @@
       display: none;
     }
   }
-}
-
-input:checked + .box {
-  height: auto;
-}
-input:checked + .box .box-title {
-  border-bottom: 1px solid rgba(0,0,0,.18);
-}
-input:checked + .box .box-content,
-input:checked + .box .box-close {
-  display: inline-block;
-}
-input:checked + section.box .box-title:before {
-  transform: rotate(90deg);
+  input:checked {
+    +.accordion {
+      height: auto;
+      .accordion-title {
+        border-bottom: var(--title-border-bottom-opened, 1px solid rgba(0,0,0,.18));
+        &:before {
+          transform: var(--title-transform-opened, rotate(90deg));
+        }
+      }
+      .accordion-content,
+      .accordion-close {
+        display: inline-block;
+      }
+    }
+  }
 }

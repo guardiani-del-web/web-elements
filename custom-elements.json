@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-19T21:15:00",
+  "timestamp": "2020-05-20T21:29:09",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -10,15 +10,161 @@
       "filePath": "./src/components/accordion/accordion.tsx",
       "encapsulation": "shadow",
       "tag": "we-accordion",
-      "readme": "# we-accordion\n\n\n",
-      "docs": "",
+      "readme": "# we-accordion\n\n```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>\n\n",
+      "docs": "```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [],
       "methods": [],
       "events": [],
       "listeners": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--container-background",
+          "annotation": "prop",
+          "docs": "Container background <br> Default: #fff"
+        },
+        {
+          "name": "--container-box-shadow",
+          "annotation": "prop",
+          "docs": "Container shadow <br> Default: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24)"
+        },
+        {
+          "name": "--container-height",
+          "annotation": "prop",
+          "docs": "Container height <br> Default: 54px"
+        },
+        {
+          "name": "--container-position",
+          "annotation": "prop",
+          "docs": "Container position <br> Default: relative"
+        },
+        {
+          "name": "--container-transition",
+          "annotation": "prop",
+          "docs": "Container transition <br> Default: all .15s ease-in-out"
+        },
+        {
+          "name": "--content-color",
+          "annotation": "prop",
+          "docs": "Content color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--content-font-size",
+          "annotation": "prop",
+          "docs": "Content font size <br> Default: 11pt"
+        },
+        {
+          "name": "--content-padding",
+          "annotation": "prop",
+          "docs": "Content padding <br> Default: 20px"
+        },
+        {
+          "name": "--content-width",
+          "annotation": "prop",
+          "docs": "Content width <br> Default: calc(100% - 40px)"
+        },
+        {
+          "name": "--icon-bottom",
+          "annotation": "prop",
+          "docs": "Icon bottom <br> Default: initial"
+        },
+        {
+          "name": "--icon-color",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: '\\203a'"
+        },
+        {
+          "name": "--icon-display",
+          "annotation": "prop",
+          "docs": "Icon display <br> Default: block"
+        },
+        {
+          "name": "--icon-font-size",
+          "annotation": "prop",
+          "docs": "Icon font size <br> Default: 18pt"
+        },
+        {
+          "name": "--icon-left",
+          "annotation": "prop",
+          "docs": "Icon left <br> Default: initial"
+        },
+        {
+          "name": "--icon-position",
+          "annotation": "prop",
+          "docs": "Icon position <br> Default: absolute"
+        },
+        {
+          "name": "--icon-right",
+          "annotation": "prop",
+          "docs": "Icon right <br> Default: 20px"
+        },
+        {
+          "name": "--icon-top",
+          "annotation": "prop",
+          "docs": "Icon top <br> Default: -2px"
+        },
+        {
+          "name": "--icon-transform",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rotate(0deg)"
+        },
+        {
+          "name": "--icon-transition",
+          "annotation": "prop",
+          "docs": "Icon transition <br> Default: transform .15s ease-in-out"
+        },
+        {
+          "name": "--title-border-bottom-opened",
+          "annotation": "prop",
+          "docs": "Title border bottom opened <br> Default: 1px solid rgba(0,0,0,.18)"
+        },
+        {
+          "name": "--title-cursor",
+          "annotation": "prop",
+          "docs": "Title cursor <br> Default: pointer"
+        },
+        {
+          "name": "--title-display",
+          "annotation": "prop",
+          "docs": "Title display <br> Default: inline-block"
+        },
+        {
+          "name": "--title-height",
+          "annotation": "prop",
+          "docs": "Title height <br> Default: 54px"
+        },
+        {
+          "name": "--title-line-height",
+          "annotation": "prop",
+          "docs": "Title line height <br> Default: 54px"
+        },
+        {
+          "name": "--title-padding",
+          "annotation": "prop",
+          "docs": "Title padding <br> Default: 0 44px 0 20px"
+        },
+        {
+          "name": "--title-transform-opened",
+          "annotation": "prop",
+          "docs": "Title transform opened <br> Default: rotate(90deg)"
+        },
+        {
+          "name": "--title-user-select",
+          "annotation": "prop",
+          "docs": "Title user select <br> Default: none"
+        },
+        {
+          "name": "--title-width",
+          "annotation": "prop",
+          "docs": "Title width <br> Default: calc(100% - 64px)"
+        }
+      ],
       "slots": [],
       "parts": [],
       "dependents": [],
