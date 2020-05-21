@@ -27,3 +27,5 @@ UserInterfaceState.xcuserstate
 .env
 
 package-lock.json
+custom-elements.d.ts
+custom-elements.json
