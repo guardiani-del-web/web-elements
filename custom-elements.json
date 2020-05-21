@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-20T21:29:09",
+  "timestamp": "2020-05-21T17:39:08",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -14,9 +14,36 @@
       "docs": "```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
-      "props": [],
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "accordionCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "listeners": [],
       "styles": [
         {
@@ -27,12 +54,12 @@
         {
           "name": "--container-box-shadow",
           "annotation": "prop",
-          "docs": "Container shadow <br> Default: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24)"
+          "docs": "Container shadow <br> Default: 0 -0.063rem 0 #e5e5e5, 0 0 0.125rem rgba(0,0,0,.12), 0 0.125rem 0.25rem rgba(0,0,0,.24)"
         },
         {
           "name": "--container-height",
           "annotation": "prop",
-          "docs": "Container height <br> Default: 54px"
+          "docs": "Container height <br> Default: 3.375rem"
         },
         {
           "name": "--container-position",
@@ -52,17 +79,17 @@
         {
           "name": "--content-font-size",
           "annotation": "prop",
-          "docs": "Content font size <br> Default: 11pt"
+          "docs": "Content font size <br> Default: 0.938rem"
         },
         {
           "name": "--content-padding",
           "annotation": "prop",
-          "docs": "Content padding <br> Default: 20px"
+          "docs": "Content padding <br> Default: 1.25rem"
         },
         {
           "name": "--content-width",
           "annotation": "prop",
-          "docs": "Content width <br> Default: calc(100% - 40px)"
+          "docs": "Content width <br> Default: calc(100% - 2.5rem)"
         },
         {
           "name": "--icon-bottom",
@@ -87,7 +114,7 @@
         {
           "name": "--icon-font-size",
           "annotation": "prop",
-          "docs": "Icon font size <br> Default: 18pt"
+          "docs": "Icon font size <br> Default: 1.5rem"
         },
         {
           "name": "--icon-left",
@@ -102,12 +129,12 @@
         {
           "name": "--icon-right",
           "annotation": "prop",
-          "docs": "Icon right <br> Default: 20px"
+          "docs": "Icon right <br> Default: 1.25rem"
         },
         {
           "name": "--icon-top",
           "annotation": "prop",
-          "docs": "Icon top <br> Default: -2px"
+          "docs": "Icon top <br> Default: -0.125rem"
         },
         {
           "name": "--icon-transform",
@@ -122,7 +149,7 @@
         {
           "name": "--title-border-bottom-opened",
           "annotation": "prop",
-          "docs": "Title border bottom opened <br> Default: 1px solid rgba(0,0,0,.18)"
+          "docs": "Title border bottom opened <br> Default: 0.063rem solid rgba(0,0,0,.18)"
         },
         {
           "name": "--title-cursor",
@@ -137,17 +164,17 @@
         {
           "name": "--title-height",
           "annotation": "prop",
-          "docs": "Title height <br> Default: 54px"
+          "docs": "Title height <br> Default: 3.375rem"
         },
         {
           "name": "--title-line-height",
           "annotation": "prop",
-          "docs": "Title line height <br> Default: 54px"
+          "docs": "Title line height <br> Default: 3.375rem"
         },
         {
           "name": "--title-padding",
           "annotation": "prop",
-          "docs": "Title padding <br> Default: 0 44px 0 20px"
+          "docs": "Title padding <br> Default: 0 2.75rem 0 1.25rem"
         },
         {
           "name": "--title-transform-opened",
@@ -162,7 +189,7 @@
         {
           "name": "--title-width",
           "annotation": "prop",
-          "docs": "Title width <br> Default: calc(100% - 64px)"
+          "docs": "Title width <br> Default: calc(100% - 4rem)"
         }
       ],
       "slots": [],
@@ -199,7 +226,13 @@
       ],
       "methods": [],
       "events": [],
-      "listeners": [],
+      "listeners": [
+        {
+          "event": "accordionCallback",
+          "capture": false,
+          "passive": false
+        }
+      ],
       "styles": [],
       "slots": [],
       "parts": [],

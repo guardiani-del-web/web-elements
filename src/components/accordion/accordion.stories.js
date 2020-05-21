@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { withKnobs, text, color } from '@storybook/addon-knobs';
+import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import readmeAccordion from "./readme.md";
 import readmeAccordionGroup from "../accordion-group/readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
@@ -27,9 +27,10 @@ export const Basic = () => {
       content: 'Nulla eget tincidunt dui. Maecenas aliquet nec velit ut mattis. Nulla sagittis ligula in ex placerat lacinia. Praesent ac dui quis augue sollicitudin dictum sit amet cursus neque. Sed posuere libero at lobortis semper.'
     },
   ]
+  const multiple = boolean('Multiple', false);
   
   return html`
-    <we-accordion-group>
+    <we-accordion-group multiple=${multiple}>
       ${accordionData.map((accordion, i) => html`
         <we-accordion>
           <div slot="title">${text(`Title ${i + 1}`, accordion.title)}</div>
