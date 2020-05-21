@@ -8,7 +8,7 @@ export default {
   parameters: {
     notes: readmeAccordion.concat(readmeAccordionGroup)
   },
-  decorators: [withKnobs],
+  decorators: [withKnobs]
 };
 
 export const Basic = () => {
