@@ -1,4 +1,4 @@
-# we-dividers
+# we-divider
 
 
 

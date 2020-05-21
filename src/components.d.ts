@@ -20,6 +20,8 @@ export namespace Components {
         "changeCallback": any;
         "name": any;
     }
+    interface WeDivider {
+    }
     interface WeDividers {
     }
     interface WeRadio {
@@ -64,6 +66,12 @@ declare global {
         prototype: HTMLWeCheckboxGroupElement;
         new (): HTMLWeCheckboxGroupElement;
     };
+    interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
+    }
+    var HTMLWeDividerElement: {
+        prototype: HTMLWeDividerElement;
+        new (): HTMLWeDividerElement;
+    };
     interface HTMLWeDividersElement extends Components.WeDividers, HTMLStencilElement {
     }
     var HTMLWeDividersElement: {
@@ -93,6 +101,7 @@ declare global {
         "we-accordion-group": HTMLWeAccordionGroupElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
+        "we-divider": HTMLWeDividerElement;
         "we-dividers": HTMLWeDividersElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
@@ -114,6 +123,8 @@ declare namespace LocalJSX {
     interface WeCheckboxGroup {
         "changeCallback"?: any;
         "name": any;
+    }
+    interface WeDivider {
     }
     interface WeDividers {
     }
@@ -139,6 +150,7 @@ declare namespace LocalJSX {
         "we-accordion-group": WeAccordionGroup;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
+        "we-divider": WeDivider;
         "we-dividers": WeDividers;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
@@ -153,6 +165,7 @@ declare module "@stencil/core" {
             "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
+            "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-dividers": LocalJSX.WeDividers & JSXBase.HTMLAttributes<HTMLWeDividersElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
