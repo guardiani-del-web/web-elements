@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
 import readmeCheckbox from "./readme.md";
-import readmeCheckboxGroup from "../we-checkbox-group/readme.md";
+import readmeCheckboxGroup from "../checkbox-group/readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-19T22:42:08",
+  "timestamp": "2020-05-19T21:15:00",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.13.0",
@@ -7,11 +7,66 @@
   },
   "components": [
     {
-      "filePath": "./src/components/we-checkbox/we-checkbox.tsx",
+      "filePath": "./src/components/accordion/accordion.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion",
+      "readme": "# we-accordion\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/accordion-group/accordion-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion-group",
+      "readme": "# we-accordion-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "multiple",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/checkbox/checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox",
-      "readme": "# we-checkbox\r\n\r\n```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>\r",
-      "docs": "```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>",
+      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "docs": "```html\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -48,22 +103,6 @@
           "required": false
         },
         {
-          "name": "onChange",
-          "type": "any",
-          "mutable": false,
-          "attr": "on-change",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
           "name": "value",
           "type": "string",
           "mutable": false,
@@ -83,7 +122,7 @@
       "methods": [],
       "events": [
         {
-          "event": "onCheckboxChange",
+          "event": "checkboxCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -177,7 +216,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/we-checkbox-group/we-checkbox-group.tsx",
+      "filePath": "./src/components/checkbox-group/we-checkbox-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox-group",
       "readme": "# we-checkbox-group\r\n\r\n\r\n\r",
@@ -222,7 +261,7 @@
       "events": [],
       "listeners": [
         {
-          "event": "onCheckboxChange",
+          "event": "checkboxCallback",
           "capture": false,
           "passive": false
         }
@@ -235,7 +274,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/we-radio/we-radio.tsx",
+      "filePath": "./src/components/radio/radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
       "readme": "# we-radio\r\n\r\n```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>\r\n\r",
@@ -295,7 +334,7 @@
       "methods": [],
       "events": [
         {
-          "event": "onRadioChange",
+          "event": "radioCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -313,7 +352,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/we-radio-group/we-radio-group.tsx",
+      "filePath": "./src/components/radio-group/radio-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio-group",
       "readme": "# we-radio-group\r\n\r\n\r\n\r",
@@ -358,7 +397,7 @@
       "events": [],
       "listeners": [
         {
-          "event": "onRadioChange",
+          "event": "radioCallback",
           "capture": false,
           "passive": false
         }

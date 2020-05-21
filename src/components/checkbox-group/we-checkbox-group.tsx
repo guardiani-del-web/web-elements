@@ -5,7 +5,7 @@ import { parseFunction } from '@utils';
   tag: 'we-checkbox-group',
   shadow: true,
 })
-export class WeCheckboxGroup implements ComponentInterface {
+export class CheckboxGroup implements ComponentInterface {
   @Element() el: HTMLElement;
   @Prop() name!: any;
   @Prop() changeCallback: any;
@@ -15,8 +15,8 @@ export class WeCheckboxGroup implements ComponentInterface {
     this.checkedItems = [];
   }
 
-  @Listen('onCheckboxChange')
-  onRadioChangeHandler(event: any) {
+  @Listen('checkboxCallback')
+  checkboxCallbackHandler(event: any) {
     const { value } = event.target;
     this.changeCallback = parseFunction(this.changeCallback);
 
