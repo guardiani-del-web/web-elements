@@ -1,3 +1,11 @@
+/**
+ * @prop --color: Color of text <br> Default: rgba(0 , 0, 0, 1)
+ */
+
 :host {
   display: block;
+}
+
+textarea {
+  color: var(--color, rgba(0, 0, 0, 1));
 }

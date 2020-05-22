@@ -2,6 +2,7 @@ import { ComponentInterface, Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'we-textarea',
+  styleUrl: 'textarea.scss',
   shadow: true,
 })
 export class Textarea implements ComponentInterface {
@@ -9,7 +10,9 @@ export class Textarea implements ComponentInterface {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <textarea >
+
+        </textarea>
       </Host>
     );
   }
