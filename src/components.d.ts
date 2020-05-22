@@ -22,8 +22,6 @@ export namespace Components {
     }
     interface WeDivider {
     }
-    interface WeDividers {
-    }
     interface WeRadio {
         "checked": boolean;
         "disabled": boolean;
@@ -72,12 +70,6 @@ declare global {
         prototype: HTMLWeDividerElement;
         new (): HTMLWeDividerElement;
     };
-    interface HTMLWeDividersElement extends Components.WeDividers, HTMLStencilElement {
-    }
-    var HTMLWeDividersElement: {
-        prototype: HTMLWeDividersElement;
-        new (): HTMLWeDividersElement;
-    };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
     var HTMLWeRadioElement: {
@@ -102,7 +94,6 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-divider": HTMLWeDividerElement;
-        "we-dividers": HTMLWeDividersElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
@@ -125,8 +116,6 @@ declare namespace LocalJSX {
         "name": any;
     }
     interface WeDivider {
-    }
-    interface WeDividers {
     }
     interface WeRadio {
         "checked"?: boolean;
@@ -151,7 +140,6 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-divider": WeDivider;
-        "we-dividers": WeDividers;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
@@ -166,7 +154,6 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
-            "we-dividers": LocalJSX.WeDividers & JSXBase.HTMLAttributes<HTMLWeDividersElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
