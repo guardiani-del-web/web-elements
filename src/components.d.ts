@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface WeAccordion {
+        "open": boolean;
     }
     interface WeAccordionGroup {
         "multiple": boolean;
@@ -101,6 +102,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface WeAccordion {
+        "onAccordionCallback"?: (event: CustomEvent<any>) => void;
+        "open"?: boolean;
     }
     interface WeAccordionGroup {
         "multiple"?: boolean;
