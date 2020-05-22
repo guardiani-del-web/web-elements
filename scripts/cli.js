@@ -12767,7 +12767,7 @@ async function taskGenerate(config) {
         : '';
     const outDir = path$1.join(absoluteSrcDir, 'components', dir, componentName);
     await mkdir$1(path$1.join(outDir, testFolder), { recursive: true });
-    const writtenFiles = await Promise.all(extensionsToGenerate.map(extension => writeFileByExtension(outDir, componentName, extension, extensionsToGenerate.includes('css')))).catch(error => config.logger.error(error));
+    const writtenFiles = await Promise.all(extensionsToGenerate.map(extension => writeFileByExtension(outDir, componentName, extension, extensionsToGenerate.includes('scss')))).catch(error => config.logger.error(error));
     if (!writtenFiles) {
         return exit(1);
     }
@@ -12845,7 +12845,7 @@ export class ${toPascalCase(tagName)} implements ComponentInterface {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <h1>we-${tagName} is ready!</h1>
       </Host>
     );
   }
