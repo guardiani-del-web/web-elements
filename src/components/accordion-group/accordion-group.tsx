@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, h, Prop } from '@stencil/core';
+import { ComponentInterface, Component, h, Prop, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'we-accordion-group',
@@ -6,6 +6,23 @@ import { ComponentInterface, Component, h, Prop } from '@stencil/core';
 })
 export class AccordionGroup implements ComponentInterface {
   @Prop() multiple: boolean;
+  @Element() el: HTMLElement;
+
+  @Listen('accordionCallback')
+  accordionCallbackHandler(event: any) {
+    const { value } = event.detail;
+    if (!this.multiple) {
+      const accordions = this.el.querySelectorAll('we-accordion');
+
+      accordions.forEach(accordion => {
+        if (accordion.getAttribute('data-id') === value) {
+          accordion.setAttribute('open', 'true');
+        } else {
+          accordion.setAttribute('open', 'false');
+        }
+      });
+    }
+  }
 
   render() {
     return (
