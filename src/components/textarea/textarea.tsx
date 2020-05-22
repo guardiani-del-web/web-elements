@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, Host, h, State } from '@stencil/core';
+import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'we-textarea',
@@ -6,20 +6,21 @@ import { ComponentInterface, Component, Host, h, State } from '@stencil/core';
   shadow: true,
 })
 export class Textarea implements ComponentInterface {
-  @State() text: string;
-
-  handleChange(event: any) {
-    this.text = event.target.value;
-
-    if (event.target.validity.typeMismatch) {
-      console.log('this element is not valid')
-    }
-  }
+  @Prop() text: string = "";
+  @Prop() name: string = "";
+  @Prop() placeholder: string = "";
+  @Prop() readonly: boolean = false;
+  @Prop() disabled: boolean = false;
+  @Prop() required: boolean = false;
+  @Prop() autofocus: boolean = false;
+  @Prop() maxLength = 100000;
+  @Prop() cols;
+  @Prop() row;
 
   render() {
     return (
       <Host>
-        <textarea onChange={this.handleChange.bind(this)}>
+        <textarea placeholder={this.placeholder} disabled={this.disabled} required={this.required} readOnly={this.readonly} autofocus={this.autofocus} maxLength={this.maxLength} cols={this.cols} rows={this.row} name={this.name}>
           {this.text}
         </textarea>
       </Host>

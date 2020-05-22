@@ -37,6 +37,16 @@ export namespace Components {
         "value": number;
     }
     interface WeTextarea {
+        "autofocus": boolean;
+        "cols": any;
+        "disabled": boolean;
+        "maxLength": number;
+        "name": string;
+        "placeholder": string;
+        "readonly": boolean;
+        "required": boolean;
+        "row": any;
+        "text": string;
     }
 }
 declare global {
@@ -133,6 +143,16 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface WeTextarea {
+        "autofocus"?: boolean;
+        "cols"?: any;
+        "disabled"?: boolean;
+        "maxLength"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        "required"?: boolean;
+        "row"?: any;
+        "text"?: string;
     }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;

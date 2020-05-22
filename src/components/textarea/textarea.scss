@@ -1,5 +1,20 @@
 /**
  * @prop --color: Color of text <br> Default: rgba(0 , 0, 0, 1)
+ * @prop --background: Background of textarea <br> Default: rgba(255, 255, 255, 1)
+ * @prop --font-size: Font size <br> Default: 12pt
+ * @prop --font-weight: Font weight <br> Default: normal
+ * @prop --text-transform: Text transform <br> Default: unset
+ * @prop --text-align: Text align <br> Default: left
+ * @prop --border-radius: Border radius of textarea <br> Default: 0.5em
+ * @prop --border-color: Border color of textarea <br> Default: unset
+ * @prop --border-width: Border width of textarea <br> Default: 0.05em
+ * @prop --width: Width of textarea <br> Default: 100%
+ * @prop --height: Height of textarea <br> Default: 50px
+ * @prop --padding: Padding inside textarea <br> Default: 0
+ * @prop --margin: Margin out of textarea <br> Default: 0
+ * @prop --display: Display of textarea <br> Default: inline-block
+ * @prop --resize: Resize option for textarea <br> Default: auto
+ * @prop --text-decoration: Text decoration for text <br> Default: unset
  */
 
 :host {
@@ -8,4 +23,19 @@
 
 textarea {
   color: var(--color, rgba(0, 0, 0, 1));
+  background: var(--background, rgba(255, 255, 255, 1));
+  font-size: var(--font-size, 12pt);
+  font-weight: var(--font-weight, normal);
+  text-transform: var(--text-transform, unset);
+  text-align: var(--text-align, left);
+  border-radius: var(--border-radius, 0.5em);
+  border-width: var(--border-width, 0.05em);
+  border-color: var(--border-color, unset);
+  width: var(--width, 100%);
+  height: var(--heigth, 50px);
+  padding: var(--padding, 0);
+  margin: var(--margin, 0);
+  display: var(--display, inline-block);
+  resize: var(--resize, auto);
+  text-decoration: var(--text-decoration, unset);
 }
