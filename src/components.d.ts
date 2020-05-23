@@ -37,10 +37,10 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
-    interface WeTabs {
+    interface WeTab {
         "enabled": boolean;
     }
-    interface WeTabsGroup {
+    interface WeTabGroup {
     }
 }
 declare global {
@@ -86,17 +86,17 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
-    interface HTMLWeTabsElement extends Components.WeTabs, HTMLStencilElement {
+    interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
     }
-    var HTMLWeTabsElement: {
-        prototype: HTMLWeTabsElement;
-        new (): HTMLWeTabsElement;
+    var HTMLWeTabElement: {
+        prototype: HTMLWeTabElement;
+        new (): HTMLWeTabElement;
     };
-    interface HTMLWeTabsGroupElement extends Components.WeTabsGroup, HTMLStencilElement {
+    interface HTMLWeTabGroupElement extends Components.WeTabGroup, HTMLStencilElement {
     }
-    var HTMLWeTabsGroupElement: {
-        prototype: HTMLWeTabsGroupElement;
-        new (): HTMLWeTabsGroupElement;
+    var HTMLWeTabGroupElement: {
+        prototype: HTMLWeTabGroupElement;
+        new (): HTMLWeTabGroupElement;
     };
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
@@ -106,8 +106,8 @@ declare global {
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
-        "we-tabs": HTMLWeTabsElement;
-        "we-tabs-group": HTMLWeTabsGroupElement;
+        "we-tab": HTMLWeTabElement;
+        "we-tab-group": HTMLWeTabGroupElement;
     }
 }
 declare namespace LocalJSX {
@@ -145,10 +145,11 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value"?: number;
     }
-    interface WeTabs {
+    interface WeTab {
         "enabled"?: boolean;
+        "onTabCallback"?: (event: CustomEvent<any>) => void;
     }
-    interface WeTabsGroup {
+    interface WeTabGroup {
     }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
@@ -158,8 +159,8 @@ declare namespace LocalJSX {
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
-        "we-tabs": WeTabs;
-        "we-tabs-group": WeTabsGroup;
+        "we-tab": WeTab;
+        "we-tab-group": WeTabGroup;
     }
 }
 export { LocalJSX as JSX };
@@ -173,8 +174,8 @@ declare module "@stencil/core" {
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
-            "we-tabs": LocalJSX.WeTabs & JSXBase.HTMLAttributes<HTMLWeTabsElement>;
-            "we-tabs-group": LocalJSX.WeTabsGroup & JSXBase.HTMLAttributes<HTMLWeTabsGroupElement>;
+            "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
+            "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
         }
     }
 }

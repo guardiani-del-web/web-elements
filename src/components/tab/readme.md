@@ -12,6 +12,13 @@
 | `enabled` | `enabled` |             | `boolean` | `undefined` |
 
 
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `tabCallback` |             | `CustomEvent<any>` |
+
+
 ----------------------------------------------
 
 
