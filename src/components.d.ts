@@ -37,6 +37,18 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
+    interface WeTextarea {
+        "autofocus": boolean;
+        "cols": any;
+        "disabled": boolean;
+        "maxLength": number;
+        "name": string;
+        "placeholder": string;
+        "readonly": boolean;
+        "required": boolean;
+        "row": any;
+        "text": string;
+    }
 }
 declare global {
     interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
@@ -81,6 +93,12 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
+    }
+    var HTMLWeTextareaElement: {
+        prototype: HTMLWeTextareaElement;
+        new (): HTMLWeTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
@@ -89,6 +107,7 @@ declare global {
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-textarea": HTMLWeTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -126,6 +145,18 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value"?: number;
     }
+    interface WeTextarea {
+        "autofocus"?: boolean;
+        "cols"?: any;
+        "disabled"?: boolean;
+        "maxLength"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        "required"?: boolean;
+        "row"?: any;
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
@@ -134,6 +165,7 @@ declare namespace LocalJSX {
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-textarea": WeTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -147,6 +179,7 @@ declare module "@stencil/core" {
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
 }
