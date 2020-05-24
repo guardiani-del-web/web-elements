@@ -7,10 +7,25 @@
 
   <script type="module" src="/build/web-elements.esm.js"></script>
   <script nomodule src="/build/web-elements.js"></script>
+  <style>
+    .box1 {
+      --color: red;
+      --margin: 10px 0;
+    }
+    .box2 {
+      --color: green;
+      --margin: 10px 0;
+    }
+  </style>
 
 </head>
 <body>
   <we-slider value=10 min=0 max=50>Slider 1</we-slider>
+<<<<<<< HEAD
   <we-divider></we-divider>
+=======
+  <div class="box1"><we-textarea text="First text area" disabled=true></we-textarea></div>
+  <div class="box2"><we-textarea text="Second text area" name="second"></we-textarea></div>
+>>>>>>> develop
 </body>
 </html>

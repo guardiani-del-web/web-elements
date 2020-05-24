@@ -2,14 +2,27 @@
 
 /**
  * @prop --divider-color: divider color <br> Default: rgb(255, 0, 0) 
-
+ * @prop --divider-border: divider border <br> Default: 1px
+ * @prop --divider-style: divider style <br> Default: solid
+ * @prop --divider-radius: divider radiues <br> Default: 0px
+ * @prop --divider-margin-left: divider margin-left <br> Default: 0px
+ * @prop --divider-margin-right: divider margin-right <br> Default: 0px
+ * @prop --divider-width: divider width <br> Dafault: 100%
+ * @prop --divider-justify-content: divider justify-content-center <br> Default: flex-start 
   */
 :host {
   display: block;
   
 }
 
-
-hr {
-  color: var(--divider-color,  red); 
+.container {
+  display: flex;
+  justify-content: var(--divider-justify-content, flex-start);
+  &__line {
+    border: var(--divider-border, 1px) var( --divider-style, solid) var(--divider-color, $divider-line-color) ;
+    border-radius: var(--divider-radius, 0px);
+    margin-left: var(--divider-margin-left, 0px);
+    margin-right: var(--divider-margin-right, 0px);
+    width: var(--divider-width, 100%);
+  }
 }

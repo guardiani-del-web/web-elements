@@ -9,8 +9,8 @@ export class Divider implements ComponentInterface {
 
   render() {
     return (
-      <div>
-        <hr />
+      <div class="container">
+        <div class="container__line" />
       </div>
     );
   }
