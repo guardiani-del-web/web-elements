@@ -1,8 +1,15 @@
+@import '../../scss/index.scss';
+
+/**
+ * @prop --divider-color: divider color <br> Default: rgb(255, 0, 0) 
+
+  */
 :host {
   display: block;
   
 }
 
+
 hr {
-  color: red;
+  color: var(--divider-color,  red); 
 }
