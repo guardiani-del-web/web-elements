@@ -1,3 +1,78 @@
-:host {
+/**
+* @prop --background: Background of chips <br> Default: rgba(229, 229, 229, 1)
+* @prop --border-radius: Border radius of chips  <br> Default: 0.5em
+* @prop --border-width: Border width of chips <br> Default: 0.05em
+* @prop --border-color: Border color of chips <br> Default: unset 
+* @prop --width: Width of chips  <br> Default: auto
+* @prop --heigth: Height of chips  <br> Default: auto        
+* @prop --padding: Padding of chips  <br> Default: 0.25rem    
+* @prop --margin: Margin of chips  <br> Default: 0
+* @prop --display: Display of chips  <br> Default: inline-block
+* @prop --selected-background: Background of chips when selected  <br> Default: rgba(65, 169, 192, 1)
+* @prop --imageLeft--cursor: Cursor type of image left <br> Default: auto
+* @prop --imageLeft--padding: Padding of image left  <br> Default: 0
+* @prop --imageLeft--margin: Margin of image left <br> Default: 0 0.5rem
+* @prop --imageLeft--width: Width of image left <br> Default: auto
+* @prop --imageLeft--heigth: Height of image left <br> Default: auto
+* @prop --imageLeft--border-radius: Border radius of image left <br> Default: 0em
+* @prop --label--color: Color of text label <br> Default: rgba(0, 0, 0, 1)
+* @prop --label--font-size: Font size of label <br> Default: 12pt
+* @prop --label--font-weight: Font weight of label <br> Default: normal
+* @prop --label--text-transform: Text trasform of label <br> Default: unset
+* @prop --label--text-align: Text align of label <br> Default: left
+* @prop --label--padding: Padding of label <br> Default: 0
+* @prop --label--margin: Margin of label <br> Default: 0 0.5rem
+* @prop --label--text-decoration: Text decoration of label <br> Default: unset
+* @prop --imageRight--cursor: Cursor type of image right <br> Default: pointer
+* @prop --imageRight--padding: Padding of image right <br> Default: 0
+* @prop --imageRight--margin: Margin of image right <br> Default: 0 0.5rem
+* @prop --imageRight--width: Width of image right <br> Default: auto
+* @prop --imageRight--heigth: Height of image right <br> Default: auto
+* @prop --imageRight--border-radius: Border radius of image right <br> Default: 0em
+*/
+
+.chips {
   display: block;
+  background: var(--background, rgba(229, 229, 229, 1));
+  border-radius: var(--border-radius, 0.5em);
+  border-width: var(--border-width, 0.05em);
+  border-color: var(--border-color, unset);
+  width: var(--width, auto);
+  height: var(--heigth, auto);
+  padding: var(--padding, 0.25rem);
+  margin: var(--margin, 0);
+  display: var(--display, inline-block);
+
+  &.selected {
+    background: var(--selected-background, rgba(65, 169, 192, 1));
+  }
+}
+
+.imageLeft {
+  cursor: var(--imageLeft--cursor, auto);
+  padding: var(--imageLeft--padding, 0);
+  margin: var(--imageLeft--margin, 0 0.5rem);
+  width: var(--imageLeft--width, auto);
+  height: var(--imageLeft--heigth, auto);
+  border-radius: var(--imageLeft--border-radius, 0em);
+}
+
+label {
+  color: var(--label--color, rgba(0, 0, 0, 1));
+  font-size: var(--label--font-size, 12pt);
+  font-weight: var(--label--font-weight, normal);
+  text-transform: var(--label--text-transform, unset);
+  text-align: var(--label--text-align, left);
+  padding: var(--label--padding, 0);
+  margin: var(--label--margin, 0 0.5rem);
+  text-decoration: var(--label--text-decoration, unset);
+}
+
+.imageRight {
+  cursor: var(--imageRight--cursor, pointer);
+  padding: var(--imageRight--padding, 0);
+  margin: var(--imageRight--margin, 0 0.5rem);
+  width: var(--imageRight--width, auto);
+  height: var(--imageRight--heigth, auto);
+  border-radius: var(--imageRight--border-radius, 0em);
 }

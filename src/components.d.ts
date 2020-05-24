@@ -22,6 +22,14 @@ export namespace Components {
         "name": any;
     }
     interface WeChips {
+        "isSelectable": boolean;
+        "label": string;
+        "removeLeft": boolean;
+        "removeRight": boolean;
+        "srcImgLeft": string;
+        "srcImgRight": string;
+    }
+    interface WeChipsGroup {
     }
     interface WeRadio {
         "checked": boolean;
@@ -43,7 +51,7 @@ export namespace Components {
         "autofocus": boolean;
         "cols": any;
         "disabled": boolean;
-        "maxLength": number;
+        "maxlength": number;
         "name": string;
         "placeholder": string;
         "readonly": boolean;
@@ -83,6 +91,12 @@ declare global {
         prototype: HTMLWeChipsElement;
         new (): HTMLWeChipsElement;
     };
+    interface HTMLWeChipsGroupElement extends Components.WeChipsGroup, HTMLStencilElement {
+    }
+    var HTMLWeChipsGroupElement: {
+        prototype: HTMLWeChipsGroupElement;
+        new (): HTMLWeChipsGroupElement;
+    };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
     var HTMLWeRadioElement: {
@@ -113,6 +127,7 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
+        "we-chips-group": HTMLWeChipsGroupElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
@@ -138,6 +153,16 @@ declare namespace LocalJSX {
         "name": any;
     }
     interface WeChips {
+        "isSelectable"?: boolean;
+        "label"?: string;
+        "onRemoveCallback"?: (event: CustomEvent<any>) => void;
+        "onSelectCallback"?: (event: CustomEvent<any>) => void;
+        "removeLeft"?: boolean;
+        "removeRight"?: boolean;
+        "srcImgLeft"?: string;
+        "srcImgRight"?: string;
+    }
+    interface WeChipsGroup {
     }
     interface WeRadio {
         "checked"?: boolean;
@@ -160,7 +185,7 @@ declare namespace LocalJSX {
         "autofocus"?: boolean;
         "cols"?: any;
         "disabled"?: boolean;
-        "maxLength"?: number;
+        "maxlength"?: number;
         "name"?: string;
         "placeholder"?: string;
         "readonly"?: boolean;
@@ -174,6 +199,7 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
+        "we-chips-group": WeChipsGroup;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
@@ -189,6 +215,7 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
+            "we-chips-group": LocalJSX.WeChipsGroup & JSXBase.HTMLAttributes<HTMLWeChipsGroupElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;

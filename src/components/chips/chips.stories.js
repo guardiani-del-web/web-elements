@@ -16,7 +16,7 @@ export const Basic = () => {
   const cssVariables = getCssVariables('we-chips', color, text);
 
   return html`
-    <we-chips></we-chips>
+    <we-chips src-img-left="prova" src-img-right="prova" label="ciao" remove-left=true/>
     <style>
       html {
         ${cssVariables}
