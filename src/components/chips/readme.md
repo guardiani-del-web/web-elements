@@ -9,20 +9,20 @@
 
 | Property       | Attribute       | Description | Type      | Default |
 | -------------- | --------------- | ----------- | --------- | ------- |
-| `isSelectable` | `is-selectable` | if ture change color and trigger selectCa            | `boolean` | `false` |
-| `label`        | `label`         |             | `string`  | `""`    |
-| `removeLeft`   | `remove-left`   |             | `boolean` | `false` |
-| `removeRight`  | `remove-right`  |             | `boolean` | `false` |
-| `srcImgLeft`   | `src-img-left`  |             | `string`  | `""`    |
-| `srcImgRight`  | `src-img-right` |             | `string`  | `""`    |
+| `isSelectable` | `is-selectable` | if true change color and trigger selectCallBack event when user click on it            | `boolean` | `false` |
+| `label`        | `label`         | text in the central label            | `string`  | `""`    |
+| `removeLeft`   | `remove-left`   | if true when user click on image left the chips is removed and removeCallback event is triggered           | `boolean` | `false` |
+| `removeRight`  | `remove-right`  | if true when user click on image right the chips is removed and removeCallback event is triggered            | `boolean` | `false` |
+| `srcImgLeft`   | `src-img-left`  | path of the left image used like src in img component, if nothing is passed img is not rendered            | `string`  | `""`    |
+| `srcImgRight`  | `src-img-right` | path of the right image used like src in img component, if nothing is passed img is not rendered            | `string`  | `""`    |
 
 
 ## Events
 
 | Event            | Description | Type               |
 | ---------------- | ----------- | ------------------ |
-| `removeCallback` |             | `CustomEvent<any>` |
-| `selectCallback` |             | `CustomEvent<any>` |
+| `removeCallback` | event triggered when user remove chips            | `CustomEvent<any>` |
+| `selectCallback` | event triggered when user select chips            | `CustomEvent<any>` |
 
 
 ## CSS Custom Properties
