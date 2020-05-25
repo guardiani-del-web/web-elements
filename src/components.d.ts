@@ -29,8 +29,6 @@ export namespace Components {
         "srcImgLeft": string;
         "srcImgRight": string;
     }
-    interface WeChipsGroup {
-    }
     interface WeRadio {
         "checked": boolean;
         "disabled": boolean;
@@ -46,6 +44,10 @@ export namespace Components {
         "min": number;
         "onChange": any;
         "value": number;
+    }
+    interface WeSwitch {
+        "initialState": boolean;
+        "label": string;
     }
     interface WeTextarea {
         "autofocus": boolean;
@@ -91,12 +93,6 @@ declare global {
         prototype: HTMLWeChipsElement;
         new (): HTMLWeChipsElement;
     };
-    interface HTMLWeChipsGroupElement extends Components.WeChipsGroup, HTMLStencilElement {
-    }
-    var HTMLWeChipsGroupElement: {
-        prototype: HTMLWeChipsGroupElement;
-        new (): HTMLWeChipsGroupElement;
-    };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
     var HTMLWeRadioElement: {
@@ -115,6 +111,12 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeSwitchElement extends Components.WeSwitch, HTMLStencilElement {
+    }
+    var HTMLWeSwitchElement: {
+        prototype: HTMLWeSwitchElement;
+        new (): HTMLWeSwitchElement;
+    };
     interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
     }
     var HTMLWeTextareaElement: {
@@ -127,10 +129,10 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
-        "we-chips-group": HTMLWeChipsGroupElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-switch": HTMLWeSwitchElement;
         "we-textarea": HTMLWeTextareaElement;
     }
 }
@@ -162,8 +164,6 @@ declare namespace LocalJSX {
         "srcImgLeft"?: string;
         "srcImgRight"?: string;
     }
-    interface WeChipsGroup {
-    }
     interface WeRadio {
         "checked"?: boolean;
         "disabled"?: boolean;
@@ -180,6 +180,11 @@ declare namespace LocalJSX {
         "min"?: number;
         "onChange"?: any;
         "value"?: number;
+    }
+    interface WeSwitch {
+        "initialState"?: boolean;
+        "label"?: string;
+        "onChangeStateCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeTextarea {
         "autofocus"?: boolean;
@@ -199,10 +204,10 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
-        "we-chips-group": WeChipsGroup;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-switch": WeSwitch;
         "we-textarea": WeTextarea;
     }
 }
@@ -215,10 +220,10 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
-            "we-chips-group": LocalJSX.WeChipsGroup & JSXBase.HTMLAttributes<HTMLWeChipsGroupElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
