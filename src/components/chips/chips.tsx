@@ -15,7 +15,7 @@ import {
   shadow: true,
 })
 export class Chips implements ComponentInterface {
-  @Prop() label: string = "";
+  @Prop() label: string = ""; 
   @Prop() srcImgLeft: string = "";
   @Prop() srcImgRight: string = "";
   @Prop() removeLeft: boolean = false;
