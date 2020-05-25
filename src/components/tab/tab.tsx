@@ -28,6 +28,9 @@ export class Tab implements ComponentInterface {
         <label htmlFor="wetab">
           <slot name="header" />
         </label>
+        <div>
+          <slot name="content" />
+        </div>
       </Host>
     );
   }

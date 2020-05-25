@@ -11,11 +11,17 @@ export class TabGroup implements ComponentInterface {
   @Listen('tabCallback')
   tabCallbackHandler(event: any) {
     const value = event.detail;
+    const content = this.el.shadowRoot.querySelector('.content');
+    const line = this.el.shadowRoot.querySelector('.line');
     const tabs = this.el.querySelectorAll('we-tab');
 
-    tabs.forEach(tab => {
+    tabs.forEach((tab, tabPosition) => {
       if (tab.getAttribute('data-id') === value) {
+        const left = (tabPosition) * (100 / tabs.length);
+        const currentContent = tab.querySelector('div').innerHTML;
+        content.innerHTML = currentContent;
         tab.setAttribute('enabled', 'true');
+        line.setAttribute('style', `left: ${left}%`);
       } else {
         tab.setAttribute('enabled', 'false');
       }
@@ -25,6 +31,7 @@ export class TabGroup implements ComponentInterface {
   render() {
     return (
       <Host>
+        <div class="content"></div>
         <slot></slot>
         <div class="line"></div>
       </Host>
