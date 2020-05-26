@@ -13,14 +13,14 @@ export class Textarea implements ComponentInterface {
   @Prop() disabled: boolean = false;
   @Prop() required: boolean = false;
   @Prop() autofocus: boolean = false;
-  @Prop() maxLength = 100000;
+  @Prop() maxlength = 100000;
   @Prop() cols;
   @Prop() row;
 
   render() {
     return (
       <Host>
-        <textarea placeholder={this.placeholder} disabled={this.disabled} required={this.required} readOnly={this.readonly} autofocus={this.autofocus} maxLength={this.maxLength} cols={this.cols} rows={this.row} name={this.name}>
+        <textarea placeholder={this.placeholder} disabled={this.disabled} required={this.required} readOnly={this.readonly} autofocus={this.autofocus} maxLength={this.maxlength} cols={this.cols} rows={this.row} name={this.name}>
           {this.text}
         </textarea>
       </Host>
