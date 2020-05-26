@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, Host, h, Listen, Element } from '@stencil/core';
+import { ComponentInterface, Component, Host, h, Listen, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'we-tab-group',
@@ -7,12 +7,12 @@ import { ComponentInterface, Component, Host, h, Listen, Element } from '@stenci
 })
 export class TabGroup implements ComponentInterface {
   @Element() el: HTMLElement;
+  @State() contentSlot: HTMLDivElement;
   
   @Listen('tabCallback')
   tabCallbackHandler(event?: any) {
     const value = event && event.detail || null;
-    const content = this.el.shadowRoot.querySelector('section');
-    const line = this.el.shadowRoot.querySelector('.line');
+    const line: any = this.el.shadowRoot.querySelector('.line');
     const tabs = this.el.querySelectorAll('we-tab');
     let isEnabled = false;
 
@@ -22,17 +22,25 @@ export class TabGroup implements ComponentInterface {
         const left = (tabPosition) * (100 / tabs.length);
         const currentContent = tab.querySelector('[slot="content"]');
         isEnabled = true;
-        content.innerHTML = currentContent.innerHTML;
+        this.contentSlot.innerHTML = currentContent.innerHTML;
+        this.el.appendChild(this.contentSlot);
         tab.setAttribute('enabled', 'true');
-        line.setAttribute('style', `left: ${left}%`);
+        line.style.left = `${left}%`;
       } else {
         tab.setAttribute('enabled', 'false');
       }
     });
     if (!isEnabled) {
       const defaultContent = tabs[0].querySelector('[slot="content"]');
-      content.innerHTML = defaultContent.innerHTML;
+      this.contentSlot.innerHTML = defaultContent.innerHTML;
+      line.style.width = `${100 / tabs.length}%`;
+      this.el.appendChild(this.contentSlot);
     } 
+  }
+
+  constructor() {
+    this.contentSlot = document.createElement('div');
+    this.contentSlot.slot = 'tab-content';
   }
 
   componentDidRender() {
@@ -46,7 +54,7 @@ export class TabGroup implements ComponentInterface {
           <slot></slot>
           <div class="line"></div>
         </header>
-        <section></section>
+        <slot name="tab-content" />
       </Host>
     );
   }
