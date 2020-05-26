@@ -29,7 +29,7 @@ export namespace Components {
         "srcImgLeft": string;
         "srcImgRight": string;
     }
-    interface WeChipsGroup {
+    interface WeDivider {
     }
     interface WeRadio {
         "checked": boolean;
@@ -91,11 +91,11 @@ declare global {
         prototype: HTMLWeChipsElement;
         new (): HTMLWeChipsElement;
     };
-    interface HTMLWeChipsGroupElement extends Components.WeChipsGroup, HTMLStencilElement {
+    interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
     }
-    var HTMLWeChipsGroupElement: {
-        prototype: HTMLWeChipsGroupElement;
-        new (): HTMLWeChipsGroupElement;
+    var HTMLWeDividerElement: {
+        prototype: HTMLWeDividerElement;
+        new (): HTMLWeDividerElement;
     };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
@@ -127,7 +127,7 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
-        "we-chips-group": HTMLWeChipsGroupElement;
+        "we-divider": HTMLWeDividerElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
@@ -162,7 +162,7 @@ declare namespace LocalJSX {
         "srcImgLeft"?: string;
         "srcImgRight"?: string;
     }
-    interface WeChipsGroup {
+    interface WeDivider {
     }
     interface WeRadio {
         "checked"?: boolean;
@@ -199,7 +199,7 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
-        "we-chips-group": WeChipsGroup;
+        "we-divider": WeDivider;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
@@ -215,7 +215,7 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
-            "we-chips-group": LocalJSX.WeChipsGroup & JSXBase.HTMLAttributes<HTMLWeChipsGroupElement>;
+            "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
