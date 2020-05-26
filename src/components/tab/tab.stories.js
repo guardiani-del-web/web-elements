@@ -17,7 +17,7 @@ export const Basic = () => {
 
   return html`
     <we-tab-group>
-      <we-tab enabled="true">
+      <we-tab>
         <div slot="header">Features</div>
         <div slot="content">
           <h3>Features</h3>

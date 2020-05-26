@@ -37,7 +37,7 @@
       opacity: 1;
     }
   }
-  div {
+  slot[name="content"] {
     display: none;
   }
 }
