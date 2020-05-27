@@ -21,6 +21,16 @@ export namespace Components {
         "changeCallback": any;
         "name": any;
     }
+    interface WeChips {
+        "isSelectable": boolean;
+        "label": string;
+        "removeLeft": boolean;
+        "removeRight": boolean;
+        "srcImgLeft": string;
+        "srcImgRight": string;
+    }
+    interface WeDivider {
+    }
     interface WeRadio {
         "checked": boolean;
         "disabled": boolean;
@@ -41,6 +51,18 @@ export namespace Components {
         "enabled": boolean;
     }
     interface WeTabGroup {
+    }
+    interface WeTextarea {
+        "autofocus": boolean;
+        "cols": any;
+        "disabled": boolean;
+        "maxlength": number;
+        "name": string;
+        "placeholder": string;
+        "readonly": boolean;
+        "required": boolean;
+        "row": any;
+        "text": string;
     }
 }
 declare global {
@@ -67,6 +89,18 @@ declare global {
     var HTMLWeCheckboxGroupElement: {
         prototype: HTMLWeCheckboxGroupElement;
         new (): HTMLWeCheckboxGroupElement;
+    };
+    interface HTMLWeChipsElement extends Components.WeChips, HTMLStencilElement {
+    }
+    var HTMLWeChipsElement: {
+        prototype: HTMLWeChipsElement;
+        new (): HTMLWeChipsElement;
+    };
+    interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
+    }
+    var HTMLWeDividerElement: {
+        prototype: HTMLWeDividerElement;
+        new (): HTMLWeDividerElement;
     };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
@@ -98,16 +132,25 @@ declare global {
         prototype: HTMLWeTabGroupElement;
         new (): HTMLWeTabGroupElement;
     };
+    interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
+    }
+    var HTMLWeTextareaElement: {
+        prototype: HTMLWeTextareaElement;
+        new (): HTMLWeTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
+        "we-chips": HTMLWeChipsElement;
+        "we-divider": HTMLWeDividerElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
+        "we-textarea": HTMLWeTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -127,6 +170,18 @@ declare namespace LocalJSX {
     interface WeCheckboxGroup {
         "changeCallback"?: any;
         "name": any;
+    }
+    interface WeChips {
+        "isSelectable"?: boolean;
+        "label"?: string;
+        "onRemoveCallback"?: (event: CustomEvent<any>) => void;
+        "onSelectCallback"?: (event: CustomEvent<any>) => void;
+        "removeLeft"?: boolean;
+        "removeRight"?: boolean;
+        "srcImgLeft"?: string;
+        "srcImgRight"?: string;
+    }
+    interface WeDivider {
     }
     interface WeRadio {
         "checked"?: boolean;
@@ -151,16 +206,31 @@ declare namespace LocalJSX {
     }
     interface WeTabGroup {
     }
+    interface WeTextarea {
+        "autofocus"?: boolean;
+        "cols"?: any;
+        "disabled"?: boolean;
+        "maxlength"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        "required"?: boolean;
+        "row"?: any;
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
+        "we-chips": WeChips;
+        "we-divider": WeDivider;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
+        "we-textarea": WeTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -171,11 +241,14 @@ declare module "@stencil/core" {
             "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
+            "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
+            "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
+            "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
 }
