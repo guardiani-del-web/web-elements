@@ -47,6 +47,11 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
+    interface WeTab {
+        "enabled": boolean;
+    }
+    interface WeTabGroup {
+    }
     interface WeTextarea {
         "autofocus": boolean;
         "cols": any;
@@ -115,6 +120,18 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
+    }
+    var HTMLWeTabElement: {
+        prototype: HTMLWeTabElement;
+        new (): HTMLWeTabElement;
+    };
+    interface HTMLWeTabGroupElement extends Components.WeTabGroup, HTMLStencilElement {
+    }
+    var HTMLWeTabGroupElement: {
+        prototype: HTMLWeTabGroupElement;
+        new (): HTMLWeTabGroupElement;
+    };
     interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
     }
     var HTMLWeTextareaElement: {
@@ -131,6 +148,8 @@ declare global {
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-tab": HTMLWeTabElement;
+        "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
     }
 }
@@ -181,6 +200,12 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value"?: number;
     }
+    interface WeTab {
+        "enabled"?: boolean;
+        "onTabCallback"?: (event: CustomEvent<any>) => void;
+    }
+    interface WeTabGroup {
+    }
     interface WeTextarea {
         "autofocus"?: boolean;
         "cols"?: any;
@@ -203,6 +228,8 @@ declare namespace LocalJSX {
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-tab": WeTab;
+        "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
     }
 }
@@ -219,6 +246,8 @@ declare module "@stencil/core" {
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
+            "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
