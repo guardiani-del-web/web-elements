@@ -16,10 +16,12 @@ import {
   shadow: true,
 })
 export class Switch implements ComponentInterface {
-  @Prop() label: string = "";
+  @Prop() labelLeft: string= "";
+  @Prop() labelRight: string= "";
   @Prop() initialState: boolean = true;
   @State() state: boolean = this.initialState;
   @Event() changeStateCallback: EventEmitter;
+
 
   handleChangeState() {
     this.state = !this.state;
@@ -29,7 +31,12 @@ export class Switch implements ComponentInterface {
   render() {
     return (
       <Host>
-        <h1>we-switch is ready!</h1>
+        <div class="container">
+          <input type="checkbox" id="switch" />
+          <label class="switch" for="switch"></label>
+          {this.labelLeft && <label class="left">Off</label>}
+          {this.labelRight && <label class="right">On</label>}
+        </div>
       </Host>
     );
   }
