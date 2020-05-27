@@ -8,20 +8,18 @@ import { ComponentInterface, Component, Host, h, Listen, Element, State } from '
 export class TabGroup implements ComponentInterface {
   @Element() el: HTMLElement;
   @State() contentSlot: HTMLDivElement;
+  @State() tabs: NodeListOf<HTMLWeTabElement>;
   
   @Listen('tabCallback')
-  tabCallbackHandler(event?: any) {
-    const value = event && event.detail || null;
+  tabCallbackHandler(event: any) {
+    const value = event && event.detail;
     const line: any = this.el.shadowRoot.querySelector('.line');
-    const tabs = this.el.querySelectorAll('we-tab');
-    let isEnabled = false;
 
-    tabs.forEach((tab, tabPosition) => {
-      if (tab.getAttribute('data-id') === value 
-        || (value === null && tab.getAttribute('enabled'))) {
-        const left = (tabPosition) * (100 / tabs.length);
+    this.tabs.forEach((tab, tabPosition) => {
+      tab.style.width = `${100 / this.tabs.length}%`;
+      if (tab.getAttribute('data-id') === value) {
+        const left = (tabPosition) * (100 / this.tabs.length);
         const currentContent = tab.querySelector('[slot="content"]');
-        isEnabled = true;
         this.contentSlot.innerHTML = currentContent.innerHTML;
         this.el.appendChild(this.contentSlot);
         tab.setAttribute('enabled', 'true');
@@ -29,22 +27,34 @@ export class TabGroup implements ComponentInterface {
       } else {
         tab.setAttribute('enabled', 'false');
       }
+    }); 
+  }
+
+  initTabs() {
+    const line: any = this.el.shadowRoot.querySelector('.line');
+    let getTabEnabledPosition = 0;
+    this.tabs.forEach((tab, position) => {
+      if (tab.getAttribute('enabled') === 'true') {
+        getTabEnabledPosition = position;
+      }
+      tab.style.width = `${100 / this.tabs.length}%`;
     });
-    if (!isEnabled) {
-      const defaultContent = tabs[0].querySelector('[slot="content"]');
-      this.contentSlot.innerHTML = defaultContent.innerHTML;
-      line.style.width = `${100 / tabs.length}%`;
-      this.el.appendChild(this.contentSlot);
-    } 
+    const defaultContent = this.tabs[getTabEnabledPosition].querySelector('[slot="content"]');
+    const left = (getTabEnabledPosition) * (100 / this.tabs.length);
+    line.style.left = `${left}%`;
+    this.contentSlot.innerHTML = defaultContent.innerHTML;
+    line.style.width = `${100 / this.tabs.length}%`;
+    this.el.appendChild(this.contentSlot);
   }
 
   constructor() {
     this.contentSlot = document.createElement('div');
     this.contentSlot.slot = 'tab-content';
+    this.tabs = this.el.querySelectorAll('we-tab');
   }
 
   componentDidRender() {
-    this.tabCallbackHandler();
+    this.initTabs();
   }
 
   render() {

@@ -1,33 +1,46 @@
+@import '../../scss/index.scss';
+
+/**
+ * @prop --enabled-tab-color: Enabled tab color <br> Default: #D7DCDF
+ * @prop --label-font-size: Label font size <br> Default: 1rem
+ * @prop --label-height: Label height <br> Default: 2.25rem
+ * @prop --label-line-height: Label line height <br> Default: 2.25rem
+ * @prop --label-text-align: Label text align <br> Default: center
+ * @prop --label-background-color: Label background <br> Default: #FFFFFF
+ * @prop --label-color: Label color <br> Default: #212121
+ * @prop --hover-color: Hover color <br> Default: #ccc
+ * @prop --hover-height: Hover height <br> Default: 0.125rem
+ * @prop --enabled-height: Enabled height <br> Default: 0.125rem
+ * @prop --enabled-background-color: Enabled background color height <br> Default: #3F51B5
+ * @prop --enabled-top: Enabled top <br> Default: 2.125rem
+ */
+
 :host {
-  display: inline-block;
-  width: 33.33%;
-  margin: 0;
-  padding: 0;
   input {
     display: none;
     &:checked + label {
-      background: #eee;
+      background: var(--enabled-tab-color, $background-color);
     }
   }
   label {
     display: inline-block;
-    font-size: 16px;
-    height: 36px;
-    line-height: 36px;
+    font-size: var(--label-font-size, 1rem);
+    height: var(--label-height, 2.25rem);
+    line-height: var(--label-line-height, 2.25rem);
     width: 100%;
-    text-align: center;
-    background: #f4f4f4;
-    color: #555;
+    text-align: var(--label-text-align, center);
+    background: var(--label-background-color, $text-icons);
+    color: var(--label-color, $primary-text);
     position: relative;
     transition: 0.25s background ease;
     cursor: pointer;
     &::after {
       content: "";
-      height: 2px;
+      height: var(--hover-height, 0.125rem);
       width: 100%;
       position: absolute;
       display: block;
-      background: #ccc;
+      background: var(--hover-color,#ccc);
       bottom: 0;
       opacity: 0;
       left: 0;

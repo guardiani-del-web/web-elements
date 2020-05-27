@@ -1,7 +1,7 @@
-import checkboxData from '../../custom-elements.json';
+import componentsData from '../../custom-elements.json';
 
 export function getCssVariables (tag, color, text) {
-    const element = checkboxData.components.find(item => item.tag === tag);
+    const element = componentsData.components.find(item => item.tag === tag);
     return element.styles.reduce((acc, style) => {
         const { name, docs } = style;
         const isColor = name.includes('color');

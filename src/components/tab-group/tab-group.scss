@@ -1,3 +1,5 @@
+@import '../../scss/index.scss';
+
 :host {
   header {
     display: flex;
@@ -5,9 +7,9 @@
     .line {
       position: absolute;
       z-index: 10;
-      height: 2px;
-      background: #1E88E5;
-      top: 34px;
+      height: var(--enabled-height, 0.125rem);
+      background: var(--enabled-background-color, $primary-color);
+      top: var(--enabled-top, 2.125rem);
       left: 0;
       transition: 0.25s ease;
     }
