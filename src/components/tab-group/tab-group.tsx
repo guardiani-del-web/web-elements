@@ -11,9 +11,9 @@ export class TabGroup implements ComponentInterface {
   @State() tabs: NodeListOf<HTMLWeTabElement>;
   
   @Listen('tabCallback')
-  tabCallbackHandler(event: any) {
-    const value = event && event.detail;
-    const line: any = this.el.shadowRoot.querySelector('.line');
+  tabCallbackHandler(event: CustomEvent) {
+    const value = event.detail;
+    const line: HTMLElement = this.el.shadowRoot.querySelector('.line');
 
     this.tabs.forEach((tab, tabPosition) => {
       tab.style.width = `${100 / this.tabs.length}%`;
@@ -31,7 +31,7 @@ export class TabGroup implements ComponentInterface {
   }
 
   initTabs() {
-    const line: any = this.el.shadowRoot.querySelector('.line');
+    const line: HTMLElement = this.el.shadowRoot.querySelector('.line');
     let getTabEnabledPosition = 0;
     this.tabs.forEach((tab, position) => {
       if (tab.getAttribute('enabled') === 'true') {
