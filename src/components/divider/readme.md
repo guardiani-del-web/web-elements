@@ -16,7 +16,7 @@
 | `--divider-margin-right`    | divider margin-right <br> Default: 0px                  |
 | `--divider-radius`          | divider radiues <br> Default: 0px                       |
 | `--divider-style`           | divider style <br> Default: solid                       |
-| `--divider-width`           | divider width <br> Dafault: 100%                        |
+| `--divider-width`           | divider width <br> Default: 100%                        |
 
 
 ----------------------------------------------
