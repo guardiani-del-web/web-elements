@@ -13,10 +13,19 @@ export default {
 };
 
 export const Basic = () => {
+  const title = text('title','Title');
+  const subtitle = text('subtitle','Subtitle');
+  const texts = text('bodytext','Some quick example text to build on the card title and make up the bulk of the cards content.');
+
+
   const cssVariables = getCssVariables('we-card', color, text);
 
   return html`
-    <we-card></we-card>
+    <we-card>
+      <div slot="title">${title}</div>
+      <div slot="subtitle">${subtitle}</div>
+      <div slot="texto">${texts}</div>
+    </we-card>
     <style>
       html {
         ${cssVariables}
