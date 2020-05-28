@@ -9,15 +9,16 @@
 
 | Property       | Attribute       | Description | Type      | Default |
 | -------------- | --------------- | ----------- | --------- | ------- |
-| `initialState` | `initial-state` |             | `boolean` | `true`  |
-| `label`        | `label`         |             | `string`  | `""`    |
+| `initialState` | `initial-state` |             | `boolean` | `false` |
+| `labelLeft`    | `label-left`    |             | `string`  | `""`    |
+| `labelRight`   | `label-right`   |             | `string`  | `""`    |
 
 
 ## Events
 
-| Event                 | Description | Type               |
-| --------------------- | ----------- | ------------------ |
-| `changeStateCallback` |             | `CustomEvent<any>` |
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `switchCallback` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

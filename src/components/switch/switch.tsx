@@ -18,22 +18,22 @@ import {
 export class Switch implements ComponentInterface {
   @Prop() labelLeft: string= "";
   @Prop() labelRight: string= "";
-  @Prop() initialState: boolean = true;
+  @Prop() initialState: boolean = false;
   @State() state: boolean = this.initialState;
-  @Event() changeStateCallback: EventEmitter;
+  @Event() switchCallback: EventEmitter;
 
 
-  handleChangeState() {
+  handleChangeState(event:any) {
     this.state = !this.state;
-    this.changeStateCallback.emit(this.state);
+    this.switchCallback.emit(event);
   }
 
   render() {
     return (
       <Host>
         <div class="container">
-          <input type="checkbox" id="switch" />
-          <label class="switch" for="switch"></label>
+          <input type="checkbox" id="switch" onClick={this.handleChangeState.bind(this)} checked={this.initialState}/>
+          <label class="switch" htmlFor="switch"></label>
           {this.labelLeft && <label class="left">Off</label>}
           {this.labelRight && <label class="right">On</label>}
         </div>

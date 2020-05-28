@@ -47,7 +47,8 @@ export namespace Components {
     }
     interface WeSwitch {
         "initialState": boolean;
-        "label": string;
+        "labelLeft": string;
+        "labelRight": string;
     }
     interface WeTextarea {
         "autofocus": boolean;
@@ -183,8 +184,9 @@ declare namespace LocalJSX {
     }
     interface WeSwitch {
         "initialState"?: boolean;
-        "label"?: string;
-        "onChangeStateCallback"?: (event: CustomEvent<any>) => void;
+        "labelLeft"?: string;
+        "labelRight"?: string;
+        "onSwitchCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeTextarea {
         "autofocus"?: boolean;
