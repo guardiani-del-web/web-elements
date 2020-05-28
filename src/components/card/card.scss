@@ -1,15 +1,35 @@
+
+/**
+  * @prop --card-background-color: card background-color <br> Default: rgb(255, 255, 255)
+  * @prop --card-width: card width <br> Default: 18rem
+  * @prop --card-border: card border <br> Default: 1px
+  * @prop --card-style: card style <br> Default: solid
+  * @prop --card-border-color: card border-color <br> Default: rgba(0, 0, 0, .125)
+  * @prop --card-border-radius: card border-radius <br> Default: .25rem
+  
+  * @prop --card-body-padding: card-body padding <br> Default: 1.25rem
+  
+  * @prop --card-title-margin-bottom: card-title-margin-bottom margin-bottom <br> Default: .75rem
+  * @prop --card-title-font-size: card-title-font-size font-size <br> 1.25rem
+  * @prop --card-title-font-weight: card-title-font-weight font-weight <br> 500
+  * @prop --card-title-line-height: card-title-line-height line-height <br> 1.2
+
+  * @prop --card-
+*/
+
+
 :host {
   display: block;
 }
 
 .card {
-  background-color: white;
+  background-color: var(--card-background-color, rgb(255, 255, 255));
   width: 18rem;
-  border: 1px solid rgba($color: #000000, $alpha: .125);
+  border: var(--card-border, 1px) var(--card-style, solid) var(--card-border-color, $card-border-color-a125);
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  border-radius: .25rem;
+  border-radius: var(--card-border-radius, .25rem) ;
   background-clip: border-box;
 
   &__body {
