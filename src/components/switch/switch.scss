@@ -1,16 +1,18 @@
+@import '../../scss/index.scss';
+
 /**
-  * @prop --container--width: Width of container  <br> Default: 12.5em
-  * @prop --container--height: Height of container <br> Default: 6.250em
+  * @prop --container--width: Width of container  <br> Default: 3em
+  * @prop --container--height: Height of container <br> Default: 1.5em
   * @prop --switch--cursor: Cursor on switch <br> Default: pointer
   * @prop --switch--background: Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)
-  * @prop --switch--background-change: Background color of switch when change from initial condition <br> Default: rgba(186, 218, 85,1)
+  * @prop --switch--background-change: Background color of switch when change from initial condition <br> Default: #3F51B5
   * @prop --switch--border-radius: Border radius of switch  <br> Default: 6.250em
-  * @prop --switch_after--top: Distance from top of button switch <br> Default: 0.313em
+  * @prop --switch_after--top: Distance from top of button switch <br> Default: 0.22em
   * @prop --switch_after--left: Distance from left of icon switch <br> Default: 0.313em
-  * @prop --switch_after--width: Width of button switch <br> Default: 5.625em
-  * @prop --switch_after--height: Height of button switch <br> Default: 5.625em
+  * @prop --switch_after--width: Width of button switch <br> Default: 1em
+  * @prop --switch_after--height: Height of button switch <br> Default: 1em
   * @prop --switch_after--background: Background of button switch <br> Default: rgba(255, 255, 255, 1)
-  * @prop --switch_after--border-radius: Border radius of button switch <br> Default: 5.625em
+  * @prop --switch_after--border-radius: Border radius of button switch <br> Default: 50%
   * @prop --switch_after--transition: Transition options about the changement of button switch <br> Default: 0.3s
   * @prop --container--font-size: Font size of labels inside the switch <br> Default: 2em
   * @prop --container--font-weight: Font weight of labels inside the switch <br> Default: bold
@@ -18,17 +20,12 @@
 
 :host {
   display: block;
-}
-
-.container {
   position: relative;
-  width: var(--container--width, 12.5em);
-  height: var(--container--height, 6.250em);
+  width: var(--container--width, 3em);
+  height: var(--container--height, 1.5em);
 
   input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
+    display: none;
   }
   .switch {
     display: block;
@@ -42,17 +39,17 @@
       content: "";
       position: absolute;
       z-index: 2;
-      top: var(--switch_after--top, 0.313em);
+      top: var(--switch_after--top, 0.22em);
       left: var(--switch_after--left, 0.313em);
-      width: var(--switch_after--width, 5.625em);
-      height: var(--switch_after--height, 5.625em);
+      width: var(--switch_after--width, 1em);
+      height: var(--switch_after--height, 1em);
       background: var(--switch_after--background, rgba(255, 255, 255, 1));
-      border-radius: var(--switch_after--border-radius, 5.625em);
+      border-radius: var(--switch_after--border-radius, 50%);
       transition: var(--switch_after--transition, 0.3s);
     }
   }
   input:checked + .switch {
-    background: var(--switch--background-change, rgba(186, 218, 85, 1));
+    background: var(--switch--background-change, $primary_color);
   }
 
   input:checked + .switch:after {
