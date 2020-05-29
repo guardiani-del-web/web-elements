@@ -21,15 +21,18 @@
   * @prop --card-title-font-size: card-title-font-size font-size <br> Default: 1.25rem
   * @prop --card-title-font-weight: card-title-font-weight font-weight <br> Default: 500
   * @prop --card-title-line-height: card-title-line-height line-height <br> Default: 1.2
+  * @prop --card-title-text-align: card-title-text-align text-align <br> Default: left
 
   * @prop --card-subtitle-margin-bottom: card-subtitle-margin-bottom margin-bottom <br> Default: .5rem
   * @prop --card-subtitle-font-size: card-subtitle-font-size font-size <br> Default: 1rem
   * @prop --card-subtitle-font-weight: card-subtitle-font-weight font-weight <br> Default: 500
   * @prop --card-subtitle-line-height: card-subtitle-line-height line-height <br> Default: 1.2
   * @prop --card-subtitle-color: card-subtitle-color color: <br> Default: rgb(108, 117, 125)
+  * @prop --card-subtitle-text-align: card-subtitle-text-align text-align <br> Defaul: left
 
-  * @prop --card-texto-margin-top: card-text-margin-top margin-top <br> Default: 0
-  * @prop --card-texto-margin-bottom: card-text-margin-bottom margin-bottom <br> Default: 0
+  * @prop --card-text-margin-top: card-text-margin-top margin-top <br> Default: 0
+  * @prop --card-text-margin-bottom: card-text-margin-bottom margin-bottom <br> Default: 0
+  * @prop --card-text-text-align: card-text-text-align text-align <br> Default: left
   
  
 */
@@ -61,6 +64,7 @@
       font-size: var(--card-title-font-size, 1.25rem);
       font-weight: var(--card-title-font-weight, 500);
       line-height: var(--card-title-line-height, 1.2);
+      text-align: var(--card-title-text-align, left);
     }
 
     &__subtitle {
@@ -69,12 +73,14 @@
       font-weight: var(--card-subtitle-font-weight ,500);
       line-height: var(--card-subtitle-line-height ,1.2);
       color: var(--card-subtitle-color ,#6c757d);
+      text-align: var(--card-subtitle-text-align, left);
     }
 
     &__texts {
       margin-top: var(--card-texto-margin-top ,0);
       margin-bottom: var(--card-texto-margin-bottom ,1rem);
       word-wrap: break-word;
+      text-align: var(--card-text-text-align, left);
     }
   }
   

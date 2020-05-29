@@ -1,6 +1,12 @@
 # we-card
 
-
+```html
+     <we-card>
+      <div slot="title">Title</div>
+      <div slot="subtitle">Subtitle</div>
+      <div slot="texts">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+    </we-card>
+```
 
 <!-- Auto Generated Below -->
 
@@ -25,12 +31,17 @@
 | `--card-subtitle-font-weight`   | card-subtitle-font-weight font-weight <br> Default: 500       |
 | `--card-subtitle-line-height`   | card-subtitle-line-height line-height <br> Default: 1.2       |
 | `--card-subtitle-margin-bottom` | card-subtitle-margin-bottom margin-bottom <br> Default: .5rem |
+| `--card-subtitle-text-align`    | card-subtitle-text-align text-align <br> Defaul: left         |
+| `--card-text-margin-bottom`     | card-text-margin-bottom margin-bottom <br> Default: 0         |
+| `--card-text-margin-top`        | card-text-margin-top margin-top <br> Default: 0               |
+| `--card-text-text-align`        | card-text-text-align text-align <br> Default: left            |
 | `--card-texto-margin-bottom`    | card-text-margin-bottom margin-bottom <br> Default: 0         |
 | `--card-texto-margin-top`       | card-text-margin-top margin-top <br> Default: 0               |
 | `--card-title-font-size`        | card-title-font-size font-size <br> Default: 1.25rem          |
 | `--card-title-font-weight`      | card-title-font-weight font-weight <br> Default: 500          |
 | `--card-title-line-height`      | card-title-line-height line-height <br> Default: 1.2          |
 | `--card-title-margin-bottom`    | card-title-margin-bottom margin-bottom <br> Default: .75rem   |
+| `--card-title-text-align`       | card-title-text-align text-align <br> Default: left           |
 | `--card-width`                  | card width <br> Default: 18rem                                |
 
 

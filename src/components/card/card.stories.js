@@ -15,7 +15,7 @@ export default {
 export const Basic = () => {
   const title = text('title','Title');
   const subtitle = text('subtitle','Subtitle');
-  const texts = text('bodytext','Some quick example text to build on the card title and make up the bulk of the cards content.');
+  const texts = text('text','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
 
   const cssVariables = getCssVariables('we-card', color, text);
