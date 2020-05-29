@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, h } from '@stencil/core';
+import { ComponentInterface, Component, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'we-divider',
@@ -9,9 +9,9 @@ export class Divider implements ComponentInterface {
 
   render() {
     return (
-      <div class="container">
-        <div class="container__line" />
-      </div>
+      <Host>
+        <div class="line" />
+      </Host>
     );
   }
 

@@ -1,6 +1,8 @@
 # we-slider
 
-
+```html
+<we-slider value=10 min=0 max=50>Slider 1</we-slider>
+```
 
 <!-- Auto Generated Below -->
 
