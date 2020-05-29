@@ -29,6 +29,8 @@ export namespace Components {
         "srcImgLeft": string;
         "srcImgRight": string;
     }
+    interface WeDivider {
+    }
     interface WeRadio {
         "checked": boolean;
         "disabled": boolean;
@@ -49,6 +51,11 @@ export namespace Components {
         "initialState": boolean;
         "labelLeft": string;
         "labelRight": string;
+    }
+    interface WeTab {
+        "enabled": boolean;
+    }
+    interface WeTabGroup {
     }
     interface WeTextarea {
         "autofocus": boolean;
@@ -94,6 +101,12 @@ declare global {
         prototype: HTMLWeChipsElement;
         new (): HTMLWeChipsElement;
     };
+    interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
+    }
+    var HTMLWeDividerElement: {
+        prototype: HTMLWeDividerElement;
+        new (): HTMLWeDividerElement;
+    };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
     var HTMLWeRadioElement: {
@@ -118,6 +131,18 @@ declare global {
         prototype: HTMLWeSwitchElement;
         new (): HTMLWeSwitchElement;
     };
+    interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
+    }
+    var HTMLWeTabElement: {
+        prototype: HTMLWeTabElement;
+        new (): HTMLWeTabElement;
+    };
+    interface HTMLWeTabGroupElement extends Components.WeTabGroup, HTMLStencilElement {
+    }
+    var HTMLWeTabGroupElement: {
+        prototype: HTMLWeTabGroupElement;
+        new (): HTMLWeTabGroupElement;
+    };
     interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
     }
     var HTMLWeTextareaElement: {
@@ -130,10 +155,13 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
+        "we-divider": HTMLWeDividerElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
         "we-switch": HTMLWeSwitchElement;
+        "we-tab": HTMLWeTabElement;
+        "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
     }
 }
@@ -165,6 +193,8 @@ declare namespace LocalJSX {
         "srcImgLeft"?: string;
         "srcImgRight"?: string;
     }
+    interface WeDivider {
+    }
     interface WeRadio {
         "checked"?: boolean;
         "disabled"?: boolean;
@@ -188,6 +218,12 @@ declare namespace LocalJSX {
         "labelRight"?: string;
         "onSwitchCallback"?: (event: CustomEvent<any>) => void;
     }
+    interface WeTab {
+        "enabled"?: boolean;
+        "onTabCallback"?: (event: CustomEvent<any>) => void;
+    }
+    interface WeTabGroup {
+    }
     interface WeTextarea {
         "autofocus"?: boolean;
         "cols"?: any;
@@ -206,10 +242,13 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
+        "we-divider": WeDivider;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
         "we-switch": WeSwitch;
+        "we-tab": WeTab;
+        "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
     }
 }
@@ -222,10 +261,13 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
+            "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
             "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
+            "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
+            "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
