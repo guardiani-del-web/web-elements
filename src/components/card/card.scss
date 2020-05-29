@@ -8,6 +8,12 @@
   * @prop --card-border-style: card style <br> Default: solid
   * @prop --card-border-color: card border-color <br> Default: rgba(0, 0, 0, .125)
   * @prop --card-border-radius: card border-radius <br> Default: .25rem
+
+  * @prop --card-shadow-offset-x: card-shadow-offset-x offset-x <br> Default: 0
+  * @prop --card-shadow-offset-y: card-shadow-offset-y offset-y <br> Default: 0
+  * @prop --card-shadow-blur-radius: card-shadow-blur-radiues blur-radius <br> Default: 0
+  * @prop --card-shadow-spread-radius: card-shadow-spread-radius spread-radius <br> Default: 0
+  * @prop --card-shadow-color: card-shadow-color color <br> Default: rgb(0, 0 ,0)
   
   * @prop --card-body-padding: card-body-padding padding <br> Default: 1.25rem
   
@@ -32,8 +38,9 @@
 :host {
  
   background-color: var(--card-background-color, rgb(255, 255, 255));
-  width: 18rem;
+  width: var(--card-width ,18rem);
   border: var(--card-border, 1px) var(--card-border-style, solid) var(--card-border-color, $card-border-color-a125);
+  box-shadow: var(--card-shadow-offset-x, 0) var(--card-shadow-offset-y, 0) var(--card-shadow-blur-radius, 0) var(--card-shadow-spread-radius, 0) var(--card-shadow-color, $card-shadow-color);
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
