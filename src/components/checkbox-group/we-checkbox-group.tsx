@@ -16,8 +16,8 @@ export class CheckboxGroup implements ComponentInterface {
   }
 
   @Listen('checkboxCallback')
-  checkboxCallbackHandler(event: any) {
-    const { value } = event.target;
+  checkboxCallbackHandler(event: CustomEvent) {
+    const value = event.detail;
     this.changeCallback = parseFunction(this.changeCallback);
 
     const getCheckedIndex = this.checkedItems.findIndex(item => item.value === value);
