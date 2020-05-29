@@ -48,9 +48,11 @@ export namespace Components {
         "value": number;
     }
     interface WeSwitch {
-        "initialState": boolean;
+        "changeCallback": any;
+        "enabled": boolean;
         "labelLeft": string;
         "labelRight": string;
+        "name": any;
     }
     interface WeTab {
         "enabled": boolean;
@@ -213,10 +215,11 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface WeSwitch {
-        "initialState"?: boolean;
+        "changeCallback"?: any;
+        "enabled"?: boolean;
         "labelLeft"?: string;
         "labelRight"?: string;
-        "onSwitchCallback"?: (event: CustomEvent<any>) => void;
+        "name": any;
     }
     interface WeTab {
         "enabled"?: boolean;
