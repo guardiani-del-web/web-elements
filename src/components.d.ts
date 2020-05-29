@@ -47,6 +47,13 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
+    interface WeSwitch {
+        "changeCallback": any;
+        "enabled": boolean;
+        "labelLeft": string;
+        "labelRight": string;
+        "name": any;
+    }
     interface WeTab {
         "enabled": boolean;
     }
@@ -120,6 +127,12 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeSwitchElement extends Components.WeSwitch, HTMLStencilElement {
+    }
+    var HTMLWeSwitchElement: {
+        prototype: HTMLWeSwitchElement;
+        new (): HTMLWeSwitchElement;
+    };
     interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
     }
     var HTMLWeTabElement: {
@@ -148,6 +161,7 @@ declare global {
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-switch": HTMLWeSwitchElement;
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
@@ -200,6 +214,13 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value"?: number;
     }
+    interface WeSwitch {
+        "changeCallback"?: any;
+        "enabled"?: boolean;
+        "labelLeft"?: string;
+        "labelRight"?: string;
+        "name": any;
+    }
     interface WeTab {
         "enabled"?: boolean;
         "onTabCallback"?: (event: CustomEvent<any>) => void;
@@ -228,6 +249,7 @@ declare namespace LocalJSX {
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-switch": WeSwitch;
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
@@ -246,6 +268,7 @@ declare module "@stencil/core" {
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;

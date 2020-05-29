@@ -11,8 +11,8 @@ export class Checkbox implements ComponentInterface {
   @Prop() checked: boolean;
   @Event() checkboxCallback: EventEmitter;
 
-  handleChange(event: any) {
-    this.checkboxCallback.emit(event);
+  handleChange(event: { target: HTMLInputElement }) {
+    this.checkboxCallback.emit(event.target.value);
   }
 
   render() {

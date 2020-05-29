@@ -8,27 +8,28 @@ import { generateUniqueId } from '@utils';
 })
 export class Accordion implements ComponentInterface {
   @Prop() open: boolean;
-  @State() valueId = generateUniqueId();
+  @State() openId = generateUniqueId();
+  @State() closeId = generateUniqueId();
   @Event() accordionCallback: EventEmitter;
 
-  handleChange(event: any) {
-    this.accordionCallback.emit({ value: event.path[0].value });
+  handleChange(event: { target: HTMLInputElement }) {
+    this.accordionCallback.emit(event.target.value);
   }
 
   render() {
     return (
-      <Host data-id={this.valueId}>
-        <input type="radio" name="accordion" id="acc-open" checked={this.open} value={this.valueId} onChange={this.handleChange.bind(this)} />
+      <Host data-id={this.openId}>
+        <input type="radio" name="accordion" id={this.openId} checked={this.open} value={this.openId} onChange={this.handleChange.bind(this)} />
         <section class="accordion">
-          <label class="accordion-title" htmlFor="acc-open">
+          <label class="accordion-title" htmlFor={this.openId}>
             <slot name="title" />
           </label>
-          <label class="accordion-close" htmlFor="acc-close"></label>
+          <label class="accordion-close" htmlFor={this.closeId}></label>
           <div class="accordion-content">
             <slot name="content" />
           </div>
         </section>
-        <input type="radio" name="accordion" id="acc-close" />
+        <input type="radio" name="accordion" id={this.closeId} />
       </Host>
     );
   }
