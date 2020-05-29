@@ -24,7 +24,7 @@ export const Basic = () => {
     <we-card>
       <div slot="title">${title}</div>
       <div slot="subtitle">${subtitle}</div>
-      <div slot="texto">${texts}</div>
+      <div slot="texts">${texts}</div>
     </we-card>
     <style>
       html {

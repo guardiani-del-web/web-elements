@@ -10,19 +10,17 @@ export class Card implements ComponentInterface {
   render() {
     return (
       <Host>
-        <div class="card">
-          <div class="card__body">
-            <h5 class="title-body">
+          <div class="card-body">
+            <h5 class="card-body__title">
               <slot name="title" />
             </h5>
-            <h6 class="subtitle-body">
+            <h6 class="card-body__subtitle">
               <slot name="subtitle" />
             </h6>
-            <p class="texto-body">
-              <slot name="texto" />
+            <p class="card-body__texts">
+              <slot name="texts" />
             </p>
           </div>
-        </div>
       </Host>
     );
   }
