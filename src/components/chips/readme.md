@@ -1,6 +1,8 @@
 # we-chips
 
-
+```html
+<we-chips src-img-left="prova.jpg" src-img-right="prova.jpg" label="Hello" />
+```
 
 <!-- Auto Generated Below -->
 

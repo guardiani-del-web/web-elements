@@ -1,6 +1,8 @@
 # we-textarea
 
-
+```html
+<we-textarea></we-textarea>
+```
 
 <!-- Auto Generated Below -->
 

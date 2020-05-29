@@ -11,8 +11,8 @@ export class RadioGroup implements ComponentInterface {
   @Prop() changeCallback: any;
 
   @Listen('radioCallback')
-  radioCallbackHandler(event: any) {
-    const { value } = event.target;
+  radioCallbackHandler(event: CustomEvent) {
+    const value = event.detail;
     const radios = this.el.querySelectorAll('we-radio');
     this.changeCallback = parseFunction(this.changeCallback);
 
