@@ -1,0 +1,76 @@
+/**
+  * @prop --container--width: Width of container  <br> Default: 12.5em
+  * @prop --container--height: Height of container <br> Default: 6.250em
+  * @prop --switch--cursor: Cursor on switch <br> Default: pointer
+  * @prop --switch--background: Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)
+  * @prop --switch--background-change: Background color of switch when change from initial condition <br> Default: rgba(186, 218, 85,1)
+  * @prop --switch--border-radius: Border radius of switch  <br> Default: 6.250em
+  * @prop --switch_after--top: Distance from top of button switch <br> Default: 0.313em
+  * @prop --switch_after--left: Distance from left of icon switch <br> Default: 0.313em
+  * @prop --switch_after--width: Width of button switch <br> Default: 5.625em
+  * @prop --switch_after--height: Height of button switch <br> Default: 5.625em
+  * @prop --switch_after--background: Background of button switch <br> Default: rgba(255, 255, 255, 1)
+  * @prop --switch_after--border-radius: Border radius of button switch <br> Default: 5.625em
+  * @prop --switch_after--transition: Transition options about the changement of button switch <br> Default: 0.3s
+  * @prop --container--font-size: Font size of labels inside the switch <br> Default: 2em
+  * @prop --container--font-weight: Font weight of labels inside the switch <br> Default: bold
+  */
+
+:host {
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: var(--container--width, 12.5em);
+  height: var(--container--height, 6.250em);
+
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  .switch {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: var(--switch--cursor, pointer);
+    background: var(--switch--background, rgba(128, 128, 128, 1));
+    border-radius: var(--switch--border-radius, 6.250em);
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: var(--switch_after--top, 0.313em);
+      left: var(--switch_after--left, 0.313em);
+      width: var(--switch_after--width, 5.625em);
+      height: var(--switch_after--height, 5.625em);
+      background: var(--switch_after--background, rgba(255, 255, 255, 1));
+      border-radius: var(--switch_after--border-radius, 5.625em);
+      transition: var(--switch_after--transition, 0.3s);
+    }
+  }
+  input:checked + .switch {
+    background: var(--switch--background-change, rgba(186, 218, 85, 1));
+  }
+
+  input:checked + .switch:after {
+    left: calc(100% - 0.313em);
+    transform: translateX(-100%);
+  }
+
+  .left,
+  .right {
+    position: absolute;
+    top: 50%;
+    font-size: var(--container--font-size, 2em);
+    font-weight: var(--container--font-weight, bold);
+  }
+  .left {
+    left: 0.625em;
+  }
+  .right {
+    right: 0.625em;
+  }
+}
