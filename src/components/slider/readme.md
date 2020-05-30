@@ -9,13 +9,12 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      | Default     |
-| ---------- | ----------- | ----------- | --------- | ----------- |
-| `disabled` | `disabled`  |             | `boolean` | `false`     |
-| `max`      | `max`       |             | `number`  | `undefined` |
-| `min`      | `min`       |             | `number`  | `undefined` |
-| `onChange` | `on-change` |             | `any`     | `undefined` |
-| `value`    | `value`     |             | `number`  | `undefined` |
+| Property             | Attribute  | Description | Type      | Default     |
+| -------------------- | ---------- | ----------- | --------- | ----------- |
+| `disabled`           | `disabled` |             | `boolean` | `false`     |
+| `max`                | `max`      |             | `number`  | `undefined` |
+| `min`                | `min`      |             | `number`  | `undefined` |
+| `value` _(required)_ | `value`    |             | `number`  | `undefined` |
 
 
 ## Events

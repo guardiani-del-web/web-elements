@@ -46,7 +46,6 @@ export namespace Components {
         "disabled": boolean;
         "max": number;
         "min": number;
-        "onChange": any;
         "value": number;
     }
     interface WeSwitch {
@@ -222,9 +221,8 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "max"?: number;
         "min"?: number;
-        "onChange"?: any;
         "onSliderChange"?: (event: CustomEvent<any>) => void;
-        "value"?: number;
+        "value": number;
     }
     interface WeSwitch {
         "changeCallback"?: any;

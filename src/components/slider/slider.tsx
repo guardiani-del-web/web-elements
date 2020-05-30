@@ -1,26 +1,18 @@
 import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
-import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-slider',
-  styleUrl: 'we-slider.scss',
+  styleUrl: 'slider.scss',
   shadow: true,
 })
-export class WeSlider {
-  @Prop() value: number;
+export class Slider {
+  @Prop() value!: number;
   @Prop() min: number;
   @Prop() max: number;
   @Prop() disabled: boolean = false;
-  @Prop() onChange: any;
   @Event() sliderChange: EventEmitter;
 
-  connectedCallback() {
-    if (this.onChange) {
-      this.onChange = parseFunction(this.onChange);
-    }
-  }
-
-  handleChange(event: any) {
+  handleChange(event: { target: HTMLInputElement }) {
     this.sliderChange.emit(event.target.value);
   }
 
