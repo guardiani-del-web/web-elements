@@ -4,7 +4,6 @@ import { withPaddings } from 'storybook-addon-paddings';
 import { withA11y } from '@storybook/addon-a11y';
 import '@storybook/addon-console';
 
-
 addDecorator(withPaddings);
 addDecorator(withA11y);
 

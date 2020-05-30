@@ -3,6 +3,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import readmeAccordion from "./readme.md";
 import readmeAccordionGroup from "../accordion-group/readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
+import { KNOBS_ATTRIBUTES, KNOBS_LIVE } from '../../../.storybook/constants';
 
 export default {
   title: 'Components|Accordion',
@@ -27,20 +28,24 @@ export const Basic = () => {
       content: 'Nulla eget tincidunt dui. Maecenas aliquet nec velit ut mattis. Nulla sagittis ligula in ex placerat lacinia. Praesent ac dui quis augue sollicitudin dictum sit amet cursus neque. Sed posuere libero at lobortis semper.'
     },
   ]
-  const multiple = boolean('Multiple', false);
+  
+  const cssVariables = getCssVariables('we-accordion', color, text);
+
+  const multiple = boolean('Multiple', false, KNOBS_ATTRIBUTES);
+  const open = boolean('Open', false, KNOBS_ATTRIBUTES);
   
   return html`
     <we-accordion-group multiple=${multiple}>
       ${accordionData.map((accordion, i) => html`
-        <we-accordion>
-          <div slot="title">${text(`Title ${i + 1}`, accordion.title)}</div>
-          <div slot="content">${text(`Content ${i + 1}`, accordion.content)}</div>
+        <we-accordion open=${i === 1 ? open : false}>
+          <div slot="title">${text(`Title ${i + 1}`, accordion.title, KNOBS_LIVE)}</div>
+          <div slot="content">${text(`Content ${i + 1}`, accordion.content, KNOBS_LIVE)}</div>
         </we-accordion>
       `)}
     </we-accordion-group>
     <style>
       html {
-        ${getCssVariables('we-accordion', color, text)};
+        ${cssVariables};
       }
     </style>
   `;
