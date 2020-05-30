@@ -6,15 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface WeAccordion {
+        "open": boolean;
+    }
+    interface WeAccordionGroup {
+        "multiple": boolean;
+    }
+    interface WeCard {
+    }
     interface WeCheckbox {
         "checked": boolean;
         "disabled": boolean;
-        "onChange": any;
         "value": string;
     }
     interface WeCheckboxGroup {
+        "changeCallback": any;
         "name": any;
-        "onChange": any;
+    }
+    interface WeChips {
+        "isSelectable": boolean;
+        "label": string;
+        "removeLeft": boolean;
+        "removeRight": boolean;
+        "srcImgLeft": string;
+        "srcImgRight": string;
+    }
+    interface WeDivider {
     }
     interface WeRadio {
         "checked": boolean;
@@ -22,8 +39,8 @@ export namespace Components {
         "value": string;
     }
     interface WeRadioGroup {
+        "changeCallback": any;
         "name": string;
-        "onChange": any;
     }
     interface WeSlider {
         "disabled": boolean;
@@ -32,8 +49,50 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
+    interface WeSwitch {
+        "changeCallback": any;
+        "enabled": boolean;
+        "labelLeft": string;
+        "labelRight": string;
+        "name": any;
+    }
+    interface WeTab {
+        "enabled": boolean;
+    }
+    interface WeTabGroup {
+    }
+    interface WeTextarea {
+        "autofocus": boolean;
+        "cols": any;
+        "disabled": boolean;
+        "maxlength": number;
+        "name": string;
+        "placeholder": string;
+        "readonly": boolean;
+        "required": boolean;
+        "row": any;
+        "text": string;
+    }
 }
 declare global {
+    interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
+    }
+    var HTMLWeAccordionElement: {
+        prototype: HTMLWeAccordionElement;
+        new (): HTMLWeAccordionElement;
+    };
+    interface HTMLWeAccordionGroupElement extends Components.WeAccordionGroup, HTMLStencilElement {
+    }
+    var HTMLWeAccordionGroupElement: {
+        prototype: HTMLWeAccordionGroupElement;
+        new (): HTMLWeAccordionGroupElement;
+    };
+    interface HTMLWeCardElement extends Components.WeCard, HTMLStencilElement {
+    }
+    var HTMLWeCardElement: {
+        prototype: HTMLWeCardElement;
+        new (): HTMLWeCardElement;
+    };
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
     }
     var HTMLWeCheckboxElement: {
@@ -45,6 +104,18 @@ declare global {
     var HTMLWeCheckboxGroupElement: {
         prototype: HTMLWeCheckboxGroupElement;
         new (): HTMLWeCheckboxGroupElement;
+    };
+    interface HTMLWeChipsElement extends Components.WeChips, HTMLStencilElement {
+    }
+    var HTMLWeChipsElement: {
+        prototype: HTMLWeChipsElement;
+        new (): HTMLWeChipsElement;
+    };
+    interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
+    }
+    var HTMLWeDividerElement: {
+        prototype: HTMLWeDividerElement;
+        new (): HTMLWeDividerElement;
     };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
@@ -64,35 +135,88 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeSwitchElement extends Components.WeSwitch, HTMLStencilElement {
+    }
+    var HTMLWeSwitchElement: {
+        prototype: HTMLWeSwitchElement;
+        new (): HTMLWeSwitchElement;
+    };
+    interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
+    }
+    var HTMLWeTabElement: {
+        prototype: HTMLWeTabElement;
+        new (): HTMLWeTabElement;
+    };
+    interface HTMLWeTabGroupElement extends Components.WeTabGroup, HTMLStencilElement {
+    }
+    var HTMLWeTabGroupElement: {
+        prototype: HTMLWeTabGroupElement;
+        new (): HTMLWeTabGroupElement;
+    };
+    interface HTMLWeTextareaElement extends Components.WeTextarea, HTMLStencilElement {
+    }
+    var HTMLWeTextareaElement: {
+        prototype: HTMLWeTextareaElement;
+        new (): HTMLWeTextareaElement;
+    };
     interface HTMLElementTagNameMap {
+        "we-accordion": HTMLWeAccordionElement;
+        "we-accordion-group": HTMLWeAccordionGroupElement;
+        "we-card": HTMLWeCardElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
+        "we-chips": HTMLWeChipsElement;
+        "we-divider": HTMLWeDividerElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-switch": HTMLWeSwitchElement;
+        "we-tab": HTMLWeTabElement;
+        "we-tab-group": HTMLWeTabGroupElement;
+        "we-textarea": HTMLWeTextareaElement;
     }
 }
 declare namespace LocalJSX {
+    interface WeAccordion {
+        "onAccordionCallback"?: (event: CustomEvent<any>) => void;
+        "open"?: boolean;
+    }
+    interface WeAccordionGroup {
+        "multiple"?: boolean;
+    }
+    interface WeCard {
+    }
     interface WeCheckbox {
         "checked"?: boolean;
         "disabled"?: boolean;
-        "onChange"?: any;
-        "onOnCheckboxChange"?: (event: CustomEvent<any>) => void;
+        "onCheckboxCallback"?: (event: CustomEvent<any>) => void;
         "value": string;
     }
     interface WeCheckboxGroup {
+        "changeCallback"?: any;
         "name": any;
-        "onChange"?: any;
+    }
+    interface WeChips {
+        "isSelectable"?: boolean;
+        "label"?: string;
+        "onRemoveCallback"?: (event: CustomEvent<any>) => void;
+        "onSelectCallback"?: (event: CustomEvent<any>) => void;
+        "removeLeft"?: boolean;
+        "removeRight"?: boolean;
+        "srcImgLeft"?: string;
+        "srcImgRight"?: string;
+    }
+    interface WeDivider {
     }
     interface WeRadio {
         "checked"?: boolean;
         "disabled"?: boolean;
-        "onOnRadioChange"?: (event: CustomEvent<any>) => void;
+        "onRadioCallback"?: (event: CustomEvent<any>) => void;
         "value": string;
     }
     interface WeRadioGroup {
+        "changeCallback"?: any;
         "name": string;
-        "onChange"?: any;
     }
     interface WeSlider {
         "disabled"?: boolean;
@@ -102,23 +226,66 @@ declare namespace LocalJSX {
         "onSliderChange"?: (event: CustomEvent<any>) => void;
         "value"?: number;
     }
+    interface WeSwitch {
+        "changeCallback"?: any;
+        "enabled"?: boolean;
+        "labelLeft"?: string;
+        "labelRight"?: string;
+        "name": any;
+    }
+    interface WeTab {
+        "enabled"?: boolean;
+        "onTabCallback"?: (event: CustomEvent<any>) => void;
+    }
+    interface WeTabGroup {
+    }
+    interface WeTextarea {
+        "autofocus"?: boolean;
+        "cols"?: any;
+        "disabled"?: boolean;
+        "maxlength"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        "required"?: boolean;
+        "row"?: any;
+        "text"?: string;
+    }
     interface IntrinsicElements {
+        "we-accordion": WeAccordion;
+        "we-accordion-group": WeAccordionGroup;
+        "we-card": WeCard;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
+        "we-chips": WeChips;
+        "we-divider": WeDivider;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-switch": WeSwitch;
+        "we-tab": WeTab;
+        "we-tab-group": WeTabGroup;
+        "we-textarea": WeTextarea;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "we-accordion": LocalJSX.WeAccordion & JSXBase.HTMLAttributes<HTMLWeAccordionElement>;
+            "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
+            "we-card": LocalJSX.WeCard & JSXBase.HTMLAttributes<HTMLWeCardElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
+            "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
+            "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
+            "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
+            "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
+            "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
         }
     }
 }

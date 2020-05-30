@@ -1,5 +1,7 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   namespace: 'web-elements',
@@ -26,6 +28,9 @@ export const config: Config = {
     openBrowser: false
   },
   plugins: [
-    sass()
+    sass(),
+    postcss({
+      plugins: [autoprefixer()]
+    })
   ]
 };
