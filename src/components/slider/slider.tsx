@@ -1,4 +1,5 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
+import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-slider',
@@ -10,17 +11,19 @@ export class Slider {
   @Prop() min: number;
   @Prop() max: number;
   @Prop() disabled: boolean = false;
-  @Event() sliderChange: EventEmitter;
+  @Prop() sliderCallback: any;
 
-  handleChange(event: { target: HTMLInputElement }) {
-    this.sliderChange.emit(event.target.value);
+  handleChange(event: CustomEvent) {
+    const value = event.currentTarget['value'];
+    this.sliderCallback = parseFunction(this.sliderCallback);
+    this.sliderCallback({ name: 'slider', value });
   }
 
   render() {
     return (
       <Host>
         <label htmlFor="weslider">
-          <slot></slot>
+          <slot />
         </label>
         <input
           type="range"

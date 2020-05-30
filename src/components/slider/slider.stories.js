@@ -11,9 +11,13 @@ export default {
   decorators: [withKnobs],
 };
 
+const sliderHandler = value => {
+  console.log('currentSelection', value);
+}
+
 export const Basic = () => {
   return html`
-    <we-slider value=10 min=0 max=50 onSliderChange={console.log($event)}>Slider 1</we-slider>
+    <we-slider value=10 min=0 max=50 slider-callback=${sliderHandler}>Slider 1</we-slider>
     <style>
       html {
         ${getCssVariables('we-slider', color, text)};
