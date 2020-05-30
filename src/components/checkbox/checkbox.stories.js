@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
+import { withKnobs, text, color } from '@storybook/addon-knobs';
 import readmeCheckbox from "./readme.md";
 import readmeCheckboxGroup from "../checkbox-group/readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
@@ -19,7 +19,7 @@ export const Basic = () => {
   const checkbox3 = text('Label checkbox3', 'Pear');
 
   const checkboxHandler = value => {
-    console.log('currentSelection', value);
+    console.log('checkboxHandler', value);
   }
 
   return html`

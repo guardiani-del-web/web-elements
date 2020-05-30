@@ -18,7 +18,7 @@ export const Basic = () => {
   const name = text('Name', 'Country');
     
   const radioHandler = value => {
-    console.log('currentSelection', value);
+    console.log('radioHandler', value);
   }
 
   return html`

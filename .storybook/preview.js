@@ -2,6 +2,7 @@ import { addParameters, addDecorator } from '@storybook/web-components';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPaddings } from 'storybook-addon-paddings';
 import { withA11y } from '@storybook/addon-a11y';
+import '@storybook/addon-console';
 
 
 addDecorator(withPaddings);

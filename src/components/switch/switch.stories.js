@@ -13,12 +13,12 @@ export default {
 };
 
 export const Basic = () => {
-  const switchHandler = value => {
-    console.log('currentSelection', value);
-  }
-
   const cssVariables = getCssVariables('we-switch', color, text);
   const status = boolean('Enabled', false);
+  
+  const switchHandler = value => {
+    console.log('switchHandler', value);
+  }
 
   return html`
     <we-switch name="switch1" enabled=${status} change-callback=${switchHandler}></we-switch>
