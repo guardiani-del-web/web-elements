@@ -25,7 +25,7 @@ export class WeSlider {
     return (
       <Host>
         <label htmlFor="weslider">
-          <slot></slot>
+          <slot />
         </label>
         <input
           type="range"
