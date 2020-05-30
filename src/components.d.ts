@@ -43,10 +43,11 @@ export namespace Components {
         "name": string;
     }
     interface WeSlider {
+        "changeCallback": any;
         "disabled": boolean;
         "max": number;
         "min": number;
-        "onChange": any;
+        "name": string;
         "value": number;
     }
     interface WeSwitch {
@@ -219,10 +220,11 @@ declare namespace LocalJSX {
         "name": string;
     }
     interface WeSlider {
+        "changeCallback"?: any;
         "disabled"?: boolean;
         "max"?: number;
         "min"?: number;
-        "onChange"?: any;
+        "name": string;
         "value"?: number;
     }
     interface WeSwitch {

@@ -3,25 +3,21 @@ import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-slider',
-  styleUrl: 'we-slider.scss',
+  styleUrl: 'slider.scss',
   shadow: true,
 })
 export class WeSlider {
+  @Prop() name!: string;
   @Prop() value: number;
   @Prop() min: number;
   @Prop() max: number;
   @Prop() disabled: boolean = false;
-  @Prop() onChange: any;
+  @Prop() changeCallback: any;
 
-  connectedCallback() {
-    if (this.onChange) {
-      this.onChange = parseFunction(this.onChange);
-    }
-  }
-
-  handleChange(event: UIEvent) {
-    if (this.onChange) {
-      this.onChange(event);
+  handleChange(event: { target: HTMLInputElement }) {
+    if (this.changeCallback) {
+      this.changeCallback = parseFunction(this.changeCallback);
+      this.changeCallback({ name: this.name, value: event.target.value});
     }
   }
 
@@ -34,6 +30,7 @@ export class WeSlider {
         <input
           type="range"
           id="weslider"
+          name={this.name}
           min={this.min}
           max={this.max}
           value={this.value}
