@@ -22,14 +22,14 @@ npm install --save web-elements
 <html>
   <body>
 
-    <we-checkbox-group name="fruits" change-callback=checkboxHandler>
+    <we-checkbox-group name="fruits" change-callback="checkboxHandler">
       <we-checkbox value="banana">Banana</we-checkbox>
       <we-checkbox value="apple">Apple</we-checkbox>
       <we-checkbox value="pear">Pear</we-checkbox>
     </we-checkbox-group>
 
-    <script type="module" src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.esm.js"></script>
-    <script nomodule src="https://unpkg.com/web-elements@0.0.6/dist/web-elements/web-elements.js"></script>
+    <script type="module" src="https://unpkg.com/web-elements@0.0.8/dist/web-elements/web-elements.esm.js"></script>
+    <script nomodule src="https://unpkg.com/web-elements@0.0.8/dist/web-elements/web-elements.js"></script>
   </body>
 </html>
 ```

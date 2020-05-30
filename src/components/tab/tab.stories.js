@@ -1,8 +1,9 @@
 
 import { html } from 'lit-html';
-import { withKnobs, text, color } from '@storybook/addon-knobs';
+import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import readme from "./readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
+import { KNOBS_LIVE } from '../../../.storybook/constants';
 
 export default {
   title: 'Components|Tabs',
@@ -30,15 +31,16 @@ export const Basic = () => {
       content: 'Vestibulum et ex efficitur, pretium diam eu, ultrices lorem. Maecenas ullamcorper mollis auctor. Nulla convallis placerat imperdiet. Curabitur at mi eget libero varius porta. Vestibulum nibh felis, cursus ullamcorper semper nec, pretium id ipsum. Nulla facilisi. Pellentesque luctus ac lacus non sagittis.'
     }
   ];
+
   const cssVariables = getCssVariables('we-tab', color, text);
 
   return html`
     <we-tab-group>
       ${tabsData.map((tab, i) => html`
         <we-tab enabled=${tab.enabled}>
-          <div slot="header">${text(`Title ${i + 1}`, tab.title)}</div>
+          <div slot="header">${text(`Title ${i + 1}`, tab.title, KNOBS_LIVE)}</div>
           <div slot="content">
-            <p>${text(`Content ${i + 1}`, tab.content)}</p>
+            <p>${text(`Content ${i + 1}`, tab.content, KNOBS_LIVE)}</p>
           </div>
         </we-tab>
       `)}

@@ -6,17 +6,19 @@ import { parseFunction } from '@utils';
   styleUrl: 'slider.scss',
   shadow: true,
 })
-export class Slider {
-  @Prop() value!: number;
+export class WeSlider {
+  @Prop() name!: string;
+  @Prop() value: number;
   @Prop() min: number;
   @Prop() max: number;
   @Prop() disabled: boolean = false;
-  @Prop() sliderCallback: any;
+  @Prop() changeCallback: any;
 
-  handleChange(event: CustomEvent) {
-    const value = event.currentTarget['value'];
-    this.sliderCallback = parseFunction(this.sliderCallback);
-    this.sliderCallback({ name: 'slider', value });
+  handleChange(event: { target: HTMLInputElement }) {
+    if (this.changeCallback) {
+      this.changeCallback = parseFunction(this.changeCallback);
+      this.changeCallback({ name: this.name, value: event.target.value});
+    }
   }
 
   render() {
@@ -28,6 +30,7 @@ export class Slider {
         <input
           type="range"
           id="weslider"
+          name={this.name}
           min={this.min}
           max={this.max}
           value={this.value}
