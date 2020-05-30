@@ -35,8 +35,6 @@
 | `--card-text-margin-bottom`     | card-text-margin-bottom margin-bottom <br> Default: 0         |
 | `--card-text-margin-top`        | card-text-margin-top margin-top <br> Default: 0               |
 | `--card-text-text-align`        | card-text-text-align text-align <br> Default: left            |
-| `--card-texto-margin-bottom`    | card-text-margin-bottom margin-bottom <br> Default: 0         |
-| `--card-texto-margin-top`       | card-text-margin-top margin-top <br> Default: 0               |
 | `--card-title-font-size`        | card-title-font-size font-size <br> Default: 1.25rem          |
 | `--card-title-font-weight`      | card-title-font-weight font-weight <br> Default: 500          |
 | `--card-title-line-height`      | card-title-line-height line-height <br> Default: 1.2          |

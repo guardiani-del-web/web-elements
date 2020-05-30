@@ -12,6 +12,8 @@ export namespace Components {
     interface WeAccordionGroup {
         "multiple": boolean;
     }
+    interface WeCard {
+    }
     interface WeCheckbox {
         "checked": boolean;
         "disabled": boolean;
@@ -47,6 +49,13 @@ export namespace Components {
         "onChange": any;
         "value": number;
     }
+    interface WeSwitch {
+        "changeCallback": any;
+        "enabled": boolean;
+        "labelLeft": string;
+        "labelRight": string;
+        "name": any;
+    }
     interface WeTab {
         "enabled": boolean;
     }
@@ -77,6 +86,12 @@ declare global {
     var HTMLWeAccordionGroupElement: {
         prototype: HTMLWeAccordionGroupElement;
         new (): HTMLWeAccordionGroupElement;
+    };
+    interface HTMLWeCardElement extends Components.WeCard, HTMLStencilElement {
+    }
+    var HTMLWeCardElement: {
+        prototype: HTMLWeCardElement;
+        new (): HTMLWeCardElement;
     };
     interface HTMLWeCheckboxElement extends Components.WeCheckbox, HTMLStencilElement {
     }
@@ -120,6 +135,12 @@ declare global {
         prototype: HTMLWeSliderElement;
         new (): HTMLWeSliderElement;
     };
+    interface HTMLWeSwitchElement extends Components.WeSwitch, HTMLStencilElement {
+    }
+    var HTMLWeSwitchElement: {
+        prototype: HTMLWeSwitchElement;
+        new (): HTMLWeSwitchElement;
+    };
     interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
     }
     var HTMLWeTabElement: {
@@ -141,6 +162,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
+        "we-card": HTMLWeCardElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
@@ -148,6 +170,7 @@ declare global {
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
+        "we-switch": HTMLWeSwitchElement;
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
@@ -160,6 +183,8 @@ declare namespace LocalJSX {
     }
     interface WeAccordionGroup {
         "multiple"?: boolean;
+    }
+    interface WeCard {
     }
     interface WeCheckbox {
         "checked"?: boolean;
@@ -200,6 +225,13 @@ declare namespace LocalJSX {
         "onChange"?: any;
         "value"?: number;
     }
+    interface WeSwitch {
+        "changeCallback"?: any;
+        "enabled"?: boolean;
+        "labelLeft"?: string;
+        "labelRight"?: string;
+        "name": any;
+    }
     interface WeTab {
         "enabled"?: boolean;
         "onTabCallback"?: (event: CustomEvent<any>) => void;
@@ -221,6 +253,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
+        "we-card": WeCard;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
@@ -228,6 +261,7 @@ declare namespace LocalJSX {
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
+        "we-switch": WeSwitch;
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
@@ -239,6 +273,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "we-accordion": LocalJSX.WeAccordion & JSXBase.HTMLAttributes<HTMLWeAccordionElement>;
             "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
+            "we-card": LocalJSX.WeCard & JSXBase.HTMLAttributes<HTMLWeCardElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
@@ -246,6 +281,7 @@ declare module "@stencil/core" {
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
+            "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
