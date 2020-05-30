@@ -13,7 +13,7 @@ export default {
 
 export const Basic = () => {
   return html`
-    <we-slider value=10 min=0 max=50>Slider 1</we-slider>
+    <we-slider value=10 min=0 max=50 onSliderChange={console.log($event)}>Slider 1</we-slider>
     <style>
       html {
         ${getCssVariables('we-slider', color, text)};

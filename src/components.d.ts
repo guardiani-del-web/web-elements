@@ -99,6 +99,7 @@ declare namespace LocalJSX {
         "max"?: number;
         "min"?: number;
         "onChange"?: any;
+        "onSliderChange"?: (event: CustomEvent<any>) => void;
         "value"?: number;
     }
     interface IntrinsicElements {

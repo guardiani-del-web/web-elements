@@ -1,8 +1,8 @@
 {
-  "timestamp": "2020-05-14T23:43:47",
+  "timestamp": "2020-05-15T11:06:02",
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.13.0",
+    "version": "1.12.7",
     "typescriptVersion": "3.8.3"
   },
   "components": [
@@ -171,7 +171,6 @@
         }
       ],
       "slots": [],
-      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
@@ -229,7 +228,6 @@
       ],
       "styles": [],
       "slots": [],
-      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
@@ -307,7 +305,6 @@
       "listeners": [],
       "styles": [],
       "slots": [],
-      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
@@ -365,7 +362,6 @@
       ],
       "styles": [],
       "slots": [],
-      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}
@@ -374,8 +370,8 @@
       "filePath": "./src/components/we-slider/we-slider.tsx",
       "encapsulation": "shadow",
       "tag": "we-slider",
-      "readme": "# we-slider\n\n\n",
-      "docs": "",
+      "readme": "# we-slider\n\n```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```\n<br>\n",
+      "docs": "```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -462,72 +458,20 @@
         }
       ],
       "methods": [],
-      "events": [],
-      "listeners": [],
-      "styles": [
+      "events": [
         {
-          "name": "--label-margin",
-          "annotation": "prop",
-          "docs": "Margin label <br> Default: 0.2em"
-        },
-        {
-          "name": "--label-padding",
-          "annotation": "prop",
-          "docs": "Padding label <br> Default: 0.2em"
-        },
-        {
-          "name": "--slider-background-color",
-          "annotation": "prop",
-          "docs": "Slider background color <br> Default: #D7DCDF"
-        },
-        {
-          "name": "--slider-disabled-color",
-          "annotation": "prop",
-          "docs": "Slider disabled color <br> Default: #aaa"
-        },
-        {
-          "name": "--slider-height",
-          "annotation": "prop",
-          "docs": "Slider height <br> Default: 5px"
-        },
-        {
-          "name": "--slider-margin",
-          "annotation": "prop",
-          "docs": "Slider margin <br> Default: 0"
-        },
-        {
-          "name": "--slider-padding",
-          "annotation": "prop",
-          "docs": "Slider padding <br> Default: 0"
-        },
-        {
-          "name": "--slider-thumb-color",
-          "annotation": "prop",
-          "docs": "Slider thumb color <br> Default: #3F51B5"
-        },
-        {
-          "name": "--slider-thumb-height",
-          "annotation": "prop",
-          "docs": "Slider thumb height <br> Default: 2em"
-        },
-        {
-          "name": "--slider-thumb-radius",
-          "annotation": "prop",
-          "docs": "Slider thumb radius <br> Default: 50%"
-        },
-        {
-          "name": "--slider-thumb-width",
-          "annotation": "prop",
-          "docs": "Slider thumb width <br> Default: 2em"
-        },
-        {
-          "name": "--slider-width",
-          "annotation": "prop",
-          "docs": "Slider width <br> Default: 100%"
+          "event": "sliderChange",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
         }
       ],
+      "listeners": [],
+      "styles": [],
       "slots": [],
-      "parts": [],
       "dependents": [],
       "dependencies": [],
       "dependencyGraph": {}

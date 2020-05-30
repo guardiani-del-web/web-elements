@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 import { parseFunction } from '@utils';
 
 @Component({
@@ -12,6 +12,7 @@ export class WeSlider {
   @Prop() max: number;
   @Prop() disabled: boolean = false;
   @Prop() onChange: any;
+  @Event() sliderChange: EventEmitter;
 
   connectedCallback() {
     if (this.onChange) {
@@ -19,10 +20,8 @@ export class WeSlider {
     }
   }
 
-  handleChange(event: UIEvent) {
-    if (this.onChange) {
-      this.onChange(event);
-    }
+  handleChange(event: any) {
+    this.sliderChange.emit(event.target.value);
   }
 
   render() {
