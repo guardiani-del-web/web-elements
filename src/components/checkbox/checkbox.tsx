@@ -3,7 +3,7 @@ import { Component, ComponentInterface, Host, h, Prop, EventEmitter, Event } fro
 @Component({
   tag: 'we-checkbox',
   styleUrl: 'checkbox.scss',
-  shadow: true,
+  shadow: true
 })
 export class Checkbox implements ComponentInterface {
   @Prop() value!: string;
@@ -18,11 +18,11 @@ export class Checkbox implements ComponentInterface {
   render() {
     return (
       <Host>
-        <input 
-          type="checkbox" 
+        <input
+          type="checkbox"
           id="wecheckbox"
-          value={this.value} 
-          disabled={this.disabled} 
+          value={this.value}
+          disabled={this.disabled}
           checked={this.checked}
           onChange={this.handleChange.bind(this)}
         />

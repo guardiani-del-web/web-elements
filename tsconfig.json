@@ -17,12 +17,16 @@
     "jsx": "react",
     "jsxFactory": "h",
     "paths": {
-      "@utils": ["src/utils/index"]
+      "@utils": [
+        "src/utils/index"
+      ]
     }
   },
   "include": [
     "src",
-    "types/jsx.d.ts"
+    "types/jsx.d.ts",
+    ".storybook/*",
+    "**/*"
   ],
   "exclude": [
     "node_modules"

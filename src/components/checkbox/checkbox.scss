@@ -22,7 +22,7 @@
   display: block;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   display: none;
   + label {
     display: flex;
@@ -32,7 +32,7 @@ input[type=checkbox] {
     padding: var(--label-padding, 0.2em);
 
     &:before {
-      content: var(--icon-content, "\2714");
+      content: var(--icon-content, '\2714');
       border: var(--icon-border, 1px solid $primary-text);
       border-radius: var(--icon-border-radius, 0.2em);
       display: inline-block;

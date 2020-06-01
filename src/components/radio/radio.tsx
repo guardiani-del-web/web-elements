@@ -3,7 +3,7 @@ import { Component, ComponentInterface, Host, h, Prop, Event, EventEmitter } fro
 @Component({
   tag: 'we-radio',
   styleUrl: 'radio.scss',
-  shadow: true,
+  shadow: true
 })
 export class Radio implements ComponentInterface {
   @Prop() value!: string;
@@ -19,10 +19,10 @@ export class Radio implements ComponentInterface {
     return (
       <Host>
         <input
-          type="radio" 
+          type="radio"
           id="weradio"
-          value={this.value} 
-          disabled={this.disabled} 
+          value={this.value}
+          disabled={this.disabled}
           checked={this.checked}
           onChange={this.handleChange.bind(this)}
         />

@@ -1,0 +1,83 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "dist",
+    "docs",
+    "www"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@stencil/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "prettier"
+  ],
+  "rules": {
+    "@stencil/own-methods-must-be-private": "off",
+    "@stencil/own-props-must-be-private": "off",
+    "@stencil/required-jsdoc": "off",
+    "@stencil/strict-boolean-conditions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-no-bind": "off",
+    "@stencil/async-methods": "error",
+    "@stencil/ban-prefix": [
+      "error",
+      [
+        "stencil",
+        "stnl",
+        "st"
+      ]
+    ],
+    "@stencil/decorators-context": "error",
+    "@stencil/decorators-style": [
+      "error",
+      {
+        "prop": "inline",
+        "state": "inline",
+        "element": "inline",
+        "event": "inline",
+        "method": "multiline",
+        "watch": "multiline",
+        "listen": "multiline"
+      }
+    ],
+    "@stencil/element-type": "error",
+    "@stencil/host-data-deprecated": "error",
+    "@stencil/methods-must-be-public": "error",
+    "@stencil/no-unused-watch": "error",
+    "@stencil/prefer-vdom-listener": "error",
+    "@stencil/props-must-be-public": "error",
+    "@stencil/render-returns-host": "error",
+    "@stencil/reserved-member-names": "error",
+    "@stencil/single-export": "error",
+    "@stencil/strict-mutable": "error"
+  },
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  }
+}

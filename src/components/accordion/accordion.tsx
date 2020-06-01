@@ -1,10 +1,19 @@
-import { ComponentInterface, Component, h, Host, Event, EventEmitter, State, Prop } from '@stencil/core';
+import {
+  ComponentInterface,
+  Component,
+  h,
+  Host,
+  Event,
+  EventEmitter,
+  State,
+  Prop
+} from '@stencil/core';
 import { generateUniqueId } from '@utils';
 
 @Component({
   tag: 'we-accordion',
   styleUrl: 'accordion.scss',
-  shadow: true,
+  shadow: true
 })
 export class Accordion implements ComponentInterface {
   @Prop() open: boolean;
@@ -19,7 +28,14 @@ export class Accordion implements ComponentInterface {
   render() {
     return (
       <Host data-id={this.openId}>
-        <input type="radio" name="accordion" id={this.openId} checked={this.open} value={this.openId} onChange={this.handleChange.bind(this)} />
+        <input
+          type="radio"
+          name="accordion"
+          id={this.openId}
+          checked={this.open}
+          value={this.openId}
+          onChange={this.handleChange.bind(this)}
+        />
         <section class="accordion">
           <label class="accordion-title" htmlFor={this.openId}>
             <slot name="title" />

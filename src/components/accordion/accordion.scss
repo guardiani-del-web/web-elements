@@ -43,8 +43,13 @@
     position: var(--container-position, relative);
     background: var(--container-background, #fff);
     height: var(--container-height, 3.375rem);
-    transition: var(--container-transition, all .15s ease-in-out);
-    box-shadow: var(--container-box-shadow, 0 -0.063rem 0 #e5e5e5, 0 0 0.125rem rgba(0,0,0,.12), 0 0.125rem 0.25rem rgba(0,0,0,.24));
+    transition: var(--container-transition, all 0.15s ease-in-out);
+    box-shadow: var(
+      --container-box-shadow,
+      0 -0.063rem 0 #e5e5e5,
+      0 0 0.125rem rgba(0, 0, 0, 0.12),
+      0 0.125rem 0.25rem rgba(0, 0, 0, 0.24)
+    );
     .accordion-title {
       width: var(--title-width, calc(100% - 4rem));
       height: var(--title-height, 3.375rem);
@@ -62,8 +67,8 @@
         bottom: var(--icon-bottom, initial);
         left: var(--icon-initial, initial);
         right: var(--icon-right, 1.25rem);
-        transition: var(--icon-transition, transform .15s ease-in-out);
-        color: var(--icon-color, rgba(0,0,0,.54));
+        transition: var(--icon-transition, transform 0.15s ease-in-out);
+        color: var(--icon-color, rgba(0, 0, 0, 0.54));
         transform: var(--icon-transform, rotate(0deg));
       }
     }
@@ -71,7 +76,7 @@
       width: var(--content-width, calc(100% - 2.5rem));
       padding: var(--content-padding, 1.25rem);
       font-size: var(--content-font-size, 0.938rem);
-      color: var(--content-color, rgba(0,0,0,.54));
+      color: var(--content-color, rgba(0, 0, 0, 0.54));
       display: none;
     }
     .accordion-close {
@@ -85,10 +90,10 @@
     }
   }
   input:checked {
-    +.accordion {
+    + .accordion {
       height: auto;
       .accordion-title {
-        border-bottom: var(--title-border-bottom-opened, 0.063rem solid rgba(0,0,0,.18));
+        border-bottom: var(--title-border-bottom-opened, 0.063rem solid rgba(0, 0, 0, 0.18));
         &:before {
           transform: var(--title-transform-opened, rotate(90deg));
         }

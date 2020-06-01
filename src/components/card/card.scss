@@ -1,6 +1,5 @@
 @import '../../scss/index.scss';
 
-
 /**
   * @prop --card-background-color: card background-color <br> Default: rgb(255, 255, 255)
   * @prop --card-width: card width <br> Default: 18rem
@@ -37,30 +36,28 @@
  
 */
 
-
 :host {
- 
   background-color: var(--card-background-color, rgb(255, 255, 255));
-  width: var(--card-width ,18rem);
+  width: var(--card-width, 18rem);
   border: var(--card-border, 1px) var(--card-border-style, solid) var(--card-border-color, $card-border-color-a125);
-  box-shadow: var(--card-shadow-offset-x, 0) var(--card-shadow-offset-y, 0) var(--card-shadow-blur-radius, 0) var(--card-shadow-spread-radius, 0) var(--card-shadow-color, $card-shadow-color);
+  box-shadow: var(--card-shadow-offset-x, 0) var(--card-shadow-offset-y, 0) var(--card-shadow-blur-radius, 0)
+    var(--card-shadow-spread-radius, 0) var(--card-shadow-color, $card-shadow-color);
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  border-radius: var(--card-border-radius, .25rem) ;
+  border-radius: var(--card-border-radius, 0.25rem);
   background-clip: border-box;
 
-  
   .card-body {
-  flex: 1 1 auto;
-  font-size: 1rem;
-  padding: var(--card-body-padding, 1.25rem);
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
+    flex: 1 1 auto;
+    font-size: 1rem;
+    padding: var(--card-body-padding, 1.25rem);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
 
     &__title {
-      margin-bottom: var(--card-title-margin-bottom, .75rem);
+      margin-bottom: var(--card-title-margin-bottom, 0.75rem);
       font-size: var(--card-title-font-size, 1.25rem);
       font-weight: var(--card-title-font-weight, 500);
       line-height: var(--card-title-line-height, 1.2);
@@ -68,21 +65,19 @@
     }
 
     &__subtitle {
-      margin-bottom: var(--card-subtitle-margin-bottom ,.5rem);
-      font-size: var(--card-subtitle-font-size ,1rem);
-      font-weight: var(--card-subtitle-font-weight ,500);
-      line-height: var(--card-subtitle-line-height ,1.2);
-      color: var(--card-subtitle-color ,#6c757d);
+      margin-bottom: var(--card-subtitle-margin-bottom, 0.5rem);
+      font-size: var(--card-subtitle-font-size, 1rem);
+      font-weight: var(--card-subtitle-font-weight, 500);
+      line-height: var(--card-subtitle-line-height, 1.2);
+      color: var(--card-subtitle-color, #6c757d);
       text-align: var(--card-subtitle-text-align, left);
     }
 
     &__texts {
-      margin-top: var(--card-texto-margin-top ,0);
-      margin-bottom: var(--card-texto-margin-bottom ,1rem);
+      margin-top: var(--card-texto-margin-top, 0);
+      margin-bottom: var(--card-texto-margin-bottom, 1rem);
       word-wrap: break-word;
       text-align: var(--card-text-text-align, left);
     }
   }
-  
-
 }
