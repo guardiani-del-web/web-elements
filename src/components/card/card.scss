@@ -1,0 +1,88 @@
+@import '../../scss/index.scss';
+
+
+/**
+  * @prop --card-background-color: card background-color <br> Default: rgb(255, 255, 255)
+  * @prop --card-width: card width <br> Default: 18rem
+  * @prop --card-border: card border <br> Default: 1px
+  * @prop --card-border-style: card style <br> Default: solid
+  * @prop --card-border-color: card border-color <br> Default: rgba(0, 0, 0, .125)
+  * @prop --card-border-radius: card border-radius <br> Default: .25rem
+
+  * @prop --card-shadow-offset-x: card-shadow-offset-x offset-x <br> Default: 0
+  * @prop --card-shadow-offset-y: card-shadow-offset-y offset-y <br> Default: 0
+  * @prop --card-shadow-blur-radius: card-shadow-blur-radiues blur-radius <br> Default: 0
+  * @prop --card-shadow-spread-radius: card-shadow-spread-radius spread-radius <br> Default: 0
+  * @prop --card-shadow-color: card-shadow-color color <br> Default: rgb(0, 0 ,0)
+  
+  * @prop --card-body-padding: card-body-padding padding <br> Default: 1.25rem
+  
+  * @prop --card-title-margin-bottom: card-title-margin-bottom margin-bottom <br> Default: .75rem
+  * @prop --card-title-font-size: card-title-font-size font-size <br> Default: 1.25rem
+  * @prop --card-title-font-weight: card-title-font-weight font-weight <br> Default: 500
+  * @prop --card-title-line-height: card-title-line-height line-height <br> Default: 1.2
+  * @prop --card-title-text-align: card-title-text-align text-align <br> Default: left
+
+  * @prop --card-subtitle-margin-bottom: card-subtitle-margin-bottom margin-bottom <br> Default: .5rem
+  * @prop --card-subtitle-font-size: card-subtitle-font-size font-size <br> Default: 1rem
+  * @prop --card-subtitle-font-weight: card-subtitle-font-weight font-weight <br> Default: 500
+  * @prop --card-subtitle-line-height: card-subtitle-line-height line-height <br> Default: 1.2
+  * @prop --card-subtitle-color: card-subtitle-color color: <br> Default: rgb(108, 117, 125)
+  * @prop --card-subtitle-text-align: card-subtitle-text-align text-align <br> Defaul: left
+
+  * @prop --card-text-margin-top: card-text-margin-top margin-top <br> Default: 0
+  * @prop --card-text-margin-bottom: card-text-margin-bottom margin-bottom <br> Default: 0
+  * @prop --card-text-text-align: card-text-text-align text-align <br> Default: left
+  
+ 
+*/
+
+
+:host {
+ 
+  background-color: var(--card-background-color, rgb(255, 255, 255));
+  width: var(--card-width ,18rem);
+  border: var(--card-border, 1px) var(--card-border-style, solid) var(--card-border-color, $card-border-color-a125);
+  box-shadow: var(--card-shadow-offset-x, 0) var(--card-shadow-offset-y, 0) var(--card-shadow-blur-radius, 0) var(--card-shadow-spread-radius, 0) var(--card-shadow-color, $card-shadow-color);
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border-radius: var(--card-border-radius, .25rem) ;
+  background-clip: border-box;
+
+  
+  .card-body {
+  flex: 1 1 auto;
+  font-size: 1rem;
+  padding: var(--card-body-padding, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+
+    &__title {
+      margin-bottom: var(--card-title-margin-bottom, .75rem);
+      font-size: var(--card-title-font-size, 1.25rem);
+      font-weight: var(--card-title-font-weight, 500);
+      line-height: var(--card-title-line-height, 1.2);
+      text-align: var(--card-title-text-align, left);
+    }
+
+    &__subtitle {
+      margin-bottom: var(--card-subtitle-margin-bottom ,.5rem);
+      font-size: var(--card-subtitle-font-size ,1rem);
+      font-weight: var(--card-subtitle-font-weight ,500);
+      line-height: var(--card-subtitle-line-height ,1.2);
+      color: var(--card-subtitle-color ,#6c757d);
+      text-align: var(--card-subtitle-text-align, left);
+    }
+
+    &__texts {
+      margin-top: var(--card-texto-margin-top ,0);
+      margin-bottom: var(--card-texto-margin-bottom ,1rem);
+      word-wrap: break-word;
+      text-align: var(--card-text-text-align, left);
+    }
+  }
+  
+
+}

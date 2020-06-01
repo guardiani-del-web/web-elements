@@ -1,5 +1,5 @@
 <script>
-  if (location.host.includes('localhost')) {
+  if (location.host.indexOf('localhost') !== -1) {
     injectScriptTag('http://localhost:3333/build/web-elements.esm.js', 'module');
     injectScriptTag('http://localhost:3333/build/web-elements.js', 'nomodule');
   } else {

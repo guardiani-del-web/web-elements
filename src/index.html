@@ -7,23 +7,29 @@
 
   <script type="module" src="/build/web-elements.esm.js"></script>
   <script nomodule src="/build/web-elements.js"></script>
-  <style>
-    .box1 {
-      --color: red;
-      --margin: 10px 0;
-    }
-    .box2 {
-      --color: green;
-      --margin: 10px 0;
-    }
-  </style>
 
 </head>
 <body>
-  <we-slider value=10 min=0 max=50>Slider 1</we-slider>
-  <div class="box1"><we-textarea text="First text area" disabled=true></we-textarea></div>
-  <div class="box2"><we-textarea text="Second text area" name="second"></we-textarea></div>
-
-  <we-chips srcImgLeft="2" label="ciao" srcImgRight="2"></we-chips>
+  <!-- JUST FOR TESTING DON'T PUSH ANYMORE TO AVOID CONFLICTS -->
+  <we-accordion-group multiple="false">
+    <we-accordion>
+      <div slot="title">Accordion 1</div>
+      <div slot="content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </div>
+    </we-accordion>
+      <we-accordion>
+      <div slot="title">Accordion 2</div>
+      <div slot="content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </div>
+    </we-accordion>
+    <we-accordion>
+      <div slot="title">Accordion 3</div>
+      <div slot="content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </div>
+    </we-accordion>
+  </we-accordion-group>
 </body>
 </html>

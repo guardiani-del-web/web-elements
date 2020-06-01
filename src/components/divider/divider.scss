@@ -1,0 +1,21 @@
+@import '../../scss/index.scss';
+
+/**
+ * @prop --divider-border: divider border <br> Default: 1px solid rgba(0,0,0,.12)
+ * @prop --divider-radius: divider radius <br> Default: 0.625rem
+ * @prop --divider-margin-left: divider margin-left <br> Default: 0
+ * @prop --divider-margin-right: divider margin-right <br> Default: 0
+ * @prop --divider-width: divider width <br> Default: 100%
+*/
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  .line {
+    border: var(--divider-border, 1px solid $divider-line-color);
+    border-radius: var(--divider-radius, 0.625rem);
+    margin-left: var(--divider-margin-left, 0);
+    margin-right: var(--divider-margin-right, 0);
+    width: var(--divider-width, 100%);
+  }
+}

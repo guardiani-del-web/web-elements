@@ -9,8 +9,9 @@ export class AccordionGroup implements ComponentInterface {
   @Element() el: HTMLElement;
 
   @Listen('accordionCallback')
-  accordionCallbackHandler(event: any) {
-    const { value } = event.detail;
+  accordionCallbackHandler(event: CustomEvent) {
+    const value = event.detail;
+
     if (!this.multiple) {
       const accordions = this.el.querySelectorAll('we-accordion');
 
