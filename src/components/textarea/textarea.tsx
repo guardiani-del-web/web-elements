@@ -17,23 +17,23 @@ export class Textarea implements ComponentInterface {
     @Prop() cols;
     @Prop() row;
 
-    render() {
-        return (
-            <Host>
-                <textarea
-                    placeholder={this.placeholder}
-                    disabled={this.disabled}
-                    required={this.required}
-                    readOnly={this.readonly}
-                    autofocus={this.autofocus}
-                    maxLength={this.maxlength}
-                    cols={this.cols}
-                    rows={this.row}
-                    name={this.name}
-                >
-                    {this.text}
-                </textarea>
-            </Host>
-        );
-    }
+  render() {
+    return (
+      <Host>
+        <textarea
+          placeholder={this.placeholder}
+          disabled={this.disabled}
+          required={this.required}
+          readOnly={this.readonly}
+          autofocus={this.autofocus}
+          maxLength={this.maxlength}
+          cols={this.cols}
+          rows={this.row}
+          name={this.name}>
+          {this.text}
+        </textarea>
+      </Host>
+    );
+  }
+
 }

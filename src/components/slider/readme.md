@@ -9,13 +9,14 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      | Default     |
-| ---------- | ----------- | ----------- | --------- | ----------- |
-| `disabled` | `disabled`  |             | `boolean` | `false`     |
-| `max`      | `max`       |             | `number`  | `undefined` |
-| `min`      | `min`       |             | `number`  | `undefined` |
-| `onChange` | `on-change` |             | `any`     | `undefined` |
-| `value`    | `value`     |             | `number`  | `undefined` |
+| Property            | Attribute         | Description | Type      | Default     |
+| ------------------- | ----------------- | ----------- | --------- | ----------- |
+| `changeCallback`    | `change-callback` |             | `any`     | `undefined` |
+| `disabled`          | `disabled`        |             | `boolean` | `false`     |
+| `max`               | `max`             |             | `number`  | `undefined` |
+| `min`               | `min`             |             | `number`  | `undefined` |
+| `name` _(required)_ | `name`            |             | `string`  | `undefined` |
+| `value`             | `value`           |             | `number`  | `undefined` |
 
 
 ## CSS Custom Properties

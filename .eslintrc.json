@@ -46,7 +46,7 @@
         "@stencil/prefer-vdom-listener": "error",
         "@stencil/props-must-be-public": "error",
         "@stencil/render-returns-host": "error",
-        "@stencil/reserved-member-names": "off",
+        "@stencil/reserved-member-names": "error",
         "@stencil/single-export": "error",
         "@stencil/strict-mutable": "error"
     },
