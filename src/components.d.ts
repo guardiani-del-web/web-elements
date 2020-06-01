@@ -33,6 +33,8 @@ export namespace Components {
     }
     interface WeDivider {
     }
+    interface WeDropdown {
+    }
     interface WeModal {
         "isVisible": boolean;
     }
@@ -121,6 +123,12 @@ declare global {
         prototype: HTMLWeDividerElement;
         new (): HTMLWeDividerElement;
     };
+    interface HTMLWeDropdownElement extends Components.WeDropdown, HTMLStencilElement {
+    }
+    var HTMLWeDropdownElement: {
+        prototype: HTMLWeDropdownElement;
+        new (): HTMLWeDropdownElement;
+    };
     interface HTMLWeModalElement extends Components.WeModal, HTMLStencilElement {
     }
     var HTMLWeModalElement: {
@@ -177,6 +185,7 @@ declare global {
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
         "we-divider": HTMLWeDividerElement;
+        "we-dropdown": HTMLWeDropdownElement;
         "we-modal": HTMLWeModalElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
@@ -218,6 +227,8 @@ declare namespace LocalJSX {
         "srcImgRight"?: string;
     }
     interface WeDivider {
+    }
+    interface WeDropdown {
     }
     interface WeModal {
         "isVisible"?: boolean;
@@ -274,6 +285,7 @@ declare namespace LocalJSX {
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
         "we-divider": WeDivider;
+        "we-dropdown": WeDropdown;
         "we-modal": WeModal;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
@@ -295,6 +307,7 @@ declare module "@stencil/core" {
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
+            "we-dropdown": LocalJSX.WeDropdown & JSXBase.HTMLAttributes<HTMLWeDropdownElement>;
             "we-modal": LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;

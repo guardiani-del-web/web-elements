@@ -1,7 +1,5 @@
-# we-divider
-```html
-<we-divider></we-divider>
-```
+# we-dropdown
+
 
 
 <!-- Auto Generated Below -->
