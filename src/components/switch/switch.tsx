@@ -1,22 +1,16 @@
-import {
-  ComponentInterface,
-  Component,
-  Host,
-  h,
-  Prop
-} from "@stencil/core";
-import { parseFunction } from "@utils";
+import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
+import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-switch',
   styleUrl: 'switch.scss',
-  shadow: true,
+  shadow: true
 })
 export class Switch implements ComponentInterface {
   @Prop() name!: any;
-  @Prop() labelLeft: string= "";
-  @Prop() labelRight: string= "";
-  @Prop() enabled: boolean = false;
+  @Prop() labelLeft = '';
+  @Prop() labelRight = '';
+  @Prop() enabled = false;
   @Prop() changeCallback: any;
 
   handleChangeState(event: CustomEvent) {
@@ -33,7 +27,8 @@ export class Switch implements ComponentInterface {
           id="switch"
           name={this.name}
           onChange={this.handleChangeState.bind(this)}
-          checked={this.enabled} />
+          checked={this.enabled}
+        />
         <label class="switch" htmlFor="switch"></label>
         {this.labelLeft && <label class="left">Off</label>}
         {this.labelRight && <label class="right">On</label>}

@@ -4,20 +4,20 @@ import { parseFunction } from '@utils';
 @Component({
   tag: 'we-slider',
   styleUrl: 'slider.scss',
-  shadow: true,
+  shadow: true
 })
 export class WeSlider {
   @Prop() name!: string;
   @Prop() value: number;
   @Prop() min: number;
   @Prop() max: number;
-  @Prop() disabled: boolean = false;
+  @Prop() disabled = false;
   @Prop() changeCallback: any;
 
   handleChange(event: { target: HTMLInputElement }) {
     if (this.changeCallback) {
       this.changeCallback = parseFunction(this.changeCallback);
-      this.changeCallback({ name: this.name, value: event.target.value});
+      this.changeCallback({ name: this.name, value: event.target.value });
     }
   }
 
@@ -40,5 +40,4 @@ export class WeSlider {
       </Host>
     );
   }
-
 }

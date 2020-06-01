@@ -3,7 +3,7 @@
 :host {
   display: block;
   margin: 0.5rem;
-  input[type="radio"] {
+  input[type='radio'] {
     position: absolute;
     opacity: 0;
     + label {
@@ -17,7 +17,7 @@
         height: 1.4em;
         position: relative;
         top: -0.2em;
-        margin-right: 0.6em; 
+        margin-right: 0.6em;
         vertical-align: top;
         cursor: pointer;
         text-align: center;
@@ -58,4 +58,3 @@
     }
   }
 }
-  

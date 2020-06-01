@@ -6,7 +6,6 @@ import { ComponentInterface, Component, h, Host } from '@stencil/core';
   styleUrl: 'divider.scss'
 })
 export class Divider implements ComponentInterface {
-
   render() {
     return (
       <Host>
@@ -14,5 +13,4 @@ export class Divider implements ComponentInterface {
       </Host>
     );
   }
-
 }

@@ -13,7 +13,7 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
-      footer: '',
+      footer: ''
     },
     {
       type: 'docs-json',
@@ -24,6 +24,7 @@ export const config: Config = {
       serviceWorker: null // disable service workers
     }
   ],
+  globalStyle: 'src/scss/index.scss',
   devServer: {
     openBrowser: false
   },

@@ -3,16 +3,16 @@ import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 @Component({
   tag: 'we-textarea',
   styleUrl: 'textarea.scss',
-  shadow: true,
+  shadow: true
 })
 export class Textarea implements ComponentInterface {
-  @Prop() text: string = "";
-  @Prop() name: string = "";
-  @Prop() placeholder: string = "";
-  @Prop() readonly: boolean = false;
-  @Prop() disabled: boolean = false;
-  @Prop() required: boolean = false;
-  @Prop() autofocus: boolean = false;
+  @Prop() text = '';
+  @Prop() name = '';
+  @Prop() placeholder = '';
+  @Prop() readonly = false;
+  @Prop() disabled = false;
+  @Prop() required = false;
+  @Prop() autofocus = false;
   @Prop() maxlength = 100000;
   @Prop() cols;
   @Prop() row;
@@ -29,11 +29,11 @@ export class Textarea implements ComponentInterface {
           maxLength={this.maxlength}
           cols={this.cols}
           rows={this.row}
-          name={this.name}>
+          name={this.name}
+        >
           {this.text}
         </textarea>
       </Host>
     );
   }
-
 }
