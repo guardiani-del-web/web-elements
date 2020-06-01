@@ -1,0 +1,1909 @@
+{
+  "timestamp": "2020-06-01T07:36:48",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.9.2",
+    "typescriptVersion": "3.8.3"
+  },
+  "components": [
+    {
+      "filePath": "src\\components\\accordion\\accordion.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion",
+      "readme": "# we-accordion\r\n\r\n```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>\r\n\r\n\r",
+      "docs": "```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "accordionCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--container-background",
+          "annotation": "prop",
+          "docs": "Container background <br> Default: #fff"
+        },
+        {
+          "name": "--container-box-shadow",
+          "annotation": "prop",
+          "docs": "Container shadow <br> Default: 0 -0.063rem 0 #e5e5e5, 0 0 0.125rem rgba(0,0,0,.12), 0 0.125rem 0.25rem rgba(0,0,0,.24)"
+        },
+        {
+          "name": "--container-height",
+          "annotation": "prop",
+          "docs": "Container height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--container-position",
+          "annotation": "prop",
+          "docs": "Container position <br> Default: relative"
+        },
+        {
+          "name": "--container-transition",
+          "annotation": "prop",
+          "docs": "Container transition <br> Default: all .15s ease-in-out"
+        },
+        {
+          "name": "--content-color",
+          "annotation": "prop",
+          "docs": "Content color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--content-font-size",
+          "annotation": "prop",
+          "docs": "Content font size <br> Default: 0.938rem"
+        },
+        {
+          "name": "--content-padding",
+          "annotation": "prop",
+          "docs": "Content padding <br> Default: 1.25rem"
+        },
+        {
+          "name": "--content-width",
+          "annotation": "prop",
+          "docs": "Content width <br> Default: calc(100% - 2.5rem)"
+        },
+        {
+          "name": "--icon-bottom",
+          "annotation": "prop",
+          "docs": "Icon bottom <br> Default: initial"
+        },
+        {
+          "name": "--icon-color",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: '\\203a'"
+        },
+        {
+          "name": "--icon-display",
+          "annotation": "prop",
+          "docs": "Icon display <br> Default: block"
+        },
+        {
+          "name": "--icon-font-size",
+          "annotation": "prop",
+          "docs": "Icon font size <br> Default: 1.5rem"
+        },
+        {
+          "name": "--icon-left",
+          "annotation": "prop",
+          "docs": "Icon left <br> Default: initial"
+        },
+        {
+          "name": "--icon-position",
+          "annotation": "prop",
+          "docs": "Icon position <br> Default: absolute"
+        },
+        {
+          "name": "--icon-right",
+          "annotation": "prop",
+          "docs": "Icon right <br> Default: 1.25rem"
+        },
+        {
+          "name": "--icon-top",
+          "annotation": "prop",
+          "docs": "Icon top <br> Default: -0.125rem"
+        },
+        {
+          "name": "--icon-transform",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rotate(0deg)"
+        },
+        {
+          "name": "--icon-transition",
+          "annotation": "prop",
+          "docs": "Icon transition <br> Default: transform .15s ease-in-out"
+        },
+        {
+          "name": "--title-border-bottom-opened",
+          "annotation": "prop",
+          "docs": "Title border bottom opened <br> Default: 0.063rem solid rgba(0,0,0,.18)"
+        },
+        {
+          "name": "--title-cursor",
+          "annotation": "prop",
+          "docs": "Title cursor <br> Default: pointer"
+        },
+        {
+          "name": "--title-display",
+          "annotation": "prop",
+          "docs": "Title display <br> Default: inline-block"
+        },
+        {
+          "name": "--title-height",
+          "annotation": "prop",
+          "docs": "Title height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--title-line-height",
+          "annotation": "prop",
+          "docs": "Title line height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--title-padding",
+          "annotation": "prop",
+          "docs": "Title padding <br> Default: 0 2.75rem 0 1.25rem"
+        },
+        {
+          "name": "--title-transform-opened",
+          "annotation": "prop",
+          "docs": "Title transform opened <br> Default: rotate(90deg)"
+        },
+        {
+          "name": "--title-user-select",
+          "annotation": "prop",
+          "docs": "Title user select <br> Default: none"
+        },
+        {
+          "name": "--title-width",
+          "annotation": "prop",
+          "docs": "Title width <br> Default: calc(100% - 4rem)"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\accordion-group\\accordion-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-accordion-group",
+      "readme": "# we-accordion-group\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "multiple",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\card\\card.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-card",
+      "readme": "# we-card\r\n\r\n```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```\r\n\r",
+      "docs": "```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--card-background-color",
+          "annotation": "prop",
+          "docs": "card background-color <br> Default: rgb(255, 255, 255)"
+        },
+        {
+          "name": "--card-body-padding",
+          "annotation": "prop",
+          "docs": "card-body-padding padding <br> Default: 1.25rem"
+        },
+        {
+          "name": "--card-border",
+          "annotation": "prop",
+          "docs": "card border <br> Default: 1px"
+        },
+        {
+          "name": "--card-border-color",
+          "annotation": "prop",
+          "docs": "card border-color <br> Default: rgba(0, 0, 0, .125)"
+        },
+        {
+          "name": "--card-border-radius",
+          "annotation": "prop",
+          "docs": "card border-radius <br> Default: .25rem"
+        },
+        {
+          "name": "--card-border-style",
+          "annotation": "prop",
+          "docs": "card style <br> Default: solid"
+        },
+        {
+          "name": "--card-shadow-blur-radius",
+          "annotation": "prop",
+          "docs": "card-shadow-blur-radiues blur-radius <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-color",
+          "annotation": "prop",
+          "docs": "card-shadow-color color <br> Default: rgb(0, 0 ,0)"
+        },
+        {
+          "name": "--card-shadow-offset-x",
+          "annotation": "prop",
+          "docs": "card-shadow-offset-x offset-x <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-offset-y",
+          "annotation": "prop",
+          "docs": "card-shadow-offset-y offset-y <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-spread-radius",
+          "annotation": "prop",
+          "docs": "card-shadow-spread-radius spread-radius <br> Default: 0"
+        },
+        {
+          "name": "--card-subtitle-color",
+          "annotation": "prop",
+          "docs": "card-subtitle-color color: <br> Default: rgb(108, 117, 125)"
+        },
+        {
+          "name": "--card-subtitle-font-size",
+          "annotation": "prop",
+          "docs": "card-subtitle-font-size font-size <br> Default: 1rem"
+        },
+        {
+          "name": "--card-subtitle-font-weight",
+          "annotation": "prop",
+          "docs": "card-subtitle-font-weight font-weight <br> Default: 500"
+        },
+        {
+          "name": "--card-subtitle-line-height",
+          "annotation": "prop",
+          "docs": "card-subtitle-line-height line-height <br> Default: 1.2"
+        },
+        {
+          "name": "--card-subtitle-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-subtitle-margin-bottom margin-bottom <br> Default: .5rem"
+        },
+        {
+          "name": "--card-subtitle-text-align",
+          "annotation": "prop",
+          "docs": "card-subtitle-text-align text-align <br> Defaul: left"
+        },
+        {
+          "name": "--card-text-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-text-margin-bottom margin-bottom <br> Default: 0"
+        },
+        {
+          "name": "--card-text-margin-top",
+          "annotation": "prop",
+          "docs": "card-text-margin-top margin-top <br> Default: 0"
+        },
+        {
+          "name": "--card-text-text-align",
+          "annotation": "prop",
+          "docs": "card-text-text-align text-align <br> Default: left"
+        },
+        {
+          "name": "--card-title-font-size",
+          "annotation": "prop",
+          "docs": "card-title-font-size font-size <br> Default: 1.25rem"
+        },
+        {
+          "name": "--card-title-font-weight",
+          "annotation": "prop",
+          "docs": "card-title-font-weight font-weight <br> Default: 500"
+        },
+        {
+          "name": "--card-title-line-height",
+          "annotation": "prop",
+          "docs": "card-title-line-height line-height <br> Default: 1.2"
+        },
+        {
+          "name": "--card-title-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-title-margin-bottom margin-bottom <br> Default: .75rem"
+        },
+        {
+          "name": "--card-title-text-align",
+          "annotation": "prop",
+          "docs": "card-title-text-align text-align <br> Default: left"
+        },
+        {
+          "name": "--card-width",
+          "annotation": "prop",
+          "docs": "card width <br> Default: 18rem"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\checkbox\\checkbox.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-checkbox",
+      "readme": "# we-checkbox\r\n\r\n```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>\r",
+      "docs": "```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "checkboxCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--checked-background-color",
+          "annotation": "prop",
+          "docs": "Checked background color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-border-color",
+          "annotation": "prop",
+          "docs": "Checked border color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-color",
+          "annotation": "prop",
+          "docs": "Checked color <br> Default: #fff"
+        },
+        {
+          "name": "--checked-disabled-background-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled background color <br> Default: #aaa"
+        },
+        {
+          "name": "--checked-disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled border color <br> Default: #aaa"
+        },
+        {
+          "name": "--disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--icon-border",
+          "annotation": "prop",
+          "docs": "Icon border <br> Default: 1px solid #212121"
+        },
+        {
+          "name": "--icon-border-radius",
+          "annotation": "prop",
+          "docs": "Icon border radius <br> Default: 0.2em"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: \"\\2714\""
+        },
+        {
+          "name": "--icon-heigth",
+          "annotation": "prop",
+          "docs": "Icon heigth <br> Default: 1em"
+        },
+        {
+          "name": "--icon-margin",
+          "annotation": "prop",
+          "docs": "Icon margin <br> Default: 0 0.3em 0 0"
+        },
+        {
+          "name": "--icon-padding",
+          "annotation": "prop",
+          "docs": "Icon padding <br> Default: 0 0 0.3em 0.2em"
+        },
+        {
+          "name": "--icon-width",
+          "annotation": "prop",
+          "docs": "Icon width <br> Default: 1em"
+        },
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\checkbox-group\\we-checkbox-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-checkbox-group",
+      "readme": "# we-checkbox-group\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "changeCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "change-callback",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "any",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\chips\\chips.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-chips",
+      "readme": "# we-chips\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "isSelectable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-selectable",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "removeLeft",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "remove-left",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "removeRight",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "remove-right",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "srcImgLeft",
+          "type": "string",
+          "mutable": false,
+          "attr": "src-img-left",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "srcImgRight",
+          "type": "string",
+          "mutable": false,
+          "attr": "src-img-right",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "removeCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "selectCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of chips <br> Default: rgba(229, 229, 229, 1)"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of chips <br> Default: unset"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of chips <br> Default: 0.5em"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of chips <br> Default: 0.05em"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of chips <br> Default: inline-block"
+        },
+        {
+          "name": "--heigth",
+          "annotation": "prop",
+          "docs": "Height of chips <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of image left <br> Default: 0em"
+        },
+        {
+          "name": "--imageLeft--cursor",
+          "annotation": "prop",
+          "docs": "Cursor type of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--heigth",
+          "annotation": "prop",
+          "docs": "Height of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--margin",
+          "annotation": "prop",
+          "docs": "Margin of image left <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--imageLeft--padding",
+          "annotation": "prop",
+          "docs": "Padding of image left <br> Default: 0"
+        },
+        {
+          "name": "--imageLeft--width",
+          "annotation": "prop",
+          "docs": "Width of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageRight--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of image right <br> Default: 0em"
+        },
+        {
+          "name": "--imageRight--cursor",
+          "annotation": "prop",
+          "docs": "Cursor type of image right <br> Default: pointer"
+        },
+        {
+          "name": "--imageRight--heigth",
+          "annotation": "prop",
+          "docs": "Height of image right <br> Default: auto"
+        },
+        {
+          "name": "--imageRight--margin",
+          "annotation": "prop",
+          "docs": "Margin of image right <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--imageRight--padding",
+          "annotation": "prop",
+          "docs": "Padding of image right <br> Default: 0"
+        },
+        {
+          "name": "--imageRight--width",
+          "annotation": "prop",
+          "docs": "Width of image right <br> Default: auto"
+        },
+        {
+          "name": "--label--color",
+          "annotation": "prop",
+          "docs": "Color of text label <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--label--font-size",
+          "annotation": "prop",
+          "docs": "Font size of label <br> Default: 12pt"
+        },
+        {
+          "name": "--label--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of label <br> Default: normal"
+        },
+        {
+          "name": "--label--margin",
+          "annotation": "prop",
+          "docs": "Margin of label <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--label--padding",
+          "annotation": "prop",
+          "docs": "Padding of label <br> Default: 0"
+        },
+        {
+          "name": "--label--text-align",
+          "annotation": "prop",
+          "docs": "Text align of label <br> Default: left"
+        },
+        {
+          "name": "--label--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of label <br> Default: unset"
+        },
+        {
+          "name": "--label--text-transform",
+          "annotation": "prop",
+          "docs": "Text trasform of label <br> Default: unset"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of chips <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of chips <br> Default: 0.25rem"
+        },
+        {
+          "name": "--selected-background",
+          "annotation": "prop",
+          "docs": "Background of chips when selected <br> Default: rgba(65, 169, 192, 1)"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of chips <br> Default: auto"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\divider\\divider.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-divider",
+      "readme": "# we-divider\r\n```html\r\n<we-divider></we-divider>\r\n```\r\n\r\n\r",
+      "docs": "```html\r\n<we-divider></we-divider>\r\n```",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--divider-border",
+          "annotation": "prop",
+          "docs": "divider border <br> Default: 1px solid rgba(0,0,0,.12)"
+        },
+        {
+          "name": "--divider-margin-left",
+          "annotation": "prop",
+          "docs": "divider margin-left <br> Default: 0"
+        },
+        {
+          "name": "--divider-margin-right",
+          "annotation": "prop",
+          "docs": "divider margin-right <br> Default: 0"
+        },
+        {
+          "name": "--divider-radius",
+          "annotation": "prop",
+          "docs": "divider radius <br> Default: 0.625rem"
+        },
+        {
+          "name": "--divider-width",
+          "annotation": "prop",
+          "docs": "divider width <br> Default: 100%"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\modal\\modal.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-modal",
+      "readme": "# we-modal\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "isVisible",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-visible",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "modalCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--back--align-items",
+          "annotation": "prop",
+          "docs": "Align items of back of modal, it affects the vertical position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--back--background",
+          "annotation": "prop",
+          "docs": "Background of back of modal <br> Default: rgba(128, 128, 128, 0.35)"
+        },
+        {
+          "name": "--back--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of back of modal, it affects the horizontal position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--modal--align-items",
+          "annotation": "prop",
+          "docs": "Align items of modal, it affects the vertical position of the elements inside the modal <br> Default: unset"
+        },
+        {
+          "name": "--modal--background",
+          "annotation": "prop",
+          "docs": "Background of modal <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--modal--border",
+          "annotation": "prop",
+          "docs": "Border of modal <br> Default: none"
+        },
+        {
+          "name": "--modal--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--modal--display",
+          "annotation": "prop",
+          "docs": "Display option of modal <br> Default: flex"
+        },
+        {
+          "name": "--modal--height",
+          "annotation": "prop",
+          "docs": "Height of modal <br> Default: 18.750em"
+        },
+        {
+          "name": "--modal--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of modal, it affects the horizontal position of the elements inside the modal <br> Default: center"
+        },
+        {
+          "name": "--modal--padding",
+          "annotation": "prop",
+          "docs": "Padding of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--modal--width",
+          "annotation": "prop",
+          "docs": "Width of modal <br> Default: 12.500em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\radio\\radio.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-radio",
+      "readme": "# we-radio\r\n\r\n```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>\r\n\r",
+      "docs": "```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "radioCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\radio-group\\radio-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-radio-group",
+      "readme": "# we-radio-group\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "changeCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "change-callback",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\slider\\slider.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-slider",
+      "readme": "# we-slider\r\n\r\n```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```\r\n\r",
+      "docs": "```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "changeCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "change-callback",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "mutable": false,
+          "attr": "max",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "mutable": false,
+          "attr": "min",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        },
+        {
+          "name": "--slider-background-color",
+          "annotation": "prop",
+          "docs": "Slider background color <br> Default: #D7DCDF"
+        },
+        {
+          "name": "--slider-disabled-color",
+          "annotation": "prop",
+          "docs": "Slider disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--slider-height",
+          "annotation": "prop",
+          "docs": "Slider height <br> Default: 5px"
+        },
+        {
+          "name": "--slider-margin",
+          "annotation": "prop",
+          "docs": "Slider margin <br> Default: 0"
+        },
+        {
+          "name": "--slider-padding",
+          "annotation": "prop",
+          "docs": "Slider padding <br> Default: 0"
+        },
+        {
+          "name": "--slider-thumb-color",
+          "annotation": "prop",
+          "docs": "Slider thumb color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--slider-thumb-height",
+          "annotation": "prop",
+          "docs": "Slider thumb height <br> Default: 2em"
+        },
+        {
+          "name": "--slider-thumb-radius",
+          "annotation": "prop",
+          "docs": "Slider thumb radius <br> Default: 50%"
+        },
+        {
+          "name": "--slider-thumb-width",
+          "annotation": "prop",
+          "docs": "Slider thumb width <br> Default: 2em"
+        },
+        {
+          "name": "--slider-width",
+          "annotation": "prop",
+          "docs": "Slider width <br> Default: 100%"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\switch\\switch.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-switch",
+      "readme": "# we-switch\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "changeCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "change-callback",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "enabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "labelLeft",
+          "type": "string",
+          "mutable": false,
+          "attr": "label-left",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "labelRight",
+          "type": "string",
+          "mutable": false,
+          "attr": "label-right",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "any",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--container--font-size",
+          "annotation": "prop",
+          "docs": "Font size of labels inside the switch <br> Default: 2em"
+        },
+        {
+          "name": "--container--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of labels inside the switch <br> Default: bold"
+        },
+        {
+          "name": "--container--height",
+          "annotation": "prop",
+          "docs": "Height of container <br> Default: 1.5em"
+        },
+        {
+          "name": "--container--width",
+          "annotation": "prop",
+          "docs": "Width of container <br> Default: 3em"
+        },
+        {
+          "name": "--switch--background",
+          "annotation": "prop",
+          "docs": "Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)"
+        },
+        {
+          "name": "--switch--background-change",
+          "annotation": "prop",
+          "docs": "Background color of switch when change from initial condition <br> Default: #3F51B5"
+        },
+        {
+          "name": "--switch--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of switch <br> Default: 6.250em"
+        },
+        {
+          "name": "--switch--cursor",
+          "annotation": "prop",
+          "docs": "Cursor on switch <br> Default: pointer"
+        },
+        {
+          "name": "--switch_after--background",
+          "annotation": "prop",
+          "docs": "Background of button switch <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--switch_after--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button switch <br> Default: 50%"
+        },
+        {
+          "name": "--switch_after--height",
+          "annotation": "prop",
+          "docs": "Height of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--switch_after--left",
+          "annotation": "prop",
+          "docs": "Distance from left of icon switch <br> Default: 0.313em"
+        },
+        {
+          "name": "--switch_after--top",
+          "annotation": "prop",
+          "docs": "Distance from top of button switch <br> Default: 0.22em"
+        },
+        {
+          "name": "--switch_after--transition",
+          "annotation": "prop",
+          "docs": "Transition options about the changement of button switch <br> Default: 0.3s"
+        },
+        {
+          "name": "--switch_after--width",
+          "annotation": "prop",
+          "docs": "Width of button switch <br> Default: 1em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\tab\\tab.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-tab",
+      "readme": "# we-tab\r\n\r\n```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>\r\n\r\n\r\n\r",
+      "docs": "```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>",
+      "docsTags": [
+        {
+          "text": "header - Slot for the title",
+          "name": "slot"
+        },
+        {
+          "text": "content - Slot for the content",
+          "name": "slot"
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "enabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "tabCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--enabled-background-color",
+          "annotation": "prop",
+          "docs": "Enabled background color height <br> Default: #3F51B5"
+        },
+        {
+          "name": "--enabled-height",
+          "annotation": "prop",
+          "docs": "Enabled height <br> Default: 0.125rem"
+        },
+        {
+          "name": "--enabled-tab-color",
+          "annotation": "prop",
+          "docs": "Enabled tab color <br> Default: #D7DCDF"
+        },
+        {
+          "name": "--enabled-top",
+          "annotation": "prop",
+          "docs": "Enabled top <br> Default: 2.125rem"
+        },
+        {
+          "name": "--hover-color",
+          "annotation": "prop",
+          "docs": "Hover color <br> Default: #ccc"
+        },
+        {
+          "name": "--hover-height",
+          "annotation": "prop",
+          "docs": "Hover height <br> Default: 0.125rem"
+        },
+        {
+          "name": "--label-background-color",
+          "annotation": "prop",
+          "docs": "Label background <br> Default: #FFFFFF"
+        },
+        {
+          "name": "--label-color",
+          "annotation": "prop",
+          "docs": "Label color <br> Default: #212121"
+        },
+        {
+          "name": "--label-font-size",
+          "annotation": "prop",
+          "docs": "Label font size <br> Default: 1rem"
+        },
+        {
+          "name": "--label-height",
+          "annotation": "prop",
+          "docs": "Label height <br> Default: 2.25rem"
+        },
+        {
+          "name": "--label-line-height",
+          "annotation": "prop",
+          "docs": "Label line height <br> Default: 2.25rem"
+        },
+        {
+          "name": "--label-text-align",
+          "annotation": "prop",
+          "docs": "Label text align <br> Default: center"
+        }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "docs": "Slot for the content"
+        },
+        {
+          "name": "header",
+          "docs": "Slot for the title"
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\tab-group\\tab-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-tab-group",
+      "readme": "# we-tabs-group\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\textarea\\textarea.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-textarea",
+      "readme": "# we-textarea\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "autofocus",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "cols",
+          "type": "any",
+          "mutable": false,
+          "attr": "cols",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "maxlength",
+          "type": "number",
+          "mutable": false,
+          "attr": "maxlength",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "100000",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "readonly",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "readonly",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "row",
+          "type": "any",
+          "mutable": false,
+          "attr": "row",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "mutable": false,
+          "attr": "text",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of textarea <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of textarea <br> Default: unset"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of textarea <br> Default: 0.5em"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of textarea <br> Default: 0.05em"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of text <br> Default: rgba(0 , 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of textarea <br> Default: inline-block"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size <br> Default: 12pt"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight <br> Default: normal"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of textarea <br> Default: 50px"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin out of textarea <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding inside textarea <br> Default: 0"
+        },
+        {
+          "name": "--resize",
+          "annotation": "prop",
+          "docs": "Resize option for textarea <br> Default: auto"
+        },
+        {
+          "name": "--text-align",
+          "annotation": "prop",
+          "docs": "Text align <br> Default: left"
+        },
+        {
+          "name": "--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration for text <br> Default: unset"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform <br> Default: unset"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of textarea <br> Default: 100%"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}

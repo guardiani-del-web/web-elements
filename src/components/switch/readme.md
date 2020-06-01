@@ -1,8 +1,6 @@
 # we-switch
 
-```html
-<we-switch name="switch1" enabled="true" change-callback="enabledHandler"></we-switch>
-```
+
 
 <!-- Auto Generated Below -->
 

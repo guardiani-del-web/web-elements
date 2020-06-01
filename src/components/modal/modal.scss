@@ -1,0 +1,43 @@
+/**
+* @prop --back--background: Background of back of modal <br> Default: rgba(128, 128, 128, 0.35)
+* @prop --back--justify-content: Justify content of back of modal, it affects the horizontal position of modal in the page <br> Default: center
+* @prop --back--align-items: Align items of back of modal, it affects the vertical position of modal in the page  <br> Default: center
+* @prop --modal--display: Display option of modal <br> Default: flex
+* @prop --modal--background: Background of modal <br> Default: rgba(255, 255, 255, 1)
+* @prop --modal--width: Width of modal <br> Default:  12.500em
+* @prop --modal--height: Height of modal <br> Default: 18.750em
+* @prop --modal--padding: Padding of modal <br> Default: 0.625em
+* @prop --modal--border-radius: Border radius of modal <br> Default: 0.625em
+* @prop --modal--border: Border of modal <br> Default: none
+* @prop --modal--justify-content: Justify content of modal, it affects the horizontal position of the elements inside the modal <br> Default: center
+* @prop --modal--align-items: Align items of modal, it affects the vertical position of the elements inside the modal <br> Default: unset
+*/
+:host {
+  display: block;
+}
+
+.back {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: var(--back--background, rgba(128, 128, 128, 0.35));
+  position: fixed;
+  justify-content: var(--back--justify-content, center);
+  align-items: var(--back--align-items, center);
+
+  &.visible {
+    display: flex;
+  }
+}
+
+.modal {
+  display: var(--modal--display, flex);
+  background: var(--modal--background, rgba(255, 255, 255, 1));
+  width: var(--modal--width, 12.500em);
+  height: var(--modal--height, 18.750em);  
+  padding: var(--modal--padding, 0.625em);
+  border-radius: var(--modal--border-radius, 0.625em);
+  border: var(--modal--border, none);
+  justify-content: var(--modal--justify-content, center);
+  align-items: var(--modal--align-items, unset);
+}
