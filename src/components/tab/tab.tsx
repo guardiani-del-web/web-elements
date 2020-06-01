@@ -24,10 +24,10 @@ export class Tab implements ComponentInterface {
     @State() valueId = generateUniqueId();
     @Event() tabCallback: EventEmitter;
 
-  handleChange(event: { target: HTMLInputElement }) {
-    console.log(event.target.value);
-    this.tabCallback.emit(event.target.value);
-  }
+    handleChange(event: { target: HTMLInputElement }) {
+        console.log(event.target.value);
+        this.tabCallback.emit(event.target.value);
+    }
 
     render() {
         return (
