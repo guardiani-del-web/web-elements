@@ -30,3 +30,4 @@ package-lock.json
 custom-elements.d.ts
 custom-elements.json
 src/index.html
+src/components.d.ts
