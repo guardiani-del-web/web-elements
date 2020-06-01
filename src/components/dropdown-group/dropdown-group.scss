@@ -1,0 +1,9 @@
+:host {
+  display: var(--dropdown-group--display, flex);
+  flex-direction: var(--dropdown-group--flex-direction, column);
+  width: var(--dropdown-group--width, 200px);
+  height: var(--dropdown-group--height, auto);
+  background: var(--dropdown-group--background, rgba(255, 166, 166, 1));
+}
+
+

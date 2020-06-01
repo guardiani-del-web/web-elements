@@ -35,6 +35,13 @@ export namespace Components {
     }
     interface WeDropdown {
     }
+    interface WeDropdownGroup {
+    }
+    interface WeDropdownItem {
+        "arrowType": string;
+        "arrowTypeChecked": string;
+        "label": string;
+    }
     interface WeModal {
         "isVisible": boolean;
     }
@@ -129,6 +136,18 @@ declare global {
         prototype: HTMLWeDropdownElement;
         new (): HTMLWeDropdownElement;
     };
+    interface HTMLWeDropdownGroupElement extends Components.WeDropdownGroup, HTMLStencilElement {
+    }
+    var HTMLWeDropdownGroupElement: {
+        prototype: HTMLWeDropdownGroupElement;
+        new (): HTMLWeDropdownGroupElement;
+    };
+    interface HTMLWeDropdownItemElement extends Components.WeDropdownItem, HTMLStencilElement {
+    }
+    var HTMLWeDropdownItemElement: {
+        prototype: HTMLWeDropdownItemElement;
+        new (): HTMLWeDropdownItemElement;
+    };
     interface HTMLWeModalElement extends Components.WeModal, HTMLStencilElement {
     }
     var HTMLWeModalElement: {
@@ -186,6 +205,8 @@ declare global {
         "we-chips": HTMLWeChipsElement;
         "we-divider": HTMLWeDividerElement;
         "we-dropdown": HTMLWeDropdownElement;
+        "we-dropdown-group": HTMLWeDropdownGroupElement;
+        "we-dropdown-item": HTMLWeDropdownItemElement;
         "we-modal": HTMLWeModalElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
@@ -229,6 +250,14 @@ declare namespace LocalJSX {
     interface WeDivider {
     }
     interface WeDropdown {
+    }
+    interface WeDropdownGroup {
+    }
+    interface WeDropdownItem {
+        "arrowType"?: string;
+        "arrowTypeChecked"?: string;
+        "label"?: string;
+        "onClickCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeModal {
         "isVisible"?: boolean;
@@ -286,6 +315,8 @@ declare namespace LocalJSX {
         "we-chips": WeChips;
         "we-divider": WeDivider;
         "we-dropdown": WeDropdown;
+        "we-dropdown-group": WeDropdownGroup;
+        "we-dropdown-item": WeDropdownItem;
         "we-modal": WeModal;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
@@ -308,6 +339,8 @@ declare module "@stencil/core" {
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-dropdown": LocalJSX.WeDropdown & JSXBase.HTMLAttributes<HTMLWeDropdownElement>;
+            "we-dropdown-group": LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
+            "we-dropdown-item": LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
             "we-modal": LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
