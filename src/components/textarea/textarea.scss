@@ -18,24 +18,24 @@
  */
 
 :host {
-      display: block;
+  display: block;
 }
 
 textarea {
-      color: var(--color, rgba(0, 0, 0, 1));
-      background: var(--background, rgba(255, 255, 255, 1));
-      font-size: var(--font-size, 12pt);
-      font-weight: var(--font-weight, normal);
-      text-transform: var(--text-transform, unset);
-      text-align: var(--text-align, left);
-      border-radius: var(--border-radius, 0.5em);
-      border-width: var(--border-width, 0.05em);
-      border-color: var(--border-color, unset);
-      width: var(--width, 100%);
-      height: var(--heigth, 50px);
-      padding: var(--padding, 0);
-      margin: var(--margin, 0);
-      display: var(--display, inline-block);
-      resize: var(--resize, auto);
-      text-decoration: var(--text-decoration, unset);
+  color: var(--color, rgba(0, 0, 0, 1));
+  background: var(--background, rgba(255, 255, 255, 1));
+  font-size: var(--font-size, 12pt);
+  font-weight: var(--font-weight, normal);
+  text-transform: var(--text-transform, unset);
+  text-align: var(--text-align, left);
+  border-radius: var(--border-radius, 0.5em);
+  border-width: var(--border-width, 0.05em);
+  border-color: var(--border-color, unset);
+  width: var(--width, 100%);
+  height: var(--heigth, 50px);
+  padding: var(--padding, 0);
+  margin: var(--margin, 0);
+  display: var(--display, inline-block);
+  resize: var(--resize, auto);
+  text-decoration: var(--text-decoration, unset);
 }

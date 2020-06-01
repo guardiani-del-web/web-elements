@@ -19,40 +19,40 @@
  */
 
 :host {
-      display: block;
+  display: block;
 }
 
 input[type='checkbox'] {
-      display: none;
-      + label {
-            display: flex;
-            align-items: center;
-            margin: var(--label-margin, 0.2em);
-            cursor: pointer;
-            padding: var(--label-padding, 0.2em);
+  display: none;
+  + label {
+    display: flex;
+    align-items: center;
+    margin: var(--label-margin, 0.2em);
+    cursor: pointer;
+    padding: var(--label-padding, 0.2em);
 
-            &:before {
-                  content: var(--icon-content, '\2714');
-                  border: var(--icon-border, 1px solid $primary-text);
-                  border-radius: var(--icon-border-radius, 0.2em);
-                  display: inline-block;
-                  width: var(--icon-width, 1em);
-                  height: var(--icon-heigth, 1em);
-                  padding: var(--icon-padding, 0 0 0.3em 0.2em);
-                  margin: var(--icon-margin, 0 0.3em 0 0);
-                  color: transparent;
-            }
-      }
-      &:checked + label:before {
-            background-color: var(--checked-background-color, $primary_color);
-            border-color: var(--checked-border-color, $primary_color);
-            color: var(--checked-color, $text_icons);
-      }
-      &:disabled + label:before {
-            border-color: var(--disabled-border-color, $disabled);
-      }
-      &:checked:disabled + label:before {
-            background-color: var(--checked-disabled-background-color, $disabled);
-            border-color: var(--checked-disabled-border-color, $disabled);
-      }
+    &:before {
+      content: var(--icon-content, '\2714');
+      border: var(--icon-border, 1px solid $primary-text);
+      border-radius: var(--icon-border-radius, 0.2em);
+      display: inline-block;
+      width: var(--icon-width, 1em);
+      height: var(--icon-heigth, 1em);
+      padding: var(--icon-padding, 0 0 0.3em 0.2em);
+      margin: var(--icon-margin, 0 0.3em 0 0);
+      color: transparent;
+    }
+  }
+  &:checked + label:before {
+    background-color: var(--checked-background-color, $primary_color);
+    border-color: var(--checked-border-color, $primary_color);
+    color: var(--checked-color, $text_icons);
+  }
+  &:disabled + label:before {
+    border-color: var(--disabled-border-color, $disabled);
+  }
+  &:checked:disabled + label:before {
+    background-color: var(--checked-disabled-background-color, $disabled);
+    border-color: var(--checked-disabled-border-color, $disabled);
+  }
 }

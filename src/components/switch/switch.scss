@@ -19,55 +19,55 @@
   */
 
 :host {
-      display: block;
-      position: relative;
-      width: var(--container--width, 3em);
-      height: var(--container--height, 1.5em);
+  display: block;
+  position: relative;
+  width: var(--container--width, 3em);
+  height: var(--container--height, 1.5em);
 
-      input[type='checkbox'] {
-            display: none;
-      }
-      .switch {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            cursor: var(--switch--cursor, pointer);
-            background: var(--switch--background, rgba(128, 128, 128, 1));
-            border-radius: var(--switch--border-radius, 6.25em);
-            &:after {
-                  content: '';
-                  position: absolute;
-                  z-index: 2;
-                  top: var(--switch_after--top, 0.22em);
-                  left: var(--switch_after--left, 0.313em);
-                  width: var(--switch_after--width, 1em);
-                  height: var(--switch_after--height, 1em);
-                  background: var(--switch_after--background, rgba(255, 255, 255, 1));
-                  border-radius: var(--switch_after--border-radius, 50%);
-                  transition: var(--switch_after--transition, 0.3s);
-            }
-      }
-      input:checked + .switch {
-            background: var(--switch--background-change, $primary_color);
-      }
+  input[type='checkbox'] {
+    display: none;
+  }
+  .switch {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: var(--switch--cursor, pointer);
+    background: var(--switch--background, rgba(128, 128, 128, 1));
+    border-radius: var(--switch--border-radius, 6.25em);
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: var(--switch_after--top, 0.22em);
+      left: var(--switch_after--left, 0.313em);
+      width: var(--switch_after--width, 1em);
+      height: var(--switch_after--height, 1em);
+      background: var(--switch_after--background, rgba(255, 255, 255, 1));
+      border-radius: var(--switch_after--border-radius, 50%);
+      transition: var(--switch_after--transition, 0.3s);
+    }
+  }
+  input:checked + .switch {
+    background: var(--switch--background-change, $primary_color);
+  }
 
-      input:checked + .switch:after {
-            left: calc(100% - 0.313em);
-            transform: translateX(-100%);
-      }
+  input:checked + .switch:after {
+    left: calc(100% - 0.313em);
+    transform: translateX(-100%);
+  }
 
-      .left,
-      .right {
-            position: absolute;
-            top: 50%;
-            font-size: var(--container--font-size, 2em);
-            font-weight: var(--container--font-weight, bold);
-      }
-      .left {
-            left: 0.625em;
-      }
-      .right {
-            right: 0.625em;
-      }
+  .left,
+  .right {
+    position: absolute;
+    top: 50%;
+    font-size: var(--container--font-size, 2em);
+    font-weight: var(--container--font-weight, bold);
+  }
+  .left {
+    left: 0.625em;
+  }
+  .right {
+    right: 0.625em;
+  }
 }
