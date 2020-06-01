@@ -16,41 +16,41 @@
  */
 
 :host {
-    input {
-        display: none;
-        &:checked + label {
-            background: var(--enabled-tab-color, $background-color);
-        }
-    }
-    label {
-        display: inline-block;
-        font-size: var(--label-font-size, 1rem);
-        height: var(--label-height, 2.25rem);
-        line-height: var(--label-line-height, 2.25rem);
-        width: 100%;
-        text-align: var(--label-text-align, center);
-        background: var(--label-background-color, $text-icons);
-        color: var(--label-color, $primary-text);
-        position: relative;
-        transition: 0.25s background ease;
-        cursor: pointer;
-        &::after {
-            content: '';
-            height: var(--hover-height, 0.125rem);
+      input {
+            display: none;
+            &:checked + label {
+                  background: var(--enabled-tab-color, $background-color);
+            }
+      }
+      label {
+            display: inline-block;
+            font-size: var(--label-font-size, 1rem);
+            height: var(--label-height, 2.25rem);
+            line-height: var(--label-line-height, 2.25rem);
             width: 100%;
-            position: absolute;
-            display: block;
-            background: var(--hover-color, #ccc);
-            bottom: 0;
-            opacity: 0;
-            left: 0;
-            transition: 0.25s ease;
-        }
-        &:hover::after {
-            opacity: 1;
-        }
-    }
-    slot[name='content'] {
-        display: none;
-    }
+            text-align: var(--label-text-align, center);
+            background: var(--label-background-color, $text-icons);
+            color: var(--label-color, $primary-text);
+            position: relative;
+            transition: 0.25s background ease;
+            cursor: pointer;
+            &::after {
+                  content: '';
+                  height: var(--hover-height, 0.125rem);
+                  width: 100%;
+                  position: absolute;
+                  display: block;
+                  background: var(--hover-color, #ccc);
+                  bottom: 0;
+                  opacity: 0;
+                  left: 0;
+                  transition: 0.25s ease;
+            }
+            &:hover::after {
+                  opacity: 1;
+            }
+      }
+      slot[name='content'] {
+            display: none;
+      }
 }

@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "prettier --write \"src/**/*.ts?(x)\" && prettier --write \"src/**/*.scss\" && pretty-quick — staged && npm run lint"
+    "pre-commit": "prettier --write \"src/**/*.ts?(x)\" && prettier --write \"src/**/*.scss\" && pretty-quick --staged && npm run lint"
   }
 }

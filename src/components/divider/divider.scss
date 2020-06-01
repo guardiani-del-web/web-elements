@@ -9,13 +9,13 @@
 */
 
 :host {
-    display: flex;
-    justify-content: flex-start;
-    .line {
-        border: var(--divider-border, 1px solid $divider-line-color);
-        border-radius: var(--divider-radius, 0.625rem);
-        margin-left: var(--divider-margin-left, 0);
-        margin-right: var(--divider-margin-right, 0);
-        width: var(--divider-width, 100%);
-    }
+      display: flex;
+      justify-content: flex-start;
+      .line {
+            border: var(--divider-border, 1px solid $divider-line-color);
+            border-radius: var(--divider-radius, 0.625rem);
+            margin-left: var(--divider-margin-left, 0);
+            margin-right: var(--divider-margin-right, 0);
+            width: var(--divider-width, 100%);
+      }
 }
