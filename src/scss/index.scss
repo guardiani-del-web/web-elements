@@ -8,3 +8,43 @@ $background-color: #d7dcdf;
 $card-border-color-a125: rgba(0, 0, 0, 0.125);
 $card-shadow-color: rgb(0, 0, 0);
 $divider-line-color: rgba(0, 0, 0, 0.12);
+
+//Color Pallet
+
+$blue: rgb(0, 38, 66);
+$red: rgb(132, 0, 50);
+$yellow: rgb(229, 149, 0);
+$grey: rgb(229, 218, 218);
+$black: rgb(2, 4, 15);
+$white: rgb(255, 255, 255);
+
+$primary: $blue;
+$seconday: $grey;
+$warning: $yellow;
+$danger: $red;
+$dark: $black;
+
+// Typography
+
+$type-default: 'Open Sans', 'Arial', 'Sans-serif';
+$font-size-normal: 1rem;
+
+$text-color-primary: $primary;
+$text-color-secondary: $secondary;
+
+$font-size-h1: 5rem;
+$font-size-h2: 2.4rem;
+$font-size-h3: 2rem;
+$font-size-body: $font-size-normal;
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-bold: 700;
+
+//Components General Styles
+
+$line-height: 1.5;
+$border-width: 1px;
+$border-color: $seconday;
+$border-radius: 0.25rem;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
