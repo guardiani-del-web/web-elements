@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-01T23:09:54",
+  "timestamp": "2020-06-02T21:34:19",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -612,6 +612,40 @@
           "required": false
         },
         {
+          "name": "bottomChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "bottom-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "heightChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "height-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"200px\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
           "name": "label",
           "type": "string",
           "mutable": false,
@@ -620,6 +654,74 @@
           "docs": "",
           "docsTags": [],
           "default": "\"prova\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "leftChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "left-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "rightChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "right-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "topChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "top-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "widthChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "width-children",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"100px\"",
           "values": [
             {
               "type": "string"

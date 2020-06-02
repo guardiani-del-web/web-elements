@@ -16,15 +16,13 @@ export const Basic = () => {
 
   return html`
     <we-dropdown-group>
-      <we-dropdown-item label="option 1">
+      <we-dropdown-item label="option 1" top-children="100%" left="0">
         <we-dropdown-group>
           <we-dropdown-item label="suboption 1"></we-dropdown-item>
           <we-dropdown-item label="suboption 2"></we-dropdown-item>
           <we-dropdown-item label="suboption 3"></we-dropdown-item>
         </we-dropdown-group>
       </we-dropdown-item>
-      <we-dropdown-item label="option 2"></we-dropdown-item>
-      <we-dropdown-item label="option 3"></we-dropdown-item>
     </we-dropdown-group>
     <style>
       html {
