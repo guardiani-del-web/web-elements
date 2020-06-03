@@ -11,11 +11,10 @@
   align-items: var(--dropdown-item--align-items, center);
 
   .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    border-color: var(--dropdown-item_arrow--color, rgba(0, 0, 0, 1));
+    border: var(--dropdown-item_arrow--border, solid rgba(0, 0, 0, 1));
+    padding: var(--dropdown-item_arrow--padding, 3px);
+    border-width: var(--dropdown-item_arrow--border-width, 0 3px 3px 0);
+    display: var(--dropdown-item_arrow--display, inline-block);
     transition: var(--dropdown-item_arrow--transition, all 0.5s);
 
     &.right {
@@ -43,7 +42,5 @@
     overflow: hidden;
     position: var(--dropdown-item_children--position, absolute);
     transition: var(--dropdown-item_children--transition, all 0.5s);
-    width: 0;
-    height: 0;
   }
 }
