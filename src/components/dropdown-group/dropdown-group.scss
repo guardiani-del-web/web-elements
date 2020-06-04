@@ -1,8 +1,4 @@
 :host {
-  display: block;
-}
-
-.dropdown_group {
   display: var(--dropdown-group--display, flex);
   width: var(--dropdown-group--width, fit-content);
   height: var(--dropdown-group--height, auto);
@@ -10,12 +6,12 @@
   border: var(--dropdown-group--border, solid 2px rgba(0, 0, 0, 1));
   border-right: var(--dropdown-group--border-bottom, none);
   border-bottom: var(--dropdown-group--border-right, none);
-
-  &.row {
+}
+  :host(.row) {
     flex-direction: var(--dropdown-group--flex-direction, row);
   }
 
-  &.column {
+  :host(.column) {
     flex-direction: var(--dropdown-group--flex-direction, column);
   }
-}
+

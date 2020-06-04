@@ -10,10 +10,8 @@ export class DropdownGroup implements ComponentInterface {
 
   render() {
     return (
-      <Host>
-        <div class={"dropdown_group " + this.orientation}>
+      <Host class={this.orientation}>
         <slot></slot>
-        </div>
       </Host>
     );
   }
