@@ -6,8 +6,7 @@ import {
   Prop,
   Event,
   EventEmitter,
-  State,
-  Listen
+  State
 } from "@stencil/core";
 
 @Component({
@@ -34,14 +33,12 @@ export class DropdownItem implements ComponentInterface {
   @Prop() rightChildren: string = "auto";
 
   handleChangeState(event: any) {
-    console.log("change state", event.label);
     this.arrowState =
       this.arrowState == this.arrowType
         ? this.arrowTypeChecked
         : this.arrowType;
     this.childrenOpen = !this.childrenOpen;
 
-    console.log("overflow", this.overflow);
     if (this.overflow === "hidden") {
       setTimeout(() => {
         if (this.childrenOpen === true) this.overflow = "unset";
@@ -49,15 +46,10 @@ export class DropdownItem implements ComponentInterface {
     } else this.overflow = "hidden";
   }
 
-  @Listen('mouseOver')
-  handleMouseOver(event: any) {
-    console.log('Received the custom todoCompleted event: ', event);
-  }
-
   render() {
     return (
       <Host>
-        <div class="dropdown-item" onClick={() => this.handleChangeState(this)}>
+        <div class="dropdown_item" onClick={() => this.handleChangeState(this)} >
           <label>{this.label}</label>
           {this.arrowType && <i class={"arrow " + this.arrowState}></i>}
         </div>

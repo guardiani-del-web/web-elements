@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-03T19:32:54",
+  "timestamp": "2020-06-04T21:33:25",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -384,23 +384,6 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\dropdown\\dropdown.tsx",
-      "encapsulation": "shadow",
-      "tag": "we-dropdown",
-      "readme": "# we-dropdown\n\n\n",
-      "docs": "",
-      "docsTags": [],
-      "usage": {},
-      "props": [],
-      "methods": [],
-      "events": [],
-      "styles": [],
-      "slots": [],
-      "dependents": [],
-      "dependencies": [],
-      "dependencyGraph": {}
-    },
-    {
       "filePath": "src\\components\\dropdown-group\\dropdown-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-dropdown-group",
@@ -408,7 +391,25 @@
       "docs": "",
       "docsTags": [],
       "usage": {},
-      "props": [],
+      "props": [
+        {
+          "name": "orientation",
+          "type": "string",
+          "mutable": false,
+          "attr": "orientation",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"column\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
       "methods": [],
       "events": [],
       "styles": [],

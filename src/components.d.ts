@@ -33,9 +33,8 @@ export namespace Components {
     }
     interface WeDivider {
     }
-    interface WeDropdown {
-    }
     interface WeDropdownGroup {
+        "orientation": string;
     }
     interface WeDropdownItem {
         "arrowType": string;
@@ -138,12 +137,6 @@ declare global {
         prototype: HTMLWeDividerElement;
         new (): HTMLWeDividerElement;
     };
-    interface HTMLWeDropdownElement extends Components.WeDropdown, HTMLStencilElement {
-    }
-    var HTMLWeDropdownElement: {
-        prototype: HTMLWeDropdownElement;
-        new (): HTMLWeDropdownElement;
-    };
     interface HTMLWeDropdownGroupElement extends Components.WeDropdownGroup, HTMLStencilElement {
     }
     var HTMLWeDropdownGroupElement: {
@@ -212,7 +205,6 @@ declare global {
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
         "we-divider": HTMLWeDividerElement;
-        "we-dropdown": HTMLWeDropdownElement;
         "we-dropdown-group": HTMLWeDropdownGroupElement;
         "we-dropdown-item": HTMLWeDropdownItemElement;
         "we-modal": HTMLWeModalElement;
@@ -257,9 +249,8 @@ declare namespace LocalJSX {
     }
     interface WeDivider {
     }
-    interface WeDropdown {
-    }
     interface WeDropdownGroup {
+        "orientation"?: string;
     }
     interface WeDropdownItem {
         "arrowType"?: string;
@@ -330,7 +321,6 @@ declare namespace LocalJSX {
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
         "we-divider": WeDivider;
-        "we-dropdown": WeDropdown;
         "we-dropdown-group": WeDropdownGroup;
         "we-dropdown-item": WeDropdownItem;
         "we-modal": WeModal;
@@ -354,7 +344,6 @@ declare module "@stencil/core" {
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
-            "we-dropdown": LocalJSX.WeDropdown & JSXBase.HTMLAttributes<HTMLWeDropdownElement>;
             "we-dropdown-group": LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
             "we-dropdown-item": LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
             "we-modal": LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
