@@ -42,11 +42,13 @@ export namespace Components {
         "arrowTypeChecked": string;
         "bottomChildren": string;
         "heightChildren": string;
+        "heightChildrenOpen": string;
         "label": string;
         "leftChildren": string;
         "rightChildren": string;
         "topChildren": string;
         "widthChildren": string;
+        "widthChildrenOpen": string;
     }
     interface WeModal {
         "isVisible": boolean;
@@ -264,12 +266,14 @@ declare namespace LocalJSX {
         "arrowTypeChecked"?: string;
         "bottomChildren"?: string;
         "heightChildren"?: string;
+        "heightChildrenOpen"?: string;
         "label"?: string;
         "leftChildren"?: string;
         "onClickCallback"?: (event: CustomEvent<any>) => void;
         "rightChildren"?: string;
         "topChildren"?: string;
         "widthChildren"?: string;
+        "widthChildrenOpen"?: string;
     }
     interface WeModal {
         "isVisible"?: boolean;

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-02T21:34:19",
+  "timestamp": "2020-06-03T19:32:54",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -360,158 +360,7 @@
           "docsTags": []
         }
       ],
-      "styles": [
-        {
-          "name": "--background",
-          "annotation": "prop",
-          "docs": "Background of chips <br> Default: rgba(229, 229, 229, 1)"
-        },
-        {
-          "name": "--border-color",
-          "annotation": "prop",
-          "docs": "Border color of chips <br> Default: unset"
-        },
-        {
-          "name": "--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of chips <br> Default: 0.5em"
-        },
-        {
-          "name": "--border-width",
-          "annotation": "prop",
-          "docs": "Border width of chips <br> Default: 0.05em"
-        },
-        {
-          "name": "--display",
-          "annotation": "prop",
-          "docs": "Display of chips <br> Default: inline-block"
-        },
-        {
-          "name": "--heigth",
-          "annotation": "prop",
-          "docs": "Height of chips <br> Default: auto"
-        },
-        {
-          "name": "--imageLeft--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of image left <br> Default: 0em"
-        },
-        {
-          "name": "--imageLeft--cursor",
-          "annotation": "prop",
-          "docs": "Cursor type of image left <br> Default: auto"
-        },
-        {
-          "name": "--imageLeft--heigth",
-          "annotation": "prop",
-          "docs": "Height of image left <br> Default: auto"
-        },
-        {
-          "name": "--imageLeft--margin",
-          "annotation": "prop",
-          "docs": "Margin of image left <br> Default: 0 0.5rem"
-        },
-        {
-          "name": "--imageLeft--padding",
-          "annotation": "prop",
-          "docs": "Padding of image left <br> Default: 0"
-        },
-        {
-          "name": "--imageLeft--width",
-          "annotation": "prop",
-          "docs": "Width of image left <br> Default: auto"
-        },
-        {
-          "name": "--imageRight--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of image right <br> Default: 0em"
-        },
-        {
-          "name": "--imageRight--cursor",
-          "annotation": "prop",
-          "docs": "Cursor type of image right <br> Default: pointer"
-        },
-        {
-          "name": "--imageRight--heigth",
-          "annotation": "prop",
-          "docs": "Height of image right <br> Default: auto"
-        },
-        {
-          "name": "--imageRight--margin",
-          "annotation": "prop",
-          "docs": "Margin of image right <br> Default: 0 0.5rem"
-        },
-        {
-          "name": "--imageRight--padding",
-          "annotation": "prop",
-          "docs": "Padding of image right <br> Default: 0"
-        },
-        {
-          "name": "--imageRight--width",
-          "annotation": "prop",
-          "docs": "Width of image right <br> Default: auto"
-        },
-        {
-          "name": "--label--color",
-          "annotation": "prop",
-          "docs": "Color of text label <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--label--font-size",
-          "annotation": "prop",
-          "docs": "Font size of label <br> Default: 12pt"
-        },
-        {
-          "name": "--label--font-weight",
-          "annotation": "prop",
-          "docs": "Font weight of label <br> Default: normal"
-        },
-        {
-          "name": "--label--margin",
-          "annotation": "prop",
-          "docs": "Margin of label <br> Default: 0 0.5rem"
-        },
-        {
-          "name": "--label--padding",
-          "annotation": "prop",
-          "docs": "Padding of label <br> Default: 0"
-        },
-        {
-          "name": "--label--text-align",
-          "annotation": "prop",
-          "docs": "Text align of label <br> Default: left"
-        },
-        {
-          "name": "--label--text-decoration",
-          "annotation": "prop",
-          "docs": "Text decoration of label <br> Default: unset"
-        },
-        {
-          "name": "--label--text-transform",
-          "annotation": "prop",
-          "docs": "Text trasform of label <br> Default: unset"
-        },
-        {
-          "name": "--margin",
-          "annotation": "prop",
-          "docs": "Margin of chips <br> Default: 0"
-        },
-        {
-          "name": "--padding",
-          "annotation": "prop",
-          "docs": "Padding of chips <br> Default: 0.25rem"
-        },
-        {
-          "name": "--selected-background",
-          "annotation": "prop",
-          "docs": "Background of chips when selected <br> Default: rgba(65, 169, 192, 1)"
-        },
-        {
-          "name": "--width",
-          "annotation": "prop",
-          "docs": "Width of chips <br> Default: auto"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -585,7 +434,7 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "\"down\"",
+          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -602,7 +451,7 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "\"up\"",
+          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -636,7 +485,24 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "\"200px\"",
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "heightChildrenOpen",
+          "type": "string",
+          "mutable": false,
+          "attr": "height-children-open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
           "values": [
             {
               "type": "string"
@@ -653,7 +519,7 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "\"prova\"",
+          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -721,7 +587,24 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "\"100px\"",
+          "default": "\"auto\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "widthChildrenOpen",
+          "type": "string",
+          "mutable": false,
+          "attr": "width-children-open",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"auto\"",
           "values": [
             {
               "type": "string"

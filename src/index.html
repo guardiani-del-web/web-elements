@@ -8,6 +8,26 @@
   <script type="module" src="/build/web-elements.esm.js"></script>
   <script nomodule src="/build/web-elements.js"></script>
 
+  <style>
+    .dropdown_row{
+      --dropdown-group--flex-direction: row;
+      --dropdown-group--width: fit-content;
+      --dropdown-item--border-right: solid 2px rgba(0, 0, 0, 1);
+      --dropdown-item--border-bottom: none;
+      --dropdown-group--border-right: none;
+      --dropdown-group--border-bottom: solid 2px rgba(0, 0, 0, 1);
+    }
+
+    .dropdown_column {
+      --dropdown-group--flex-direction: column;
+      --dropdown-item--border-bottom: solid 2px rgba(0, 0, 0, 1);
+      --dropdown-item--border-right: none;
+      --dropdown-group--border-bottom: none;
+      --dropdown-group--border-right: solid 2px rgba(0, 0, 0, 1);
+    }
+
+  </style>
+
 </head>
 <body>
   <!-- JUST FOR TESTING DON'T PUSH ANYMORE TO AVOID CONFLICTS -->
@@ -31,5 +51,42 @@
       </div>
     </we-accordion>
   </we-accordion-group>
+
+  <we-dropdown-group>
+    <we-dropdown-item label="option 1" top-children="-2px" left-children="100%" height-children="0px" height-children-open="170px" arrow-type="right" arrow-type-checked="left">
+      <we-dropdown-group>
+        <we-dropdown-item label="suboption 1" top-children="-2px" left-children="100%" height-children="0" height-children-open="170px" arrow-type="right" arrow-type-checked="left">
+          <we-dropdown-group>
+            <we-dropdown-item label="suboption 1.1"></we-dropdown-item>
+            <we-dropdown-item label="suboption 1.2"></we-dropdown-item>
+            <we-dropdown-item label="suboption 1.3"></we-dropdown-item>
+          </we-dropdown-group>
+        </we-dropdown-item>
+        <we-dropdown-item label="suboption 2"></we-dropdown-item>
+        <we-dropdown-item label="suboption 3"></we-dropdown-item>
+      </we-dropdown-group>
+    </we-dropdown-item>
+    <we-dropdown-item label="option 2">
+    </we-dropdown-item>
+    <we-dropdown-item label="option 3">
+    </we-dropdown-item>
+  </we-dropdown-group>
+  
+  </br>
+  
+  <we-dropdown-group class="dropdown_row">
+    <we-dropdown-item label="option 1" top-children="100%" left-children="-2px" height-children="0" height-children-open="170px" arrow-type="bottom" arrow-type-checked="bottom">
+      <we-dropdown-group class="dropdown_column">
+        <we-dropdown-item label="suboption 1"></we-dropdown-item>
+        <we-dropdown-item label="suboption 2"></we-dropdown-item>
+        <we-dropdown-item label="suboption 3"></we-dropdown-item>
+      </we-dropdown-group>
+    </we-dropdown-item>
+    <we-dropdown-item label="option 2">
+    </we-dropdown-item>
+    <we-dropdown-item label="option 3">
+    </we-dropdown-item>
+  </we-dropdown-group>
+  <style>
 </body>
 </html>

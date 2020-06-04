@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, Host, h } from '@stencil/core';
+import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'we-dropdown-group',

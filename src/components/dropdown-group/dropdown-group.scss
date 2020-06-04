@@ -1,9 +1,12 @@
 :host {
   display: var(--dropdown-group--display, flex);
   flex-direction: var(--dropdown-group--flex-direction, column);
-  width: var(--dropdown-group--width, auto);
+  width: var(--dropdown-group--width, 220px);
   height: var(--dropdown-group--height, auto);
-  background: var(--dropdown-group--background, rgba(255, 166, 166, 1));
+  background: var(--dropdown-group--background, rgba(255, 255, 255, 1));
+  border: var(--dropdown-group--border, solid 2px rgba(0, 0, 0, 1));
+  border-bottom: var(--dropdown-group--border-bottom, none);
+  border-right: var(--dropdown-group--border-right, solid 2px rgba(0, 0, 0, 1));
 }
 
 
