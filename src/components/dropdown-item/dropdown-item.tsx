@@ -7,6 +7,7 @@ import {
   Event,
   EventEmitter,
   State,
+  Listen
 } from "@stencil/core";
 
 @Component({
@@ -46,6 +47,11 @@ export class DropdownItem implements ComponentInterface {
         if (this.childrenOpen === true) this.overflow = "unset";
       }, 500);
     } else this.overflow = "hidden";
+  }
+
+  @Listen('mouseOver')
+  handleMouseOver(event: any) {
+    console.log('Received the custom todoCompleted event: ', event);
   }
 
   render() {
