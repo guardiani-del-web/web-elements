@@ -42,6 +42,7 @@ export namespace Components {
         "label": string;
         "marginClass": string;
         "positionChildren": string;
+        "value": string;
         "width": string;
     }
     interface WeModal {
@@ -253,7 +254,9 @@ declare namespace LocalJSX {
         "label"?: string;
         "marginClass"?: string;
         "onClickCallback"?: (event: CustomEvent<any>) => void;
+        "onDropdownItemCallback"?: (event: CustomEvent<any>) => void;
         "positionChildren"?: string;
+        "value"?: string;
         "width"?: string;
     }
     interface WeModal {

@@ -6,7 +6,7 @@ import {
   Prop,
   Event,
   EventEmitter,
-  State
+  State,
 } from "@stencil/core";
 
 @Component({
@@ -16,7 +16,8 @@ import {
 })
 export class DropdownItem implements ComponentInterface {
   @Prop() label: string = "";
-  @Prop() arrow: string = ""
+  @Prop() value: string = "";
+  @Prop() arrow: string = "";
   @State() arrowState: string = this.arrow;
   @Event() clickCallback: EventEmitter;
   @State() childrenOpen: boolean = false;
@@ -25,75 +26,77 @@ export class DropdownItem implements ComponentInterface {
   @State() widthArray: any;
   @Prop() height: string = "";
   @State() heightArray: any;
-  @State() style: any = {}
+  @State() style: any = {};
   @Prop() positionChildren: string = "right";
-
   @Prop() marginClass: string = "";
 
+  @Event() dropdownItemCallback: EventEmitter;
+
   manageTransition() {
-    if(this.width) {
+    if (this.width) {
       this.widthArray = JSON.parse(this.width);
-      this.style['width'] = this.childrenOpen
+      this.style["width"] = this.childrenOpen
         ? this.widthArray[1]
-        : this.widthArray[0]
-      } else 
-      this.style['width'] = 'auto';
-    if(this.height){
+        : this.widthArray[0];
+    } else this.style["width"] = "auto";
+    if (this.height) {
       this.heightArray = JSON.parse(this.height);
-      console.log("manageTransiton",this.heightArray,this.childrenOpen)
-      this.style['height'] = this.childrenOpen
+      this.style["height"] = this.childrenOpen
         ? this.heightArray[1]
-        : this.heightArray[0]
-      } else
-      this.style['height'] = 'auto';
+        : this.heightArray[0];
+    } else this.style["height"] = "auto";
   }
 
   componentWillLoad() {
-    this.style['overflow'] = "hidden";
-    if(this.arrow) {
+    this.style["overflow"] = "hidden";
+    if (this.arrow) {
       const arrowArray = JSON.parse(this.arrow);
-    this.arrowState = arrowArray[0];
+      this.arrowState = arrowArray[0];
     }
-    this.manageTransition();
-  }
-
-  componentWillUpdate(){
     this.manageTransition();
   }
 
   handleChangeState() {
-    if(this.arrow) {
+    if (this.arrow) {
       const arrowArray = JSON.parse(this.arrow);
-    this.arrowState =
-      this.arrowState == arrowArray[0]
-        ? arrowArray[1]
-        : arrowArray[0];
+      this.arrowState =
+        this.arrowState == arrowArray[0] ? arrowArray[1] : arrowArray[0];
     }
     this.childrenOpen = !this.childrenOpen;
     this.manageTransition();
-    
-    if (this.style['overflow'] === "hidden") {
+
+    if (this.style["overflow"] === "hidden") {
       setTimeout(() => {
-        if (this.childrenOpen === true) this.style['overflow'] = "unset";
+        if (this.childrenOpen === true) this.style["overflow"] = "unset";
       }, 500);
-    } else this.style['overflow'] = "hidden";
+    } else this.style["overflow"] = "hidden";
+  }
+
+  handleItemClicked(event: { target: HTMLInputElement }) {
+    this.clickCallback.emit(event.target.value);
   }
 
   render() {
-    console.log("style",this.style)
     return (
       <Host>
-        <div class={"dropdown_item " +this.marginClass} onClick={() => this.handleChangeState()} >
+        <div
+          class={"dropdown_item " + this.marginClass}
+          onClick={this.handleItemClicked.bind(this)}
+        >
           <label>{this.label}</label>
-          {this.arrow && <i class={"arrow " + this.arrowState}></i>}
+          {this.arrow && (
+            <div class="arrowContainer" onClick={() => this.handleChangeState()}>
+              <i class={"arrow " + this.arrowState}></i>
+            </div>
+          )}
         </div>
         <div
           class={"children position_" + this.positionChildren}
           style={{
-            width:this.style['width'],
-            height:this.style['height'],
-            overflow:this.style['overflow']
-        }}
+            width: this.style["width"],
+            height: this.style["height"],
+            overflow: this.style["overflow"],
+          }}
         >
           <slot></slot>
         </div>
