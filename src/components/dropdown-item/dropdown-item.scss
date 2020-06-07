@@ -1,6 +1,38 @@
+/**
+* @prop --dropdown-item--cursor: Cursor inside dropdown <br> Default: pointer
+* @prop --dropdown-item--display:  <br> Default: flex
+* @prop --dropdown-item--width:  <br> Default: 200px
+* @prop --dropdown-item--height:  <br> Default: 30px
+* @prop --dropdown-item--background:  <br> Default: rgba(255, 255, 255, 1)     
+* @prop --dropdown-item--color:  <br> Default: rgba(0, 0, 0, 1)
+* @prop --dropdown-item--padding:  <br> Default: 10px
+* @prop --dropdown-item--margin:  <br> Default: 0
+* @prop --dropdown-item--justify-content:  <br> Default: space-between
+* @prop --dropdown-item--align-items:  <br> Default: center
+* @prop --dropdown-item--border-right:  <br> Default: solid 2px rgba(0, 0, 0,  
+* @prop --dropdown-item--border-bottom:  <br> Default: solid 2px rgba(0, 0, 0, 
+
+* @prop --dropdown-item--background-hover:  <br> Default: rgb(185, 185, 185)   
+* @prop --dropdown-item_arrow--border:  <br> Default: solid rgba(0, 0, 0, 1)   
+* @prop --dropdown-item_arrow--padding:  <br> Default: 3px
+* @prop --dropdown-item_arrow--border-width:  <br> Default: 0 3px 3px 0        
+* @prop --dropdown-item_arrow--display:  <br> Default: inline-block
+* @prop --dropdown-item_arrow--transition:  <br> Default: all 0.5s
+* @prop --dropdown-item_children--position:  <br> Default: absolute
+* @prop --dropdown-item_children--transition:  <br> Default: all 0.5s
+* @prop --dropdown-item_children--top:  <br> Default: -2px
+* @prop --dropdown-item_children--left:  <br> Default: 100%
+* @prop --dropdown-item_children--top:  <br> Default: 100%
+* @prop --dropdown-item_children--left:  <br> Default: -2px
+* @prop --dropdown-item_children--top:  <br> Default: -2px
+* @prop --dropdown-item_children--right:  <br> Default: 100%
+* @prop --dropdown-item_children--bottom:  <br> Default: 100%
+* @prop --dropdown-item_children--left:  <br> Default: -2px
+*/
+
 :host {
   display: block;
-  position: var(--dropdown-item--position, relative);
+  position: relative;
   cursor: var(--dropdown-item--cursor, pointer);
 
   .dropdown_item {
@@ -15,16 +47,12 @@
     align-items: var(--dropdown-item--align-items, center);
 
     &.margin_right {
-      border-right: var(
-        --dropdown-item--border-right,
-        solid 2px rgba(0, 0, 0, 1)
+      border-right: var(--dropdown-item--border-right, solid 2px rgba(0, 0, 0, 1)
       );
     }
 
     &.margin_bottom {
-      border-bottom: var(
-        --dropdown-item--border-bottom,
-        solid 2px rgba(0, 0, 0, 1)
+      border-bottom: var(--dropdown-item--border-bottom, solid 2px rgba(0, 0, 0, 1)
       );
     }
 

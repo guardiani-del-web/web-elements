@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-07T16:56:02",
+  "timestamp": "2020-06-07T18:26:17",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -412,7 +412,38 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--dropdown-group--background",
+          "annotation": "prop",
+          "docs": "Background of of dropdown group <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--dropdown-group--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown group <br> Default: solid 2px rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-group--display",
+          "annotation": "prop",
+          "docs": "Display property of dropdown group <br> Default: flex"
+        },
+        {
+          "name": "--dropdown-group--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of dropdown group, the default value depend of the class choosen, column or row <br> Default: column"
+        },
+        {
+          "name": "--dropdown-group--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown group <br> Default: auto"
+        },
+        {
+          "name": "--dropdown-group--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown group <br> Default: fit-content"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -568,7 +599,128 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--dropdown-item--align-items",
+          "annotation": "prop",
+          "docs": "<br> Default: center"
+        },
+        {
+          "name": "--dropdown-item--background",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--dropdown-item--background-hover",
+          "annotation": "prop",
+          "docs": "<br> Default: rgb(185, 185, 185)"
+        },
+        {
+          "name": "--dropdown-item--border-bottom",
+          "annotation": "prop",
+          "docs": "<br> Default: solid 2px rgba(0, 0, 0,"
+        },
+        {
+          "name": "--dropdown-item--border-right",
+          "annotation": "prop",
+          "docs": "<br> Default: solid 2px rgba(0, 0, 0,"
+        },
+        {
+          "name": "--dropdown-item--color",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item--cursor",
+          "annotation": "prop",
+          "docs": "Cursor inside dropdown <br> Default: pointer"
+        },
+        {
+          "name": "--dropdown-item--display",
+          "annotation": "prop",
+          "docs": "<br> Default: flex"
+        },
+        {
+          "name": "--dropdown-item--height",
+          "annotation": "prop",
+          "docs": "<br> Default: 30px"
+        },
+        {
+          "name": "--dropdown-item--justify-content",
+          "annotation": "prop",
+          "docs": "<br> Default: space-between"
+        },
+        {
+          "name": "--dropdown-item--margin",
+          "annotation": "prop",
+          "docs": "<br> Default: 0"
+        },
+        {
+          "name": "--dropdown-item--padding",
+          "annotation": "prop",
+          "docs": "<br> Default: 10px"
+        },
+        {
+          "name": "--dropdown-item--width",
+          "annotation": "prop",
+          "docs": "<br> Default: 200px"
+        },
+        {
+          "name": "--dropdown-item_arrow--border",
+          "annotation": "prop",
+          "docs": "<br> Default: solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item_arrow--border-width",
+          "annotation": "prop",
+          "docs": "<br> Default: 0 3px 3px 0"
+        },
+        {
+          "name": "--dropdown-item_arrow--display",
+          "annotation": "prop",
+          "docs": "<br> Default: inline-block"
+        },
+        {
+          "name": "--dropdown-item_arrow--padding",
+          "annotation": "prop",
+          "docs": "<br> Default: 3px"
+        },
+        {
+          "name": "--dropdown-item_arrow--transition",
+          "annotation": "prop",
+          "docs": "<br> Default: all 0.5s"
+        },
+        {
+          "name": "--dropdown-item_children--bottom",
+          "annotation": "prop",
+          "docs": "<br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--left",
+          "annotation": "prop",
+          "docs": "<br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--position",
+          "annotation": "prop",
+          "docs": "<br> Default: absolute"
+        },
+        {
+          "name": "--dropdown-item_children--right",
+          "annotation": "prop",
+          "docs": "<br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--top",
+          "annotation": "prop",
+          "docs": "<br> Default: -2px"
+        },
+        {
+          "name": "--dropdown-item_children--transition",
+          "annotation": "prop",
+          "docs": "<br> Default: all 0.5s"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
