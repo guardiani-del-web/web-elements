@@ -37,17 +37,12 @@ export namespace Components {
         "orientation": string;
     }
     interface WeDropdownItem {
-        "arrowType": string;
-        "arrowTypeChecked": string;
-        "bottomChildren": string;
-        "heightChildren": string;
-        "heightChildrenOpen": string;
+        "arrow": string;
+        "height": string;
         "label": string;
-        "leftChildren": string;
-        "rightChildren": string;
-        "topChildren": string;
-        "widthChildren": string;
-        "widthChildrenOpen": string;
+        "marginClass": string;
+        "positionChildren": string;
+        "width": string;
     }
     interface WeModal {
         "isVisible": boolean;
@@ -253,18 +248,13 @@ declare namespace LocalJSX {
         "orientation"?: string;
     }
     interface WeDropdownItem {
-        "arrowType"?: string;
-        "arrowTypeChecked"?: string;
-        "bottomChildren"?: string;
-        "heightChildren"?: string;
-        "heightChildrenOpen"?: string;
+        "arrow"?: string;
+        "height"?: string;
         "label"?: string;
-        "leftChildren"?: string;
+        "marginClass"?: string;
         "onClickCallback"?: (event: CustomEvent<any>) => void;
-        "rightChildren"?: string;
-        "topChildren"?: string;
-        "widthChildren"?: string;
-        "widthChildrenOpen"?: string;
+        "positionChildren"?: string;
+        "width"?: string;
     }
     interface WeModal {
         "isVisible"?: boolean;
