@@ -2,11 +2,11 @@ import { ComponentInterface, Component, h, Prop, Listen, Element } from '@stenci
 
 @Component({
   tag: 'we-accordion-group',
-  shadow: true,
+  shadow: true
 })
 export class AccordionGroup implements ComponentInterface {
   @Prop() multiple: boolean;
-  @Element() el: HTMLElement;
+  @Element() el: HTMLWeAccordionGroupElement;
 
   @Listen('accordionCallback')
   accordionCallbackHandler(event: CustomEvent) {
@@ -15,7 +15,7 @@ export class AccordionGroup implements ComponentInterface {
     if (!this.multiple) {
       const accordions = this.el.querySelectorAll('we-accordion');
 
-      accordions.forEach(accordion => {
+      accordions.forEach((accordion) => {
         if (accordion.getAttribute('data-id') === value) {
           accordion.setAttribute('open', 'true');
         } else {
@@ -26,9 +26,6 @@ export class AccordionGroup implements ComponentInterface {
   }
 
   render() {
-    return (
-      <slot></slot>
-    );
+    return <slot></slot>;
   }
-
 }

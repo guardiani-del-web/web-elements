@@ -2,10 +2,10 @@
 * @prop --background: Background of chips <br> Default: rgba(229, 229, 229, 1)
 * @prop --border-radius: Border radius of chips  <br> Default: 0.5em
 * @prop --border-width: Border width of chips <br> Default: 0.05em
-* @prop --border-color: Border color of chips <br> Default: unset 
+* @prop --border-color: Border color of chips <br> Default: unset
 * @prop --width: Width of chips  <br> Default: auto
-* @prop --heigth: Height of chips  <br> Default: auto        
-* @prop --padding: Padding of chips  <br> Default: 0.25rem    
+* @prop --heigth: Height of chips  <br> Default: auto
+* @prop --padding: Padding of chips  <br> Default: 0.25rem
 * @prop --margin: Margin of chips  <br> Default: 0
 * @prop --display: Display of chips  <br> Default: inline-block
 * @prop --selected-background: Background of chips when selected  <br> Default: rgba(65, 169, 192, 1)
@@ -32,7 +32,6 @@
 */
 
 .chips {
-  display: block;
   background: var(--background, rgba(229, 229, 229, 1));
   border-radius: var(--border-radius, 0.5em);
   border-width: var(--border-width, 0.05em);

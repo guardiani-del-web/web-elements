@@ -7,25 +7,24 @@ import {
   State,
   Event,
   EventEmitter
-} from "@stencil/core";
+} from '@stencil/core';
 
 @Component({
-  tag: "we-chips",
-  styleUrl: "chips.scss",
-  shadow: true,
+  tag: 'we-chips',
+  styleUrl: 'chips.scss',
+  shadow: true
 })
 export class Chips implements ComponentInterface {
-  @Prop() label: string = ""; 
-  @Prop() srcImgLeft: string = "";
-  @Prop() srcImgRight: string = "";
-  @Prop() removeLeft: boolean = false;
-  @Prop() removeRight: boolean = false;
-  @State() isVisible: boolean = true;
+  @Prop() label = '';
+  @Prop() srcImgLeft = '';
+  @Prop() srcImgRight = '';
+  @Prop() removeLeft = false;
+  @Prop() removeRight = false;
+  @State() isVisible = true;
   @Event() removeCallback: EventEmitter;
-  @Prop() isSelectable: boolean = false;
-  @State() isSelected: boolean = false;
+  @Prop() isSelectable = false;
+  @State() isSelected = false;
   @Event() selectCallback: EventEmitter;
-  
 
   handleRemoveChips(event) {
     this.isVisible = !this.isVisible;
@@ -41,7 +40,10 @@ export class Chips implements ComponentInterface {
     if (this.isVisible)
       return (
         <Host>
-          <div class={"chips " + (this.isSelected && "selected")} onClick={this.isSelectable && this.handleSelectedChips.bind(this)}>
+          <div
+            class={'chips ' + (this.isSelected && 'selected')}
+            onClick={this.isSelectable && this.handleSelectedChips.bind(this)}
+          >
             {this.srcImgLeft && (
               <img
                 class="imageLeft"

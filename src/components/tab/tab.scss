@@ -35,12 +35,12 @@
     transition: 0.25s background ease;
     cursor: pointer;
     &::after {
-      content: "";
+      content: '';
       height: var(--hover-height, 0.125rem);
       width: 100%;
       position: absolute;
       display: block;
-      background: var(--hover-color,#ccc);
+      background: var(--hover-color, #ccc);
       bottom: 0;
       opacity: 0;
       left: 0;
@@ -50,7 +50,7 @@
       opacity: 1;
     }
   }
-  slot[name="content"] {
+  slot[name='content'] {
     display: none;
   }
 }

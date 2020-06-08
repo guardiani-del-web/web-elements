@@ -3,10 +3,10 @@ import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-radio-group',
-  shadow: true,
+  shadow: true
 })
 export class RadioGroup implements ComponentInterface {
-  @Element() el: HTMLElement;
+  @Element() el: HTMLWeRadioGroupElement;
   @Prop() name!: string;
   @Prop() changeCallback: any;
 
@@ -16,7 +16,7 @@ export class RadioGroup implements ComponentInterface {
     const radios = this.el.querySelectorAll('we-radio');
     this.changeCallback = parseFunction(this.changeCallback);
 
-    radios.forEach(radio => {
+    radios.forEach((radio) => {
       if (radio.getAttribute('value') === value) {
         radio.setAttribute('checked', 'true');
       } else {
