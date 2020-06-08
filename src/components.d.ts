@@ -89,6 +89,12 @@ export namespace Components {
         "row": any;
         "text": string;
     }
+    interface WeTooltip {
+        /**
+          * value: [optional] if you want to use a simple tooltip you can only add this value
+         */
+        "value": string;
+    }
 }
 declare global {
     interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
@@ -193,6 +199,12 @@ declare global {
         prototype: HTMLWeTextareaElement;
         new (): HTMLWeTextareaElement;
     };
+    interface HTMLWeTooltipElement extends Components.WeTooltip, HTMLStencilElement {
+    }
+    var HTMLWeTooltipElement: {
+        prototype: HTMLWeTooltipElement;
+        new (): HTMLWeTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
@@ -211,6 +223,7 @@ declare global {
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
+        "we-tooltip": HTMLWeTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -306,6 +319,12 @@ declare namespace LocalJSX {
         "row"?: any;
         "text"?: string;
     }
+    interface WeTooltip {
+        /**
+          * value: [optional] if you want to use a simple tooltip you can only add this value
+         */
+        "value"?: string;
+    }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
@@ -324,6 +343,7 @@ declare namespace LocalJSX {
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
+        "we-tooltip": WeTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -347,6 +367,7 @@ declare module "@stencil/core" {
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
+            "we-tooltip": LocalJSX.WeTooltip & JSXBase.HTMLAttributes<HTMLWeTooltipElement>;
         }
     }
 }
