@@ -12,6 +12,9 @@ export namespace Components {
     interface WeAccordionGroup {
         "multiple": boolean;
     }
+    interface WeButton {
+        "label": string;
+    }
     interface WeCard {
     }
     interface WeCheckbox {
@@ -108,6 +111,12 @@ declare global {
     var HTMLWeAccordionGroupElement: {
         prototype: HTMLWeAccordionGroupElement;
         new (): HTMLWeAccordionGroupElement;
+    };
+    interface HTMLWeButtonElement extends Components.WeButton, HTMLStencilElement {
+    }
+    var HTMLWeButtonElement: {
+        prototype: HTMLWeButtonElement;
+        new (): HTMLWeButtonElement;
     };
     interface HTMLWeCardElement extends Components.WeCard, HTMLStencilElement {
     }
@@ -208,6 +217,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
+        "we-button": HTMLWeButtonElement;
         "we-card": HTMLWeCardElement;
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
@@ -233,6 +243,9 @@ declare namespace LocalJSX {
     }
     interface WeAccordionGroup {
         "multiple"?: boolean;
+    }
+    interface WeButton {
+        "label"?: string;
     }
     interface WeCard {
     }
@@ -328,6 +341,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
+        "we-button": WeButton;
         "we-card": WeCard;
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
@@ -352,6 +366,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "we-accordion": LocalJSX.WeAccordion & JSXBase.HTMLAttributes<HTMLWeAccordionElement>;
             "we-accordion-group": LocalJSX.WeAccordionGroup & JSXBase.HTMLAttributes<HTMLWeAccordionGroupElement>;
+            "we-button": LocalJSX.WeButton & JSXBase.HTMLAttributes<HTMLWeButtonElement>;
             "we-card": LocalJSX.WeCard & JSXBase.HTMLAttributes<HTMLWeCardElement>;
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
