@@ -14,6 +14,7 @@ export namespace Components {
     }
     interface WeButton {
         "label": string;
+        "value": string;
     }
     interface WeCard {
     }
@@ -246,6 +247,8 @@ declare namespace LocalJSX {
     }
     interface WeButton {
         "label"?: string;
+        "onAccordionCallback"?: (event: CustomEvent<any>) => void;
+        "value": string;
     }
     interface WeCard {
     }
