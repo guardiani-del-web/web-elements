@@ -16,7 +16,9 @@ export const Basic = () => {
   const cssVariables = getCssVariables('we-dropdown-item', color, text);
 
   return html`
-    <we-dropdown-item></we-dropdown-item>
+  <we-dropdown-group>
+  <we-dropdown-item label="option 1"> </we-dropdown-item>
+  </we-dropdown-group>
     <style>
       html {
         ${cssVariables}
