@@ -33,6 +33,18 @@ export namespace Components {
     }
     interface WeDivider {
     }
+    interface WeDropdownGroup {
+        "orientation": string;
+    }
+    interface WeDropdownItem {
+        "arrow": string;
+        "height": string;
+        "label": string;
+        "marginClass": string;
+        "positionChildren": string;
+        "value": string;
+        "width": string;
+    }
     interface WeModal {
         "isVisible": boolean;
     }
@@ -77,6 +89,12 @@ export namespace Components {
         "row": any;
         "text": string;
     }
+    interface WeTooltip {
+        /**
+          * value: [optional] if you want to use a simple tooltip you can only add this value
+         */
+        "value": string;
+    }
 }
 declare global {
     interface HTMLWeAccordionElement extends Components.WeAccordion, HTMLStencilElement {
@@ -120,6 +138,18 @@ declare global {
     var HTMLWeDividerElement: {
         prototype: HTMLWeDividerElement;
         new (): HTMLWeDividerElement;
+    };
+    interface HTMLWeDropdownGroupElement extends Components.WeDropdownGroup, HTMLStencilElement {
+    }
+    var HTMLWeDropdownGroupElement: {
+        prototype: HTMLWeDropdownGroupElement;
+        new (): HTMLWeDropdownGroupElement;
+    };
+    interface HTMLWeDropdownItemElement extends Components.WeDropdownItem, HTMLStencilElement {
+    }
+    var HTMLWeDropdownItemElement: {
+        prototype: HTMLWeDropdownItemElement;
+        new (): HTMLWeDropdownItemElement;
     };
     interface HTMLWeModalElement extends Components.WeModal, HTMLStencilElement {
     }
@@ -169,6 +199,12 @@ declare global {
         prototype: HTMLWeTextareaElement;
         new (): HTMLWeTextareaElement;
     };
+    interface HTMLWeTooltipElement extends Components.WeTooltip, HTMLStencilElement {
+    }
+    var HTMLWeTooltipElement: {
+        prototype: HTMLWeTooltipElement;
+        new (): HTMLWeTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "we-accordion": HTMLWeAccordionElement;
         "we-accordion-group": HTMLWeAccordionGroupElement;
@@ -177,6 +213,8 @@ declare global {
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
         "we-divider": HTMLWeDividerElement;
+        "we-dropdown-group": HTMLWeDropdownGroupElement;
+        "we-dropdown-item": HTMLWeDropdownItemElement;
         "we-modal": HTMLWeModalElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
@@ -185,6 +223,7 @@ declare global {
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
+        "we-tooltip": HTMLWeTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -218,6 +257,20 @@ declare namespace LocalJSX {
         "srcImgRight"?: string;
     }
     interface WeDivider {
+    }
+    interface WeDropdownGroup {
+        "orientation"?: string;
+    }
+    interface WeDropdownItem {
+        "arrow"?: string;
+        "height"?: string;
+        "label"?: string;
+        "marginClass"?: string;
+        "onClickCallback"?: (event: CustomEvent<any>) => void;
+        "onDropdownItemCallback"?: (event: CustomEvent<any>) => void;
+        "positionChildren"?: string;
+        "value"?: string;
+        "width"?: string;
     }
     interface WeModal {
         "isVisible"?: boolean;
@@ -266,6 +319,12 @@ declare namespace LocalJSX {
         "row"?: any;
         "text"?: string;
     }
+    interface WeTooltip {
+        /**
+          * value: [optional] if you want to use a simple tooltip you can only add this value
+         */
+        "value"?: string;
+    }
     interface IntrinsicElements {
         "we-accordion": WeAccordion;
         "we-accordion-group": WeAccordionGroup;
@@ -274,6 +333,8 @@ declare namespace LocalJSX {
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
         "we-divider": WeDivider;
+        "we-dropdown-group": WeDropdownGroup;
+        "we-dropdown-item": WeDropdownItem;
         "we-modal": WeModal;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
@@ -282,6 +343,7 @@ declare namespace LocalJSX {
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
+        "we-tooltip": WeTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -295,6 +357,8 @@ declare module "@stencil/core" {
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
+            "we-dropdown-group": LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
+            "we-dropdown-item": LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
             "we-modal": LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
@@ -303,6 +367,7 @@ declare module "@stencil/core" {
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;
+            "we-tooltip": LocalJSX.WeTooltip & JSXBase.HTMLAttributes<HTMLWeTooltipElement>;
         }
     }
 }
