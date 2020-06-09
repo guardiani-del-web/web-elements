@@ -7,10 +7,15 @@ import { parseFunction } from '@utils';
   shadow: true
 })
 export class Switch implements ComponentInterface {
+  /** Name of switch, put in the payload of changeCallback event */
   @Prop() name!: any;
+  /** Text put in the left of switch */
   @Prop() labelLeft = '';
+  /** Text put in the right of switch */
   @Prop() labelRight = '';
+  /** Default value of switch when component is rendered the first time */
   @Prop() enabled = false;
+  /** Event triggered any time user change the state of the switch putting in the payload name and status */
   @Prop() changeCallback: any;
 
   handleChangeState(event: CustomEvent) {

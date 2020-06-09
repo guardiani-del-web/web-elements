@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-08T20:45:19",
+  "timestamp": "2020-06-09T20:35:27",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -21,7 +21,7 @@
           "mutable": false,
           "attr": "open",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Indentify if accordion is opened of not",
           "docsTags": [],
           "values": [
             {
@@ -40,7 +40,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered each time the accordion is opened/closed",
           "docsTags": []
         }
       ],
@@ -65,7 +65,7 @@
           "mutable": false,
           "attr": "multiple",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this accordion group contains more accordions or only once",
           "docsTags": [],
           "values": [
             {
@@ -99,7 +99,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If you use label prop you can create simple button with only text, if you want to use button with many things inside don't use label prop but put the contents inside the tag we-button",
           "docsTags": [],
           "values": [
             {
@@ -115,7 +115,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value returned from buttonCallback event when button will be pressed",
           "docsTags": [],
           "values": [
             {
@@ -129,16 +129,82 @@
       "methods": [],
       "events": [
         {
-          "event": "accordionCallback",
+          "event": "buttonCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when button is pressed",
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--button--background",
+          "annotation": "prop",
+          "docs": "Background of button <br> Default: rgba(211, 211, 211, 1)"
+        },
+        {
+          "name": "--button--border",
+          "annotation": "prop",
+          "docs": "Border of button <br> Default: none"
+        },
+        {
+          "name": "--button--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button <br> Default: 0"
+        },
+        {
+          "name": "--button--color",
+          "annotation": "prop",
+          "docs": "Color of button <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--button--cursor",
+          "annotation": "prop",
+          "docs": "Cursor of button <br> Default: auto"
+        },
+        {
+          "name": "--button--display",
+          "annotation": "prop",
+          "docs": "Display of button <br> Default: block"
+        },
+        {
+          "name": "--button--font-size",
+          "annotation": "prop",
+          "docs": "Font size of button <br> Default: 1em"
+        },
+        {
+          "name": "--button--height",
+          "annotation": "prop",
+          "docs": "Height of button <br> Default: auto"
+        },
+        {
+          "name": "--button--margin",
+          "annotation": "prop",
+          "docs": "Margin of button <br> Default: 0"
+        },
+        {
+          "name": "--button--padding",
+          "annotation": "prop",
+          "docs": "Padding of button <br> Default: 0.125em"
+        },
+        {
+          "name": "--button--text-align",
+          "annotation": "prop",
+          "docs": "Text align of button <br> Default: center"
+        },
+        {
+          "name": "--button--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of button <br> Default: none"
+        },
+        {
+          "name": "--button--width",
+          "annotation": "prop",
+          "docs": "Width of button <br> Default: auto"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -176,7 +242,7 @@
           "mutable": false,
           "attr": "checked",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "identify if this checkbox is checked or not when the page is loaded",
           "docsTags": [],
           "values": [
             {
@@ -192,7 +258,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this checkbox is disabled or not",
           "docsTags": [],
           "values": [
             {
@@ -208,7 +274,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value returned when the input is submitted if this checkbox is checked",
           "docsTags": [],
           "values": [
             {
@@ -227,7 +293,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when this checkbox is checked/not checked returning the value prop for payload",
           "docsTags": []
         }
       ],
@@ -252,7 +318,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed",
           "docsTags": [],
           "values": [
             {
@@ -268,7 +334,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name that identify this checkbox group",
           "docsTags": [],
           "values": [
             {
@@ -302,7 +368,7 @@
           "mutable": false,
           "attr": "is-selectable",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true user can select the chips and selectCallback event is triggered",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -319,7 +385,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Center text written inside the chips if you want a text inside the chips",
           "docsTags": [],
           "default": "''",
           "values": [
@@ -336,7 +402,7 @@
           "mutable": false,
           "attr": "remove-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -353,7 +419,7 @@
           "mutable": false,
           "attr": "remove-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -370,7 +436,7 @@
           "mutable": false,
           "attr": "src-img-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Src of img you want to put in left side of chips if you want an image in that position",
           "docsTags": [],
           "default": "''",
           "values": [
@@ -387,7 +453,7 @@
           "mutable": false,
           "attr": "src-img-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Src of img you want to put in right side of chips if you want an image in that position",
           "docsTags": [],
           "default": "''",
           "values": [
@@ -407,7 +473,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when the chips is removed",
           "docsTags": []
         },
         {
@@ -416,7 +482,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when the chips is selected",
           "docsTags": []
         }
       ],
@@ -458,7 +524,7 @@
           "mutable": false,
           "attr": "orientation",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Define the orientation of the objects inside this group, \"column\" or \"row\"",
           "docsTags": [],
           "default": "\"column\"",
           "values": [
@@ -493,9 +559,24 @@
           "mutable": false,
           "attr": "arrow",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Arrow direction when dropdown is opened/closed inserted in this way: [\"arrow_closed\",\"arrow_opened\"], values accepted: right, left, up, down",
           "docsTags": [],
-          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "borderClass",
+          "type": "string",
+          "mutable": false,
+          "attr": "border-class",
+          "reflectToAttr": false,
+          "docs": "Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them",
+          "docsTags": [],
           "values": [
             {
               "type": "string"
@@ -510,9 +591,8 @@
           "mutable": false,
           "attr": "height",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Height of the children container when is opened/closed, insert it if you want a transition of height in this way: [\"height_close\", \"height_open\"], usually the height_close is 0",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -527,26 +607,8 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text inside the dropdown item if you want to use a simple dropdown item with only text",
           "docsTags": [],
-          "default": "\"\"",
-          "values": [
-            {
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "marginClass",
-          "type": "string",
-          "mutable": false,
-          "attr": "margin-class",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -561,7 +623,7 @@
           "mutable": false,
           "attr": "position-children",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position",
           "docsTags": [],
           "default": "\"right\"",
           "values": [
@@ -578,9 +640,8 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value put in payload of event triggered when dropdown item is clicked",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -595,9 +656,8 @@
           "mutable": false,
           "attr": "width",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Width of the children container when is opened/closed, insert it if you want a transition of width in this way: [\"width_close\", \"width_open\"], usually the width_close is 0",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -610,25 +670,137 @@
       "methods": [],
       "events": [
         {
-          "event": "clickCallback",
+          "event": "clickItemCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "dropdownItemCallback",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
+          "docs": "Event triggered when dropdown item is clicked, not the arrow",
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--dropdown-item--align-items",
+          "annotation": "prop",
+          "docs": "Align items inside dropdown item <br> Default: center"
+        },
+        {
+          "name": "--dropdown-item--background",
+          "annotation": "prop",
+          "docs": "Background of dropdown item <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--dropdown-item--background-hover",
+          "annotation": "prop",
+          "docs": "Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)"
+        },
+        {
+          "name": "--dropdown-item--border-bottom",
+          "annotation": "prop",
+          "docs": "Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item--border-right",
+          "annotation": "prop",
+          "docs": "Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item--color",
+          "annotation": "prop",
+          "docs": "Color of dropdown item <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item--cursor",
+          "annotation": "prop",
+          "docs": "Cursor inside dropdown item <br> Default: pointer"
+        },
+        {
+          "name": "--dropdown-item--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item <br> Default: flex"
+        },
+        {
+          "name": "--dropdown-item--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown item <br> Default: 1.875em"
+        },
+        {
+          "name": "--dropdown-item--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content inside dropdown item <br> Default: space-between"
+        },
+        {
+          "name": "--dropdown-item--margin",
+          "annotation": "prop",
+          "docs": "Margin of dropdown item <br> Default: 0"
+        },
+        {
+          "name": "--dropdown-item--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item <br> Default: 0.625em"
+        },
+        {
+          "name": "--dropdown-item--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown item <br> Default: 12.5em"
+        },
+        {
+          "name": "--dropdown-item_arrow--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--dropdown-item_arrow--border-width",
+          "annotation": "prop",
+          "docs": "Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0"
+        },
+        {
+          "name": "--dropdown-item_arrow--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item arrow <br> Default: inline-block"
+        },
+        {
+          "name": "--dropdown-item_arrow--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item arrow <br> Default: 0.1875em"
+        },
+        {
+          "name": "--dropdown-item_arrow--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item arrow <br> Default: all 0.5s"
+        },
+        {
+          "name": "--dropdown-item_children--bottom",
+          "annotation": "prop",
+          "docs": "Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--left",
+          "annotation": "prop",
+          "docs": "Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--position",
+          "annotation": "prop",
+          "docs": "Position of dropdown item children, not change it to default behaviour <br> Default: absolute"
+        },
+        {
+          "name": "--dropdown-item_children--right",
+          "annotation": "prop",
+          "docs": "Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%"
+        },
+        {
+          "name": "--dropdown-item_children--top",
+          "annotation": "prop",
+          "docs": "Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em"
+        },
+        {
+          "name": "--dropdown-item_children--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item children <br> Default: all 0.5s"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -649,7 +821,7 @@
           "mutable": false,
           "attr": "is-visible",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "identify if modal is visible or not",
           "docsTags": [],
           "default": "true",
           "values": [
@@ -669,7 +841,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when the visibility of modal change",
           "docsTags": []
         }
       ],
@@ -694,7 +866,7 @@
           "mutable": false,
           "attr": "checked",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "identify if this radio button is checked or not when the page is loaded",
           "docsTags": [],
           "values": [
             {
@@ -710,7 +882,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this radio button is disabled or not",
           "docsTags": [],
           "values": [
             {
@@ -726,7 +898,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value returned when the input is submitted if this radio button is checked",
           "docsTags": [],
           "values": [
             {
@@ -745,7 +917,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when this radio button is checked/not checked returning the value prop for payload",
           "docsTags": []
         }
       ],
@@ -770,7 +942,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
           "docsTags": [],
           "values": [
             {
@@ -786,7 +958,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name that identify this radio group",
           "docsTags": [],
           "values": [
             {
@@ -820,7 +992,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered any time user moves the slider putting in the payload name and current value",
           "docsTags": [],
           "values": [
             {
@@ -836,7 +1008,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if slider is disabled or not",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -853,7 +1025,7 @@
           "mutable": false,
           "attr": "max",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Maximum value you can set in the slider",
           "docsTags": [],
           "values": [
             {
@@ -869,7 +1041,7 @@
           "mutable": false,
           "attr": "min",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Minimum value you can set in the slider",
           "docsTags": [],
           "values": [
             {
@@ -885,7 +1057,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name of slider, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
@@ -901,7 +1073,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Starting value of slider",
           "docsTags": [],
           "values": [
             {
@@ -935,7 +1107,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
           "docsTags": [],
           "values": [
             {
@@ -951,7 +1123,7 @@
           "mutable": false,
           "attr": "enabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Default value of switch when component is rendered the first time",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -968,7 +1140,7 @@
           "mutable": false,
           "attr": "label-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text put in the left of switch",
           "docsTags": [],
           "default": "''",
           "values": [
@@ -985,7 +1157,7 @@
           "mutable": false,
           "attr": "label-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text put in the right of switch",
           "docsTags": [],
           "default": "''",
           "values": [
@@ -1002,7 +1174,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name of switch, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
@@ -1045,7 +1217,7 @@
           "mutable": false,
           "attr": "enabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Default value of tab (opened/closed) when component is triggered the first time",
           "docsTags": [],
           "values": [
             {
@@ -1064,7 +1236,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when user select a tab putting in the payload the value id generated",
           "docsTags": []
         }
       ],
@@ -1117,7 +1289,6 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1150,7 +1321,6 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1182,9 +1352,8 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name prop of the textarea",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -1199,9 +1368,8 @@
           "mutable": false,
           "attr": "placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Placeholder appear when there isn't text in the textarea",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -1218,7 +1386,6 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1235,7 +1402,6 @@
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1266,9 +1432,8 @@
           "mutable": false,
           "attr": "text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Test inside the textarea when rendered the first time",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -1301,7 +1466,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "value: [optional] if you want to use a simple tooltip you can only add this value",
+          "docs": "If you want to use a simple tooltip you can only add this value",
           "docsTags": [],
           "values": [
             {
@@ -1314,68 +1479,7 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [
-        {
-          "name": "--tooltip--background",
-          "annotation": "prop",
-          "docs": "Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));"
-        },
-        {
-          "name": "--tooltip--border",
-          "annotation": "prop",
-          "docs": "Border of tooltip <br> Default: none"
-        },
-        {
-          "name": "--tooltip--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of tooltip <br> Default: 0"
-        },
-        {
-          "name": "--tooltip--bottom",
-          "annotation": "prop",
-          "docs": "Bottom of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--color",
-          "annotation": "prop",
-          "docs": "Color of tooltip <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--tooltip--height",
-          "annotation": "prop",
-          "docs": "Height of tooltip <br> Default: fit-content"
-        },
-        {
-          "name": "--tooltip--left",
-          "annotation": "prop",
-          "docs": "Left of tooltip <br> Default: 50%"
-        },
-        {
-          "name": "--tooltip--padding",
-          "annotation": "prop",
-          "docs": "Padding of tooltip <br> Default: 3px"
-        },
-        {
-          "name": "--tooltip--right",
-          "annotation": "prop",
-          "docs": "Right of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--top",
-          "annotation": "prop",
-          "docs": "Top of tooltip <br> Default: 100%"
-        },
-        {
-          "name": "--tooltip--transform",
-          "annotation": "prop",
-          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
-        },
-        {
-          "name": "--tooltip--width",
-          "annotation": "prop",
-          "docs": "Width of tooltip <br> Default: fit-content"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
