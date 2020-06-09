@@ -16,7 +16,7 @@ export const Basic = () => {
   const cssVariables = getCssVariables('we-button', color, text);
 
   return html`
-    <we-button label="label button"></we-button>
+    <we-button label="label button" value="pressed"></we-button>
     <style>
       html {
         ${cssVariables}

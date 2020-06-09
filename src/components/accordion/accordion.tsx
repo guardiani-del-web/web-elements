@@ -16,9 +16,11 @@ import { generateUniqueId } from '@utils';
   shadow: true
 })
 export class Accordion implements ComponentInterface {
+  /** Indentify if accordion is opened of not */
   @Prop() open: boolean;
   @State() openId = generateUniqueId();
   @State() closeId = generateUniqueId();
+  /** Event triggered each time the accordion is opened/closed */
   @Event() accordionCallback: EventEmitter;
 
   handleChange(event: { target: HTMLInputElement }) {

@@ -14,14 +14,15 @@ import {
 })
 export class DropdownGroup implements ComponentInterface {
   @Element() el: HTMLElement;
+  /** Define the orientation of the objects inside this group, "column" or "row" */
   @Prop() orientation: string = "column";
 
   componentDidLoad() {
     const items = this.el.querySelectorAll(":scope > we-dropdown-item");
     for (let i = 0; i < items.length - 1; i++) {
       if (this.orientation === "column")
-        items[i].setAttribute("margin-class", "margin_bottom");
-      else items[i].setAttribute("margin-class", "margin_right");
+        items[i].setAttribute("border-class", "border_bottom");
+      else items[i].setAttribute("border-class", "border_right");
     }
   }
 
