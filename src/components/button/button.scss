@@ -1,17 +1,19 @@
 /**
 * @prop --button--width: Width of button <br> Default: auto
 * @prop --button--height: Height of button <br> Default: auto
-* @prop --button--padding: Padding of button  <br> Default: 0.125em
+* @prop --button--padding: Padding of button  <br> Default: 0.250em
 * @prop --button--margin: Margin of button  <br> Default: 0
 * @prop --button--display: Display of button  <br> Default: block
-* @prop --button--border: Border of button  <br> Default: none
-* @prop --button--border-radius: Border radius of button  <br> Default: 0
+* @prop --button--border: Border of button  <br> Default: 0.125em solid rgba(128, 128, 128, 1);
+* @prop --button--border-radius: Border radius of button  <br> Default: 0.250em
 * @prop --button--background: Background of button  <br> Default: rgba(211, 211, 211, 1)
 * @prop --button--cursor: Cursor of button  <br> Default: auto
 * @prop --button--color: Color of button  <br> Default: rgba(0, 0, 0, 1)
 * @prop --button--text-align: Text align of button  <br> Default: center
 * @prop --button--font-size: Font size of button  <br> Default: 1em
 * @prop --button--text-decoration: Text decoration of button  <br> Default: none
+* @prop --button--text-transform: Text transform of button  <br> Default: none
+* @prop --button--outline: Outline of button  <br> Default: none
 */
 
 :host {
@@ -21,15 +23,17 @@
 button {
   width: var(--button--width, auto);
   height: var(--button--height, auto);
-  padding: var(--button--padding, 0.125em);
+  padding: var(--button--padding, 0.250em);
   margin: var(--button--margin, 0);
   display: var(--button--display, block);
-  border: var(--button--border, none);
-  border-radius: var(--button--border-radius, 0);
+  border: var(--button--border, 0.125em solid rgba(128, 128, 128, 1));
+  border-radius: var(--button--border-radius, 0.250em);
   background: var(--button--background, (211, 211, 211, 1));
   cursor: var(--button--cursor, auto);
   color: var(--button--color, (0, 0, 0, 1));
   text-align: var(--button--text-align, center);
   font-size: var(--button--font-size, 1em);
   text-decoration: var(--button--text-decoration, none);
+  text-transform: var(--button--text-transform, none);
+  outline: var(--button--outline, none);
 }
