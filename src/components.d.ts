@@ -205,9 +205,21 @@ export namespace Components {
     interface WeTabGroup {
     }
     interface WeTextarea {
+        /**
+          * Identify the autofocus property of textarea
+         */
         "autofocus": boolean;
+        /**
+          * Identify the cols property of textarea
+         */
         "cols": any;
+        /**
+          * Identify the disabled property of textarea
+         */
         "disabled": boolean;
+        /**
+          * Identify the maxlength property of textarea
+         */
         "maxlength": number;
         /**
           * Name prop of the textarea
@@ -217,9 +229,18 @@ export namespace Components {
           * Placeholder appear when there isn't text in the textarea
          */
         "placeholder": string;
+        /**
+          * Identify the readonly property of textarea
+         */
         "readonly": boolean;
+        /**
+          * Identify the required property of textarea
+         */
         "required": boolean;
-        "row": any;
+        /**
+          * Identify the rows property of textarea
+         */
+        "rows": any;
         /**
           * Test inside the textarea when rendered the first time
          */
@@ -605,9 +626,21 @@ declare namespace LocalJSX {
     interface WeTabGroup {
     }
     interface WeTextarea {
+        /**
+          * Identify the autofocus property of textarea
+         */
         "autofocus"?: boolean;
+        /**
+          * Identify the cols property of textarea
+         */
         "cols"?: any;
+        /**
+          * Identify the disabled property of textarea
+         */
         "disabled"?: boolean;
+        /**
+          * Identify the maxlength property of textarea
+         */
         "maxlength"?: number;
         /**
           * Name prop of the textarea
@@ -617,9 +650,18 @@ declare namespace LocalJSX {
           * Placeholder appear when there isn't text in the textarea
          */
         "placeholder"?: string;
+        /**
+          * Identify the readonly property of textarea
+         */
         "readonly"?: boolean;
+        /**
+          * Identify the required property of textarea
+         */
         "required"?: boolean;
-        "row"?: any;
+        /**
+          * Identify the rows property of textarea
+         */
+        "rows"?: any;
         /**
           * Test inside the textarea when rendered the first time
          */

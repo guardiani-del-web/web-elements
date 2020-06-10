@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-09T20:35:27",
+  "timestamp": "2020-06-10T06:50:10",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -1287,7 +1287,7 @@
           "mutable": false,
           "attr": "autofocus",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the autofocus property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1303,7 +1303,7 @@
           "mutable": false,
           "attr": "cols",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the cols property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1319,7 +1319,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the disabled property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1335,7 +1335,7 @@
           "mutable": false,
           "attr": "maxlength",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the maxlength property of textarea",
           "docsTags": [],
           "default": "100000",
           "values": [
@@ -1384,7 +1384,7 @@
           "mutable": false,
           "attr": "readonly",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the readonly property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1400,7 +1400,7 @@
           "mutable": false,
           "attr": "required",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the required property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1411,12 +1411,12 @@
           "required": false
         },
         {
-          "name": "row",
+          "name": "rows",
           "type": "any",
           "mutable": false,
-          "attr": "row",
+          "attr": "rows",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the rows property of textarea",
           "docsTags": [],
           "values": [
             {
