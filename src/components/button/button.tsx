@@ -6,12 +6,15 @@ import { ComponentInterface, Component, Host, h, Prop, Event, EventEmitter } fro
   shadow: true,
 })
 export class Button implements ComponentInterface {
+  /** If you use label prop you can create simple button with only text, if you want to use button with many things inside don't use label prop but put the contents inside the tag we-button */
   @Prop() label: string;
+  /** Value returned from buttonCallback event when button will be pressed*/
   @Prop() value!: string;
-  @Event() accordionCallback: EventEmitter;
+  /** Event triggered when button is pressed */
+  @Event() buttonCallback: EventEmitter;
 
   handleButtonPressed() {
-    this.accordionCallback.emit(this.value);
+    this.buttonCallback.emit(this.value);
   }
 
   render() {
