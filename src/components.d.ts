@@ -13,7 +13,13 @@ export namespace Components {
         "multiple": boolean;
     }
     interface WeButton {
+        /**
+          * If you use label prop you can create simple button with only text, if you want to use button with many things inside don't use label prop but put the contents inside the tag we-button
+         */
         "label": string;
+        /**
+          * Value returned from buttonCallback event when button will be pressed
+         */
         "value": string;
     }
     interface WeCard {
@@ -246,8 +252,17 @@ declare namespace LocalJSX {
         "multiple"?: boolean;
     }
     interface WeButton {
+        /**
+          * If you use label prop you can create simple button with only text, if you want to use button with many things inside don't use label prop but put the contents inside the tag we-button
+         */
         "label"?: string;
-        "onAccordionCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Event triggered when button is pressed
+         */
+        "onButtonCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Value returned from buttonCallback event when button will be pressed
+         */
         "value": string;
     }
     interface WeCard {
