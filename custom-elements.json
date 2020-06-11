@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-10T07:04:17",
+  "timestamp": "2020-06-11T07:26:01",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -138,83 +138,7 @@
           "docsTags": []
         }
       ],
-      "styles": [
-        {
-          "name": "--button--background",
-          "annotation": "prop",
-          "docs": "Background of button <br> Default: rgba(211, 211, 211, 1)"
-        },
-        {
-          "name": "--button--border",
-          "annotation": "prop",
-          "docs": "Border of button <br> Default: 0.125em solid rgba(128, 128, 128, 1);"
-        },
-        {
-          "name": "--button--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of button <br> Default: 0.250em"
-        },
-        {
-          "name": "--button--color",
-          "annotation": "prop",
-          "docs": "Color of button <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--button--cursor",
-          "annotation": "prop",
-          "docs": "Cursor of button <br> Default: auto"
-        },
-        {
-          "name": "--button--display",
-          "annotation": "prop",
-          "docs": "Display of button <br> Default: block"
-        },
-        {
-          "name": "--button--font-size",
-          "annotation": "prop",
-          "docs": "Font size of button <br> Default: 1em"
-        },
-        {
-          "name": "--button--height",
-          "annotation": "prop",
-          "docs": "Height of button <br> Default: auto"
-        },
-        {
-          "name": "--button--margin",
-          "annotation": "prop",
-          "docs": "Margin of button <br> Default: 0"
-        },
-        {
-          "name": "--button--outline",
-          "annotation": "prop",
-          "docs": "Outline of button <br> Default: none"
-        },
-        {
-          "name": "--button--padding",
-          "annotation": "prop",
-          "docs": "Padding of button <br> Default: 0.250em"
-        },
-        {
-          "name": "--button--text-align",
-          "annotation": "prop",
-          "docs": "Text align of button <br> Default: center"
-        },
-        {
-          "name": "--button--text-decoration",
-          "annotation": "prop",
-          "docs": "Text decoration of button <br> Default: none"
-        },
-        {
-          "name": "--button--text-transform",
-          "annotation": "prop",
-          "docs": "Text transform of button <br> Default: none"
-        },
-        {
-          "name": "--button--width",
-          "annotation": "prop",
-          "docs": "Width of button <br> Default: auto"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -689,128 +613,7 @@
           "docsTags": []
         }
       ],
-      "styles": [
-        {
-          "name": "--dropdown-item--align-items",
-          "annotation": "prop",
-          "docs": "Align items inside dropdown item <br> Default: center"
-        },
-        {
-          "name": "--dropdown-item--background",
-          "annotation": "prop",
-          "docs": "Background of dropdown item <br> Default: rgba(255, 255, 255, 1)"
-        },
-        {
-          "name": "--dropdown-item--background-hover",
-          "annotation": "prop",
-          "docs": "Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)"
-        },
-        {
-          "name": "--dropdown-item--border-bottom",
-          "annotation": "prop",
-          "docs": "Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--dropdown-item--border-right",
-          "annotation": "prop",
-          "docs": "Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--dropdown-item--color",
-          "annotation": "prop",
-          "docs": "Color of dropdown item <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--dropdown-item--cursor",
-          "annotation": "prop",
-          "docs": "Cursor inside dropdown item <br> Default: pointer"
-        },
-        {
-          "name": "--dropdown-item--display",
-          "annotation": "prop",
-          "docs": "Display of dropdown item <br> Default: flex"
-        },
-        {
-          "name": "--dropdown-item--height",
-          "annotation": "prop",
-          "docs": "Height of dropdown item <br> Default: 1.875em"
-        },
-        {
-          "name": "--dropdown-item--justify-content",
-          "annotation": "prop",
-          "docs": "Justify content inside dropdown item <br> Default: space-between"
-        },
-        {
-          "name": "--dropdown-item--margin",
-          "annotation": "prop",
-          "docs": "Margin of dropdown item <br> Default: 0"
-        },
-        {
-          "name": "--dropdown-item--padding",
-          "annotation": "prop",
-          "docs": "Padding of dropdown item <br> Default: 0.625em"
-        },
-        {
-          "name": "--dropdown-item--width",
-          "annotation": "prop",
-          "docs": "Width of dropdown item <br> Default: 12.5em"
-        },
-        {
-          "name": "--dropdown-item_arrow--border",
-          "annotation": "prop",
-          "docs": "Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--dropdown-item_arrow--border-width",
-          "annotation": "prop",
-          "docs": "Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0"
-        },
-        {
-          "name": "--dropdown-item_arrow--display",
-          "annotation": "prop",
-          "docs": "Display of dropdown item arrow <br> Default: inline-block"
-        },
-        {
-          "name": "--dropdown-item_arrow--padding",
-          "annotation": "prop",
-          "docs": "Padding of dropdown item arrow <br> Default: 0.1875em"
-        },
-        {
-          "name": "--dropdown-item_arrow--transition",
-          "annotation": "prop",
-          "docs": "Transition of dropdown item arrow <br> Default: all 0.5s"
-        },
-        {
-          "name": "--dropdown-item_children--bottom",
-          "annotation": "prop",
-          "docs": "Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
-        },
-        {
-          "name": "--dropdown-item_children--left",
-          "annotation": "prop",
-          "docs": "Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
-        },
-        {
-          "name": "--dropdown-item_children--position",
-          "annotation": "prop",
-          "docs": "Position of dropdown item children, not change it to default behaviour <br> Default: absolute"
-        },
-        {
-          "name": "--dropdown-item_children--right",
-          "annotation": "prop",
-          "docs": "Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%"
-        },
-        {
-          "name": "--dropdown-item_children--top",
-          "annotation": "prop",
-          "docs": "Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em"
-        },
-        {
-          "name": "--dropdown-item_children--transition",
-          "annotation": "prop",
-          "docs": "Transition of dropdown item children <br> Default: all 0.5s"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -856,6 +659,122 @@
         }
       ],
       "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\navigation-drawer\\navigation-drawer.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-navigation-drawer",
+      "readme": "# we-navigation-drawer\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "closed",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "closed",
+          "reflectToAttr": false,
+          "docs": "If true the navigation drawer is closed",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--dropdown-item_children--transition",
+          "annotation": "prop",
+          "docs": "Transition of navigation drawer <br> Default: all 0.5s"
+        },
+        {
+          "name": "--navigation-drawer--align-items",
+          "annotation": "prop",
+          "docs": "Align items of navigation drawer <br> Default: start"
+        },
+        {
+          "name": "--navigation-drawer--background",
+          "annotation": "prop",
+          "docs": "Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)"
+        },
+        {
+          "name": "--navigation-drawer--border",
+          "annotation": "prop",
+          "docs": "Border of navigation drawer <br> Default: none"
+        },
+        {
+          "name": "--navigation-drawer--bottom",
+          "annotation": "prop",
+          "docs": "Bottom option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--navigation-drawer--color",
+          "annotation": "prop",
+          "docs": "Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--navigation-drawer--display",
+          "annotation": "prop",
+          "docs": "Display of navigation drawer <br> Default: flex"
+        },
+        {
+          "name": "--navigation-drawer--font-size",
+          "annotation": "prop",
+          "docs": "Font size of navigation drawer <br> Default: 1em"
+        },
+        {
+          "name": "--navigation-drawer--height",
+          "annotation": "prop",
+          "docs": "Height of navigation drawer <br> Default: 100vh"
+        },
+        {
+          "name": "--navigation-drawer--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of navigation drawer <br> Default: left"
+        },
+        {
+          "name": "--navigation-drawer--left",
+          "annotation": "prop",
+          "docs": "Left option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--navigation-drawer--padding",
+          "annotation": "prop",
+          "docs": "Padding of navigation drawer <br> Default: 0.625em"
+        },
+        {
+          "name": "--navigation-drawer--position",
+          "annotation": "prop",
+          "docs": "Position of navigation drawer <br> Default: fixed"
+        },
+        {
+          "name": "--navigation-drawer--right",
+          "annotation": "prop",
+          "docs": "Right option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--navigation-drawer--top",
+          "annotation": "prop",
+          "docs": "Top option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--navigation-drawer--width",
+          "annotation": "prop",
+          "docs": "Width of navigation drawer<br> Default: 12.5em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1489,63 +1408,7 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [
-        {
-          "name": "--tooltip--background",
-          "annotation": "prop",
-          "docs": "Background of tooltip <br> Default: rgba(128, 128, 128, 0.8)"
-        },
-        {
-          "name": "--tooltip--border",
-          "annotation": "prop",
-          "docs": "Border of tooltip <br> Default: none"
-        },
-        {
-          "name": "--tooltip--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of tooltip <br> Default: 0"
-        },
-        {
-          "name": "--tooltip--bottom",
-          "annotation": "prop",
-          "docs": "Bottom of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--height",
-          "annotation": "prop",
-          "docs": "Height of tooltip <br> Default: fit-content"
-        },
-        {
-          "name": "--tooltip--left",
-          "annotation": "prop",
-          "docs": "Left of tooltip <br> Default: 50%"
-        },
-        {
-          "name": "--tooltip--padding",
-          "annotation": "prop",
-          "docs": "Padding of tooltip <br> Default: 3px"
-        },
-        {
-          "name": "--tooltip--right",
-          "annotation": "prop",
-          "docs": "Right of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--top",
-          "annotation": "prop",
-          "docs": "Top of tooltip <br> Default: 100%"
-        },
-        {
-          "name": "--tooltip--transform",
-          "annotation": "prop",
-          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
-        },
-        {
-          "name": "--tooltip--width",
-          "annotation": "prop",
-          "docs": "Width of tooltip <br> Default: fit-content"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],

@@ -1,3 +1,44 @@
+/**
+* @prop --navigation-drawer--width:  Width of navigation drawer<br> Default: 12.5em
+* @prop --navigation-drawer--height: Height of navigation drawer <br> Default: 100vh  
+* @prop --navigation-drawer--position: Position of navigation drawer <br> Default: fixed
+* @prop --navigation-drawer--left: Left option of navigation drawer <br> Default: 0        
+* @prop --navigation-drawer--top: Top option of navigation drawer <br> Default: 0
+* @prop --navigation-drawer--right: Right option of navigation drawer <br> Default: auto
+* @prop --navigation-drawer--bottom: Bottom option of navigation drawer <br> Default: auto
+* @prop --navigation-drawer--padding: Padding of navigation drawer <br> Default: 0.625em
+* @prop --navigation-drawer--display: Display of navigation drawer <br> Default: flex
+* @prop --navigation-drawer--border: Border of navigation drawer <br> Default: none
+* @prop --navigation-drawer--background: Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)   
+* @prop --navigation-drawer--color: Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)
+* @prop --navigation-drawer--font-size: Font size of navigation drawer <br> Default: 1em
+* @prop --navigation-drawer--justify-content: Justify content of navigation drawer <br> Default: left
+* @prop --navigation-drawer--align-items: Align items of navigation drawer <br> Default: start
+* @prop --dropdown-item_children--transition: Transition of navigation drawer <br> Default: all 0.5s
+*/
+
 :host {
-  display: block;
+  width: var(--navigation-drawer--width, 12.5em);
+  height: var(--navigation-drawer--height, 100vh);
+  position: var(--navigation-drawer--position, fixed);
+  left: var(--navigation-drawer--left, 0);
+  top: var(--navigation-drawer--top, 0);
+  right: var(--navigation-drawer--right, auto);
+  bottom: var(--navigation-drawer--bottom, auto);
+  padding: var(--navigation-drawer--padding, 0.625em);
+  display: var(--navigation-drawer--display, flex);
+  border: var(--navigation-drawer--border, none);
+  background: var(--navigation-drawer--background, rgba(151, 151, 151, 1));
+  color: var(--navigation-drawer--color, rgba(0, 0, 0, 1));
+  font-size: var(--navigation-drawer--font-size, 1em);
+  justify-content: var(--navigation-drawer--justify-content, left);
+  align-items: var(--navigation-drawer--align-items, start);
+  transition: var(--dropdown-item_children--transition, all 0.5s);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+:host(.closed) {
+  width: 0;
+  padding: 0;
 }

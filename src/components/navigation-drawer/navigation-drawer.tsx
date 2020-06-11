@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, Host, h } from '@stencil/core';
+import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'we-navigation-drawer',
@@ -6,11 +6,13 @@ import { ComponentInterface, Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class NavigationDrawer implements ComponentInterface {
+  /** If true the navigation drawer is closed */
+  @Prop() closed:boolean = true;
 
   render() {
     return (
-      <Host>
-        <h1>we-navigation-drawer is ready!</h1>
+      <Host class={this.closed && "closed"}>
+        <slot></slot>
       </Host>
     );
   }
