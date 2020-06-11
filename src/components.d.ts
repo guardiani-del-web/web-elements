@@ -124,6 +124,12 @@ export namespace Components {
          */
         "isVisible": boolean;
     }
+    interface WeNavigationDrawer {
+        /**
+          * If true the navigation drawer is closed
+         */
+        "closed": boolean;
+    }
     interface WeRadio {
         /**
           * identify if this radio button is checked or not when the page is loaded
@@ -320,6 +326,12 @@ declare global {
         prototype: HTMLWeModalElement;
         new (): HTMLWeModalElement;
     };
+    interface HTMLWeNavigationDrawerElement extends Components.WeNavigationDrawer, HTMLStencilElement {
+    }
+    var HTMLWeNavigationDrawerElement: {
+        prototype: HTMLWeNavigationDrawerElement;
+        new (): HTMLWeNavigationDrawerElement;
+    };
     interface HTMLWeRadioElement extends Components.WeRadio, HTMLStencilElement {
     }
     var HTMLWeRadioElement: {
@@ -380,6 +392,7 @@ declare global {
         "we-dropdown-group": HTMLWeDropdownGroupElement;
         "we-dropdown-item": HTMLWeDropdownItemElement;
         "we-modal": HTMLWeModalElement;
+        "we-navigation-drawer": HTMLWeNavigationDrawerElement;
         "we-radio": HTMLWeRadioElement;
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
@@ -537,6 +550,12 @@ declare namespace LocalJSX {
          */
         "onModalCallback"?: (event: CustomEvent<any>) => void;
     }
+    interface WeNavigationDrawer {
+        /**
+          * If true the navigation drawer is closed
+         */
+        "closed"?: boolean;
+    }
     interface WeRadio {
         /**
           * identify if this radio button is checked or not when the page is loaded
@@ -685,6 +704,7 @@ declare namespace LocalJSX {
         "we-dropdown-group": WeDropdownGroup;
         "we-dropdown-item": WeDropdownItem;
         "we-modal": WeModal;
+        "we-navigation-drawer": WeNavigationDrawer;
         "we-radio": WeRadio;
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
@@ -710,6 +730,7 @@ declare module "@stencil/core" {
             "we-dropdown-group": LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
             "we-dropdown-item": LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
             "we-modal": LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
+            "we-navigation-drawer": LocalJSX.WeNavigationDrawer & JSXBase.HTMLAttributes<HTMLWeNavigationDrawerElement>;
             "we-radio": LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;

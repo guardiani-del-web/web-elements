@@ -20,27 +20,6 @@
 | `buttonCallback` | Event triggered when button is pressed | `CustomEvent<any>` |
 
 
-## CSS Custom Properties
-
-| Name                        | Description                                                          |
-| --------------------------- | -------------------------------------------------------------------- |
-| `--button--background`      | Background of button <br> Default: rgba(211, 211, 211, 1)            |
-| `--button--border`          | Border of button <br> Default: 0.125em solid rgba(128, 128, 128, 1); |
-| `--button--border-radius`   | Border radius of button <br> Default: 0.250em                        |
-| `--button--color`           | Color of button <br> Default: rgba(0, 0, 0, 1)                       |
-| `--button--cursor`          | Cursor of button <br> Default: auto                                  |
-| `--button--display`         | Display of button <br> Default: block                                |
-| `--button--font-size`       | Font size of button <br> Default: 1em                                |
-| `--button--height`          | Height of button <br> Default: auto                                  |
-| `--button--margin`          | Margin of button <br> Default: 0                                     |
-| `--button--outline`         | Outline of button <br> Default: none                                 |
-| `--button--padding`         | Padding of button <br> Default: 0.250em                              |
-| `--button--text-align`      | Text align of button <br> Default: center                            |
-| `--button--text-decoration` | Text decoration of button <br> Default: none                         |
-| `--button--text-transform`  | Text transform of button <br> Default: none                          |
-| `--button--width`           | Width of button <br> Default: auto                                   |
-
-
 ----------------------------------------------
 
 
