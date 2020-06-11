@@ -2,7 +2,8 @@
 * @prop --tooltip--width: Width of tooltip <br> Default: fit-content
 * @prop --tooltip--height: Height of tooltip <br> Default: fit-content
 * @prop --tooltip--padding: Padding of tooltip <br> Default: 3px
-* @prop --tooltip--background: Background of tooltip <br> Default: rgba(128, 128, 128, 0.8)
+* @prop --tooltip--background: Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));
+* @prop --tooltip--color: Color of tooltip <br> Default: rgba(0, 0, 0, 1)
 * @prop --tooltip--top: Top of tooltip <br> Default: 100%
 * @prop --tooltip--left: Left of tooltip <br> Default: 50%
 * @prop --tooltip--right: Right of tooltip <br> Default: auto
@@ -26,8 +27,9 @@
   display: none;
   width: var(--tooltip--width, fit-content);
   height: var(--tooltip--height, fit-content);
+  color:var(--tooltip--color, rgba(255, 255, 255, 1));
   padding: var(--tooltip--padding, 3px);
-  background: var(--tooltip--background, rgba(128, 128, 128, 0.8));
+  background: var(--tooltip--background, rgba(196, 196, 196, 0.5));
   top: var(--tooltip--top, 100%);
   left: var(--tooltip--left, 50%);
   right: var(--tooltip--right, auto);
