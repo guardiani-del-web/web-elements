@@ -138,7 +138,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--button--background",
+          "annotation": "prop",
+          "docs": "Background of button <br> Default: rgba(211, 211, 211, 1)"
+        },
+        {
+          "name": "--button--border",
+          "annotation": "prop",
+          "docs": "Border of button <br> Default: 0.125em solid rgba(128, 128, 128, 1);"
+        },
+        {
+          "name": "--button--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--button--color",
+          "annotation": "prop",
+          "docs": "Color of button <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--button--cursor",
+          "annotation": "prop",
+          "docs": "Cursor of button <br> Default: auto"
+        },
+        {
+          "name": "--button--display",
+          "annotation": "prop",
+          "docs": "Display of button <br> Default: block"
+        },
+        {
+          "name": "--button--font-size",
+          "annotation": "prop",
+          "docs": "Font size of button <br> Default: 1em"
+        },
+        {
+          "name": "--button--height",
+          "annotation": "prop",
+          "docs": "Height of button <br> Default: auto"
+        },
+        {
+          "name": "--button--margin",
+          "annotation": "prop",
+          "docs": "Margin of button <br> Default: 0"
+        },
+        {
+          "name": "--button--outline",
+          "annotation": "prop",
+          "docs": "Outline of button <br> Default: none"
+        },
+        {
+          "name": "--button--padding",
+          "annotation": "prop",
+          "docs": "Padding of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--button--text-align",
+          "annotation": "prop",
+          "docs": "Text align of button <br> Default: center"
+        },
+        {
+          "name": "--button--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of button <br> Default: none"
+        },
+        {
+          "name": "--button--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform of button <br> Default: none"
+        },
+        {
+          "name": "--button--width",
+          "annotation": "prop",
+          "docs": "Width of button <br> Default: auto"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1292,68 +1368,7 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [
-        {
-          "name": "--tooltip--background",
-          "annotation": "prop",
-          "docs": "Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));"
-        },
-        {
-          "name": "--tooltip--border",
-          "annotation": "prop",
-          "docs": "Border of tooltip <br> Default: none"
-        },
-        {
-          "name": "--tooltip--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of tooltip <br> Default: 0"
-        },
-        {
-          "name": "--tooltip--bottom",
-          "annotation": "prop",
-          "docs": "Bottom of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--color",
-          "annotation": "prop",
-          "docs": "Color of tooltip <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--tooltip--height",
-          "annotation": "prop",
-          "docs": "Height of tooltip <br> Default: fit-content"
-        },
-        {
-          "name": "--tooltip--left",
-          "annotation": "prop",
-          "docs": "Left of tooltip <br> Default: 50%"
-        },
-        {
-          "name": "--tooltip--padding",
-          "annotation": "prop",
-          "docs": "Padding of tooltip <br> Default: 3px"
-        },
-        {
-          "name": "--tooltip--right",
-          "annotation": "prop",
-          "docs": "Right of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--top",
-          "annotation": "prop",
-          "docs": "Top of tooltip <br> Default: 100%"
-        },
-        {
-          "name": "--tooltip--transform",
-          "annotation": "prop",
-          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
-        },
-        {
-          "name": "--tooltip--width",
-          "annotation": "prop",
-          "docs": "Width of tooltip <br> Default: fit-content"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
