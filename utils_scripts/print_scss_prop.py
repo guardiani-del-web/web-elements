@@ -1,28 +1,17 @@
 scss_file = '''
-:host {
-  display: block;
-  position: relative;
-  width: fit-content;
-}
-
-:host(:hover) > .tooltip  {
-  display: block;
-}
-
-.tooltip {
-  position: absolute;
-  display: none;
-  width: var(--tooltip--width, fit-content);
-  height: var(--tooltip--height, fit-content);
-  padding: var(--tooltip--padding, 3px);
-  background: var(--tooltip--background, rgba(128, 128, 128, 0.8));
-  top: var(--tooltip--top, 100%);
-  left: var(--tooltip--left, 50%);
-  right: var(--tooltip--right, auto);
-  bottom: var(--tooltip--bottom, auto);
-  transform: var(--tooltip--transform, translate(-50%, 0%));
-}
-
+width: var(--button--width, auto);
+  height: var(--button--height, auto);
+  padding: var(--button--padding, 0.125em);
+  margin: var(--button--margin, 0);
+  display: var(--button--display, block);
+  border: var(--button--border, none);
+  border-radius: var(--button--border-radius, 0);
+  background: var(--button--background, (211, 211, 211, 1));
+  cursor: var(--button--cursor, auto);
+  color: var(--button--color, (0, 0, 0, 1));
+  text-align: var(--button--text-align, center);
+  font-size: var(--button--font-size, 1em);
+  text-decoration: var(--button--text-decoration, none);
 '''
 
 def print_scss_prop():
