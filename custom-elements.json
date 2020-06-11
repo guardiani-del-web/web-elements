@@ -614,6 +614,7 @@
         }
       ],
       "styles": [],
+<<<<<<< HEAD
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -775,6 +776,8 @@
           "docs": "Width of navigation drawer<br> Default: 12.5em"
         }
       ],
+=======
+>>>>>>> c4ce68024810ba3d6700e9ff147ab7c90f7b8344
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1408,68 +1411,7 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [
-        {
-          "name": "--tooltip--background",
-          "annotation": "prop",
-          "docs": "Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));"
-        },
-        {
-          "name": "--tooltip--border",
-          "annotation": "prop",
-          "docs": "Border of tooltip <br> Default: none"
-        },
-        {
-          "name": "--tooltip--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of tooltip <br> Default: 0"
-        },
-        {
-          "name": "--tooltip--bottom",
-          "annotation": "prop",
-          "docs": "Bottom of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--color",
-          "annotation": "prop",
-          "docs": "Color of tooltip <br> Default: rgba(0, 0, 0, 1)"
-        },
-        {
-          "name": "--tooltip--height",
-          "annotation": "prop",
-          "docs": "Height of tooltip <br> Default: fit-content"
-        },
-        {
-          "name": "--tooltip--left",
-          "annotation": "prop",
-          "docs": "Left of tooltip <br> Default: 50%"
-        },
-        {
-          "name": "--tooltip--padding",
-          "annotation": "prop",
-          "docs": "Padding of tooltip <br> Default: 3px"
-        },
-        {
-          "name": "--tooltip--right",
-          "annotation": "prop",
-          "docs": "Right of tooltip <br> Default: auto"
-        },
-        {
-          "name": "--tooltip--top",
-          "annotation": "prop",
-          "docs": "Top of tooltip <br> Default: 100%"
-        },
-        {
-          "name": "--tooltip--transform",
-          "annotation": "prop",
-          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
-        },
-        {
-          "name": "--tooltip--width",
-          "annotation": "prop",
-          "docs": "Width of tooltip <br> Default: fit-content"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],
