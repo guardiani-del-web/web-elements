@@ -20,8 +20,10 @@ import { generateUniqueId } from '@utils';
   shadow: true
 })
 export class Tab implements ComponentInterface {
+  /** Default value of tab (opened/closed) when component is triggered the first time*/
   @Prop() enabled: boolean;
   @State() valueId = generateUniqueId();
+  /** Event triggered when user select a tab putting in the payload the value id generated */
   @Event() tabCallback: EventEmitter;
 
   handleChange(event: { target: HTMLInputElement }) {

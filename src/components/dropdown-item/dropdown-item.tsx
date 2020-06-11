@@ -15,22 +15,27 @@ import {
   shadow: true,
 })
 export class DropdownItem implements ComponentInterface {
-  @Prop() label: string = "";
-  @Prop() value: string = "";
-  @Prop() arrow: string = "";
+  /** Text inside the dropdown item if you want to use a simple dropdown item with only text*/
+  @Prop() label: string;
+  /** Value put in payload of event triggered when dropdown item is clicked */
+  @Prop() value: string;
+  /** Arrow direction when dropdown is opened/closed inserted in this way: ["arrow_closed","arrow_opened"], values accepted: right, left, up, down */
+  @Prop() arrow: string;
   @State() arrowState: string = this.arrow;
-  @Event() clickCallback: EventEmitter;
+  /** Event triggered when dropdown item is clicked, not the arrow */
+  @Event() clickItemCallback: EventEmitter;
   @State() childrenOpen: boolean = false;
-
-  @Prop() width: string = "";
+  /** Width of the children container when is opened/closed, insert it if you want a transition of width in this way: ["width_close", "width_open"], usually the width_close is 0 */
+  @Prop() width: string;
   @State() widthArray: any;
-  @Prop() height: string = "";
+  /** Height of the children container when is opened/closed, insert it if you want a transition of height in this way: ["height_close", "height_open"], usually the height_close is 0 */
+  @Prop() height: string;
   @State() heightArray: any;
   @State() style: any = {};
+  /** In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position*/
   @Prop() positionChildren: string = "right";
-  @Prop() marginClass: string = "";
-
-  @Event() dropdownItemCallback: EventEmitter;
+  /** Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them */
+  @Prop() borderClass: string;
 
   manageTransition() {
     if (this.width) {
@@ -73,17 +78,17 @@ export class DropdownItem implements ComponentInterface {
   }
 
   handleItemClicked(event: { target: HTMLInputElement }) {
-    this.clickCallback.emit(event.target.value);
+    this.clickItemCallback.emit(event.target.value);
   }
 
   render() {
     return (
       <Host>
         <div
-          class={"dropdown_item " + this.marginClass}
+          class={"dropdown_item " + this.borderClass}
           onClick={this.handleItemClicked.bind(this)}
         >
-          <label>{this.label}</label>
+          {this.label ? <label>{this.label}</label> : <slot name="item_content"></slot>}
           {this.arrow && (
             <div class="arrowContainer" onClick={() => this.handleChangeState()}>
               <i class={"arrow " + this.arrowState}></i>

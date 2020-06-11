@@ -5,6 +5,7 @@ import { ComponentInterface, Component, h, Prop, Listen, Element } from '@stenci
   shadow: true
 })
 export class AccordionGroup implements ComponentInterface {
+  /** Identify if this accordion group contains more accordions or only once */
   @Prop() multiple: boolean;
   @Element() el: HTMLWeAccordionGroupElement;
 

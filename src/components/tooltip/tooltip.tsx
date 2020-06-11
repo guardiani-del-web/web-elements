@@ -6,7 +6,7 @@ import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class Tooltip implements ComponentInterface {
-  /** value: [optional] if you want to use a simple tooltip you can only add this value */
+  /** If you want to use a simple tooltip you can only add this value */
   @Prop() value: string;
 
   render() {

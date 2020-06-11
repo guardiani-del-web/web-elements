@@ -6,16 +6,26 @@ import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class Textarea implements ComponentInterface {
-  @Prop() text = '';
-  @Prop() name = '';
-  @Prop() placeholder = '';
-  @Prop() readonly = false;
-  @Prop() disabled = false;
-  @Prop() required = false;
-  @Prop() autofocus = false;
+  /** Test inside the textarea when rendered the first time */
+  @Prop() text:string;
+  /** Name prop of the textarea */
+  @Prop() name:string;
+  /** Placeholder appear when there isn't text in the textarea */
+  @Prop() placeholder:string;
+  /** Identify the readonly property of textarea */
+  @Prop() readonly:boolean;
+  /** Identify the disabled property of textarea */
+  @Prop() disabled:boolean;
+  /** Identify the required property of textarea */
+  @Prop() required:boolean;
+  /** Identify the autofocus property of textarea */
+  @Prop() autofocus:boolean;
+  /** Identify the maxlength property of textarea */
   @Prop() maxlength = 100000;
+  /** Identify the cols property of textarea */
   @Prop() cols;
-  @Prop() row;
+  /** Identify the rows property of textarea */
+  @Prop() rows;
 
   render() {
     return (
@@ -28,7 +38,7 @@ export class Textarea implements ComponentInterface {
           autofocus={this.autofocus}
           maxLength={this.maxlength}
           cols={this.cols}
-          rows={this.row}
+          rows={this.rows}
           name={this.name}
         >
           {this.text}

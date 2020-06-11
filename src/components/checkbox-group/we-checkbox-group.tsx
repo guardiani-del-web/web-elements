@@ -16,7 +16,9 @@ import { parseFunction } from '@utils';
 })
 export class CheckboxGroup implements ComponentInterface {
   @Element() el: HTMLWeCheckboxGroupElement;
+  /** Name that identify this checkbox group */
   @Prop() name!: any;
+  /** Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed */
   @Prop() changeCallback: any;
   @State() checkedItems: Array<any>;
 

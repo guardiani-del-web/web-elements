@@ -7,7 +7,9 @@ import { parseFunction } from '@utils';
 })
 export class RadioGroup implements ComponentInterface {
   @Element() el: HTMLWeRadioGroupElement;
+  /** Name that identify this radio group */
   @Prop() name!: string;
+  /** Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked */
   @Prop() changeCallback: any;
 
   @Listen('radioCallback')

@@ -34,16 +34,16 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type      | Default     |
-| --------- | --------- | ----------- | --------- | ----------- |
-| `enabled` | `enabled` |             | `boolean` | `undefined` |
+| Property  | Attribute | Description                                                                     | Type      | Default     |
+| --------- | --------- | ------------------------------------------------------------------------------- | --------- | ----------- |
+| `enabled` | `enabled` | Default value of tab (opened/closed) when component is triggered the first time | `boolean` | `undefined` |
 
 
 ## Events
 
-| Event         | Description | Type               |
-| ------------- | ----------- | ------------------ |
-| `tabCallback` |             | `CustomEvent<any>` |
+| Event         | Description                                                                          | Type               |
+| ------------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `tabCallback` | Event triggered when user select a tab putting in the payload the value id generated | `CustomEvent<any>` |
 
 
 ## Slots

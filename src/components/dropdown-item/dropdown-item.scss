@@ -44,12 +44,12 @@
     justify-content: var(--dropdown-item--justify-content, space-between);
     align-items: var(--dropdown-item--align-items, center);
 
-    &.margin_right {
+    &.border_right {
       border-right: var(--dropdown-item--border-right, solid 0.125em rgba(0, 0, 0, 1)
       );
     }
 
-    &.margin_bottom {
+    &.border_bottom {
       border-bottom: var(--dropdown-item--border-bottom, solid 0.125em rgba(0, 0, 0, 1)
       );
     }

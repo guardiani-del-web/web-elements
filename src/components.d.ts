@@ -7,9 +7,15 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface WeAccordion {
+        /**
+          * Indentify if accordion is opened of not
+         */
         "open": boolean;
     }
     interface WeAccordionGroup {
+        /**
+          * Identify if this accordion group contains more accordions or only once
+         */
         "multiple": boolean;
     }
     interface WeButton {
@@ -25,83 +31,224 @@ export namespace Components {
     interface WeCard {
     }
     interface WeCheckbox {
+        /**
+          * identify if this checkbox is checked or not when the page is loaded
+         */
         "checked": boolean;
+        /**
+          * Identify if this checkbox is disabled or not
+         */
         "disabled": boolean;
+        /**
+          * Value returned when the input is submitted if this checkbox is checked
+         */
         "value": string;
     }
     interface WeCheckboxGroup {
+        /**
+          * Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed
+         */
         "changeCallback": any;
+        /**
+          * Name that identify this checkbox group
+         */
         "name": any;
     }
     interface WeChips {
+        /**
+          * If true user can select the chips and selectCallback event is triggered
+         */
         "isSelectable": boolean;
+        /**
+          * Center text written inside the chips if you want a text inside the chips
+         */
         "label": string;
+        /**
+          * If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered
+         */
         "removeLeft": boolean;
+        /**
+          * If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered
+         */
         "removeRight": boolean;
+        /**
+          * Src of img you want to put in left side of chips if you want an image in that position
+         */
         "srcImgLeft": string;
+        /**
+          * Src of img you want to put in right side of chips if you want an image in that position
+         */
         "srcImgRight": string;
     }
     interface WeDivider {
     }
     interface WeDropdownGroup {
+        /**
+          * Define the orientation of the objects inside this group, "column" or "row"
+         */
         "orientation": string;
     }
     interface WeDropdownItem {
+        /**
+          * Arrow direction when dropdown is opened/closed inserted in this way: ["arrow_closed","arrow_opened"], values accepted: right, left, up, down
+         */
         "arrow": string;
+        /**
+          * Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them
+         */
+        "borderClass": string;
+        /**
+          * Height of the children container when is opened/closed, insert it if you want a transition of height in this way: ["height_close", "height_open"], usually the height_close is 0
+         */
         "height": string;
+        /**
+          * Text inside the dropdown item if you want to use a simple dropdown item with only text
+         */
         "label": string;
-        "marginClass": string;
+        /**
+          * In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position
+         */
         "positionChildren": string;
+        /**
+          * Value put in payload of event triggered when dropdown item is clicked
+         */
         "value": string;
+        /**
+          * Width of the children container when is opened/closed, insert it if you want a transition of width in this way: ["width_close", "width_open"], usually the width_close is 0
+         */
         "width": string;
     }
     interface WeModal {
+        /**
+          * identify if modal is visible or not
+         */
         "isVisible": boolean;
     }
     interface WeRadio {
+        /**
+          * identify if this radio button is checked or not when the page is loaded
+         */
         "checked": boolean;
+        /**
+          * Identify if this radio button is disabled or not
+         */
         "disabled": boolean;
+        /**
+          * Value returned when the input is submitted if this radio button is checked
+         */
         "value": string;
     }
     interface WeRadioGroup {
+        /**
+          * Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked
+         */
         "changeCallback": any;
+        /**
+          * Name that identify this radio group
+         */
         "name": string;
     }
     interface WeSlider {
+        /**
+          * Event triggered any time user moves the slider putting in the payload name and current value
+         */
         "changeCallback": any;
+        /**
+          * Identify if slider is disabled or not
+         */
         "disabled": boolean;
+        /**
+          * Maximum value you can set in the slider
+         */
         "max": number;
+        /**
+          * Minimum value you can set in the slider
+         */
         "min": number;
+        /**
+          * Name of slider, put in the payload of changeCallback event
+         */
         "name": string;
+        /**
+          * Starting value of slider
+         */
         "value": number;
     }
     interface WeSwitch {
+        /**
+          * Event triggered any time user change the state of the switch putting in the payload name and status
+         */
         "changeCallback": any;
+        /**
+          * Default value of switch when component is rendered the first time
+         */
         "enabled": boolean;
+        /**
+          * Text put in the left of switch
+         */
         "labelLeft": string;
+        /**
+          * Text put in the right of switch
+         */
         "labelRight": string;
+        /**
+          * Name of switch, put in the payload of changeCallback event
+         */
         "name": any;
     }
     interface WeTab {
+        /**
+          * Default value of tab (opened/closed) when component is triggered the first time
+         */
         "enabled": boolean;
     }
     interface WeTabGroup {
     }
     interface WeTextarea {
+        /**
+          * Identify the autofocus property of textarea
+         */
         "autofocus": boolean;
+        /**
+          * Identify the cols property of textarea
+         */
         "cols": any;
+        /**
+          * Identify the disabled property of textarea
+         */
         "disabled": boolean;
+        /**
+          * Identify the maxlength property of textarea
+         */
         "maxlength": number;
+        /**
+          * Name prop of the textarea
+         */
         "name": string;
+        /**
+          * Placeholder appear when there isn't text in the textarea
+         */
         "placeholder": string;
+        /**
+          * Identify the readonly property of textarea
+         */
         "readonly": boolean;
+        /**
+          * Identify the required property of textarea
+         */
         "required": boolean;
-        "row": any;
+        /**
+          * Identify the rows property of textarea
+         */
+        "rows": any;
+        /**
+          * Test inside the textarea when rendered the first time
+         */
         "text": string;
     }
     interface WeTooltip {
         /**
-          * value: [optional] if you want to use a simple tooltip you can only add this value
+          * If you want to use a simple tooltip you can only add this value
          */
         "value": string;
     }
@@ -245,10 +392,19 @@ declare global {
 }
 declare namespace LocalJSX {
     interface WeAccordion {
+        /**
+          * Event triggered each time the accordion is opened/closed
+         */
         "onAccordionCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Indentify if accordion is opened of not
+         */
         "open"?: boolean;
     }
     interface WeAccordionGroup {
+        /**
+          * Identify if this accordion group contains more accordions or only once
+         */
         "multiple"?: boolean;
     }
     interface WeButton {
@@ -268,91 +424,252 @@ declare namespace LocalJSX {
     interface WeCard {
     }
     interface WeCheckbox {
+        /**
+          * identify if this checkbox is checked or not when the page is loaded
+         */
         "checked"?: boolean;
+        /**
+          * Identify if this checkbox is disabled or not
+         */
         "disabled"?: boolean;
+        /**
+          * Event triggered when this checkbox is checked/not checked returning the value prop for payload
+         */
         "onCheckboxCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Value returned when the input is submitted if this checkbox is checked
+         */
         "value": string;
     }
     interface WeCheckboxGroup {
+        /**
+          * Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed
+         */
         "changeCallback"?: any;
+        /**
+          * Name that identify this checkbox group
+         */
         "name": any;
     }
     interface WeChips {
+        /**
+          * If true user can select the chips and selectCallback event is triggered
+         */
         "isSelectable"?: boolean;
+        /**
+          * Center text written inside the chips if you want a text inside the chips
+         */
         "label"?: string;
+        /**
+          * Event triggered when the chips is removed
+         */
         "onRemoveCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Event triggered when the chips is selected
+         */
         "onSelectCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered
+         */
         "removeLeft"?: boolean;
+        /**
+          * If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered
+         */
         "removeRight"?: boolean;
+        /**
+          * Src of img you want to put in left side of chips if you want an image in that position
+         */
         "srcImgLeft"?: string;
+        /**
+          * Src of img you want to put in right side of chips if you want an image in that position
+         */
         "srcImgRight"?: string;
     }
     interface WeDivider {
     }
     interface WeDropdownGroup {
+        /**
+          * Define the orientation of the objects inside this group, "column" or "row"
+         */
         "orientation"?: string;
     }
     interface WeDropdownItem {
+        /**
+          * Arrow direction when dropdown is opened/closed inserted in this way: ["arrow_closed","arrow_opened"], values accepted: right, left, up, down
+         */
         "arrow"?: string;
+        /**
+          * Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them
+         */
+        "borderClass"?: string;
+        /**
+          * Height of the children container when is opened/closed, insert it if you want a transition of height in this way: ["height_close", "height_open"], usually the height_close is 0
+         */
         "height"?: string;
+        /**
+          * Text inside the dropdown item if you want to use a simple dropdown item with only text
+         */
         "label"?: string;
-        "marginClass"?: string;
-        "onClickCallback"?: (event: CustomEvent<any>) => void;
-        "onDropdownItemCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Event triggered when dropdown item is clicked, not the arrow
+         */
+        "onClickItemCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position
+         */
         "positionChildren"?: string;
+        /**
+          * Value put in payload of event triggered when dropdown item is clicked
+         */
         "value"?: string;
+        /**
+          * Width of the children container when is opened/closed, insert it if you want a transition of width in this way: ["width_close", "width_open"], usually the width_close is 0
+         */
         "width"?: string;
     }
     interface WeModal {
+        /**
+          * identify if modal is visible or not
+         */
         "isVisible"?: boolean;
+        /**
+          * Event triggered when the visibility of modal change
+         */
         "onModalCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeRadio {
+        /**
+          * identify if this radio button is checked or not when the page is loaded
+         */
         "checked"?: boolean;
+        /**
+          * Identify if this radio button is disabled or not
+         */
         "disabled"?: boolean;
+        /**
+          * Event triggered when this radio button is checked/not checked returning the value prop for payload
+         */
         "onRadioCallback"?: (event: CustomEvent<any>) => void;
+        /**
+          * Value returned when the input is submitted if this radio button is checked
+         */
         "value": string;
     }
     interface WeRadioGroup {
+        /**
+          * Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked
+         */
         "changeCallback"?: any;
+        /**
+          * Name that identify this radio group
+         */
         "name": string;
     }
     interface WeSlider {
+        /**
+          * Event triggered any time user moves the slider putting in the payload name and current value
+         */
         "changeCallback"?: any;
+        /**
+          * Identify if slider is disabled or not
+         */
         "disabled"?: boolean;
+        /**
+          * Maximum value you can set in the slider
+         */
         "max"?: number;
+        /**
+          * Minimum value you can set in the slider
+         */
         "min"?: number;
+        /**
+          * Name of slider, put in the payload of changeCallback event
+         */
         "name": string;
+        /**
+          * Starting value of slider
+         */
         "value"?: number;
     }
     interface WeSwitch {
+        /**
+          * Event triggered any time user change the state of the switch putting in the payload name and status
+         */
         "changeCallback"?: any;
+        /**
+          * Default value of switch when component is rendered the first time
+         */
         "enabled"?: boolean;
+        /**
+          * Text put in the left of switch
+         */
         "labelLeft"?: string;
+        /**
+          * Text put in the right of switch
+         */
         "labelRight"?: string;
+        /**
+          * Name of switch, put in the payload of changeCallback event
+         */
         "name": any;
     }
     interface WeTab {
+        /**
+          * Default value of tab (opened/closed) when component is triggered the first time
+         */
         "enabled"?: boolean;
+        /**
+          * Event triggered when user select a tab putting in the payload the value id generated
+         */
         "onTabCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeTabGroup {
     }
     interface WeTextarea {
+        /**
+          * Identify the autofocus property of textarea
+         */
         "autofocus"?: boolean;
+        /**
+          * Identify the cols property of textarea
+         */
         "cols"?: any;
+        /**
+          * Identify the disabled property of textarea
+         */
         "disabled"?: boolean;
+        /**
+          * Identify the maxlength property of textarea
+         */
         "maxlength"?: number;
+        /**
+          * Name prop of the textarea
+         */
         "name"?: string;
+        /**
+          * Placeholder appear when there isn't text in the textarea
+         */
         "placeholder"?: string;
+        /**
+          * Identify the readonly property of textarea
+         */
         "readonly"?: boolean;
+        /**
+          * Identify the required property of textarea
+         */
         "required"?: boolean;
-        "row"?: any;
+        /**
+          * Identify the rows property of textarea
+         */
+        "rows"?: any;
+        /**
+          * Test inside the textarea when rendered the first time
+         */
         "text"?: string;
     }
     interface WeTooltip {
         /**
-          * value: [optional] if you want to use a simple tooltip you can only add this value
+          * If you want to use a simple tooltip you can only add this value
          */
         "value"?: string;
     }
