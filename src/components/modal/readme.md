@@ -9,7 +9,7 @@
 
 | Property    | Attribute    | Description                         | Type      | Default |
 | ----------- | ------------ | ----------------------------------- | --------- | ------- |
-| `isVisible` | `is-visible` | identify if modal is visible or not | `boolean` | `true`  |
+| `isVisible` | `is-visible` | identify if modal is visible or not | `boolean` | `false` |
 
 
 ## Events
