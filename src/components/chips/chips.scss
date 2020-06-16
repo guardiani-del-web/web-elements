@@ -48,7 +48,7 @@
 }
 
 .imageLeft {
-  cursor: var(--imageLeft--cursor, auto);
+  cursor: var(--cursor, auto);
   padding: var(--imageLeft--padding, 0);
   margin: var(--imageLeft--margin, 0 0.5rem);
   width: var(--imageLeft--width, auto);
@@ -57,18 +57,18 @@
 }
 
 label {
-  color: var(--label--color, rgba(0, 0, 0, 1));
-  font-size: var(--label--font-size, 12pt);
-  font-weight: var(--label--font-weight, normal);
-  text-transform: var(--label--text-transform, unset);
-  text-align: var(--label--text-align, left);
+  color: var(--color, rgba(0, 0, 0, 1));
+  font-size: var(--font-size, 12pt);
+  font-weight: var(--font-weight, normal);
+  text-transform: var(--text-transform, unset);
+  text-align: var(--text-align, left);
   padding: var(--label--padding, 0);
   margin: var(--label--margin, 0 0.5rem);
-  text-decoration: var(--label--text-decoration, unset);
+  text-decoration: var(--text-decoration, unset);
 }
 
 .imageRight {
-  cursor: var(--imageRight--cursor, pointer);
+  cursor: var(--cursor, pointer);
   padding: var(--imageRight--padding, 0);
   margin: var(--imageRight--margin, 0 0.5rem);
   width: var(--imageRight--width, auto);

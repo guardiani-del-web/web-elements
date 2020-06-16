@@ -61,8 +61,8 @@
   .right {
     position: absolute;
     top: 50%;
-    font-size: var(--container--font-size, 2em);
-    font-weight: var(--container--font-weight, bold);
+    font-size: var(--font-size, 2em);
+    font-weight: var(--font-weight, bold);
   }
   .left {
     left: 0.625em;

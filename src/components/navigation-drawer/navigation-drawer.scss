@@ -1,0 +1,44 @@
+/**
+* @prop --width:  Width of navigation drawer<br> Default: 12.5em
+* @prop --height: Height of navigation drawer <br> Default: 100vh  
+* @prop --position: Position of navigation drawer <br> Default: fixed
+* @prop --left: Left option of navigation drawer <br> Default: 0        
+* @prop --top: Top option of navigation drawer <br> Default: 0
+* @prop --right: Right option of navigation drawer <br> Default: auto
+* @prop --bottom: Bottom option of navigation drawer <br> Default: auto
+* @prop --padding: Padding of navigation drawer <br> Default: 0.625em
+* @prop --display: Display of navigation drawer <br> Default: flex
+* @prop --border: Border of navigation drawer <br> Default: none
+* @prop --background: Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)   
+* @prop --color: Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)
+* @prop --font-size: Font size of navigation drawer <br> Default: 1em
+* @prop --justify-content: Justify content of navigation drawer <br> Default: left
+* @prop --align-items: Align items of navigation drawer <br> Default: start
+* @prop --transition: Transition of navigation drawer <br> Default: all 0.5s
+*/
+
+:host {
+  width: var(--width, 12.5em);
+  height: var(--height, 100vh);
+  position: var(--position, fixed);
+  left: var(--left, 0);
+  top: var(--top, 0);
+  right: var(--right, auto);
+  bottom: var(--bottom, auto);
+  padding: var(--padding, 0.625em);
+  display: var(--display, flex);
+  border: var(--border, none);
+  background: var(--background, rgba(151, 151, 151, 1));
+  color: var(--color, rgba(0, 0, 0, 1));
+  font-size: var(--font-size, 1em);
+  justify-content: var(--justify-content, left);
+  align-items: var(--align-items, start);
+  transition: var(--transition, all 0.5s);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+:host(.closed) {
+  width: 0;
+  padding: 0;
+}

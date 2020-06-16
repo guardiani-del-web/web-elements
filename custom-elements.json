@@ -614,6 +614,7 @@
         }
       ],
       "styles": [],
+<<<<<<< HEAD
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -659,6 +660,124 @@
         }
       ],
       "styles": [],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\navigation-drawer\\navigation-drawer.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-navigation-drawer",
+      "readme": "# we-navigation-drawer\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "closed",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "closed",
+          "reflectToAttr": false,
+          "docs": "If true the navigation drawer is closed",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--dropdown-item_children--transition",
+          "annotation": "prop",
+          "docs": "Transition of navigation drawer <br> Default: all 0.5s"
+        },
+        {
+          "name": "--navigation-drawer--align-items",
+          "annotation": "prop",
+          "docs": "Align items of navigation drawer <br> Default: start"
+        },
+        {
+          "name": "--navigation-drawer--background",
+          "annotation": "prop",
+          "docs": "Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)"
+        },
+        {
+          "name": "--navigation-drawer--border",
+          "annotation": "prop",
+          "docs": "Border of navigation drawer <br> Default: none"
+        },
+        {
+          "name": "--navigation-drawer--bottom",
+          "annotation": "prop",
+          "docs": "Bottom option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--navigation-drawer--color",
+          "annotation": "prop",
+          "docs": "Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--navigation-drawer--display",
+          "annotation": "prop",
+          "docs": "Display of navigation drawer <br> Default: flex"
+        },
+        {
+          "name": "--navigation-drawer--font-size",
+          "annotation": "prop",
+          "docs": "Font size of navigation drawer <br> Default: 1em"
+        },
+        {
+          "name": "--navigation-drawer--height",
+          "annotation": "prop",
+          "docs": "Height of navigation drawer <br> Default: 100vh"
+        },
+        {
+          "name": "--navigation-drawer--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of navigation drawer <br> Default: left"
+        },
+        {
+          "name": "--navigation-drawer--left",
+          "annotation": "prop",
+          "docs": "Left option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--navigation-drawer--padding",
+          "annotation": "prop",
+          "docs": "Padding of navigation drawer <br> Default: 0.625em"
+        },
+        {
+          "name": "--navigation-drawer--position",
+          "annotation": "prop",
+          "docs": "Position of navigation drawer <br> Default: fixed"
+        },
+        {
+          "name": "--navigation-drawer--right",
+          "annotation": "prop",
+          "docs": "Right option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--navigation-drawer--top",
+          "annotation": "prop",
+          "docs": "Top option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--navigation-drawer--width",
+          "annotation": "prop",
+          "docs": "Width of navigation drawer<br> Default: 12.5em"
+        }
+      ],
+=======
+>>>>>>> c4ce68024810ba3d6700e9ff147ab7c90f7b8344
       "slots": [],
       "dependents": [],
       "dependencies": [],
