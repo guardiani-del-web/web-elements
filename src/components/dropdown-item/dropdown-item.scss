@@ -1,61 +1,61 @@
 /**
-* @prop --dropdown-item--cursor: Cursor inside dropdown item <br> Default: pointer
-* @prop --dropdown-item--display: Display of dropdown item <br> Default: flex
-* @prop --dropdown-item--width: Width of dropdown item <br> Default: 12.5em
-* @prop --dropdown-item--height: Height of dropdown item <br> Default: 1.875em
-* @prop --dropdown-item--background: Background of dropdown item <br> Default: rgba(255, 255, 255, 1)     
-* @prop --dropdown-item--color: Color of dropdown item <br> Default: rgba(0, 0, 0, 1)
-* @prop --dropdown-item--padding: Padding of dropdown item <br> Default: 0.625em
-* @prop --dropdown-item--margin: Margin of dropdown item <br> Default: 0
-* @prop --dropdown-item--justify-content: Justify content inside dropdown item <br> Default: space-between
-* @prop --dropdown-item--align-items: Align items inside dropdown item <br> Default: center
-* @prop --dropdown-item--border-right: Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)
-* @prop --dropdown-item--border-bottom: Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)
+* @prop --cursor: Cursor inside dropdown item <br> Default: pointer
+* @prop --display: Display of dropdown item <br> Default: flex
+* @prop --width: Width of dropdown item <br> Default: 12.5em
+* @prop --height: Height of dropdown item <br> Default: 1.875em
+* @prop --background: Background of dropdown item <br> Default: rgba(255, 255, 255, 1)     
+* @prop --color: Color of dropdown item <br> Default: rgba(0, 0, 0, 1)
+* @prop --padding: Padding of dropdown item <br> Default: 0.625em
+* @prop --margin: Margin of dropdown item <br> Default: 0
+* @prop --justify-content: Justify content inside dropdown item <br> Default: space-between
+* @prop --align-items: Align items inside dropdown item <br> Default: center
+* @prop --border-right: Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)
+* @prop --border-bottom: Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)
 
-* @prop --dropdown-item--background-hover: Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)   
+* @prop --background-hover: Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)   
 
-* @prop --dropdown-item_arrow--border: Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)   
-* @prop --dropdown-item_arrow--padding: Padding of dropdown item arrow <br> Default: 0.1875em
-* @prop --dropdown-item_arrow--border-width: Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0        
-* @prop --dropdown-item_arrow--display: Display of dropdown item arrow  <br> Default: inline-block
-* @prop --dropdown-item_arrow--transition: Transition of dropdown item arrow <br> Default: all 0.5s
+* @prop --arrow--border: Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)   
+* @prop --arrow--padding: Padding of dropdown item arrow <br> Default: 0.1875em
+* @prop --arrow--border-width: Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0        
+* @prop --arrow--display: Display of dropdown item arrow  <br> Default: inline-block
+* @prop --arrow--transition: Transition of dropdown item arrow <br> Default: all 0.5s
 
-* @prop --dropdown-item_children--position: Position of dropdown item children, not change it to default behaviour <br> Default: absolute
-* @prop --dropdown-item_children--transition: Transition of dropdown item children <br> Default: all 0.5s
-* @prop --dropdown-item_children--top: Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em
-* @prop --dropdown-item_children--right: Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%
-* @prop --dropdown-item_children--left: Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%
-* @prop --dropdown-item_children--bottom: Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%
+* @prop --children--position: Position of dropdown item children, not change it to default behaviour <br> Default: absolute
+* @prop --children--transition: Transition of dropdown item children <br> Default: all 0.5s
+* @prop --children--top: Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em
+* @prop --children--right: Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%
+* @prop --children--left: Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%
+* @prop --children--bottom: Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%
 */
 
 :host {
   display: block;
   position: relative;
-  cursor: var(--dropdown-item--cursor, pointer);
+  cursor: var(--cursor, pointer);
 
   .dropdown_item {
-    display: var(--dropdown-item--display, flex);
-    width: var(--dropdown-item--width, 12.5em);
-    height: var(--dropdown-item--height, 1.875em);
-    background: var(--dropdown-item--background, rgba(255, 255, 255, 1));
-    color: var(--dropdown-item--color, rgba(0, 0, 0, 1));
-    padding: var(--dropdown-item--padding, 0.625em);
-    margin: var(--dropdown-item--margin, 0);
-    justify-content: var(--dropdown-item--justify-content, space-between);
-    align-items: var(--dropdown-item--align-items, center);
+    display: var(--display, flex);
+    width: var(--width, 12.5em);
+    height: var(--height, 1.875em);
+    background: var(--background, rgba(255, 255, 255, 1));
+    color: var(--color, rgba(0, 0, 0, 1));
+    padding: var(--padding, 0.625em);
+    margin: var(--margin, 0);
+    justify-content: var(--justify-content, space-between);
+    align-items: var(--align-items, center);
 
     &.border_right {
-      border-right: var(--dropdown-item--border-right, solid 0.125em rgba(0, 0, 0, 1)
+      border-right: var(--border-right, solid 0.125em rgba(0, 0, 0, 1)
       );
     }
 
     &.border_bottom {
-      border-bottom: var(--dropdown-item--border-bottom, solid 0.125em rgba(0, 0, 0, 1)
+      border-bottom: var(--border-bottom, solid 0.125em rgba(0, 0, 0, 1)
       );
     }
 
     &:hover {
-      background: var(--dropdown-item--background-hover, rgb(185, 185, 185));
+      background: var(--background-hover, rgb(185, 185, 185));
     }
 
     label {
@@ -63,11 +63,11 @@
     }
 
     .arrow {
-      border: var(--dropdown-item_arrow--border, solid rgba(0, 0, 0, 1));
-      padding: var(--dropdown-item_arrow--padding, 0.1875em);
-      border-width: var(--dropdown-item_arrow--border-width, 0 0.1875em 0.1875em 0);
-      display: var(--dropdown-item_arrow--display, inline-block);
-      transition: var(--dropdown-item_arrow--transition, all 0.5s);
+      border: var(--arrow--border, solid rgba(0, 0, 0, 1));
+      padding: var(--arrow--padding, 0.1875em);
+      border-width: var(--arrow--border-width, 0 0.1875em 0.1875em 0);
+      display: var(--arrow--display, inline-block);
+      transition: var(--arrow--transition, all 0.5s);
 
       &.right {
         transform: rotate(-45deg);
@@ -92,28 +92,28 @@
   }
 
   .children {
-    position: var(--dropdown-item_children--position, absolute);
-    transition: var(--dropdown-item_children--transition, all 0.5s);
+    position: var(--children--position, absolute);
+    transition: var(--children--transition, all 0.5s);
     z-index: 2;
 
     &.position_right {
-      top: var(--dropdown-item_children--top, -0.125em);
-      left: var(--dropdown-item_children--left, 100%);
+      top: var(--children--top, -0.125em);
+      left: var(--children--left, 100%);
     }
 
     &.position_bottom {
-      top: var(--dropdown-item_children--top, 100%);
-      left: var(--dropdown-item_children--left, -0.125em);
+      top: var(--children--top, 100%);
+      left: var(--children--left, -0.125em);
     }
 
     &.position_left {
-      top: var(--dropdown-item_children--top, -0.125em);
-      right: var(--dropdown-item_children--right, 100%);
+      top: var(--children--top, -0.125em);
+      right: var(--children--right, 100%);
     }
 
     &.position_top {
-      bottom: var(--dropdown-item_children--bottom, 100%);
-      left: var(--dropdown-item_children--left, -0.125em);
+      bottom: var(--children--bottom, 100%);
+      left: var(--children--left, -0.125em);
     }
   }
 }
