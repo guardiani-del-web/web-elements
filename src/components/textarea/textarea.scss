@@ -38,4 +38,9 @@ textarea {
   display: var(--display, inline-block);
   resize: var(--resize, auto);
   text-decoration: var(--text-decoration, unset);
+  transition: var(--container-transition, height 0.15s ease-in-out);
+  
+  &:focus {
+    height: var(--heigth, 100px);
+  }
 }

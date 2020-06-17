@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-16T20:54:40",
+  "timestamp": "2020-06-17T06:28:13",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -1683,7 +1683,88 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of textarea <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of textarea <br> Default: unset"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of textarea <br> Default: 0.5em"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of textarea <br> Default: 0.05em"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of text <br> Default: rgba(0 , 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of textarea <br> Default: inline-block"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size <br> Default: 12pt"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight <br> Default: normal"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of textarea <br> Default: 50px"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin out of textarea <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding inside textarea <br> Default: 0"
+        },
+        {
+          "name": "--resize",
+          "annotation": "prop",
+          "docs": "Resize option for textarea <br> Default: auto"
+        },
+        {
+          "name": "--text-align",
+          "annotation": "prop",
+          "docs": "Text align <br> Default: left"
+        },
+        {
+          "name": "--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration for text <br> Default: unset"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform <br> Default: unset"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of textarea <br> Default: 100%"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
