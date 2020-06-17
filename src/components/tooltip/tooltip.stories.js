@@ -1,7 +1,6 @@
-
 import { html } from 'lit-html';
 import { withKnobs, text, color } from '@storybook/addon-knobs';
-import readme from "./readme.md";
+import readme from './readme.md';
 import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {
@@ -9,7 +8,7 @@ export default {
   parameters: {
     notes: readme
   },
-  decorators: [withKnobs],
+  decorators: [withKnobs]
 };
 
 export const Basic = () => {

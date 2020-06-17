@@ -7,7 +7,7 @@ import { ComponentInterface, Component, Host, h, Prop, Event, EventEmitter } fro
 })
 export class Modal implements ComponentInterface {
   /** identify if modal is visible or not */
-  @Prop() isVisible: boolean = true;
+  @Prop() isVisible: boolean = false;
   /** Event triggered when the visibility of modal change */
   @Event() modalCallback: EventEmitter;
 

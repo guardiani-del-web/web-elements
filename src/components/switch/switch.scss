@@ -5,15 +5,15 @@
   * @prop --container--height: Height of container <br> Default: 1.5em
   * @prop --switch--cursor: Cursor on switch <br> Default: pointer
   * @prop --switch--background: Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)
-  * @prop --switch--background-change: Background color of switch when change from initial condition <br> Default: #3F51B5
+  * @prop --background-checked: Background color of switch when change from initial condition <br> Default: #3F51B5
   * @prop --switch--border-radius: Border radius of switch  <br> Default: 6.250em
-  * @prop --switch_after--top: Distance from top of button switch <br> Default: 0.22em
-  * @prop --switch_after--left: Distance from left of icon switch <br> Default: 0.313em
-  * @prop --switch_after--width: Width of button switch <br> Default: 1em
-  * @prop --switch_after--height: Height of button switch <br> Default: 1em
-  * @prop --switch_after--background: Background of button switch <br> Default: rgba(255, 255, 255, 1)
-  * @prop --switch_after--border-radius: Border radius of button switch <br> Default: 50%
-  * @prop --switch_after--transition: Transition options about the changement of button switch <br> Default: 0.3s
+  * @prop --after--top: Distance from top of button switch <br> Default: 0.22em
+  * @prop --after--left: Distance from left of icon switch <br> Default: 0.313em
+  * @prop --after--width: Width of button switch <br> Default: 1em
+  * @prop --after--height: Height of button switch <br> Default: 1em
+  * @prop --after--background: Background of button switch <br> Default: rgba(255, 255, 255, 1)
+  * @prop --after--border-radius: Border radius of button switch <br> Default: 50%
+  * @prop --after--transition: Transition options about the changement of button switch <br> Default: 0.3s
   * @prop --container--font-size: Font size of labels inside the switch <br> Default: 2em
   * @prop --container--font-weight: Font weight of labels inside the switch <br> Default: bold
   */
@@ -32,24 +32,24 @@
     width: 100%;
     height: 100%;
     position: relative;
-    cursor: var(--switch--cursor, pointer);
-    background: var(--switch--background, rgba(128, 128, 128, 1));
-    border-radius: var(--switch--border-radius, 6.25em);
+    cursor: var(--cursor, pointer);
+    background: var(--background, rgba(128, 128, 128, 1));
+    border-radius: var(--border-radius, 6.25em);
     &:after {
       content: '';
       position: absolute;
       z-index: 2;
-      top: var(--switch_after--top, 0.22em);
-      left: var(--switch_after--left, 0.313em);
-      width: var(--switch_after--width, 1em);
-      height: var(--switch_after--height, 1em);
-      background: var(--switch_after--background, rgba(255, 255, 255, 1));
-      border-radius: var(--switch_after--border-radius, 50%);
-      transition: var(--switch_after--transition, 0.3s);
+      top: var(--after--top, 0.22em);
+      left: var(--after--left, 0.313em);
+      width: var(--after--width, 1em);
+      height: var(--after--height, 1em);
+      background: var(--after--background, rgba(255, 255, 255, 1));
+      border-radius: var(--after--border-radius, 50%);
+      transition: var(--after--transition, 0.3s);
     }
   }
   input:checked + .switch {
-    background: var(--switch--background-change, $primary_color);
+    background: var(--background-checked, $primary_color);
   }
 
   input:checked + .switch:after {
@@ -61,8 +61,8 @@
   .right {
     position: absolute;
     top: 50%;
-    font-size: var(--container--font-size, 2em);
-    font-weight: var(--container--font-weight, bold);
+    font-size: var(--font-size, 2em);
+    font-weight: var(--font-weight, bold);
   }
   .left {
     left: 0.625em;
