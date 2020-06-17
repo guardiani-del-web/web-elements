@@ -14,7 +14,7 @@ export class SwitchGroup implements ComponentInterface {
   @State() childrenState: Array<any> = [];
 
   findAllChildren() {
-    const items = this.el.querySelectorAll(":scope > switch");
+    //const items = this.el.querySelectorAll(":scope > switch");
   }
 
   componentDidLoad() {

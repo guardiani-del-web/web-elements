@@ -27,7 +27,7 @@ export class Chips implements ComponentInterface {
   @Prop() removeLeft: boolean;
   /** If true the chips will be removed when user click on right image inside chips and removeChipsCallback event is triggered */
   @Prop() removeRight: boolean;
-  @State() isVisible:boolean = true;
+  @State() isVisible: boolean = true;
   /** Event triggered when the chips is removed */
   @Event() removeChipsCallback: EventEmitter;
   /** If true user can select the chips and selectChipsCallback event is triggered */
@@ -44,10 +44,10 @@ export class Chips implements ComponentInterface {
   }
 
   handleSelectedChips() {
-    console.log('handlechips', this.isSelectable)
+    console.log('handlechips',this.value, this.isSelected);
     if (this.isSelectable) {
       this.isSelected = !this.isSelected;
-      this.selectChipsCallback.emit(this.value,this.isSelected);
+      this.selectChipsCallback.emit({ value: this.value, isSelected: this.isSelected });
     }
   }
 

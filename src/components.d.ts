@@ -56,7 +56,7 @@ export namespace Components {
     }
     interface WeChips {
         /**
-          * If true user can select the chips and selectCallback event is triggered
+          * If true user can select the chips and selectChipsCallback event is triggered
          */
         "isSelectable": boolean;
         /**
@@ -64,11 +64,11 @@ export namespace Components {
          */
         "label": string;
         /**
-          * If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered
+          * If true the chips will be removed when user click on left image inside chips and removeChipsCallback event is triggered
          */
         "removeLeft": boolean;
         /**
-          * If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered
+          * If true the chips will be removed when user click on right image inside chips and removeChipsCallback event is triggered
          */
         "removeRight": boolean;
         /**
@@ -85,6 +85,18 @@ export namespace Components {
         "value": string;
     }
     interface WeChipsGroup {
+        /**
+          * Name that identify this chips group
+         */
+        "name": any;
+        /**
+          * Function called when a chip is removed
+         */
+        "removeCallback": any;
+        /**
+          * Function called when a chip is selected
+         */
+        "selectCallback": any;
     }
     interface WeDivider {
     }
@@ -209,6 +221,14 @@ export namespace Components {
         "name": any;
     }
     interface WeSwitchGroup {
+        /**
+          * Function called when a switch inside change it's state
+         */
+        "changeSwitchCallback": any;
+        /**
+          * Name that identify this switch group
+         */
+        "name": any;
     }
     interface WeTab {
         /**
@@ -488,7 +508,7 @@ declare namespace LocalJSX {
     }
     interface WeChips {
         /**
-          * If true user can select the chips and selectCallback event is triggered
+          * If true user can select the chips and selectChipsCallback event is triggered
          */
         "isSelectable"?: boolean;
         /**
@@ -498,17 +518,17 @@ declare namespace LocalJSX {
         /**
           * Event triggered when the chips is removed
          */
-        "onRemoveCallback"?: (event: CustomEvent<any>) => void;
+        "onRemoveChipsCallback"?: (event: CustomEvent<any>) => void;
         /**
           * Event triggered when the chips is selected
          */
-        "onSelectCallback"?: (event: CustomEvent<any>) => void;
+        "onSelectChipsCallback"?: (event: CustomEvent<any>) => void;
         /**
-          * If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered
+          * If true the chips will be removed when user click on left image inside chips and removeChipsCallback event is triggered
          */
         "removeLeft"?: boolean;
         /**
-          * If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered
+          * If true the chips will be removed when user click on right image inside chips and removeChipsCallback event is triggered
          */
         "removeRight"?: boolean;
         /**
@@ -522,9 +542,21 @@ declare namespace LocalJSX {
         /**
           * Value passed on event when chips selected or removed
          */
-        "value"?: string;
+        "value": string;
     }
     interface WeChipsGroup {
+        /**
+          * Name that identify this chips group
+         */
+        "name": any;
+        /**
+          * Function called when a chip is removed
+         */
+        "removeCallback"?: any;
+        /**
+          * Function called when a chip is selected
+         */
+        "selectCallback"?: any;
     }
     interface WeDivider {
     }
@@ -661,6 +693,14 @@ declare namespace LocalJSX {
         "name": any;
     }
     interface WeSwitchGroup {
+        /**
+          * Function called when a switch inside change it's state
+         */
+        "changeSwitchCallback"?: any;
+        /**
+          * Name that identify this switch group
+         */
+        "name": any;
     }
     interface WeTab {
         /**

@@ -1,4 +1,5 @@
 import { ComponentInterface, Component, Host, h, State, Listen, Prop } from '@stencil/core';
+import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-chips-group',
@@ -17,6 +18,7 @@ export class ChipsGroup implements ComponentInterface {
 
   @Listen('removeChipsCallback')
   removeCallbackHandler(value) {
+    this.removeCallback = parseFunction(this.removeCallback);
     this.removedChips.push({ name: this.name, value });
     this.removeCallback(this.removedChips);
   }
@@ -30,11 +32,14 @@ export class ChipsGroup implements ComponentInterface {
   }
 
   @Listen('selectChipsCallback')
-  selectCallbackHandler(value, isSelected) {
-    if (isSelected)
-      this.selectedChips.push({ name: this.name, value })
+  selectCallbackHandler(prop) {
+    console.log("listen selectChipsCallback", prop)
+    const detail = prop.detail;
+    this.selectCallback = parseFunction(this.selectCallback);
+    if (detail.isSelected)
+      this.selectedChips.push({ name: this.name, value: detail.value })
     else {
-      const getSelectedIndex = this.selectedChips.findIndex((item) => item.value === value);
+      const getSelectedIndex = this.selectedChips.findIndex((item) => item.value === detail.value);
       if (getSelectedIndex >= 0) {
         this.selectedChips.splice(getSelectedIndex, 1);
       }
