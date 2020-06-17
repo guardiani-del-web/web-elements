@@ -79,6 +79,12 @@ export namespace Components {
           * Src of img you want to put in right side of chips if you want an image in that position
          */
         "srcImgRight": string;
+        /**
+          * Value passed on event when chips selected or removed
+         */
+        "value": string;
+    }
+    interface WeChipsGroup {
     }
     interface WeDivider {
     }
@@ -202,6 +208,8 @@ export namespace Components {
          */
         "name": any;
     }
+    interface WeSwitchGroup {
+    }
     interface WeTab {
         /**
           * Default value of tab (opened/closed) when component is triggered the first time
@@ -302,6 +310,12 @@ declare global {
         prototype: HTMLWeChipsElement;
         new (): HTMLWeChipsElement;
     };
+    interface HTMLWeChipsGroupElement extends Components.WeChipsGroup, HTMLStencilElement {
+    }
+    var HTMLWeChipsGroupElement: {
+        prototype: HTMLWeChipsGroupElement;
+        new (): HTMLWeChipsGroupElement;
+    };
     interface HTMLWeDividerElement extends Components.WeDivider, HTMLStencilElement {
     }
     var HTMLWeDividerElement: {
@@ -356,6 +370,12 @@ declare global {
         prototype: HTMLWeSwitchElement;
         new (): HTMLWeSwitchElement;
     };
+    interface HTMLWeSwitchGroupElement extends Components.WeSwitchGroup, HTMLStencilElement {
+    }
+    var HTMLWeSwitchGroupElement: {
+        prototype: HTMLWeSwitchGroupElement;
+        new (): HTMLWeSwitchGroupElement;
+    };
     interface HTMLWeTabElement extends Components.WeTab, HTMLStencilElement {
     }
     var HTMLWeTabElement: {
@@ -388,6 +408,7 @@ declare global {
         "we-checkbox": HTMLWeCheckboxElement;
         "we-checkbox-group": HTMLWeCheckboxGroupElement;
         "we-chips": HTMLWeChipsElement;
+        "we-chips-group": HTMLWeChipsGroupElement;
         "we-divider": HTMLWeDividerElement;
         "we-dropdown-group": HTMLWeDropdownGroupElement;
         "we-dropdown-item": HTMLWeDropdownItemElement;
@@ -397,6 +418,7 @@ declare global {
         "we-radio-group": HTMLWeRadioGroupElement;
         "we-slider": HTMLWeSliderElement;
         "we-switch": HTMLWeSwitchElement;
+        "we-switch-group": HTMLWeSwitchGroupElement;
         "we-tab": HTMLWeTabElement;
         "we-tab-group": HTMLWeTabGroupElement;
         "we-textarea": HTMLWeTextareaElement;
@@ -497,6 +519,12 @@ declare namespace LocalJSX {
           * Src of img you want to put in right side of chips if you want an image in that position
          */
         "srcImgRight"?: string;
+        /**
+          * Value passed on event when chips selected or removed
+         */
+        "value"?: string;
+    }
+    interface WeChipsGroup {
     }
     interface WeDivider {
     }
@@ -632,6 +660,8 @@ declare namespace LocalJSX {
          */
         "name": any;
     }
+    interface WeSwitchGroup {
+    }
     interface WeTab {
         /**
           * Default value of tab (opened/closed) when component is triggered the first time
@@ -700,6 +730,7 @@ declare namespace LocalJSX {
         "we-checkbox": WeCheckbox;
         "we-checkbox-group": WeCheckboxGroup;
         "we-chips": WeChips;
+        "we-chips-group": WeChipsGroup;
         "we-divider": WeDivider;
         "we-dropdown-group": WeDropdownGroup;
         "we-dropdown-item": WeDropdownItem;
@@ -709,6 +740,7 @@ declare namespace LocalJSX {
         "we-radio-group": WeRadioGroup;
         "we-slider": WeSlider;
         "we-switch": WeSwitch;
+        "we-switch-group": WeSwitchGroup;
         "we-tab": WeTab;
         "we-tab-group": WeTabGroup;
         "we-textarea": WeTextarea;
@@ -726,6 +758,7 @@ declare module "@stencil/core" {
             "we-checkbox": LocalJSX.WeCheckbox & JSXBase.HTMLAttributes<HTMLWeCheckboxElement>;
             "we-checkbox-group": LocalJSX.WeCheckboxGroup & JSXBase.HTMLAttributes<HTMLWeCheckboxGroupElement>;
             "we-chips": LocalJSX.WeChips & JSXBase.HTMLAttributes<HTMLWeChipsElement>;
+            "we-chips-group": LocalJSX.WeChipsGroup & JSXBase.HTMLAttributes<HTMLWeChipsGroupElement>;
             "we-divider": LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
             "we-dropdown-group": LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
             "we-dropdown-item": LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
@@ -735,6 +768,7 @@ declare module "@stencil/core" {
             "we-radio-group": LocalJSX.WeRadioGroup & JSXBase.HTMLAttributes<HTMLWeRadioGroupElement>;
             "we-slider": LocalJSX.WeSlider & JSXBase.HTMLAttributes<HTMLWeSliderElement>;
             "we-switch": LocalJSX.WeSwitch & JSXBase.HTMLAttributes<HTMLWeSwitchElement>;
+            "we-switch-group": LocalJSX.WeSwitchGroup & JSXBase.HTMLAttributes<HTMLWeSwitchGroupElement>;
             "we-tab": LocalJSX.WeTab & JSXBase.HTMLAttributes<HTMLWeTabElement>;
             "we-tab-group": LocalJSX.WeTabGroup & JSXBase.HTMLAttributes<HTMLWeTabGroupElement>;
             "we-textarea": LocalJSX.WeTextarea & JSXBase.HTMLAttributes<HTMLWeTextareaElement>;

@@ -65,6 +65,7 @@ label {
   padding: var(--label--padding, 0);
   margin: var(--label--margin, 0 0.5rem);
   text-decoration: var(--text-decoration, unset);
+  pointer-events: none;
 }
 
 .imageRight {

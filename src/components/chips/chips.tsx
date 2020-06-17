@@ -15,33 +15,40 @@ import {
   shadow: true
 })
 export class Chips implements ComponentInterface {
+  /** Value passed on event when chips selected or removed */
+  @Prop() value: string;
   /** Center text written inside the chips if you want a text inside the chips */
-  @Prop() label = '';
+  @Prop() label: string;
   /** Src of img you want to put in left side of chips if you want an image in that position*/
-  @Prop() srcImgLeft = '';
+  @Prop() srcImgLeft: string;
   /** Src of img you want to put in right side of chips if you want an image in that position */
-  @Prop() srcImgRight = '';
+  @Prop() srcImgRight: string;
   /** If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered */
-  @Prop() removeLeft = false;
+  @Prop() removeLeft: boolean;
   /** If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered */
-  @Prop() removeRight = false;
-  @State() isVisible = true;
+  @Prop() removeRight: boolean;
+  @State() isVisible:boolean = true;
   /** Event triggered when the chips is removed */
   @Event() removeCallback: EventEmitter;
   /** If true user can select the chips and selectCallback event is triggered */
-  @Prop() isSelectable = false;
-  @State() isSelected = false;
+  @Prop() isSelectable: boolean;
+  @State() isSelected: boolean;
   /** Event triggered when the chips is selected */
   @Event() selectCallback: EventEmitter;
 
-  handleRemoveChips(event) {
-    this.isVisible = !this.isVisible;
-    this.removeCallback.emit(event);
+  handleRemoveChips(side) {
+    if ((this.removeRight && side === 'right') || (this.removeLeft && side === 'left')) {
+      this.isVisible = !this.isVisible;
+      this.removeCallback.emit(this.value);
+    }
   }
 
-  handleSelectedChips(event) {
-    this.isSelected = !this.isSelected;
-    this.selectCallback.emit(event);
+  handleSelectedChips() {
+    console.log('handlechips', this.isSelectable)
+    if (this.isSelectable) {
+      this.isSelected = !this.isSelected;
+      this.selectCallback.emit(this.value);
+    }
   }
 
   render() {
@@ -50,13 +57,13 @@ export class Chips implements ComponentInterface {
         <Host>
           <div
             class={'chips ' + (this.isSelected && 'selected')}
-            onClick={this.isSelectable && this.handleSelectedChips.bind(this)}
+            onClick={() => this.handleSelectedChips()}
           >
             {this.srcImgLeft && (
               <img
                 class="imageLeft"
                 src={this.srcImgLeft}
-                onClick={this.removeLeft && this.handleRemoveChips.bind(this)}
+                onClick={() => this.handleRemoveChips('left')}
               />
             )}
             {this.label && <label>{this.label}</label>}
@@ -64,7 +71,7 @@ export class Chips implements ComponentInterface {
               <img
                 class="imageRight"
                 src={this.srcImgRight}
-                onClick={this.removeRight && this.handleRemoveChips.bind(this)}
+                onClick={() => this.handleRemoveChips('right')}
               />
             )}
           </div>

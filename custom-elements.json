@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-17T06:28:13",
+  "timestamp": "2020-06-17T07:51:15",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -511,7 +511,6 @@
           "reflectToAttr": false,
           "docs": "If true user can select the chips and selectCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -528,7 +527,6 @@
           "reflectToAttr": false,
           "docs": "Center text written inside the chips if you want a text inside the chips",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -545,7 +543,6 @@
           "reflectToAttr": false,
           "docs": "If true the chips will be removed when user click on left image inside chips and removeCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -562,7 +559,6 @@
           "reflectToAttr": false,
           "docs": "If true the chips will be removed when user click on right image inside chips and removeCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -579,7 +575,6 @@
           "reflectToAttr": false,
           "docs": "Src of img you want to put in left side of chips if you want an image in that position",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -596,7 +591,22 @@
           "reflectToAttr": false,
           "docs": "Src of img you want to put in right side of chips if you want an image in that position",
           "docsTags": [],
-          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "Value passed on event when chips selected or removed",
+          "docsTags": [],
           "values": [
             {
               "type": "string"

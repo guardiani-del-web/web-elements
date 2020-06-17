@@ -18,13 +18,15 @@ export const Basic = () => {
 
   const removeLeft = boolean('removeLeft', true, KNOBS_ATTRIBUTES);
 
+  const isSelectable = boolean('isSelectable', true, KNOBS_LIVE);
+
   const image1 = text('Image left', 'https://via.placeholder.com/15', KNOBS_LIVE);
   const image2 = text('Image right', 'https://via.placeholder.com/15', KNOBS_LIVE);
   const label = text('Label', 'Apple', KNOBS_LIVE);
 
 
   return html`
-    <we-chips src-img-left=${image1} src-img-right=${image2} label=${label} remove-left=${removeLeft}/>
+    <we-chips src-img-left=${image1} src-img-right=${image2} label=${label} remove-left=${removeLeft} is-selectable=${isSelectable}/>
     <style>
       html {
         ${cssVariables}
