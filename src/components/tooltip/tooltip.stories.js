@@ -23,7 +23,7 @@ export const Basic = () => {
       <label>Tooltip</label>
       </div>
     </we-tooltip>
--
+
     </br></br></br>
 
     <we-tooltip value="simple tooltip">
