@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-17T21:12:26",
+  "timestamp": "2020-06-18T07:36:23",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -1026,26 +1026,10 @@
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "enabled",
+          "name": "checked",
           "type": "boolean",
           "mutable": false,
-          "attr": "enabled",
+          "attr": "checked",
           "reflectToAttr": false,
           "docs": "Default value of switch when component is rendered the first time",
           "docsTags": [],
@@ -1110,7 +1094,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "changeCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
+          "docsTags": []
+        }
+      ],
       "styles": [],
       "slots": [],
       "dependents": [],
@@ -1161,23 +1155,7 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [
-        {
-          "name": "--align-items",
-          "annotation": "prop",
-          "docs": "Align items of chips group <br> Default: unset"
-        },
-        {
-          "name": "--display",
-          "annotation": "prop",
-          "docs": "Display of chips group <br> Default: flex"
-        },
-        {
-          "name": "--justify-content",
-          "annotation": "prop",
-          "docs": "Justify content of chips grou <br> Default: unset"
-        }
-      ],
+      "styles": [],
       "slots": [],
       "dependents": [],
       "dependencies": [],

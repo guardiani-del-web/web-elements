@@ -3,7 +3,7 @@ import { ComponentInterface, Component, Host, h, Prop, State, Element } from '@s
 @Component({
   tag: 'we-switch-group',
   styleUrl: 'switch-group.scss',
-  shadow: true,
+  shadow: true
 })
 export class SwitchGroup implements ComponentInterface {
   @Element() el: HTMLElement;
@@ -14,14 +14,21 @@ export class SwitchGroup implements ComponentInterface {
   @State() childrenState: Array<any> = [];
 
   findAllChildren() {
-    //const items = this.el.querySelectorAll(":scope > switch");
+    const items = this.el.querySelectorAll(':scope > we-switch');
+    console.log('findAllChildren', items);
+    console.log('findAllChildren 2', items[0], items[0].getAttribute('name'));
+    const children = [];
+    items.forEach(i =>{
+      children.push({name: i.getAttribute('name'), checked: i.getAttribute('checked')})
+    });
+    this.childrenState.push({name:this.name, children});
   }
 
   componentDidLoad() {
     this.findAllChildren();
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     this.findAllChildren();
   }
 
@@ -32,5 +39,4 @@ export class SwitchGroup implements ComponentInterface {
       </Host>
     );
   }
-
 }

@@ -200,13 +200,9 @@ export namespace Components {
     }
     interface WeSwitch {
         /**
-          * Event triggered any time user change the state of the switch putting in the payload name and status
-         */
-        "changeCallback": any;
-        /**
           * Default value of switch when component is rendered the first time
          */
-        "enabled": boolean;
+        "checked": boolean;
         /**
           * Text put in the left of switch
          */
@@ -672,13 +668,9 @@ declare namespace LocalJSX {
     }
     interface WeSwitch {
         /**
-          * Event triggered any time user change the state of the switch putting in the payload name and status
-         */
-        "changeCallback"?: any;
-        /**
           * Default value of switch when component is rendered the first time
          */
-        "enabled"?: boolean;
+        "checked"?: boolean;
         /**
           * Text put in the left of switch
          */
@@ -691,6 +683,10 @@ declare namespace LocalJSX {
           * Name of switch, put in the payload of changeCallback event
          */
         "name": any;
+        /**
+          * Event triggered any time user change the state of the switch putting in the payload name and status
+         */
+        "onChangeCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeSwitchGroup {
         /**
