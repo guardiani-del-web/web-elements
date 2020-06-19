@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-19T09:40:26",
+  "timestamp": "2020-06-19T09:44:26",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -1475,10 +1475,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\list-group\\list-group.tsx",
+      "filePath": "src\\components\\list\\list.tsx",
       "encapsulation": "shadow",
-      "tag": "we-list-group",
-      "readme": "# we-list-group\n\n\n",
+      "tag": "we-list",
+      "readme": "# we-list\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},

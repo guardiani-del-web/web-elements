@@ -1,4 +1,4 @@
-# we-list-group
+# we-list
 
 
 

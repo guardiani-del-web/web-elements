@@ -134,7 +134,7 @@ export namespace Components {
      */
     width: string;
   }
-  interface WeListGroup {}
+  interface WeList {}
   interface WeListItem {}
   interface WeModal {
     /**
@@ -338,10 +338,10 @@ declare global {
     prototype: HTMLWeDropdownItemElement;
     new (): HTMLWeDropdownItemElement;
   };
-  interface HTMLWeListGroupElement extends Components.WeListGroup, HTMLStencilElement {}
-  var HTMLWeListGroupElement: {
-    prototype: HTMLWeListGroupElement;
-    new (): HTMLWeListGroupElement;
+  interface HTMLWeListElement extends Components.WeList, HTMLStencilElement {}
+  var HTMLWeListElement: {
+    prototype: HTMLWeListElement;
+    new (): HTMLWeListElement;
   };
   interface HTMLWeListItemElement extends Components.WeListItem, HTMLStencilElement {}
   var HTMLWeListItemElement: {
@@ -415,7 +415,7 @@ declare global {
     'we-divider': HTMLWeDividerElement;
     'we-dropdown-group': HTMLWeDropdownGroupElement;
     'we-dropdown-item': HTMLWeDropdownItemElement;
-    'we-list-group': HTMLWeListGroupElement;
+    'we-list': HTMLWeListElement;
     'we-list-item': HTMLWeListItemElement;
     'we-modal': HTMLWeModalElement;
     'we-navigation-drawer': HTMLWeNavigationDrawerElement;
@@ -583,7 +583,7 @@ declare namespace LocalJSX {
      */
     width?: string;
   }
-  interface WeListGroup {}
+  interface WeList {}
   interface WeListItem {}
   interface WeModal {
     /**
@@ -758,7 +758,7 @@ declare namespace LocalJSX {
     'we-divider': WeDivider;
     'we-dropdown-group': WeDropdownGroup;
     'we-dropdown-item': WeDropdownItem;
-    'we-list-group': WeListGroup;
+    'we-list': WeList;
     'we-list-item': WeListItem;
     'we-modal': WeModal;
     'we-navigation-drawer': WeNavigationDrawer;
@@ -788,7 +788,7 @@ declare module '@stencil/core' {
       'we-divider': LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
       'we-dropdown-group': LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
       'we-dropdown-item': LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
-      'we-list-group': LocalJSX.WeListGroup & JSXBase.HTMLAttributes<HTMLWeListGroupElement>;
+      'we-list': LocalJSX.WeList & JSXBase.HTMLAttributes<HTMLWeListElement>;
       'we-list-item': LocalJSX.WeListItem & JSXBase.HTMLAttributes<HTMLWeListItemElement>;
       'we-modal': LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
       'we-navigation-drawer': LocalJSX.WeNavigationDrawer & JSXBase.HTMLAttributes<HTMLWeNavigationDrawerElement>;

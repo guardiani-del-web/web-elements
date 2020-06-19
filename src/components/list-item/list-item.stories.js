@@ -5,7 +5,7 @@ import readme from "./readme.md";
 import { getCssVariables } from '../../utils/getCssVariables';
 
 export default {
-  title: 'Components|ListItem',
+  title: 'Components|List',
   parameters: {
     notes: readme
   },
@@ -16,11 +16,11 @@ export const Basic = () => {
   const cssVariables = getCssVariables('we-list-item', color, text);
 
   return html`
-    <we-list-group>
+    <we-list>
       <we-list-item></we-list-item>
       <we-list-item></we-list-item>
       <we-list-item></we-list-item>
-    </we-list-group>
+    </we-list>
     <style>
       html {
         ${cssVariables}
