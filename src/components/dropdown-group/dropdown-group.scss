@@ -14,11 +14,10 @@
   background: var(--background, rgba(255, 255, 255, 1));
   border: var(--border, solid 0.125em rgba(0, 0, 0, 1));
 }
-  :host(.row) {
-    flex-direction: var(--flex-direction, row);
-  }
+:host(.row) {
+  flex-direction: var(--flex-direction, row);
+}
 
-  :host(.column) {
-    flex-direction: var(--flex-direction, column);
-  }
-
+:host(.column) {
+  flex-direction: var(--flex-direction, column);
+}

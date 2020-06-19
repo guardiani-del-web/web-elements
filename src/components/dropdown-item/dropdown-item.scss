@@ -45,13 +45,11 @@
     align-items: var(--align-items, center);
 
     &.border_right {
-      border-right: var(--border-right, solid 0.125em rgba(0, 0, 0, 1)
-      );
+      border-right: var(--border-right, solid 0.125em rgba(0, 0, 0, 1));
     }
 
     &.border_bottom {
-      border-bottom: var(--border-bottom, solid 0.125em rgba(0, 0, 0, 1)
-      );
+      border-bottom: var(--border-bottom, solid 0.125em rgba(0, 0, 0, 1));
     }
 
     &:hover {

@@ -1,0 +1,26 @@
+
+import { html } from 'lit-html';
+import { withKnobs, text, color } from '@storybook/addon-knobs';
+import readme from "./readme.md";
+import { getCssVariables } from '../../utils/getCssVariables';
+
+export default {
+  title: 'Components|List',
+  parameters: {
+    notes: readme
+  },
+  decorators: [withKnobs],
+};
+
+export const Basic = () => {
+  const cssVariables = getCssVariables('we-list', color, text);
+
+  return html`
+    <we-list></we-list>
+    <style>
+      html {
+        ${cssVariables}
+      }
+    </style>
+  `;
+};
