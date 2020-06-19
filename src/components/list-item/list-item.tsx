@@ -1,15 +1,15 @@
 import { ComponentInterface, Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'we-list',
-  styleUrl: 'list.scss',
+  tag: 'we-list-item',
+  styleUrl: 'list-item.scss',
   shadow: true
 })
-export class List implements ComponentInterface {
+export class ListItem implements ComponentInterface {
   render() {
     return (
       <Host>
-        <h1>we-list is ready!</h1>
+        <h1>we-list-item is ready!</h1>
       </Host>
     );
   }

@@ -13,6 +13,16 @@
 | `name` _(required)_    | `name`                   | Name that identify this switch group                   | `any` | `undefined` |
 
 
+## CSS Custom Properties
+
+| Name                | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| `--align-items`     | Align items of switch group <br> Default: unset    |
+| `--display`         | Display of switch group <br> Default: flex         |
+| `--flex-direction`  | Flex direction of switch group <br> Default: row   |
+| `--justify-content` | Justify content of switch grou <br> Default: unset |
+
+
 ----------------------------------------------
 
 
