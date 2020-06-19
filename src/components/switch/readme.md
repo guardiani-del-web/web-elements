@@ -17,9 +17,9 @@
 
 ## Events
 
-| Event            | Description                                                                                         | Type               |
-| ---------------- | --------------------------------------------------------------------------------------------------- | ------------------ |
-| `changeCallback` | Event triggered any time user change the state of the switch putting in the payload name and status | `CustomEvent<any>` |
+| Event                  | Description                                                                                         | Type               |
+| ---------------------- | --------------------------------------------------------------------------------------------------- | ------------------ |
+| `changeSwitchCallback` | Event triggered any time user change the state of the switch putting in the payload name and status | `CustomEvent<any>` |
 
 
 ----------------------------------------------

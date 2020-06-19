@@ -686,7 +686,7 @@ declare namespace LocalJSX {
         /**
           * Event triggered any time user change the state of the switch putting in the payload name and status
          */
-        "onChangeCallback"?: (event: CustomEvent<any>) => void;
+        "onChangeSwitchCallback"?: (event: CustomEvent<any>) => void;
     }
     interface WeSwitchGroup {
         /**

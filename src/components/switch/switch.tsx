@@ -1,5 +1,4 @@
-import { ComponentInterface, Component, Host, h, Prop, Event } from '@stencil/core';
-import { parseFunction } from '@utils';
+import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@stencil/core';
 
 @Component({
   tag: 'we-switch',
@@ -15,12 +14,13 @@ export class Switch implements ComponentInterface {
   @Prop() labelRight = '';
   /** Default value of switch when component is rendered the first time */
   @Prop() checked = false;
+  @State() checkedState = this.checked;
   /** Event triggered any time user change the state of the switch putting in the payload name and status */
   @Event() changeSwitchCallback: any;
 
   handleChangeState() {
-    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-    this.changeSwitchCallback.emit();
+    this.checkedState = !this.checkedState;
+    this.changeSwitchCallback.emit({name:this.name, checked:this.checkedState});
   }
 
   render() {

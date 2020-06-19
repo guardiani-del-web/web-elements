@@ -1,4 +1,14 @@
-import { ComponentInterface, Component, Host, h, Prop, State, Element, Listen } from '@stencil/core';
+import {
+  ComponentInterface,
+  Component,
+  Host,
+  h,
+  Prop,
+  State,
+  Element,
+  Listen
+} from '@stencil/core';
+import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-switch-group',
@@ -15,32 +25,28 @@ export class SwitchGroup implements ComponentInterface {
 
   findAllChildren() {
     const items = this.el.querySelectorAll(':scope > we-switch');
-    let childChange = false;
     const children = {};
-    items.forEach(i => {
+    items.forEach((i) => {
       const name = i.getAttribute('name');
       const checked = i.getAttribute('checked');
-      children[name] = checked;
-      if ((!this.childrenState.children) || children[name] != this.childrenState.children[name])
-        childChange = true;
-
+      children[name] = checked === "false" ? false : true;
     });
-    if (childChange) {
-      this.childrenState = { name: this.name, children };
+    this.childrenState = { name: this.name, children };
+    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
+    this.changeSwitchCallback(this.childrenState);
+  }
+
+  @Listen('changeSwitchCallback')
+  changeSwitchCallbackHandler(prop) {
+    const { name, checked } = prop.detail;
+    if (this.childrenState.children[name] != checked) {
+      this.childrenState.children[name] = checked;
+      this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
       this.changeSwitchCallback(this.childrenState);
     }
   }
 
-  @Listen('changeSwitchCallback')
-  changeSwitchCallbackHandler() {
-    this.findAllChildren();
-  }
-
   componentDidLoad() {
-    this.findAllChildren();
-  }
-
-  componentDidUpdate() {
     this.findAllChildren();
   }
 
