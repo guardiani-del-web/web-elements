@@ -16,7 +16,7 @@ import { parseFunction } from '@utils';
   shadow: true
 })
 export class SwitchGroup implements ComponentInterface {
-  @Element() el: HTMLElement;
+  @Element() el: HTMLWeSwitchGroupElement;
   /** Name that identify this switch group */
   @Prop() name!: any;
   /** Function called when a switch inside change it's state */
@@ -29,7 +29,7 @@ export class SwitchGroup implements ComponentInterface {
     items.forEach((i) => {
       const name = i.getAttribute('name');
       const checked = i.getAttribute('checked');
-      children[name] = checked === "false" ? false : true;
+      children[name] = checked === 'false' ? false : true;
     });
     this.childrenState = { name: this.name, children };
     this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);

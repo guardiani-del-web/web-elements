@@ -20,7 +20,7 @@ export class Switch implements ComponentInterface {
 
   handleChangeState() {
     this.checkedState = !this.checkedState;
-    this.changeSwitchCallback.emit({name:this.name, checked:this.checkedState});
+    this.changeSwitchCallback.emit({ name: this.name, checked: this.checkedState });
   }
 
   render() {
