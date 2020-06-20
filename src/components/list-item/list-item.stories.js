@@ -17,9 +17,9 @@ export const Basic = () => {
 
   return html`
     <we-list>
-      <we-list-item></we-list-item>
-      <we-list-item></we-list-item>
-      <we-list-item></we-list-item>
+      <we-list-item value="item 1"></we-list-item>
+      <we-list-item value="item 2"></we-list-item>
+      <we-list-item value="item 3"></we-list-item>
     </we-list>
     <style>
       html {

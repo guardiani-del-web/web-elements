@@ -1,3 +1,30 @@
+/**
+* @prop --width:  <br> Default: 6.250em
+* @prop --height:  <br> Default: 3.125em
+* @prop --padding:  <br> Default: 0.625em
+* @prop --display:  <br> Default: flex
+* @prop --background:  <br> Default: rgba(255, 255, 255, 1)
+* @prop --color:  <br> Default: rgba(0, 0, 0, 1)
+* @prop --font-size:  <br> Default: 1em
+* @prop --justify-content:  <br> Default: left
+* @prop --align-items:  <br> Default: center
+* @prop --cursor:  <br> Default: pointer
+* @prop --background-hover:  <br> Default: rgb(181, 181, 181)
+*/
+
 :host {
-  display: block;
+  width: var(--width, 6.25em);
+  height: var(--height, 3.125em);
+  padding: var(--padding, 0.625em);
+  display: var(--display, flex);
+  background: var(--background, rgba(255, 255, 255, 1));
+  color: var(--color, rgba(0, 0, 0, 1));
+  font-size: var(--font-size, 1em);
+  justify-content: var(--justify-content, left);
+  align-items: var(--align-items, center);
+  cursor: var(--cursor, pointer);
+}
+
+:host(:hover) {
+  background: var(--background-hover, rgb(181, 181, 181));
 }

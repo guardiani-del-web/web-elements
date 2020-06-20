@@ -1,4 +1,4 @@
-import { ComponentInterface, Component, Host, h } from '@stencil/core';
+import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'we-list-item',
@@ -6,11 +6,10 @@ import { ComponentInterface, Component, Host, h } from '@stencil/core';
   shadow: true
 })
 export class ListItem implements ComponentInterface {
+  /** If you want to use a simple tooltip you can only add this value */
+  @Prop() value: string;
+
   render() {
-    return (
-      <Host>
-        <h1>we-list-item is ready!</h1>
-      </Host>
-    );
+    return <Host>{this.value ? this.value : <slot></slot>}</Host>;
   }
 }
