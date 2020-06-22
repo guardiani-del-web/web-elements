@@ -1,15 +1,26 @@
-import { ComponentInterface, Component, h, Host, Event, EventEmitter, State, Prop } from '@stencil/core';
+import {
+  ComponentInterface,
+  Component,
+  h,
+  Host,
+  Event,
+  EventEmitter,
+  State,
+  Prop
+} from '@stencil/core';
 import { generateUniqueId } from '@utils';
 
 @Component({
   tag: 'we-accordion',
   styleUrl: 'accordion.scss',
-  shadow: true,
+  shadow: true
 })
 export class Accordion implements ComponentInterface {
+  /** Indentify if accordion is opened of not */
   @Prop() open: boolean;
   @State() openId = generateUniqueId();
   @State() closeId = generateUniqueId();
+  /** Event triggered each time the accordion is opened/closed */
   @Event() accordionCallback: EventEmitter;
 
   handleChange(event: { target: HTMLInputElement }) {
@@ -19,7 +30,14 @@ export class Accordion implements ComponentInterface {
   render() {
     return (
       <Host data-id={this.openId}>
-        <input type="radio" name="accordion" id={this.openId} checked={this.open} value={this.openId} onChange={this.handleChange.bind(this)} />
+        <input
+          type="radio"
+          name="accordion"
+          id={this.openId}
+          checked={this.open}
+          value={this.openId}
+          onChange={this.handleChange.bind(this)}
+        />
         <section class="accordion">
           <label class="accordion-title" htmlFor={this.openId}>
             <slot name="title" />

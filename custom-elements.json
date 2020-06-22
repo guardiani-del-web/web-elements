@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-05-30T19:28:13",
+  "timestamp": "2020-06-22T07:07:23",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -7,11 +7,11 @@
   },
   "components": [
     {
-      "filePath": "src/components/accordion/accordion.tsx",
+      "filePath": "src\\components\\accordion\\accordion.tsx",
       "encapsulation": "shadow",
       "tag": "we-accordion",
-      "readme": "# we-accordion\n\n```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>\n\n",
-      "docs": "```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>",
+      "readme": "# we-accordion\r\n\r\n```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>\r\n\r\n\r",
+      "docs": "```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -21,7 +21,7 @@
           "mutable": false,
           "attr": "open",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Indentify if accordion is opened of not",
           "docsTags": [],
           "values": [
             {
@@ -40,7 +40,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered each time the accordion is opened/closed",
           "docsTags": []
         }
       ],
@@ -197,10 +197,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/accordion-group/accordion-group.tsx",
+      "filePath": "src\\components\\accordion-group\\accordion-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-accordion-group",
-      "readme": "# we-accordion-group\n\n\n",
+      "readme": "# we-accordion-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -211,7 +211,7 @@
           "mutable": false,
           "attr": "multiple",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this accordion group contains more accordions or only once",
           "docsTags": [],
           "values": [
             {
@@ -231,11 +231,147 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/card/card.tsx",
+      "filePath": "src\\components\\button\\button.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-button",
+      "readme": "# we-button\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "If you use label prop you can create simple button with only text, if you want to use button with many things inside don't use label prop but put the contents inside the tag we-button",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "Value returned from buttonCallback event when button will be pressed",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "buttonCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when button is pressed",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of button <br> Default: rgba(211, 211, 211, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of button <br> Default: 0.125em solid rgba(128, 128, 128, 1);"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of button <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "Cursor of button <br> Default: auto"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of button <br> Default: block"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of button <br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of button <br> Default: auto"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of button <br> Default: 0"
+        },
+        {
+          "name": "--outline",
+          "annotation": "prop",
+          "docs": "Outline of button <br> Default: none"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--text-align",
+          "annotation": "prop",
+          "docs": "Text align of button <br> Default: center"
+        },
+        {
+          "name": "--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of button <br> Default: none"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform of button <br> Default: none"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of button <br> Default: auto"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\card\\card.tsx",
       "encapsulation": "shadow",
       "tag": "we-card",
-      "readme": "# we-card\n\n```html\n     <we-card>\n      <div slot=\"title\">Title</div>\n      <div slot=\"subtitle\">Subtitle</div>\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\n    </we-card>\n```\n",
-      "docs": "```html\n     <we-card>\n      <div slot=\"title\">Title</div>\n      <div slot=\"subtitle\">Subtitle</div>\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\n    </we-card>\n```",
+      "readme": "# we-card\r\n\r\n```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```\r\n\r",
+      "docs": "```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```",
       "docsTags": [],
       "usage": {},
       "props": [],
@@ -379,11 +515,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/checkbox/checkbox.tsx",
+      "filePath": "src\\components\\checkbox\\checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox",
-      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" change-callback=\"checkboxHandler\">\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
-      "docs": "```html\n<we-checkbox-group name=\"fruits\" change-callback=\"checkboxHandler\">\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "readme": "# we-checkbox\r\n\r\n```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>\r",
+      "docs": "```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -393,7 +529,7 @@
           "mutable": false,
           "attr": "checked",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "identify if this checkbox is checked or not when the page is loaded",
           "docsTags": [],
           "values": [
             {
@@ -409,7 +545,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this checkbox is disabled or not",
           "docsTags": [],
           "values": [
             {
@@ -425,7 +561,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value returned when the input is submitted if this checkbox is checked",
           "docsTags": [],
           "values": [
             {
@@ -444,7 +580,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when this checkbox is checked/not checked returning the value prop for payload",
           "docsTags": []
         }
       ],
@@ -531,10 +667,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/checkbox-group/we-checkbox-group.tsx",
+      "filePath": "src\\components\\checkbox-group\\we-checkbox-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox-group",
-      "readme": "# we-checkbox-group\n\n\n",
+      "readme": "# we-checkbox-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -545,7 +681,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed",
           "docsTags": [],
           "values": [
             {
@@ -557,15 +693,15 @@
         },
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name that identify this checkbox group",
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -581,11 +717,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/chips/chips.tsx",
+      "filePath": "src\\components\\chips\\chips.tsx",
       "encapsulation": "shadow",
       "tag": "we-chips",
-      "readme": "# we-chips\n\n```html\n<we-chips src-img-left=\"prova.jpg\" src-img-right=\"prova.jpg\" label=\"Hello\" />\n```\n",
-      "docs": "```html\n<we-chips src-img-left=\"prova.jpg\" src-img-right=\"prova.jpg\" label=\"Hello\" />\n```",
+      "readme": "# we-chips\r\n\r\n\r\n\r",
+      "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -595,9 +731,8 @@
           "mutable": false,
           "attr": "is-selectable",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true user can select the chips and selectChipsCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -612,9 +747,8 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Center text written inside the chips if you want a text inside the chips",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -629,9 +763,8 @@
           "mutable": false,
           "attr": "remove-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true the chips will be removed when user click on left image inside chips and removeChipsCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -646,9 +779,8 @@
           "mutable": false,
           "attr": "remove-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "If true the chips will be removed when user click on right image inside chips and removeChipsCallback event is triggered",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -663,9 +795,8 @@
           "mutable": false,
           "attr": "src-img-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Src of img you want to put in left side of chips if you want an image in that position",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -680,9 +811,8 @@
           "mutable": false,
           "attr": "src-img-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Src of img you want to put in right side of chips if you want an image in that position",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -690,26 +820,42 @@
           ],
           "optional": false,
           "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "Value passed on event when chips selected or removed",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
         }
       ],
       "methods": [],
       "events": [
         {
-          "event": "removeCallback",
+          "event": "removeChipsCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when the chips is removed",
           "docsTags": []
         },
         {
-          "event": "selectCallback",
+          "event": "selectChipsCallback",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when the chips is selected",
           "docsTags": []
         }
       ],
@@ -871,11 +1017,98 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/divider/divider.tsx",
+      "filePath": "src\\components\\chips-group\\chips-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-chips-group",
+      "readme": "# we-chips-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "Name that identify this chips group",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        },
+        {
+          "name": "removeCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "remove-callback",
+          "reflectToAttr": false,
+          "docs": "Function called when a chip is removed",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "selectCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "select-callback",
+          "reflectToAttr": false,
+          "docs": "Function called when a chip is selected",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of chips group <br> Default: unset"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of chips group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of chips group <br> Default: row"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of chips grou <br> Default: unset"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\divider\\divider.tsx",
       "encapsulation": "shadow",
       "tag": "we-divider",
-      "readme": "# we-divider\n```html\n<we-divider></we-divider>\n```\n\n",
-      "docs": "```html\n<we-divider></we-divider>\n```",
+      "readme": "# we-divider\r\n```html\r\n<we-divider></we-divider>\r\n```\r\n\r\n\r",
+      "docs": "```html\r\n<we-divider></we-divider>\r\n```",
       "docsTags": [],
       "usage": {},
       "props": [],
@@ -914,11 +1147,703 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/radio/radio.tsx",
+      "filePath": "src\\components\\dropdown-group\\dropdown-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-dropdown-group",
+      "readme": "# we-dropdown-group\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "orientation",
+          "type": "string",
+          "mutable": false,
+          "attr": "orientation",
+          "reflectToAttr": false,
+          "docs": "Define the orientation of the objects inside this group, \"column\" or \"row\"",
+          "docsTags": [],
+          "default": "'column'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of of dropdown group <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display property of dropdown group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of dropdown group, the default value depend of the class choosen, column or row <br> Default: column"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown group <br> Default: auto"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown group <br> Default: fit-content"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\dropdown-item\\dropdown-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-dropdown-item",
+      "readme": "# we-dropdown-item\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "arrow",
+          "type": "string",
+          "mutable": false,
+          "attr": "arrow",
+          "reflectToAttr": false,
+          "docs": "Arrow direction when dropdown is opened/closed inserted in this way: [\"arrow_closed\",\"arrow_opened\"], values accepted: right, left, up, down",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "borderClass",
+          "type": "string",
+          "mutable": false,
+          "attr": "border-class",
+          "reflectToAttr": false,
+          "docs": "Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "height",
+          "type": "string",
+          "mutable": false,
+          "attr": "height",
+          "reflectToAttr": false,
+          "docs": "Height of the children container when is opened/closed, insert it if you want a transition of height in this way: [\"height_close\", \"height_open\"], usually the height_close is 0",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "Text inside the dropdown item if you want to use a simple dropdown item with only text",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "positionChildren",
+          "type": "string",
+          "mutable": false,
+          "attr": "position-children",
+          "reflectToAttr": false,
+          "docs": "In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position",
+          "docsTags": [],
+          "default": "'right'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "Value put in payload of event triggered when dropdown item is clicked",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "width",
+          "type": "string",
+          "mutable": false,
+          "attr": "width",
+          "reflectToAttr": false,
+          "docs": "Width of the children container when is opened/closed, insert it if you want a transition of width in this way: [\"width_close\", \"width_open\"], usually the width_close is 0",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "clickItemCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when dropdown item is clicked, not the arrow",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items inside dropdown item <br> Default: center"
+        },
+        {
+          "name": "--arrow--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--arrow--border-width",
+          "annotation": "prop",
+          "docs": "Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0"
+        },
+        {
+          "name": "--arrow--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item arrow <br> Default: inline-block"
+        },
+        {
+          "name": "--arrow--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item arrow <br> Default: 0.1875em"
+        },
+        {
+          "name": "--arrow--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item arrow <br> Default: all 0.5s"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of dropdown item <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--background-hover",
+          "annotation": "prop",
+          "docs": "Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)"
+        },
+        {
+          "name": "--border-bottom",
+          "annotation": "prop",
+          "docs": "Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--border-right",
+          "annotation": "prop",
+          "docs": "Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--children--bottom",
+          "annotation": "prop",
+          "docs": "Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--children--left",
+          "annotation": "prop",
+          "docs": "Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--children--position",
+          "annotation": "prop",
+          "docs": "Position of dropdown item children, not change it to default behaviour <br> Default: absolute"
+        },
+        {
+          "name": "--children--right",
+          "annotation": "prop",
+          "docs": "Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%"
+        },
+        {
+          "name": "--children--top",
+          "annotation": "prop",
+          "docs": "Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em"
+        },
+        {
+          "name": "--children--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item children <br> Default: all 0.5s"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of dropdown item <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "Cursor inside dropdown item <br> Default: pointer"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item <br> Default: flex"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown item <br> Default: 1.875em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content inside dropdown item <br> Default: space-between"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of dropdown item <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item <br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown item <br> Default: 12.5em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\list\\list.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-list",
+      "readme": "# we-list\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of list group <br> Default: unset"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "<br> Default: 0.063em solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of list group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of list group <br> Default: column"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "<br> Default: fit-content"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of list grou <br> Default: unset"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "<br> Default: fit-content"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\list-item\\list-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-list-item",
+      "readme": "# we-list-item\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "If you want to use a simple tooltip you can only add this value",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "<br> Default: center"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--background-hover",
+          "annotation": "prop",
+          "docs": "<br> Default: rgb(181, 181, 181)"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "<br> Default: pointer"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "<br> Default: flex"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "<br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "<br> Default: 3.125em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "<br> Default: left"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "<br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "<br> Default: 6.250em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\modal\\modal.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-modal",
+      "readme": "# we-modal\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "isVisible",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-visible",
+          "reflectToAttr": false,
+          "docs": "identify if modal is visible or not",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "modalCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when the visibility of modal change",
+          "docsTags": []
+        }
+      ],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of modal, it affects the vertical position of the elements inside the modal <br> Default: unset"
+        },
+        {
+          "name": "--back--align-items",
+          "annotation": "prop",
+          "docs": "Align items of back of modal, it affects the vertical position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--back--background",
+          "annotation": "prop",
+          "docs": "Background of back of modal <br> Default: rgba(128, 128, 128, 0.35)"
+        },
+        {
+          "name": "--back--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of back of modal, it affects the horizontal position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of modal <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of modal <br> Default: none"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display option of modal <br> Default: flex"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of modal <br> Default: 18.750em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of modal, it affects the horizontal position of the elements inside the modal <br> Default: center"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of modal <br> Default: 12.500em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\navigation-drawer\\navigation-drawer.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-navigation-drawer",
+      "readme": "# we-navigation-drawer\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "closed",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "closed",
+          "reflectToAttr": false,
+          "docs": "If true the navigation drawer is closed",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of navigation drawer <br> Default: start"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of navigation drawer <br> Default: none"
+        },
+        {
+          "name": "--bottom",
+          "annotation": "prop",
+          "docs": "Bottom option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of navigation drawer <br> Default: flex"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of navigation drawer <br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of navigation drawer <br> Default: 100vh"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of navigation drawer <br> Default: left"
+        },
+        {
+          "name": "--left",
+          "annotation": "prop",
+          "docs": "Left option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of navigation drawer <br> Default: 0.625em"
+        },
+        {
+          "name": "--position",
+          "annotation": "prop",
+          "docs": "Position of navigation drawer <br> Default: fixed"
+        },
+        {
+          "name": "--right",
+          "annotation": "prop",
+          "docs": "Right option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--top",
+          "annotation": "prop",
+          "docs": "Top option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--transition",
+          "annotation": "prop",
+          "docs": "Transition of navigation drawer <br> Default: all 0.5s"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of navigation drawer<br> Default: 12.5em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\radio\\radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
-      "readme": "# we-radio\n\n```html\n<we-radio-group change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>\n",
-      "docs": "```html\n<we-radio-group change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>",
+      "readme": "# we-radio\r\n\r\n```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>\r\n\r",
+      "docs": "```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -928,7 +1853,7 @@
           "mutable": false,
           "attr": "checked",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "identify if this radio button is checked or not when the page is loaded",
           "docsTags": [],
           "values": [
             {
@@ -944,7 +1869,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if this radio button is disabled or not",
           "docsTags": [],
           "values": [
             {
@@ -960,7 +1885,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Value returned when the input is submitted if this radio button is checked",
           "docsTags": [],
           "values": [
             {
@@ -979,7 +1904,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when this radio button is checked/not checked returning the value prop for payload",
           "docsTags": []
         }
       ],
@@ -990,10 +1915,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/radio-group/radio-group.tsx",
+      "filePath": "src\\components\\radio-group\\radio-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio-group",
-      "readme": "# we-radio-group\n\n\n",
+      "readme": "# we-radio-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1004,7 +1929,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
           "docsTags": [],
           "values": [
             {
@@ -1020,7 +1945,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name that identify this radio group",
           "docsTags": [],
           "values": [
             {
@@ -1040,11 +1965,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/slider/slider.tsx",
+      "filePath": "src\\components\\slider\\slider.tsx",
       "encapsulation": "shadow",
       "tag": "we-slider",
-      "readme": "# we-slider\n\n```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```\n",
-      "docs": "```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```",
+      "readme": "# we-slider\r\n\r\n```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```\r\n\r",
+      "docs": "```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1054,7 +1979,7 @@
           "mutable": false,
           "attr": "change-callback",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Event triggered any time user moves the slider putting in the payload name and current value",
           "docsTags": [],
           "values": [
             {
@@ -1070,7 +1995,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify if slider is disabled or not",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1087,7 +2012,7 @@
           "mutable": false,
           "attr": "max",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Maximum value you can set in the slider",
           "docsTags": [],
           "values": [
             {
@@ -1103,7 +2028,7 @@
           "mutable": false,
           "attr": "min",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Minimum value you can set in the slider",
           "docsTags": [],
           "values": [
             {
@@ -1119,7 +2044,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name of slider, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
@@ -1135,7 +2060,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Starting value of slider",
           "docsTags": [],
           "values": [
             {
@@ -1216,37 +2141,21 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/switch/switch.tsx",
+      "filePath": "src\\components\\switch\\switch.tsx",
       "encapsulation": "shadow",
       "tag": "we-switch",
-      "readme": "# we-switch\n\n```html\n<we-switch name=\"switch1\" enabled=\"true\" change-callback=\"enabledHandler\"></we-switch>\n```\n",
-      "docs": "```html\n<we-switch name=\"switch1\" enabled=\"true\" change-callback=\"enabledHandler\"></we-switch>\n```",
+      "readme": "# we-switch\r\n\r\n\r\n\r",
+      "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "enabled",
+          "name": "checked",
           "type": "boolean",
           "mutable": false,
-          "attr": "enabled",
+          "attr": "checked",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Default value of switch when component is rendered the first time",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1263,9 +2172,8 @@
           "mutable": false,
           "attr": "label-left",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text put in the left of switch",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -1280,9 +2188,8 @@
           "mutable": false,
           "attr": "label-right",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text put in the right of switch",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -1293,15 +2200,15 @@
         },
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name of switch, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -1309,8 +2216,58 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "changeSwitchCallback",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
+          "docsTags": []
+        }
+      ],
       "styles": [
+        {
+          "name": "--after--background",
+          "annotation": "prop",
+          "docs": "Background of button switch <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--after--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button switch <br> Default: 50%"
+        },
+        {
+          "name": "--after--height",
+          "annotation": "prop",
+          "docs": "Height of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--after--left",
+          "annotation": "prop",
+          "docs": "Distance from left of icon switch <br> Default: 0.313em"
+        },
+        {
+          "name": "--after--top",
+          "annotation": "prop",
+          "docs": "Distance from top of button switch <br> Default: 0.22em"
+        },
+        {
+          "name": "--after--transition",
+          "annotation": "prop",
+          "docs": "Transition options about the changement of button switch <br> Default: 0.3s"
+        },
+        {
+          "name": "--after--width",
+          "annotation": "prop",
+          "docs": "Width of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--background-checked",
+          "annotation": "prop",
+          "docs": "Background color of switch when change from initial condition <br> Default: #3F51B5"
+        },
         {
           "name": "--container--font-size",
           "annotation": "prop",
@@ -1337,11 +2294,6 @@
           "docs": "Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)"
         },
         {
-          "name": "--switch--background-change",
-          "annotation": "prop",
-          "docs": "Background color of switch when change from initial condition <br> Default: #3F51B5"
-        },
-        {
           "name": "--switch--border-radius",
           "annotation": "prop",
           "docs": "Border radius of switch <br> Default: 6.250em"
@@ -1350,41 +2302,6 @@
           "name": "--switch--cursor",
           "annotation": "prop",
           "docs": "Cursor on switch <br> Default: pointer"
-        },
-        {
-          "name": "--switch_after--background",
-          "annotation": "prop",
-          "docs": "Background of button switch <br> Default: rgba(255, 255, 255, 1)"
-        },
-        {
-          "name": "--switch_after--border-radius",
-          "annotation": "prop",
-          "docs": "Border radius of button switch <br> Default: 50%"
-        },
-        {
-          "name": "--switch_after--height",
-          "annotation": "prop",
-          "docs": "Height of button switch <br> Default: 1em"
-        },
-        {
-          "name": "--switch_after--left",
-          "annotation": "prop",
-          "docs": "Distance from left of icon switch <br> Default: 0.313em"
-        },
-        {
-          "name": "--switch_after--top",
-          "annotation": "prop",
-          "docs": "Distance from top of button switch <br> Default: 0.22em"
-        },
-        {
-          "name": "--switch_after--transition",
-          "annotation": "prop",
-          "docs": "Transition options about the changement of button switch <br> Default: 0.3s"
-        },
-        {
-          "name": "--switch_after--width",
-          "annotation": "prop",
-          "docs": "Width of button switch <br> Default: 1em"
         }
       ],
       "slots": [],
@@ -1393,11 +2310,82 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/tab/tab.tsx",
+      "filePath": "src\\components\\switch-group\\switch-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-switch-group",
+      "readme": "# we-switch-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "changeSwitchCallback",
+          "type": "any",
+          "mutable": false,
+          "attr": "change-switch-callback",
+          "reflectToAttr": false,
+          "docs": "Function called when a switch inside change it's state",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "Name that identify this switch group",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": true
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of switch group <br> Default: unset"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of switch group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of switch group <br> Default: row"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of switch grou <br> Default: unset"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\tab\\tab.tsx",
       "encapsulation": "shadow",
       "tag": "we-tab",
-      "readme": "# we-tab\n\n```html\n<we-tab-group>\n  <we-tab>\n    <div slot=\"header\">Tab 1</div>\n    <div slot=\"content\">\n      <h3>Tab 1</h3>\n        <p>There really are a lot of features.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 2</div>\n    <div slot=\"content\">\n        <h3>Tab 2</h3>\n        <p>The project started in 2018 when someone needed something.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 3</div>\n    <div slot=\"content\">\n        <h3>Tab 3</h3>\n        <p>Amazing product. I don't know how it works.</p>\n    </div>\n    </we-tab>\n</we-tab-group>\n```\n<br>\n\n\n",
-      "docs": "```html\n<we-tab-group>\n  <we-tab>\n    <div slot=\"header\">Tab 1</div>\n    <div slot=\"content\">\n      <h3>Tab 1</h3>\n        <p>There really are a lot of features.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 2</div>\n    <div slot=\"content\">\n        <h3>Tab 2</h3>\n        <p>The project started in 2018 when someone needed something.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 3</div>\n    <div slot=\"content\">\n        <h3>Tab 3</h3>\n        <p>Amazing product. I don't know how it works.</p>\n    </div>\n    </we-tab>\n</we-tab-group>\n```\n<br>",
+      "readme": "# we-tab\r\n\r\n```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>\r\n\r\n\r\n\r",
+      "docs": "```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>",
       "docsTags": [
         {
           "text": "header - Slot for the title",
@@ -1416,7 +2404,7 @@
           "mutable": false,
           "attr": "enabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Default value of tab (opened/closed) when component is triggered the first time",
           "docsTags": [],
           "values": [
             {
@@ -1435,7 +2423,7 @@
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "Event triggered when user select a tab putting in the payload the value id generated",
           "docsTags": []
         }
       ],
@@ -1516,10 +2504,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/tab-group/tab-group.tsx",
+      "filePath": "src\\components\\tab-group\\tab-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-tab-group",
-      "readme": "# we-tabs-group\n\n\n",
+      "readme": "# we-tabs-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1533,11 +2521,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src/components/textarea/textarea.tsx",
+      "filePath": "src\\components\\textarea\\textarea.tsx",
       "encapsulation": "shadow",
       "tag": "we-textarea",
-      "readme": "# we-textarea\n\n```html\n<we-textarea></we-textarea>\n```\n",
-      "docs": "```html\n<we-textarea></we-textarea>\n```",
+      "readme": "# we-textarea\r\n\r\n\r\n\r",
+      "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1547,9 +2535,8 @@
           "mutable": false,
           "attr": "autofocus",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the autofocus property of textarea",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1564,7 +2551,7 @@
           "mutable": false,
           "attr": "cols",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the cols property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1580,9 +2567,8 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the disabled property of textarea",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1597,7 +2583,7 @@
           "mutable": false,
           "attr": "maxlength",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the maxlength property of textarea",
           "docsTags": [],
           "default": "100000",
           "values": [
@@ -1614,9 +2600,8 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Name prop of the textarea",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -1631,9 +2616,8 @@
           "mutable": false,
           "attr": "placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Placeholder appear when there isn't text in the textarea",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -1648,9 +2632,8 @@
           "mutable": false,
           "attr": "readonly",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the readonly property of textarea",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1665,9 +2648,8 @@
           "mutable": false,
           "attr": "required",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the required property of textarea",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -1677,12 +2659,12 @@
           "required": false
         },
         {
-          "name": "row",
+          "name": "rows",
           "type": "any",
           "mutable": false,
-          "attr": "row",
+          "attr": "rows",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Identify the rows property of textarea",
           "docsTags": [],
           "values": [
             {
@@ -1698,9 +2680,8 @@
           "mutable": false,
           "attr": "text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Test inside the textarea when rendered the first time",
           "docsTags": [],
-          "default": "\"\"",
           "values": [
             {
               "type": "string"
@@ -1792,6 +2773,101 @@
           "name": "--width",
           "annotation": "prop",
           "docs": "Width of textarea <br> Default: 100%"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\tooltip\\tooltip.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-tooltip",
+      "readme": "# we-tooltip\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "If you want to use a simple tooltip you can only add this value",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of tooltip <br> Default: none"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of tooltip <br> Default: 0"
+        },
+        {
+          "name": "--bottom",
+          "annotation": "prop",
+          "docs": "Bottom of tooltip <br> Default: auto"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of tooltip <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of tooltip <br> Default: fit-content"
+        },
+        {
+          "name": "--left",
+          "annotation": "prop",
+          "docs": "Left of tooltip <br> Default: 50%"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of tooltip <br> Default: 3px"
+        },
+        {
+          "name": "--right",
+          "annotation": "prop",
+          "docs": "Right of tooltip <br> Default: auto"
+        },
+        {
+          "name": "--top",
+          "annotation": "prop",
+          "docs": "Top of tooltip <br> Default: 100%"
+        },
+        {
+          "name": "--transform",
+          "annotation": "prop",
+          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of tooltip <br> Default: fit-content"
         }
       ],
       "slots": [],

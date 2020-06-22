@@ -1,0 +1,23 @@
+/**
+* @prop --display: Display property of dropdown group <br> Default: flex
+* @prop --width: Width of dropdown group <br> Default: fit-content
+* @prop --height: Height of dropdown group <br> Default: auto
+* @prop --background: Background of of dropdown group <br> Default: rgba(255, 255, 255, 1)       
+* @prop --border: Border of dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)       
+* @prop --flex-direction: Flex direction of dropdown group, the default value depend of the class choosen, column or row <br> Default: column
+*/
+
+:host {
+  display: var(--display, flex);
+  width: var(--width, fit-content);
+  height: var(--height, auto);
+  background: var(--background, rgba(255, 255, 255, 1));
+  border: var(--border, solid 0.125em rgba(0, 0, 0, 1));
+}
+:host(.row) {
+  flex-direction: var(--flex-direction, row);
+}
+
+:host(.column) {
+  flex-direction: var(--flex-direction, column);
+}

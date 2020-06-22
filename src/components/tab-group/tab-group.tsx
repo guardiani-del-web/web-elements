@@ -3,13 +3,13 @@ import { ComponentInterface, Component, Host, h, Listen, Element, State } from '
 @Component({
   tag: 'we-tab-group',
   styleUrl: 'tab-group.scss',
-  shadow: true,
+  shadow: true
 })
 export class TabGroup implements ComponentInterface {
-  @Element() el: HTMLElement;
+  @Element() el: HTMLWeTabGroupElement;
   @State() contentSlot: HTMLDivElement;
   @State() tabs: NodeListOf<HTMLWeTabElement>;
-  
+
   @Listen('tabCallback')
   tabCallbackHandler(event: CustomEvent) {
     const value = event.detail;
@@ -18,7 +18,7 @@ export class TabGroup implements ComponentInterface {
     this.tabs.forEach((tab, tabPosition) => {
       tab.style.width = `${100 / this.tabs.length}%`;
       if (tab.getAttribute('data-id') === value) {
-        const left = (tabPosition) * (100 / this.tabs.length);
+        const left = tabPosition * (100 / this.tabs.length);
         const currentContent = tab.querySelector('[slot="content"]');
         this.contentSlot.innerHTML = currentContent.innerHTML;
         this.el.appendChild(this.contentSlot);
@@ -27,7 +27,7 @@ export class TabGroup implements ComponentInterface {
       } else {
         tab.setAttribute('enabled', 'false');
       }
-    }); 
+    });
   }
 
   initTabs() {
@@ -40,7 +40,7 @@ export class TabGroup implements ComponentInterface {
       tab.style.width = `${100 / this.tabs.length}%`;
     });
     const defaultContent = this.tabs[getTabEnabledPosition].querySelector('[slot="content"]');
-    const left = (getTabEnabledPosition) * (100 / this.tabs.length);
+    const left = getTabEnabledPosition * (100 / this.tabs.length);
     line.style.left = `${left}%`;
     this.contentSlot.innerHTML = defaultContent.innerHTML;
     line.style.width = `${100 / this.tabs.length}%`;

@@ -1,0 +1,13 @@
+/**
+* @prop --display: Display of chips group <br> Default: flex
+* @prop --justify-content: Justify content of chips grou <br> Default: unset
+* @prop --align-items: Align items of chips group <br> Default: unset
+* @prop --flex-direction: Flex direction of chips group <br> Default: row
+*/
+
+:host {
+  display: var(--display, flex);
+  justify-content: var(--justify-content, unset);
+  align-items: var(--align-items, unset);
+  flex-direction: var(--flex-direction, row);
+}

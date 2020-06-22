@@ -1,28 +1,26 @@
-import {
-  ComponentInterface,
-  Component,
-  Host,
-  h,
-  Prop
-} from "@stencil/core";
-import { parseFunction } from "@utils";
+import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@stencil/core';
 
 @Component({
   tag: 'we-switch',
   styleUrl: 'switch.scss',
-  shadow: true,
+  shadow: true
 })
 export class Switch implements ComponentInterface {
-  @Prop() name!: any;
-  @Prop() labelLeft: string= "";
-  @Prop() labelRight: string= "";
-  @Prop() enabled: boolean = false;
-  @Prop() changeCallback: any;
+  /** Name of switch, put in the payload of changeCallback event */
+  @Prop() name!: string;
+  /** Text put in the left of switch */
+  @Prop() labelLeft: string;
+  /** Text put in the right of switch */
+  @Prop() labelRight: string;
+  /** Default value of switch when component is rendered the first time */
+  @Prop() checked = false;
+  @State() checkedState = this.checked;
+  /** Event triggered any time user change the state of the switch putting in the payload name and status */
+  @Event() changeSwitchCallback: any;
 
-  handleChangeState(event: CustomEvent) {
-    const status = event.currentTarget['checked'];
-    this.changeCallback = parseFunction(this.changeCallback);
-    this.changeCallback({ name: this.name, status });
+  handleChangeState() {
+    this.checkedState = !this.checkedState;
+    this.changeSwitchCallback.emit({ name: this.name, checked: this.checkedState });
   }
 
   render() {
@@ -33,7 +31,8 @@ export class Switch implements ComponentInterface {
           id="switch"
           name={this.name}
           onChange={this.handleChangeState.bind(this)}
-          checked={this.enabled} />
+          checked={this.checked}
+        />
         <label class="switch" htmlFor="switch"></label>
         {this.labelLeft && <label class="left">Off</label>}
         {this.labelRight && <label class="right">On</label>}

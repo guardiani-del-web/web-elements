@@ -1,5 +1,14 @@
 scss_file = '''
-Insert here scss you want transform in comments
+
+:host {
+  display: var(--display, flex);
+  width: var(--width, fit-content);
+  height: var(--height, fit-content);
+  justify-content: var(--justify-content, unset);
+  align-items: var(--align-items, unset);
+  flex-direction: var(--flex-direction, column);
+  border: var(--border, 0.063em solid rgb(0, 0, 0));
+}
 '''
 
 def print_scss_prop():

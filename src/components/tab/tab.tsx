@@ -1,4 +1,13 @@
-import { ComponentInterface, Component, Host, h, Prop, Event, EventEmitter, State } from '@stencil/core';
+import {
+  ComponentInterface,
+  Component,
+  Host,
+  h,
+  Prop,
+  Event,
+  EventEmitter,
+  State
+} from '@stencil/core';
 import { generateUniqueId } from '@utils';
 
 /**
@@ -8,11 +17,13 @@ import { generateUniqueId } from '@utils';
 @Component({
   tag: 'we-tab',
   styleUrl: 'tab.scss',
-  shadow: true,
+  shadow: true
 })
 export class Tab implements ComponentInterface {
+  /** Default value of tab (opened/closed) when component is triggered the first time*/
   @Prop() enabled: boolean;
   @State() valueId = generateUniqueId();
+  /** Event triggered when user select a tab putting in the payload the value id generated */
   @Event() tabCallback: EventEmitter;
 
   handleChange(event: { target: HTMLInputElement }) {
@@ -23,13 +34,14 @@ export class Tab implements ComponentInterface {
   render() {
     return (
       <Host data-id={this.valueId}>
-        <input 
+        <input
           type="radio"
           id="wetab"
           name="tab"
           checked={this.enabled}
           value={this.valueId}
-          onChange={this.handleChange.bind(this)} />
+          onChange={this.handleChange.bind(this)}
+        />
         <label htmlFor="wetab">
           <slot name="header" />
         </label>
@@ -37,5 +49,4 @@ export class Tab implements ComponentInterface {
       </Host>
     );
   }
-
 }

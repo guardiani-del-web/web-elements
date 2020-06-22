@@ -1,0 +1,39 @@
+/**
+* @prop --width: Width of button <br> Default: auto
+* @prop --height: Height of button <br> Default: auto
+* @prop --padding: Padding of button  <br> Default: 0.250em
+* @prop --margin: Margin of button  <br> Default: 0
+* @prop --display: Display of button  <br> Default: block
+* @prop --border: Border of button  <br> Default: 0.125em solid rgba(128, 128, 128, 1);
+* @prop --border-radius: Border radius of button  <br> Default: 0.250em
+* @prop --background: Background of button  <br> Default: rgba(211, 211, 211, 1)
+* @prop --cursor: Cursor of button  <br> Default: auto
+* @prop --color: Color of button  <br> Default: rgba(0, 0, 0, 1)
+* @prop --text-align: Text align of button  <br> Default: center
+* @prop --font-size: Font size of button  <br> Default: 1em
+* @prop --text-decoration: Text decoration of button  <br> Default: none
+* @prop --text-transform: Text transform of button  <br> Default: none
+* @prop --outline: Outline of button  <br> Default: none
+*/
+
+:host {
+  display: block;
+}
+
+button {
+  width: var(--width, auto);
+  height: var(--height, auto);
+  padding: var(--padding, 0.25em);
+  margin: var(--margin, 0);
+  display: var(--display, block);
+  border: var(--border, 0.125em solid rgba(128, 128, 128, 1));
+  border-radius: var(--border-radius, 0.25em);
+  background: var(--background, (211, 211, 211, 1));
+  cursor: var(--cursor, auto);
+  color: var(--color, (0, 0, 0, 1));
+  text-align: var(--text-align, center);
+  font-size: var(--font-size, 1em);
+  text-decoration: var(--text-decoration, none);
+  text-transform: var(--text-transform, none);
+  outline: var(--outline, none);
+}

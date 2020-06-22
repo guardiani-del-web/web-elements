@@ -1,0 +1,19 @@
+/**
+* @prop --display: Display of list group <br> Default: flex
+* @prop --width:  <br> Default: fit-content
+* @prop --height:  <br> Default: fit-content
+* @prop --justify-content: Justify content of list grou <br> Default: unset
+* @prop --align-items: Align items of list group <br> Default: unset
+* @prop --flex-direction: Flex direction of list group <br> Default: column
+* @prop --border:  <br> Default: 0.063em solid rgba(0, 0, 0, 1)
+*/
+
+:host {
+  display: var(--display, flex);
+  width: var(--width, fit-content);
+  height: var(--height, fit-content);
+  justify-content: var(--justify-content, unset);
+  align-items: var(--align-items, unset);
+  flex-direction: var(--flex-direction, column);
+  border: var(--border, 0.063em solid rgba(0, 0, 0, 1));
+}

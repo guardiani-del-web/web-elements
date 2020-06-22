@@ -30,16 +30,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default     |
-| -------- | --------- | ----------- | --------- | ----------- |
-| `open`   | `open`    |             | `boolean` | `undefined` |
+| Property | Attribute | Description                             | Type      | Default     |
+| -------- | --------- | --------------------------------------- | --------- | ----------- |
+| `open`   | `open`    | Indentify if accordion is opened of not | `boolean` | `undefined` |
 
 
 ## Events
 
-| Event               | Description | Type               |
-| ------------------- | ----------- | ------------------ |
-| `accordionCallback` |             | `CustomEvent<any>` |
+| Event               | Description                                              | Type               |
+| ------------------- | -------------------------------------------------------- | ------------------ |
+| `accordionCallback` | Event triggered each time the accordion is opened/closed | `CustomEvent<any>` |
 
 
 ## CSS Custom Properties
