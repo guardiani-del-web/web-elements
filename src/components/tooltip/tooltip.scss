@@ -18,7 +18,7 @@
   width: fit-content;
 }
 
-:host(:hover) > .tooltip  {
+:host(:hover) > .tooltip {
   display: block;
 }
 
@@ -27,7 +27,7 @@
   display: none;
   width: var(--width, fit-content);
   height: var(--height, fit-content);
-  color:var(--color, rgba(255, 255, 255, 1));
+  color: var(--color, rgba(255, 255, 255, 1));
   padding: var(--padding, 3px);
   background: var(--background, rgba(196, 196, 196, 0.5));
   top: var(--top, 100%);

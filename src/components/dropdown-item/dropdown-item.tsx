@@ -31,7 +31,7 @@ export class DropdownItem implements ComponentInterface {
   /** Height of the children container when is opened/closed, insert it if you want a transition of height in this way: ["height_close", "height_open"], usually the height_close is 0 */
   @Prop() height: string;
   @State() heightArray: any;
-  @State() style: any = {};
+  @State() style = {};
   /** In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position*/
   @Prop() positionChildren = 'right';
   /** Prop update from dropdown group depend on the orientation the dropdown item is put in order to draw a line separation between them */

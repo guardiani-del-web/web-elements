@@ -51,7 +51,7 @@ export namespace Components {
     /**
      * Name that identify this checkbox group
      */
-    name: any;
+    name: string;
   }
   interface WeChips {
     /**
@@ -87,7 +87,7 @@ export namespace Components {
     /**
      * Name that identify this chips group
      */
-    name: any;
+    name: string;
     /**
      * Function called when a chip is removed
      */
@@ -133,6 +133,13 @@ export namespace Components {
      * Width of the children container when is opened/closed, insert it if you want a transition of width in this way: ["width_close", "width_open"], usually the width_close is 0
      */
     width: string;
+  }
+  interface WeList {}
+  interface WeListItem {
+    /**
+     * If you want to use a simple tooltip you can only add this value
+     */
+    value: string;
   }
   interface WeModal {
     /**
@@ -212,7 +219,7 @@ export namespace Components {
     /**
      * Name of switch, put in the payload of changeCallback event
      */
-    name: any;
+    name: string;
   }
   interface WeSwitchGroup {
     /**
@@ -222,7 +229,7 @@ export namespace Components {
     /**
      * Name that identify this switch group
      */
-    name: any;
+    name: string;
   }
   interface WeTab {
     /**
@@ -336,6 +343,16 @@ declare global {
     prototype: HTMLWeDropdownItemElement;
     new (): HTMLWeDropdownItemElement;
   };
+  interface HTMLWeListElement extends Components.WeList, HTMLStencilElement {}
+  var HTMLWeListElement: {
+    prototype: HTMLWeListElement;
+    new (): HTMLWeListElement;
+  };
+  interface HTMLWeListItemElement extends Components.WeListItem, HTMLStencilElement {}
+  var HTMLWeListItemElement: {
+    prototype: HTMLWeListItemElement;
+    new (): HTMLWeListItemElement;
+  };
   interface HTMLWeModalElement extends Components.WeModal, HTMLStencilElement {}
   var HTMLWeModalElement: {
     prototype: HTMLWeModalElement;
@@ -403,6 +420,8 @@ declare global {
     'we-divider': HTMLWeDividerElement;
     'we-dropdown-group': HTMLWeDropdownGroupElement;
     'we-dropdown-item': HTMLWeDropdownItemElement;
+    'we-list': HTMLWeListElement;
+    'we-list-item': HTMLWeListItemElement;
     'we-modal': HTMLWeModalElement;
     'we-navigation-drawer': HTMLWeNavigationDrawerElement;
     'we-radio': HTMLWeRadioElement;
@@ -474,7 +493,7 @@ declare namespace LocalJSX {
     /**
      * Name that identify this checkbox group
      */
-    name: any;
+    name: string;
   }
   interface WeChips {
     /**
@@ -518,7 +537,7 @@ declare namespace LocalJSX {
     /**
      * Name that identify this chips group
      */
-    name: any;
+    name: string;
     /**
      * Function called when a chip is removed
      */
@@ -568,6 +587,13 @@ declare namespace LocalJSX {
      * Width of the children container when is opened/closed, insert it if you want a transition of width in this way: ["width_close", "width_open"], usually the width_close is 0
      */
     width?: string;
+  }
+  interface WeList {}
+  interface WeListItem {
+    /**
+     * If you want to use a simple tooltip you can only add this value
+     */
+    value?: string;
   }
   interface WeModal {
     /**
@@ -655,7 +681,7 @@ declare namespace LocalJSX {
     /**
      * Name of switch, put in the payload of changeCallback event
      */
-    name: any;
+    name: string;
     /**
      * Event triggered any time user change the state of the switch putting in the payload name and status
      */
@@ -669,7 +695,7 @@ declare namespace LocalJSX {
     /**
      * Name that identify this switch group
      */
-    name: any;
+    name: string;
   }
   interface WeTab {
     /**
@@ -742,6 +768,8 @@ declare namespace LocalJSX {
     'we-divider': WeDivider;
     'we-dropdown-group': WeDropdownGroup;
     'we-dropdown-item': WeDropdownItem;
+    'we-list': WeList;
+    'we-list-item': WeListItem;
     'we-modal': WeModal;
     'we-navigation-drawer': WeNavigationDrawer;
     'we-radio': WeRadio;
@@ -770,6 +798,8 @@ declare module '@stencil/core' {
       'we-divider': LocalJSX.WeDivider & JSXBase.HTMLAttributes<HTMLWeDividerElement>;
       'we-dropdown-group': LocalJSX.WeDropdownGroup & JSXBase.HTMLAttributes<HTMLWeDropdownGroupElement>;
       'we-dropdown-item': LocalJSX.WeDropdownItem & JSXBase.HTMLAttributes<HTMLWeDropdownItemElement>;
+      'we-list': LocalJSX.WeList & JSXBase.HTMLAttributes<HTMLWeListElement>;
+      'we-list-item': LocalJSX.WeListItem & JSXBase.HTMLAttributes<HTMLWeListItemElement>;
       'we-modal': LocalJSX.WeModal & JSXBase.HTMLAttributes<HTMLWeModalElement>;
       'we-navigation-drawer': LocalJSX.WeNavigationDrawer & JSXBase.HTMLAttributes<HTMLWeNavigationDrawerElement>;
       'we-radio': LocalJSX.WeRadio & JSXBase.HTMLAttributes<HTMLWeRadioElement>;

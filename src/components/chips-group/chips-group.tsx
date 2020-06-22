@@ -8,11 +8,11 @@ import { parseFunction } from '@utils';
 })
 export class ChipsGroup implements ComponentInterface {
   /** Name that identify this chips group */
-  @Prop() name!: any;
-  @State() selectedChips: Array<any> = [];
+  @Prop() name!: string;
+  @State() selectedChips = [];
   /** Function called when a chip is selected */
   @Prop() selectCallback: any;
-  @State() removedChips: Array<any> = [];
+  @State() removedChips = [];
   /** Function called when a chip is removed */
   @Prop() removeCallback: any;
 

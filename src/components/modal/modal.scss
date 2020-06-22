@@ -33,8 +33,8 @@
 .modal {
   display: var(--display, flex);
   background: var(--background, rgba(255, 255, 255, 1));
-  width: var(--width, 12.500em);
-  height: var(--height, 18.750em);  
+  width: var(--width, 12.5em);
+  height: var(--height, 18.75em);
   padding: var(--padding, 0.625em);
   border-radius: var(--border-radius, 0.625em);
   border: var(--border, none);

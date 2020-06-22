@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-19T09:00:32",
+  "timestamp": "2020-06-22T07:07:23",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -44,7 +44,153 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--container-background",
+          "annotation": "prop",
+          "docs": "Container background <br> Default: #fff"
+        },
+        {
+          "name": "--container-box-shadow",
+          "annotation": "prop",
+          "docs": "Container shadow <br> Default: 0 -0.063rem 0 #e5e5e5, 0 0 0.125rem rgba(0,0,0,.12), 0 0.125rem 0.25rem rgba(0,0,0,.24)"
+        },
+        {
+          "name": "--container-height",
+          "annotation": "prop",
+          "docs": "Container height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--container-position",
+          "annotation": "prop",
+          "docs": "Container position <br> Default: relative"
+        },
+        {
+          "name": "--container-transition",
+          "annotation": "prop",
+          "docs": "Container transition <br> Default: all .15s ease-in-out"
+        },
+        {
+          "name": "--content-color",
+          "annotation": "prop",
+          "docs": "Content color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--content-font-size",
+          "annotation": "prop",
+          "docs": "Content font size <br> Default: 0.938rem"
+        },
+        {
+          "name": "--content-padding",
+          "annotation": "prop",
+          "docs": "Content padding <br> Default: 1.25rem"
+        },
+        {
+          "name": "--content-width",
+          "annotation": "prop",
+          "docs": "Content width <br> Default: calc(100% - 2.5rem)"
+        },
+        {
+          "name": "--icon-bottom",
+          "annotation": "prop",
+          "docs": "Icon bottom <br> Default: initial"
+        },
+        {
+          "name": "--icon-color",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rgba(0,0,0,.54)"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: '\\203a'"
+        },
+        {
+          "name": "--icon-display",
+          "annotation": "prop",
+          "docs": "Icon display <br> Default: block"
+        },
+        {
+          "name": "--icon-font-size",
+          "annotation": "prop",
+          "docs": "Icon font size <br> Default: 1.5rem"
+        },
+        {
+          "name": "--icon-left",
+          "annotation": "prop",
+          "docs": "Icon left <br> Default: initial"
+        },
+        {
+          "name": "--icon-position",
+          "annotation": "prop",
+          "docs": "Icon position <br> Default: absolute"
+        },
+        {
+          "name": "--icon-right",
+          "annotation": "prop",
+          "docs": "Icon right <br> Default: 1.25rem"
+        },
+        {
+          "name": "--icon-top",
+          "annotation": "prop",
+          "docs": "Icon top <br> Default: -0.125rem"
+        },
+        {
+          "name": "--icon-transform",
+          "annotation": "prop",
+          "docs": "Icon color <br> Default: rotate(0deg)"
+        },
+        {
+          "name": "--icon-transition",
+          "annotation": "prop",
+          "docs": "Icon transition <br> Default: transform .15s ease-in-out"
+        },
+        {
+          "name": "--title-border-bottom-opened",
+          "annotation": "prop",
+          "docs": "Title border bottom opened <br> Default: 0.063rem solid rgba(0,0,0,.18)"
+        },
+        {
+          "name": "--title-cursor",
+          "annotation": "prop",
+          "docs": "Title cursor <br> Default: pointer"
+        },
+        {
+          "name": "--title-display",
+          "annotation": "prop",
+          "docs": "Title display <br> Default: inline-block"
+        },
+        {
+          "name": "--title-height",
+          "annotation": "prop",
+          "docs": "Title height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--title-line-height",
+          "annotation": "prop",
+          "docs": "Title line height <br> Default: 3.375rem"
+        },
+        {
+          "name": "--title-padding",
+          "annotation": "prop",
+          "docs": "Title padding <br> Default: 0 2.75rem 0 1.25rem"
+        },
+        {
+          "name": "--title-transform-opened",
+          "annotation": "prop",
+          "docs": "Title transform opened <br> Default: rotate(90deg)"
+        },
+        {
+          "name": "--title-user-select",
+          "annotation": "prop",
+          "docs": "Title user select <br> Default: none"
+        },
+        {
+          "name": "--title-width",
+          "annotation": "prop",
+          "docs": "Title width <br> Default: calc(100% - 4rem)"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -138,7 +284,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of button <br> Default: rgba(211, 211, 211, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of button <br> Default: 0.125em solid rgba(128, 128, 128, 1);"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of button <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "Cursor of button <br> Default: auto"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of button <br> Default: block"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of button <br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of button <br> Default: auto"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of button <br> Default: 0"
+        },
+        {
+          "name": "--outline",
+          "annotation": "prop",
+          "docs": "Outline of button <br> Default: none"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of button <br> Default: 0.250em"
+        },
+        {
+          "name": "--text-align",
+          "annotation": "prop",
+          "docs": "Text align of button <br> Default: center"
+        },
+        {
+          "name": "--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of button <br> Default: none"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform of button <br> Default: none"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of button <br> Default: auto"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -155,7 +377,138 @@
       "props": [],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--card-background-color",
+          "annotation": "prop",
+          "docs": "card background-color <br> Default: rgb(255, 255, 255)"
+        },
+        {
+          "name": "--card-body-padding",
+          "annotation": "prop",
+          "docs": "card-body-padding padding <br> Default: 1.25rem"
+        },
+        {
+          "name": "--card-border",
+          "annotation": "prop",
+          "docs": "card border <br> Default: 1px"
+        },
+        {
+          "name": "--card-border-color",
+          "annotation": "prop",
+          "docs": "card border-color <br> Default: rgba(0, 0, 0, .125)"
+        },
+        {
+          "name": "--card-border-radius",
+          "annotation": "prop",
+          "docs": "card border-radius <br> Default: .25rem"
+        },
+        {
+          "name": "--card-border-style",
+          "annotation": "prop",
+          "docs": "card style <br> Default: solid"
+        },
+        {
+          "name": "--card-shadow-blur-radius",
+          "annotation": "prop",
+          "docs": "card-shadow-blur-radiues blur-radius <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-color",
+          "annotation": "prop",
+          "docs": "card-shadow-color color <br> Default: rgb(0, 0 ,0)"
+        },
+        {
+          "name": "--card-shadow-offset-x",
+          "annotation": "prop",
+          "docs": "card-shadow-offset-x offset-x <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-offset-y",
+          "annotation": "prop",
+          "docs": "card-shadow-offset-y offset-y <br> Default: 0"
+        },
+        {
+          "name": "--card-shadow-spread-radius",
+          "annotation": "prop",
+          "docs": "card-shadow-spread-radius spread-radius <br> Default: 0"
+        },
+        {
+          "name": "--card-subtitle-color",
+          "annotation": "prop",
+          "docs": "card-subtitle-color color: <br> Default: rgb(108, 117, 125)"
+        },
+        {
+          "name": "--card-subtitle-font-size",
+          "annotation": "prop",
+          "docs": "card-subtitle-font-size font-size <br> Default: 1rem"
+        },
+        {
+          "name": "--card-subtitle-font-weight",
+          "annotation": "prop",
+          "docs": "card-subtitle-font-weight font-weight <br> Default: 500"
+        },
+        {
+          "name": "--card-subtitle-line-height",
+          "annotation": "prop",
+          "docs": "card-subtitle-line-height line-height <br> Default: 1.2"
+        },
+        {
+          "name": "--card-subtitle-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-subtitle-margin-bottom margin-bottom <br> Default: .5rem"
+        },
+        {
+          "name": "--card-subtitle-text-align",
+          "annotation": "prop",
+          "docs": "card-subtitle-text-align text-align <br> Defaul: left"
+        },
+        {
+          "name": "--card-text-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-text-margin-bottom margin-bottom <br> Default: 0"
+        },
+        {
+          "name": "--card-text-margin-top",
+          "annotation": "prop",
+          "docs": "card-text-margin-top margin-top <br> Default: 0"
+        },
+        {
+          "name": "--card-text-text-align",
+          "annotation": "prop",
+          "docs": "card-text-text-align text-align <br> Default: left"
+        },
+        {
+          "name": "--card-title-font-size",
+          "annotation": "prop",
+          "docs": "card-title-font-size font-size <br> Default: 1.25rem"
+        },
+        {
+          "name": "--card-title-font-weight",
+          "annotation": "prop",
+          "docs": "card-title-font-weight font-weight <br> Default: 500"
+        },
+        {
+          "name": "--card-title-line-height",
+          "annotation": "prop",
+          "docs": "card-title-line-height line-height <br> Default: 1.2"
+        },
+        {
+          "name": "--card-title-margin-bottom",
+          "annotation": "prop",
+          "docs": "card-title-margin-bottom margin-bottom <br> Default: .75rem"
+        },
+        {
+          "name": "--card-title-text-align",
+          "annotation": "prop",
+          "docs": "card-title-text-align text-align <br> Default: left"
+        },
+        {
+          "name": "--card-width",
+          "annotation": "prop",
+          "docs": "card width <br> Default: 18rem"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -231,7 +584,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--checked-background-color",
+          "annotation": "prop",
+          "docs": "Checked background color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-border-color",
+          "annotation": "prop",
+          "docs": "Checked border color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-color",
+          "annotation": "prop",
+          "docs": "Checked color <br> Default: #fff"
+        },
+        {
+          "name": "--checked-disabled-background-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled background color <br> Default: #aaa"
+        },
+        {
+          "name": "--checked-disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled border color <br> Default: #aaa"
+        },
+        {
+          "name": "--disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--icon-border",
+          "annotation": "prop",
+          "docs": "Icon border <br> Default: 1px solid #212121"
+        },
+        {
+          "name": "--icon-border-radius",
+          "annotation": "prop",
+          "docs": "Icon border radius <br> Default: 0.2em"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: \"\\2714\""
+        },
+        {
+          "name": "--icon-heigth",
+          "annotation": "prop",
+          "docs": "Icon heigth <br> Default: 1em"
+        },
+        {
+          "name": "--icon-margin",
+          "annotation": "prop",
+          "docs": "Icon margin <br> Default: 0 0.3em 0 0"
+        },
+        {
+          "name": "--icon-padding",
+          "annotation": "prop",
+          "docs": "Icon padding <br> Default: 0 0 0.3em 0.2em"
+        },
+        {
+          "name": "--icon-width",
+          "annotation": "prop",
+          "docs": "Icon width <br> Default: 1em"
+        },
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -264,7 +693,7 @@
         },
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
@@ -272,7 +701,7 @@
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -430,7 +859,158 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of chips <br> Default: rgba(229, 229, 229, 1)"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of chips <br> Default: unset"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of chips <br> Default: 0.5em"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of chips <br> Default: 0.05em"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of chips <br> Default: inline-block"
+        },
+        {
+          "name": "--heigth",
+          "annotation": "prop",
+          "docs": "Height of chips <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of image left <br> Default: 0em"
+        },
+        {
+          "name": "--imageLeft--cursor",
+          "annotation": "prop",
+          "docs": "Cursor type of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--heigth",
+          "annotation": "prop",
+          "docs": "Height of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageLeft--margin",
+          "annotation": "prop",
+          "docs": "Margin of image left <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--imageLeft--padding",
+          "annotation": "prop",
+          "docs": "Padding of image left <br> Default: 0"
+        },
+        {
+          "name": "--imageLeft--width",
+          "annotation": "prop",
+          "docs": "Width of image left <br> Default: auto"
+        },
+        {
+          "name": "--imageRight--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of image right <br> Default: 0em"
+        },
+        {
+          "name": "--imageRight--cursor",
+          "annotation": "prop",
+          "docs": "Cursor type of image right <br> Default: pointer"
+        },
+        {
+          "name": "--imageRight--heigth",
+          "annotation": "prop",
+          "docs": "Height of image right <br> Default: auto"
+        },
+        {
+          "name": "--imageRight--margin",
+          "annotation": "prop",
+          "docs": "Margin of image right <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--imageRight--padding",
+          "annotation": "prop",
+          "docs": "Padding of image right <br> Default: 0"
+        },
+        {
+          "name": "--imageRight--width",
+          "annotation": "prop",
+          "docs": "Width of image right <br> Default: auto"
+        },
+        {
+          "name": "--label--color",
+          "annotation": "prop",
+          "docs": "Color of text label <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--label--font-size",
+          "annotation": "prop",
+          "docs": "Font size of label <br> Default: 12pt"
+        },
+        {
+          "name": "--label--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of label <br> Default: normal"
+        },
+        {
+          "name": "--label--margin",
+          "annotation": "prop",
+          "docs": "Margin of label <br> Default: 0 0.5rem"
+        },
+        {
+          "name": "--label--padding",
+          "annotation": "prop",
+          "docs": "Padding of label <br> Default: 0"
+        },
+        {
+          "name": "--label--text-align",
+          "annotation": "prop",
+          "docs": "Text align of label <br> Default: left"
+        },
+        {
+          "name": "--label--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration of label <br> Default: unset"
+        },
+        {
+          "name": "--label--text-transform",
+          "annotation": "prop",
+          "docs": "Text trasform of label <br> Default: unset"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of chips <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of chips <br> Default: 0.25rem"
+        },
+        {
+          "name": "--selected-background",
+          "annotation": "prop",
+          "docs": "Background of chips when selected <br> Default: rgba(65, 169, 192, 1)"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of chips <br> Default: auto"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -447,7 +1027,7 @@
       "props": [
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
@@ -455,7 +1035,7 @@
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -496,7 +1076,28 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of chips group <br> Default: unset"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of chips group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of chips group <br> Default: row"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of chips grou <br> Default: unset"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -513,7 +1114,33 @@
       "props": [],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--divider-border",
+          "annotation": "prop",
+          "docs": "divider border <br> Default: 1px solid rgba(0,0,0,.12)"
+        },
+        {
+          "name": "--divider-margin-left",
+          "annotation": "prop",
+          "docs": "divider margin-left <br> Default: 0"
+        },
+        {
+          "name": "--divider-margin-right",
+          "annotation": "prop",
+          "docs": "divider margin-right <br> Default: 0"
+        },
+        {
+          "name": "--divider-radius",
+          "annotation": "prop",
+          "docs": "divider radius <br> Default: 0.625rem"
+        },
+        {
+          "name": "--divider-width",
+          "annotation": "prop",
+          "docs": "divider width <br> Default: 100%"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -536,7 +1163,7 @@
           "reflectToAttr": false,
           "docs": "Define the orientation of the objects inside this group, \"column\" or \"row\"",
           "docsTags": [],
-          "default": "\"column\"",
+          "default": "'column'",
           "values": [
             {
               "type": "string"
@@ -548,7 +1175,38 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of of dropdown group <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display property of dropdown group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of dropdown group, the default value depend of the class choosen, column or row <br> Default: column"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown group <br> Default: auto"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown group <br> Default: fit-content"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -635,7 +1293,7 @@
           "reflectToAttr": false,
           "docs": "In which position you want put children relative to the parent dropdown item: right, left, bottom, top <br> Choosen the position you can also modify the css variables that define the position",
           "docsTags": [],
-          "default": "\"right\"",
+          "default": "'right'",
           "values": [
             {
               "type": "string"
@@ -689,7 +1347,271 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items inside dropdown item <br> Default: center"
+        },
+        {
+          "name": "--arrow--border",
+          "annotation": "prop",
+          "docs": "Border of dropdown item arrow <br> Default: solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--arrow--border-width",
+          "annotation": "prop",
+          "docs": "Border width of dropdown item arrow <br> Default: 0 0.1875em 0.1875em 0"
+        },
+        {
+          "name": "--arrow--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item arrow <br> Default: inline-block"
+        },
+        {
+          "name": "--arrow--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item arrow <br> Default: 0.1875em"
+        },
+        {
+          "name": "--arrow--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item arrow <br> Default: all 0.5s"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of dropdown item <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--background-hover",
+          "annotation": "prop",
+          "docs": "Background of dropdown item when user go on hover with mouse <br> Default: rgb(185, 185, 185)"
+        },
+        {
+          "name": "--border-bottom",
+          "annotation": "prop",
+          "docs": "Border bottom of item in a column dropdown group<br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--border-right",
+          "annotation": "prop",
+          "docs": "Border right of item in a row dropdown group <br> Default: solid 0.125em rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--children--bottom",
+          "annotation": "prop",
+          "docs": "Bottom property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--children--left",
+          "annotation": "prop",
+          "docs": "Left property of dropdown item children, the default value depend of the position class choosen for the children (default class, position_left, not used this property) <br> Default: 100%"
+        },
+        {
+          "name": "--children--position",
+          "annotation": "prop",
+          "docs": "Position of dropdown item children, not change it to default behaviour <br> Default: absolute"
+        },
+        {
+          "name": "--children--right",
+          "annotation": "prop",
+          "docs": "Right property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: 100%"
+        },
+        {
+          "name": "--children--top",
+          "annotation": "prop",
+          "docs": "Top property of dropdown item children, the default value depend of the position class choosen for the children (default value indicated is for left class) <br> Default: -0.125em"
+        },
+        {
+          "name": "--children--transition",
+          "annotation": "prop",
+          "docs": "Transition of dropdown item children <br> Default: all 0.5s"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of dropdown item <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "Cursor inside dropdown item <br> Default: pointer"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of dropdown item <br> Default: flex"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of dropdown item <br> Default: 1.875em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content inside dropdown item <br> Default: space-between"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin of dropdown item <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of dropdown item <br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of dropdown item <br> Default: 12.5em"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\list\\list.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-list",
+      "readme": "# we-list\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of list group <br> Default: unset"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "<br> Default: 0.063em solid rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of list group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of list group <br> Default: column"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "<br> Default: fit-content"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of list grou <br> Default: unset"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "<br> Default: fit-content"
+        }
+      ],
+      "slots": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src\\components\\list-item\\list-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "we-list-item",
+      "readme": "# we-list-item\r\n\r\n\r\n\r",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "If you want to use a simple tooltip you can only add this value",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "<br> Default: center"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--background-hover",
+          "annotation": "prop",
+          "docs": "<br> Default: rgb(181, 181, 181)"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "<br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--cursor",
+          "annotation": "prop",
+          "docs": "<br> Default: pointer"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "<br> Default: flex"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "<br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "<br> Default: 3.125em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "<br> Default: left"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "<br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "<br> Default: 6.250em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -712,7 +1634,6 @@
           "reflectToAttr": false,
           "docs": "identify if modal is visible or not",
           "docsTags": [],
-          "default": "false",
           "values": [
             {
               "type": "boolean"
@@ -734,7 +1655,68 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of modal, it affects the vertical position of the elements inside the modal <br> Default: unset"
+        },
+        {
+          "name": "--back--align-items",
+          "annotation": "prop",
+          "docs": "Align items of back of modal, it affects the vertical position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--back--background",
+          "annotation": "prop",
+          "docs": "Background of back of modal <br> Default: rgba(128, 128, 128, 0.35)"
+        },
+        {
+          "name": "--back--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of back of modal, it affects the horizontal position of modal in the page <br> Default: center"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of modal <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of modal <br> Default: none"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display option of modal <br> Default: flex"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of modal <br> Default: 18.750em"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of modal, it affects the horizontal position of the elements inside the modal <br> Default: center"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of modal <br> Default: 0.625em"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of modal <br> Default: 12.500em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -769,7 +1751,88 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of navigation drawer <br> Default: start"
+        },
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of navigation drawer <br> Default: rgba(151, 151, 151, 1)"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of navigation drawer <br> Default: none"
+        },
+        {
+          "name": "--bottom",
+          "annotation": "prop",
+          "docs": "Bottom option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of navigation drawer <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of navigation drawer <br> Default: flex"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of navigation drawer <br> Default: 1em"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of navigation drawer <br> Default: 100vh"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of navigation drawer <br> Default: left"
+        },
+        {
+          "name": "--left",
+          "annotation": "prop",
+          "docs": "Left option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of navigation drawer <br> Default: 0.625em"
+        },
+        {
+          "name": "--position",
+          "annotation": "prop",
+          "docs": "Position of navigation drawer <br> Default: fixed"
+        },
+        {
+          "name": "--right",
+          "annotation": "prop",
+          "docs": "Right option of navigation drawer <br> Default: auto"
+        },
+        {
+          "name": "--top",
+          "annotation": "prop",
+          "docs": "Top option of navigation drawer <br> Default: 0"
+        },
+        {
+          "name": "--transition",
+          "annotation": "prop",
+          "docs": "Transition of navigation drawer <br> Default: all 0.5s"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of navigation drawer<br> Default: 12.5em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1010,7 +2073,68 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        },
+        {
+          "name": "--slider-background-color",
+          "annotation": "prop",
+          "docs": "Slider background color <br> Default: #D7DCDF"
+        },
+        {
+          "name": "--slider-disabled-color",
+          "annotation": "prop",
+          "docs": "Slider disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--slider-height",
+          "annotation": "prop",
+          "docs": "Slider height <br> Default: 5px"
+        },
+        {
+          "name": "--slider-margin",
+          "annotation": "prop",
+          "docs": "Slider margin <br> Default: 0"
+        },
+        {
+          "name": "--slider-padding",
+          "annotation": "prop",
+          "docs": "Slider padding <br> Default: 0"
+        },
+        {
+          "name": "--slider-thumb-color",
+          "annotation": "prop",
+          "docs": "Slider thumb color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--slider-thumb-height",
+          "annotation": "prop",
+          "docs": "Slider thumb height <br> Default: 2em"
+        },
+        {
+          "name": "--slider-thumb-radius",
+          "annotation": "prop",
+          "docs": "Slider thumb radius <br> Default: 50%"
+        },
+        {
+          "name": "--slider-thumb-width",
+          "annotation": "prop",
+          "docs": "Slider thumb width <br> Default: 2em"
+        },
+        {
+          "name": "--slider-width",
+          "annotation": "prop",
+          "docs": "Slider width <br> Default: 100%"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1050,7 +2174,6 @@
           "reflectToAttr": false,
           "docs": "Text put in the left of switch",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -1067,7 +2190,6 @@
           "reflectToAttr": false,
           "docs": "Text put in the right of switch",
           "docsTags": [],
-          "default": "''",
           "values": [
             {
               "type": "string"
@@ -1078,7 +2200,7 @@
         },
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
@@ -1086,7 +2208,7 @@
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -1105,7 +2227,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--after--background",
+          "annotation": "prop",
+          "docs": "Background of button switch <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--after--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button switch <br> Default: 50%"
+        },
+        {
+          "name": "--after--height",
+          "annotation": "prop",
+          "docs": "Height of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--after--left",
+          "annotation": "prop",
+          "docs": "Distance from left of icon switch <br> Default: 0.313em"
+        },
+        {
+          "name": "--after--top",
+          "annotation": "prop",
+          "docs": "Distance from top of button switch <br> Default: 0.22em"
+        },
+        {
+          "name": "--after--transition",
+          "annotation": "prop",
+          "docs": "Transition options about the changement of button switch <br> Default: 0.3s"
+        },
+        {
+          "name": "--after--width",
+          "annotation": "prop",
+          "docs": "Width of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--background-checked",
+          "annotation": "prop",
+          "docs": "Background color of switch when change from initial condition <br> Default: #3F51B5"
+        },
+        {
+          "name": "--container--font-size",
+          "annotation": "prop",
+          "docs": "Font size of labels inside the switch <br> Default: 2em"
+        },
+        {
+          "name": "--container--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of labels inside the switch <br> Default: bold"
+        },
+        {
+          "name": "--container--height",
+          "annotation": "prop",
+          "docs": "Height of container <br> Default: 1.5em"
+        },
+        {
+          "name": "--container--width",
+          "annotation": "prop",
+          "docs": "Width of container <br> Default: 3em"
+        },
+        {
+          "name": "--switch--background",
+          "annotation": "prop",
+          "docs": "Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)"
+        },
+        {
+          "name": "--switch--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of switch <br> Default: 6.250em"
+        },
+        {
+          "name": "--switch--cursor",
+          "annotation": "prop",
+          "docs": "Cursor on switch <br> Default: pointer"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1138,7 +2336,7 @@
         },
         {
           "name": "name",
-          "type": "any",
+          "type": "string",
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
@@ -1146,7 +2344,7 @@
           "docsTags": [],
           "values": [
             {
-              "type": "any"
+              "type": "string"
             }
           ],
           "optional": false,
@@ -1155,7 +2353,28 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of switch group <br> Default: unset"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of switch group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of switch group <br> Default: row"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of switch grou <br> Default: unset"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1208,7 +2427,68 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--enabled-background-color",
+          "annotation": "prop",
+          "docs": "Enabled background color height <br> Default: #3F51B5"
+        },
+        {
+          "name": "--enabled-height",
+          "annotation": "prop",
+          "docs": "Enabled height <br> Default: 0.125rem"
+        },
+        {
+          "name": "--enabled-tab-color",
+          "annotation": "prop",
+          "docs": "Enabled tab color <br> Default: #D7DCDF"
+        },
+        {
+          "name": "--enabled-top",
+          "annotation": "prop",
+          "docs": "Enabled top <br> Default: 2.125rem"
+        },
+        {
+          "name": "--hover-color",
+          "annotation": "prop",
+          "docs": "Hover color <br> Default: #ccc"
+        },
+        {
+          "name": "--hover-height",
+          "annotation": "prop",
+          "docs": "Hover height <br> Default: 0.125rem"
+        },
+        {
+          "name": "--label-background-color",
+          "annotation": "prop",
+          "docs": "Label background <br> Default: #FFFFFF"
+        },
+        {
+          "name": "--label-color",
+          "annotation": "prop",
+          "docs": "Label color <br> Default: #212121"
+        },
+        {
+          "name": "--label-font-size",
+          "annotation": "prop",
+          "docs": "Label font size <br> Default: 1rem"
+        },
+        {
+          "name": "--label-height",
+          "annotation": "prop",
+          "docs": "Label height <br> Default: 2.25rem"
+        },
+        {
+          "name": "--label-line-height",
+          "annotation": "prop",
+          "docs": "Label line height <br> Default: 2.25rem"
+        },
+        {
+          "name": "--label-text-align",
+          "annotation": "prop",
+          "docs": "Label text align <br> Default: center"
+        }
+      ],
       "slots": [
         {
           "name": "content",
@@ -1413,7 +2693,88 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of textarea <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of textarea <br> Default: unset"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of textarea <br> Default: 0.5em"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of textarea <br> Default: 0.05em"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of text <br> Default: rgba(0 , 0, 0, 1)"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of textarea <br> Default: inline-block"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size <br> Default: 12pt"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight <br> Default: normal"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of textarea <br> Default: 50px"
+        },
+        {
+          "name": "--margin",
+          "annotation": "prop",
+          "docs": "Margin out of textarea <br> Default: 0"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding inside textarea <br> Default: 0"
+        },
+        {
+          "name": "--resize",
+          "annotation": "prop",
+          "docs": "Resize option for textarea <br> Default: auto"
+        },
+        {
+          "name": "--text-align",
+          "annotation": "prop",
+          "docs": "Text align <br> Default: left"
+        },
+        {
+          "name": "--text-decoration",
+          "annotation": "prop",
+          "docs": "Text decoration for text <br> Default: unset"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform <br> Default: unset"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of textarea <br> Default: 100%"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -1447,7 +2808,68 @@
       ],
       "methods": [],
       "events": [],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of tooltip <br> Default: rgba(196, 196, 196, 0.5));"
+        },
+        {
+          "name": "--border",
+          "annotation": "prop",
+          "docs": "Border of tooltip <br> Default: none"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of tooltip <br> Default: 0"
+        },
+        {
+          "name": "--bottom",
+          "annotation": "prop",
+          "docs": "Bottom of tooltip <br> Default: auto"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Color of tooltip <br> Default: rgba(0, 0, 0, 1)"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of tooltip <br> Default: fit-content"
+        },
+        {
+          "name": "--left",
+          "annotation": "prop",
+          "docs": "Left of tooltip <br> Default: 50%"
+        },
+        {
+          "name": "--padding",
+          "annotation": "prop",
+          "docs": "Padding of tooltip <br> Default: 3px"
+        },
+        {
+          "name": "--right",
+          "annotation": "prop",
+          "docs": "Right of tooltip <br> Default: auto"
+        },
+        {
+          "name": "--top",
+          "annotation": "prop",
+          "docs": "Top of tooltip <br> Default: 100%"
+        },
+        {
+          "name": "--transform",
+          "annotation": "prop",
+          "docs": "Transform of tooltip <br> Default: translate(-50%, 0%)"
+        },
+        {
+          "name": "--width",
+          "annotation": "prop",
+          "docs": "Width of tooltip <br> Default: fit-content"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],

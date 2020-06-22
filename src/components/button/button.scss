@@ -23,11 +23,11 @@
 button {
   width: var(--width, auto);
   height: var(--height, auto);
-  padding: var(--padding, 0.250em);
+  padding: var(--padding, 0.25em);
   margin: var(--margin, 0);
   display: var(--display, block);
   border: var(--border, 0.125em solid rgba(128, 128, 128, 1));
-  border-radius: var(--border-radius, 0.250em);
+  border-radius: var(--border-radius, 0.25em);
   background: var(--background, (211, 211, 211, 1));
   cursor: var(--cursor, auto);
   color: var(--color, (0, 0, 0, 1));

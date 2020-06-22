@@ -18,7 +18,7 @@ import { parseFunction } from '@utils';
 export class SwitchGroup implements ComponentInterface {
   @Element() el: HTMLWeSwitchGroupElement;
   /** Name that identify this switch group */
-  @Prop() name!: any;
+  @Prop() name!: string;
   /** Function called when a switch inside change it's state */
   @Prop() changeSwitchCallback: any;
   @State() childrenState: any = {};

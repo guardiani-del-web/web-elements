@@ -36,8 +36,8 @@
     display: none;
   }
   we-accordion:first-of-type {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;
   }
   .accordion {
     position: var(--container-position, relative);
