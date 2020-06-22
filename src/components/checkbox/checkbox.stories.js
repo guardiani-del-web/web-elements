@@ -17,7 +17,7 @@ export const Basic = () => {
   const cssVariables = getCssVariables('we-checkbox', color, text);
   
   const name = text('Name', 'Fruits', KNOBS_ATTRIBUTES);
-  const checked = boolean('Checked', false, KNOBS_ATTRIBUTES);
+  const checked = boolean('Checked', true, KNOBS_ATTRIBUTES);
   const disabled = boolean('Disabled', false, KNOBS_ATTRIBUTES);
 
   const checkbox1 = text('Label checkbox1', 'Banana', KNOBS_LIVE);

@@ -7,19 +7,19 @@ import { ComponentInterface, Component, Host, h, Prop } from '@stencil/core';
 })
 export class Textarea implements ComponentInterface {
   /** Test inside the textarea when rendered the first time */
-  @Prop() text:string;
+  @Prop() text: string;
   /** Name prop of the textarea */
-  @Prop() name:string;
+  @Prop() name: string;
   /** Placeholder appear when there isn't text in the textarea */
-  @Prop() placeholder:string;
+  @Prop() placeholder: string;
   /** Identify the readonly property of textarea */
-  @Prop() readonly:boolean;
+  @Prop() readonly: boolean;
   /** Identify the disabled property of textarea */
-  @Prop() disabled:boolean;
+  @Prop() disabled: boolean;
   /** Identify the required property of textarea */
-  @Prop() required:boolean;
+  @Prop() required: boolean;
   /** Identify the autofocus property of textarea */
-  @Prop() autofocus:boolean;
+  @Prop() autofocus: boolean;
   /** Identify the maxlength property of textarea */
   @Prop() maxlength = 100000;
   /** Identify the cols property of textarea */
