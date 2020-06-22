@@ -7,11 +7,11 @@ import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@ste
 })
 export class Switch implements ComponentInterface {
   /** Name of switch, put in the payload of changeCallback event */
-  @Prop() name!: any;
+  @Prop() name!: string;
   /** Text put in the left of switch */
-  @Prop() labelLeft = '';
+  @Prop() labelLeft: string;
   /** Text put in the right of switch */
-  @Prop() labelRight = '';
+  @Prop() labelRight: string;
   /** Default value of switch when component is rendered the first time */
   @Prop() checked = false;
   @State() checkedState = this.checked;
