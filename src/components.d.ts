@@ -45,10 +45,6 @@ export namespace Components {
   }
   interface WeCheckboxGroup {
     /**
-     * Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed
-     */
-    changeCallback: any;
-    /**
      * Name that identify this checkbox group
      */
     name: string;
@@ -487,13 +483,13 @@ declare namespace LocalJSX {
   }
   interface WeCheckboxGroup {
     /**
-     * Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed
-     */
-    changeCallback?: any;
-    /**
      * Name that identify this checkbox group
      */
     name: string;
+    /**
+     * Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed
+     */
+    onCheckboxGroupCallback?: (event: CustomEvent<any>) => void;
   }
   interface WeChips {
     /**

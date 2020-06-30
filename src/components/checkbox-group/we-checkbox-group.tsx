@@ -6,9 +6,10 @@ import {
   Prop,
   Listen,
   Element,
-  State
+  State,
+  Event,
+  EventEmitter
 } from '@stencil/core';
-import { parseFunction } from '@utils';
 
 @Component({
   tag: 'we-checkbox-group',
@@ -19,7 +20,7 @@ export class CheckboxGroup implements ComponentInterface {
   /** Name that identify this checkbox group */
   @Prop() name!: string;
   /** Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed */
-  @Prop() changeCallback: any;
+  @Event() checkboxGroupCallback: EventEmitter;
   @State() checkedItems: Array<any>;
 
   constructor() {
@@ -29,17 +30,16 @@ export class CheckboxGroup implements ComponentInterface {
   @Listen('checkboxCallback')
   checkboxCallbackHandler(event: CustomEvent) {
     const value = event.detail;
-    this.changeCallback = parseFunction(this.changeCallback);
 
     const getCheckedIndex = this.checkedItems.findIndex((item) => item.value === value);
 
     if (getCheckedIndex === -1) {
-      this.checkedItems.push({ name: this.name, value });
+      this.checkedItems.push(value);
     } else {
       this.checkedItems.splice(getCheckedIndex, 1);
     }
 
-    this.changeCallback(this.checkedItems);
+    this.checkboxGroupCallback.emit({ name: this.name, checkedItems: this.checkedItems });
   }
 
   render() {

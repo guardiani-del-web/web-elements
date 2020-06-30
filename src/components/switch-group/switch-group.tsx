@@ -23,19 +23,6 @@ export class SwitchGroup implements ComponentInterface {
   @Prop() changeSwitchCallback: any;
   @State() childrenState: any = {};
 
-  findAllChildren() {
-    const items = this.el.querySelectorAll(':scope > we-switch');
-    const children = {};
-    items.forEach((i) => {
-      const name = i.getAttribute('name');
-      const checked = i.getAttribute('checked');
-      children[name] = checked === 'false' ? false : true;
-    });
-    this.childrenState = { name: this.name, children };
-    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-    this.changeSwitchCallback(this.childrenState);
-  }
-
   @Listen('changeSwitchCallback')
   changeSwitchCallbackHandler(prop) {
     const { name, checked } = prop.detail;
@@ -47,7 +34,16 @@ export class SwitchGroup implements ComponentInterface {
   }
 
   componentDidLoad() {
-    this.findAllChildren();
+    const items = this.el.querySelectorAll(':scope > we-switch');
+    const children = {};
+    items.forEach((i) => {
+      const name = i.getAttribute('name');
+      const checked = i.getAttribute('checked');
+      children[name] = checked === 'false' ? false : true;
+    });
+    this.childrenState = { name: this.name, children };
+    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
+    this.changeSwitchCallback(this.childrenState);
   }
 
   render() {
