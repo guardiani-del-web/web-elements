@@ -6,9 +6,14 @@ import {
   Prop,
   State,
   Element,
-  Listen
+  Listen,
+  Event, EventEmitter
 } from '@stencil/core';
-import { parseFunction } from '@utils';
+
+export interface SwitchValue {
+  name: string;
+  children: Array<any>;
+}
 
 @Component({
   tag: 'we-switch-group',
@@ -18,18 +23,17 @@ import { parseFunction } from '@utils';
 export class SwitchGroup implements ComponentInterface {
   @Element() el: HTMLWeSwitchGroupElement;
   /** Name that identify this switch group */
-  @Prop() name!: string;
+  @Prop() value!: string;
   /** Function called when a switch inside change it's state */
-  @Prop() changeSwitchCallback: any;
+  @Event() changeSwitchCallback: EventEmitter<SwitchValue>;
   @State() childrenState: any = {};
 
   @Listen('changeSwitchCallback')
   changeSwitchCallbackHandler(prop) {
-    const { name, checked } = prop.detail;
-    if (this.childrenState.children[name] != checked) {
-      this.childrenState.children[name] = checked;
-      this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-      this.changeSwitchCallback(this.childrenState);
+    const { value, checked } = prop.detail;
+    if (this.childrenState[value] != checked) {
+      this.childrenState[value] = checked;
+      this.changeSwitchCallback.emit({ value: this.value, children: this.childrenState });
     }
   }
 
@@ -37,13 +41,11 @@ export class SwitchGroup implements ComponentInterface {
     const items = this.el.querySelectorAll(':scope > we-switch');
     const children = {};
     items.forEach((i) => {
-      const name = i.getAttribute('name');
+      const value = i.getAttribute('value');
       const checked = i.getAttribute('checked');
-      children[name] = checked === 'false' ? false : true;
+      children[value] = checked === 'false' ? false : true;
     });
-    this.childrenState = { name: this.name, children };
-    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-    this.changeSwitchCallback(this.childrenState);
+    this.childrenState = children;
   }
 
   render() {

@@ -11,16 +11,21 @@ import {
   EventEmitter
 } from '@stencil/core';
 
+export interface CheckboxValue {
+  value: string;
+  checkedItems: Array<any>;
+}
+
 @Component({
   tag: 'we-checkbox-group',
   shadow: true
 })
 export class CheckboxGroup implements ComponentInterface {
   @Element() el: HTMLWeCheckboxGroupElement;
-  /** Name that identify this checkbox group */
-  @Prop() name!: string;
-  /** Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed */
-  @Event() checkboxGroupCallback: EventEmitter;
+  /** Value that identify this checkbox group */
+  @Prop() value!: string;
+  /** Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed */
+  @Event() checkboxGroupCallback: EventEmitter<CheckboxValue>;
   @State() checkedItems: Array<any>;
 
   constructor() {
@@ -39,7 +44,7 @@ export class CheckboxGroup implements ComponentInterface {
       this.checkedItems.splice(getCheckedIndex, 1);
     }
 
-    this.checkboxGroupCallback.emit({ name: this.name, checkedItems: this.checkedItems });
+    this.checkboxGroupCallback.emit({ value: this.value, checkedItems: this.checkedItems });
   }
 
   render() {

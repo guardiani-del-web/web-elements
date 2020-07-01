@@ -6,8 +6,8 @@ import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@ste
   shadow: true
 })
 export class Switch implements ComponentInterface {
-  /** Name of switch, put in the payload of changeCallback event */
-  @Prop() name!: string;
+  /** Value of switch, put in the payload of changeCallback event */
+  @Prop() value!: string;
   /** Text put in the left of switch */
   @Prop() labelLeft: string;
   /** Text put in the right of switch */
@@ -15,12 +15,12 @@ export class Switch implements ComponentInterface {
   /** Default value of switch when component is rendered the first time */
   @Prop() checked = false;
   @State() checkedState = this.checked;
-  /** Event triggered any time user change the state of the switch putting in the payload name and status */
+  /** Event triggered any time user change the state of the switch putting in the payload value and status */
   @Event() changeSwitchCallback: any;
 
   handleChangeState() {
     this.checkedState = !this.checkedState;
-    this.changeSwitchCallback.emit({ name: this.name, checked: this.checkedState });
+    this.changeSwitchCallback.emit({ value: this.value, checked: this.checkedState });
   }
 
   render() {
@@ -29,7 +29,7 @@ export class Switch implements ComponentInterface {
         <input
           type="checkbox"
           id="switch"
-          name={this.name}
+          name={this.value}
           onChange={this.handleChangeState.bind(this)}
           checked={this.checked}
         />

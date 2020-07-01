@@ -25,8 +25,10 @@ export const Basic = () => {
     console.log('radioHandler', value);
   }
 
+  window.addEventListener('radioGroupCallback', (data) => console.log(data));
+
   return html`
-    <we-radio-group name=${name} change-callback=${radioHandler}>
+    <we-radio-group name=${name}>
       <we-radio value=${radio1}>${radio1}</we-radio>
       <we-radio checked=${checked} disabled=${disabled} value=${radio2}>${radio2}</we-radio>
       <we-radio value=${radio3}>${radio3}</we-radio>

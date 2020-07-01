@@ -46,7 +46,7 @@ export const Basic = () => {
       <we-chips value=${value1} src-img-left=${image1} src-img-right=${image2} label=${label1} remove-left=${removeLeft} is-selectable=${isSelectable}></we-chips>
       <we-chips value=${value2} src-img-left=${image1} src-img-right=${image2} label=${label2} remove-left=${removeLeft} is-selectable=${isSelectable}>></we-chips>
       <we-chips value=${value3} src-img-left=${image1} src-img-right=${image2} label=${label3} remove-left=${removeLeft} is-selectable=${isSelectable}>></we-chips>
-      <we-chips-group/>
+      </we-chips-group>
     <style>
       html {
         ${cssVariables}
