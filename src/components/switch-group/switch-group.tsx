@@ -7,11 +7,12 @@ import {
   State,
   Element,
   Listen,
-  Event, EventEmitter
+  Event,
+  EventEmitter
 } from '@stencil/core';
 
 export interface SwitchValue {
-  name: string;
+  value: string;
   children: Array<any>;
 }
 
@@ -25,27 +26,30 @@ export class SwitchGroup implements ComponentInterface {
   /** Name that identify this switch group */
   @Prop() value!: string;
   /** Function called when a switch inside change it's state */
-  @Event() changeSwitchCallback: EventEmitter<SwitchValue>;
-  @State() childrenState: any = {};
+  @Event() switchGroupCallback: EventEmitter<SwitchValue>;
+  @State() childrenState: any = [];
 
-  @Listen('changeSwitchCallback')
+  @Listen('switchCallback')
   changeSwitchCallbackHandler(prop) {
     const { value, checked } = prop.detail;
-    if (this.childrenState[value] != checked) {
-      this.childrenState[value] = checked;
-      this.changeSwitchCallback.emit({ value: this.value, children: this.childrenState });
-    }
+    this.childrenState.forEach((child) => {
+      if (child['value'] == value) {
+        child['checked'] = checked;
+      }
+    });
+    this.switchGroupCallback.emit({ value: this.value, children: this.childrenState });
   }
 
   componentDidLoad() {
     const items = this.el.querySelectorAll(':scope > we-switch');
-    const children = {};
     items.forEach((i) => {
+      const child = {};
       const value = i.getAttribute('value');
+      child['value'] = value;
       const checked = i.getAttribute('checked');
-      children[value] = checked === 'false' ? false : true;
+      child['checked'] = checked === 'false' ? false : true;
+      this.childrenState.push(child);
     });
-    this.childrenState = children;
   }
 
   render() {

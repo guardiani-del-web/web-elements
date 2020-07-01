@@ -16,11 +16,11 @@ export class Switch implements ComponentInterface {
   @Prop() checked = false;
   @State() checkedState = this.checked;
   /** Event triggered any time user change the state of the switch putting in the payload value and status */
-  @Event() changeSwitchCallback: any;
+  @Event() switchCallback: any;
 
   handleChangeState() {
     this.checkedState = !this.checkedState;
-    this.changeSwitchCallback.emit({ value: this.value, checked: this.checkedState });
+    this.switchCallback.emit({ value: this.value, checked: this.checkedState });
   }
 
   render() {

@@ -1,4 +1,15 @@
-import { Component, ComponentInterface, Host, h, Prop, Listen, Element, Event, EventEmitter } from '@stencil/core';
+import {
+  Component,
+  ComponentInterface,
+  Host,
+  h,
+  Prop,
+  Listen,
+  Element,
+  State,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 
 export interface RadioValue {
   value: string;
