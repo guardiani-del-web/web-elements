@@ -24,10 +24,10 @@ export const Basic = () => {
   const checkbox2 = text('Label checkbox2', 'Apple', KNOBS_LIVE);
   const checkbox3 = text('Label checkbox3', 'Pear', KNOBS_LIVE);
 
-  window.addEventListener('checkboxGroupCallback', (data) => console.log(data));
+  window.addEventListener('checkboxGroupCallback', (data) => console.log("checkboxGroupCallback",data));
 
   return html`
-    <we-checkbox-group name=${name}>
+    <we-checkbox-group value=${name}>
       <we-checkbox value=${checkbox1}>${checkbox1}</we-checkbox>
       <we-checkbox checked=${checked} disabled=${disabled} value=${checkbox2}>${checkbox2}</we-checkbox>
       <we-checkbox value=${checkbox3}>${checkbox3}</we-checkbox>

@@ -13,7 +13,7 @@ import {
 
 export interface CheckboxValue {
   value: string;
-  checkedItems: Array<any>;
+  children: Array<any>;
 }
 
 @Component({
@@ -26,25 +26,30 @@ export class CheckboxGroup implements ComponentInterface {
   @Prop() value!: string;
   /** Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed */
   @Event() checkboxGroupCallback: EventEmitter<CheckboxValue>;
-  @State() checkedItems: Array<any>;
-
-  constructor() {
-    this.checkedItems = [];
-  }
+  @State() children = [];
 
   @Listen('checkboxCallback')
-  checkboxCallbackHandler(event: CustomEvent) {
-    const value = event.detail;
+  checkboxCallbackHandler(prop) {
+    const { value, checked } = prop.detail;
+    this.children.forEach((child) => {
+      if (child['value'] == value) {
+        child['checked'] = checked;
+      }
+    });
+    console.log('children', this.children);
+    this.checkboxGroupCallback.emit({ value: this.value, children: this.children });
+  }
 
-    const getCheckedIndex = this.checkedItems.findIndex((item) => item.value === value);
-
-    if (getCheckedIndex === -1) {
-      this.checkedItems.push(value);
-    } else {
-      this.checkedItems.splice(getCheckedIndex, 1);
-    }
-
-    this.checkboxGroupCallback.emit({ value: this.value, checkedItems: this.checkedItems });
+  componentDidLoad() {
+    const items = this.el.querySelectorAll(':scope > we-checkbox');
+    items.forEach((i) => {
+      const child = {};
+      const value = i.getAttribute('value');
+      child['value'] = value;
+      const checked = i.getAttribute('checked');
+      child['checked'] = checked === 'true' ? true : false;
+      this.children.push(child);
+    });
   }
 
   render() {

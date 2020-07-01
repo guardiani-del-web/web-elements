@@ -25,7 +25,7 @@ export const Basic = () => {
     console.log('radioHandler', value);
   }
 
-  window.addEventListener('radioGroupCallback', (data) => console.log("radioGroupCallback listen",data));
+  window.addEventListener('radioGroupCallback', (data) => console.log("radioGroupCallback listen",data.detail));
 
   return html`
     <we-radio-group value=${value}>

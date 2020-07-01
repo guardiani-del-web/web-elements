@@ -15,8 +15,8 @@ export class Radio implements ComponentInterface {
   /** Event triggered when this radio button is checked/not checked returning the value prop for payload */
   @Event() radioCallback: EventEmitter;
 
-  handleChange(event: { target: HTMLInputElement }) {
-    this.radioCallback.emit(event.target.value);
+  handleChange() {
+    this.radioCallback.emit(this.value);
   }
 
   render() {
