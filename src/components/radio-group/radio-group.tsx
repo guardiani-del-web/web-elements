@@ -26,21 +26,29 @@ export class RadioGroup implements ComponentInterface {
   @Prop() value!: string;
   /** Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked */
   @Event() radioGroupCallback: EventEmitter<RadioValue>;
-  @State() children: Array<any>;
+  @State() children = [];
 
   @Listen('radioCallback')
-  radioCallbackHandler(event: CustomEvent) {
-    const details = event.detail;
-    const radios = this.el.querySelectorAll('we-radio');
-
-    radios.forEach((radio) => {
-      if (radio.getAttribute('value') === details) {
-        radio.setAttribute('checked', 'true');
-      } else {
-        radio.setAttribute('checked', 'false');
+  radioCallbackHandler(prop) {
+    const { value, checked } = prop.detail;
+    this.children.forEach((child) => {
+      if (child['value'] == value) {
+        child['checked'] = checked;
       }
     });
     this.radioGroupCallback.emit({ value: this.value, children: this.children });
+  }
+
+  componentDidLoad() {
+    const radios = this.el.querySelectorAll(':scope > we-radio');
+    radios.forEach((radio) => {
+      const child = {};
+      const value = radio.getAttribute('value');
+      child['value'] = value;
+      const checked = radio.getAttribute('checked');
+      child['checked'] = checked === 'false' ? false : true;
+      this.children.push(child);
+    });
   }
 
   render() {

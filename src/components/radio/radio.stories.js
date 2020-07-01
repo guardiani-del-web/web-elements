@@ -13,7 +13,7 @@ export default {
 };
 
 export const Basic = () => {
-  const name = text('Name', 'Country', KNOBS_ATTRIBUTES);
+  const value = text('Name', 'Country', KNOBS_ATTRIBUTES);
   const checked = boolean('Checked', true, KNOBS_ATTRIBUTES);
   const disabled = boolean('Disabled', false, KNOBS_ATTRIBUTES);
 
@@ -25,10 +25,10 @@ export const Basic = () => {
     console.log('radioHandler', value);
   }
 
-  window.addEventListener('radioGroupCallback', (data) => console.log(data));
+  window.addEventListener('radioGroupCallback', (data) => console.log("radioGroupCallback listen",data));
 
   return html`
-    <we-radio-group name=${name}>
+    <we-radio-group value=${value}>
       <we-radio value=${radio1}>${radio1}</we-radio>
       <we-radio checked=${checked} disabled=${disabled} value=${radio2}>${radio2}</we-radio>
       <we-radio value=${radio3}>${radio3}</we-radio>

@@ -27,17 +27,17 @@ export class SwitchGroup implements ComponentInterface {
   @Prop() value!: string;
   /** Function called when a switch inside change it's state */
   @Event() switchGroupCallback: EventEmitter<SwitchValue>;
-  @State() childrenState: any = [];
+  @State() children = [];
 
   @Listen('switchCallback')
   changeSwitchCallbackHandler(prop) {
     const { value, checked } = prop.detail;
-    this.childrenState.forEach((child) => {
+    this.children.forEach((child) => {
       if (child['value'] == value) {
         child['checked'] = checked;
       }
     });
-    this.switchGroupCallback.emit({ value: this.value, children: this.childrenState });
+    this.switchGroupCallback.emit({ value: this.value, children: this.children });
   }
 
   componentDidLoad() {
@@ -48,7 +48,7 @@ export class SwitchGroup implements ComponentInterface {
       child['value'] = value;
       const checked = i.getAttribute('checked');
       child['checked'] = checked === 'false' ? false : true;
-      this.childrenState.push(child);
+      this.children.push(child);
     });
   }
 
