@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-07-01T21:36:53",
+  "timestamp": "2020-07-02T07:18:07",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -584,7 +584,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--checked-background-color",
+          "annotation": "prop",
+          "docs": "Checked background color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-border-color",
+          "annotation": "prop",
+          "docs": "Checked border color <br> Default: #3F51B5"
+        },
+        {
+          "name": "--checked-color",
+          "annotation": "prop",
+          "docs": "Checked color <br> Default: #fff"
+        },
+        {
+          "name": "--checked-disabled-background-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled background color <br> Default: #aaa"
+        },
+        {
+          "name": "--checked-disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked and disabled border color <br> Default: #aaa"
+        },
+        {
+          "name": "--disabled-border-color",
+          "annotation": "prop",
+          "docs": "Checked disabled color <br> Default: #aaa"
+        },
+        {
+          "name": "--icon-border",
+          "annotation": "prop",
+          "docs": "Icon border <br> Default: 1px solid #212121"
+        },
+        {
+          "name": "--icon-border-radius",
+          "annotation": "prop",
+          "docs": "Icon border radius <br> Default: 0.2em"
+        },
+        {
+          "name": "--icon-content",
+          "annotation": "prop",
+          "docs": "Icon content <br> Default: \"\\2714\""
+        },
+        {
+          "name": "--icon-heigth",
+          "annotation": "prop",
+          "docs": "Icon heigth <br> Default: 1em"
+        },
+        {
+          "name": "--icon-margin",
+          "annotation": "prop",
+          "docs": "Icon margin <br> Default: 0 0.3em 0 0"
+        },
+        {
+          "name": "--icon-padding",
+          "annotation": "prop",
+          "docs": "Icon padding <br> Default: 0 0 0.3em 0.2em"
+        },
+        {
+          "name": "--icon-width",
+          "annotation": "prop",
+          "docs": "Icon width <br> Default: 1em"
+        },
+        {
+          "name": "--label-margin",
+          "annotation": "prop",
+          "docs": "Margin label <br> Default: 0.2em"
+        },
+        {
+          "name": "--label-padding",
+          "annotation": "prop",
+          "docs": "Padding label <br> Default: 0.2em"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -944,12 +1020,12 @@
       "usage": {},
       "props": [
         {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this chips group",
+          "docs": "Value that identify this chips group",
           "docsTags": [],
           "values": [
             {
@@ -958,42 +1034,20 @@
           ],
           "optional": false,
           "required": true
-        },
-        {
-          "name": "removeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "remove-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is removed",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "selectCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "select-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is selected",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "chipsGroupCallback",
+          "detail": "ChipsValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "styles": [
         {
           "name": "--align-items",
@@ -2139,7 +2193,83 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--after--background",
+          "annotation": "prop",
+          "docs": "Background of button switch <br> Default: rgba(255, 255, 255, 1)"
+        },
+        {
+          "name": "--after--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of button switch <br> Default: 50%"
+        },
+        {
+          "name": "--after--height",
+          "annotation": "prop",
+          "docs": "Height of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--after--left",
+          "annotation": "prop",
+          "docs": "Distance from left of icon switch <br> Default: 0.313em"
+        },
+        {
+          "name": "--after--top",
+          "annotation": "prop",
+          "docs": "Distance from top of button switch <br> Default: 0.22em"
+        },
+        {
+          "name": "--after--transition",
+          "annotation": "prop",
+          "docs": "Transition options about the changement of button switch <br> Default: 0.3s"
+        },
+        {
+          "name": "--after--width",
+          "annotation": "prop",
+          "docs": "Width of button switch <br> Default: 1em"
+        },
+        {
+          "name": "--background-checked",
+          "annotation": "prop",
+          "docs": "Background color of switch when change from initial condition <br> Default: #3F51B5"
+        },
+        {
+          "name": "--container--font-size",
+          "annotation": "prop",
+          "docs": "Font size of labels inside the switch <br> Default: 2em"
+        },
+        {
+          "name": "--container--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of labels inside the switch <br> Default: bold"
+        },
+        {
+          "name": "--container--height",
+          "annotation": "prop",
+          "docs": "Height of container <br> Default: 1.5em"
+        },
+        {
+          "name": "--container--width",
+          "annotation": "prop",
+          "docs": "Width of container <br> Default: 3em"
+        },
+        {
+          "name": "--switch--background",
+          "annotation": "prop",
+          "docs": "Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)"
+        },
+        {
+          "name": "--switch--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of switch <br> Default: 6.250em"
+        },
+        {
+          "name": "--switch--cursor",
+          "annotation": "prop",
+          "docs": "Cursor on switch <br> Default: pointer"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],
@@ -2183,7 +2313,28 @@
           "docsTags": []
         }
       ],
-      "styles": [],
+      "styles": [
+        {
+          "name": "--align-items",
+          "annotation": "prop",
+          "docs": "Align items of switch group <br> Default: unset"
+        },
+        {
+          "name": "--display",
+          "annotation": "prop",
+          "docs": "Display of switch group <br> Default: flex"
+        },
+        {
+          "name": "--flex-direction",
+          "annotation": "prop",
+          "docs": "Flex direction of switch group <br> Default: row"
+        },
+        {
+          "name": "--justify-content",
+          "annotation": "prop",
+          "docs": "Justify content of switch grou <br> Default: unset"
+        }
+      ],
       "slots": [],
       "dependents": [],
       "dependencies": [],

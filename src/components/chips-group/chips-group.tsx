@@ -1,5 +1,20 @@
-import { ComponentInterface, Component, Host, h, State, Listen, Prop } from '@stencil/core';
-import { parseFunction } from '@utils';
+import {
+  ComponentInterface,
+  Component,
+  Host,
+  h,
+  State,
+  Listen,
+  Prop,
+  Event,
+  Element,
+  EventEmitter
+} from '@stencil/core';
+
+export interface ChipsValue {
+  value: string;
+  children: Array<any>;
+}
 
 @Component({
   tag: 'we-chips-group',
@@ -7,43 +22,42 @@ import { parseFunction } from '@utils';
   shadow: true
 })
 export class ChipsGroup implements ComponentInterface {
-  /** Name that identify this chips group */
-  @Prop() name!: string;
-  @State() selectedChips = [];
-  /** Function called when a chip is selected */
-  @Prop() selectCallback: any;
-  @State() removedChips = [];
-  /** Function called when a chip is removed */
-  @Prop() removeCallback: any;
+  @Element() el: HTMLWeChipsGroupElement;
+  /** Value that identify this chips group */
+  @Prop() value!: string;
+  /* Event triggered when a chipd is added in the gruop, a chips is selected or removed passing the value of the group and an array with children state*/
+  @Event() chipsGroupCallback: EventEmitter<ChipsValue>;
+  @State() children = [];
 
   @Listen('removeChipsCallback')
-  removeCallbackHandler(value) {
-    this.removeCallback = parseFunction(this.removeCallback);
-    this.removedChips.push({ name: this.name, value });
-    this.removeCallback(this.removedChips);
-  }
-
-  @Listen('addChipsCallback')
-  addCallbackHandler(value) {
-    const getRemovedIndex = this.removedChips.findIndex((item) => item.value === value);
+  removeCallbackHandler(prop) {
+    const value = prop.detail;
+    const getRemovedIndex = this.children.findIndex((item) => item.value === value);
     if (getRemovedIndex >= 0) {
-      this.removedChips.splice(getRemovedIndex, 1);
+      this.children.splice(getRemovedIndex, 1);
     }
+    this.chipsGroupCallback.emit({ value: this.value, children: this.children });
   }
 
   @Listen('selectChipsCallback')
   selectCallbackHandler(prop) {
     console.log('listen selectChipsCallback', prop);
-    const detail = prop.detail;
-    this.selectCallback = parseFunction(this.selectCallback);
-    if (detail.isSelected) this.selectedChips.push({ name: this.name, value: detail.value });
-    else {
-      const getSelectedIndex = this.selectedChips.findIndex((item) => item.value === detail.value);
-      if (getSelectedIndex >= 0) {
-        this.selectedChips.splice(getSelectedIndex, 1);
-      }
-    }
-    this.selectCallback(this.selectedChips);
+    const { value, isSelected } = prop.detail;
+    this.children.forEach((child) => {
+      if (child['value'] === value) child['isSelected'] = isSelected;
+    });
+    this.chipsGroupCallback.emit({ value: this.value, children: this.children });
+  }
+
+  componentDidLoad() {
+    const items = this.el.querySelectorAll(':scope > we-chips');
+    items.forEach((i) => {
+      const child = {};
+      const value = i.getAttribute('value');
+      child['value'] = value;
+      child['isSelected'] = false;
+      this.children.push(child);
+    });
   }
 
   render() {

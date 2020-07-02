@@ -7,11 +7,16 @@
 
 ## Properties
 
-| Property            | Attribute         | Description                             | Type     | Default     |
-| ------------------- | ----------------- | --------------------------------------- | -------- | ----------- |
-| `name` _(required)_ | `name`            | Name that identify this chips group     | `string` | `undefined` |
-| `removeCallback`    | `remove-callback` | Function called when a chip is removed  | `any`    | `undefined` |
-| `selectCallback`    | `select-callback` | Function called when a chip is selected | `any`    | `undefined` |
+| Property             | Attribute | Description                          | Type     | Default     |
+| -------------------- | --------- | ------------------------------------ | -------- | ----------- |
+| `value` _(required)_ | `value`   | Value that identify this chips group | `string` | `undefined` |
+
+
+## Events
+
+| Event                | Description | Type                      |
+| -------------------- | ----------- | ------------------------- |
+| `chipsGroupCallback` |             | `CustomEvent<ChipsValue>` |
 
 
 ## CSS Custom Properties
