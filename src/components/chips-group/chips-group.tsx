@@ -41,7 +41,6 @@ export class ChipsGroup implements ComponentInterface {
 
   @Listen('selectChipsCallback')
   selectCallbackHandler(prop) {
-    console.log('listen selectChipsCallback', prop);
     const { value, isSelected } = prop.detail;
     this.children.forEach((child) => {
       if (child['value'] === value) child['isSelected'] = isSelected;

@@ -56,12 +56,11 @@ export class Chips implements ComponentInterface {
     if (this.isVisible) {
       if (this.isSelectable) {
         this.isSelected = !this.isSelected;
-        this.selectChipsCallback.emit({ value: this.value, isSelected: this.isSelected });
       }
     } else if (this.isSelectable) {
       this.isSelected = false;
-      this.selectChipsCallback.emit({ value: this.value, isSelected: this.isSelected });
     }
+    this.selectChipsCallback.emit({ value: this.value, isSelected: this.isSelected });
   }
 
   render() {
