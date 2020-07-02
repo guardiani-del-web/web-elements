@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                   | Description                                                                                                                          | Type                         |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- |
-| `checkboxGroupCallback` | Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed | `CustomEvent<CheckboxValue>` |
+| Event                   | Description                                                                                                                          | Type                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| `checkboxGroupCallback` | Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed | `CustomEvent<CheckboxGroupValue>` |
 
 
 ----------------------------------------------

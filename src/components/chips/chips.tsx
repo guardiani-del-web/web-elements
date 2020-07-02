@@ -9,6 +9,15 @@ import {
   EventEmitter
 } from '@stencil/core';
 
+export interface ChipsValueRemove {
+  value: string;
+}
+
+export interface ChipsValueSelect {
+  value: string;
+  isSelected: boolean;
+}
+
 @Component({
   tag: 'we-chips',
   styleUrl: 'chips.scss',
@@ -29,17 +38,17 @@ export class Chips implements ComponentInterface {
   @Prop() removeRight: boolean;
   @State() isVisible = true;
   /** Event triggered when the chips is removed */
-  @Event() removeChipsCallback: EventEmitter;
+  @Event() removeChipsCallback: EventEmitter<ChipsValueRemove>;
   /** If true user can select the chips and selectChipsCallback event is triggered */
   @Prop() isSelectable: boolean;
   @State() isSelected: boolean;
   /** Event triggered when the chips is selected */
-  @Event() selectChipsCallback: EventEmitter;
+  @Event() selectChipsCallback: EventEmitter<ChipsValueSelect>;
 
   handleRemoveChips(side) {
     if ((this.removeRight && side === 'right') || (this.removeLeft && side === 'left')) {
       this.isVisible = !this.isVisible;
-      this.removeChipsCallback.emit(this.value);
+      this.removeChipsCallback.emit({ value: this.value });
     }
   }
 

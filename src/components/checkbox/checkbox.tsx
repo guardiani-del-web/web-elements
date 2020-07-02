@@ -9,6 +9,11 @@ import {
   State
 } from '@stencil/core';
 
+export interface CheckboxValue {
+  value: string;
+  checked: boolean;
+}
+
 @Component({
   tag: 'we-checkbox',
   styleUrl: 'checkbox.scss',
@@ -23,7 +28,7 @@ export class Checkbox implements ComponentInterface {
   @Prop() checked: boolean;
   @State() checkedState = this.checked;
   /** Event triggered when this checkbox is checked/not checked returning the value prop for payload */
-  @Event() checkboxCallback: EventEmitter;
+  @Event() checkboxCallback: EventEmitter<CheckboxValue>;
 
   handleChange() {
     this.checkedState = !this.checkedState;

@@ -1,5 +1,9 @@
 import { Component, ComponentInterface, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 
+export interface RadioValue {
+  value: string;
+}
+
 @Component({
   tag: 'we-radio',
   styleUrl: 'radio.scss',
@@ -13,10 +17,10 @@ export class Radio implements ComponentInterface {
   /** identify if this radio button is checked or not when the page is loaded*/
   @Prop() checked: boolean;
   /** Event triggered when this radio button is checked/not checked returning the value prop for payload */
-  @Event() radioCallback: EventEmitter;
+  @Event() radioCallback: EventEmitter<RadioValue>;
 
   handleChange() {
-    this.radioCallback.emit(this.value);
+    this.radioCallback.emit({ value: this.value });
   }
 
   render() {

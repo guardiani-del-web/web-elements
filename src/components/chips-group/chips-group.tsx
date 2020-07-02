@@ -25,13 +25,13 @@ export class ChipsGroup implements ComponentInterface {
   @Element() el: HTMLWeChipsGroupElement;
   /** Value that identify this chips group */
   @Prop() value!: string;
-  /* Event triggered when a chipd is added in the gruop, a chips is selected or removed passing the value of the group and an array with children state*/
+  /* Event triggered when a chips is added in the gruop, a chips is selected or removed passing the value of the group and an array with children state*/
   @Event() chipsGroupCallback: EventEmitter<ChipsGroupValue>;
   @State() children = [];
 
   @Listen('removeChipsCallback')
   removeCallbackHandler(prop) {
-    const value = prop.detail;
+    const { value } = prop.detail;
     const getRemovedIndex = this.children.findIndex((item) => item.value === value);
     if (getRemovedIndex >= 0) {
       this.children.splice(getRemovedIndex, 1);

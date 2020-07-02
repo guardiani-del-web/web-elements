@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                 | Description                                            | Type                       |
-| --------------------- | ------------------------------------------------------ | -------------------------- |
-| `switchGroupCallback` | Function called when a switch inside change it's state | `CustomEvent<SwitchValue>` |
+| Event                 | Description                                            | Type                            |
+| --------------------- | ------------------------------------------------------ | ------------------------------- |
+| `switchGroupCallback` | Function called when a switch inside change it's state | `CustomEvent<SwitchGroupValue>` |
 
 
 ## CSS Custom Properties

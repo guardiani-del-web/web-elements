@@ -36,7 +36,6 @@ export class CheckboxGroup implements ComponentInterface {
         child['checked'] = checked;
       }
     });
-    console.log('children', this.children);
     this.checkboxGroupCallback.emit({ value: this.value, children: this.children });
   }
 

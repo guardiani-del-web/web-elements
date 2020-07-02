@@ -17,9 +17,9 @@
 
 ## Events
 
-| Event            | Description                                                                                          | Type               |
-| ---------------- | ---------------------------------------------------------------------------------------------------- | ------------------ |
-| `switchCallback` | Event triggered any time user change the state of the switch putting in the payload value and status | `CustomEvent<any>` |
+| Event            | Description                                                                                          | Type                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------- | -------------------------- |
+| `switchCallback` | Event triggered any time user change the state of the switch putting in the payload value and status | `CustomEvent<SwitchValue>` |
 
 
 ## CSS Custom Properties

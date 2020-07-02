@@ -1,4 +1,10 @@
 import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@stencil/core';
+import { EventEmitter } from 'dist-storybook/dist/types/stencil-public-runtime';
+
+export interface SwitchValue {
+  value: string;
+  checked: boolean;
+}
 
 @Component({
   tag: 'we-switch',
@@ -16,7 +22,7 @@ export class Switch implements ComponentInterface {
   @Prop() checked = false;
   @State() checkedState = this.checked;
   /** Event triggered any time user change the state of the switch putting in the payload value and status */
-  @Event() switchCallback: any;
+  @Event() switchCallback: EventEmitter<SwitchValue>;
 
   handleChangeState() {
     this.checkedState = !this.checkedState;

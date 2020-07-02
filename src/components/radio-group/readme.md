@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                | Description                                                                                                                              | Type                      |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| `radioGroupCallback` | Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked | `CustomEvent<RadioValue>` |
+| Event                | Description                                                                                                                              | Type                           |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `radioGroupCallback` | Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked | `CustomEvent<RadioGroupValue>` |
 
 
 ----------------------------------------------

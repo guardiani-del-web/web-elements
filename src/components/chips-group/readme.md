@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                | Description | Type                      |
-| -------------------- | ----------- | ------------------------- |
-| `chipsGroupCallback` |             | `CustomEvent<ChipsValue>` |
+| Event                | Description | Type                           |
+| -------------------- | ----------- | ------------------------------ |
+| `chipsGroupCallback` |             | `CustomEvent<ChipsGroupValue>` |
 
 
 ## CSS Custom Properties

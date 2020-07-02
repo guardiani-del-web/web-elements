@@ -30,7 +30,7 @@ export class RadioGroup implements ComponentInterface {
 
   @Listen('radioCallback')
   radioCallbackHandler(prop) {
-    const value = prop.detail;
+    const { value } = prop.detail;
     this.children.forEach((child) => {
       if (child['value'] == value) child['checked'] = true;
       else child['checked'] = false;

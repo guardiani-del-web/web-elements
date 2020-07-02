@@ -5,10 +5,14 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import { CheckboxValue } from './components/checkbox-group/checkbox-group';
-import { ChipsValue } from './components/chips-group/chips-group';
-import { RadioValue } from './components/radio-group/radio-group';
-import { SwitchValue } from './components/switch-group/switch-group';
+import { CheckboxValue } from './components/checkbox/checkbox';
+import { CheckboxGroupValue } from './components/checkbox-group/checkbox-group';
+import { ChipsValueRemove, ChipsValueSelect } from './components/chips/chips';
+import { ChipsGroupValue } from './components/chips-group/chips-group';
+import { RadioValue } from './components/radio/radio';
+import { RadioGroupValue } from './components/radio-group/radio-group';
+import { SwitchValue } from './components/switch/switch';
+import { SwitchGroupValue } from './components/switch-group/switch-group';
 export namespace Components {
   interface WeAccordion {
     /**
@@ -463,7 +467,7 @@ declare namespace LocalJSX {
     /**
      * Event triggered when this checkbox is checked/not checked returning the value prop for payload
      */
-    onCheckboxCallback?: (event: CustomEvent<any>) => void;
+    onCheckboxCallback?: (event: CustomEvent<CheckboxValue>) => void;
     /**
      * Value returned when the input is submitted if this checkbox is checked
      */
@@ -473,7 +477,7 @@ declare namespace LocalJSX {
     /**
      * Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed
      */
-    onCheckboxGroupCallback?: (event: CustomEvent<CheckboxValue>) => void;
+    onCheckboxGroupCallback?: (event: CustomEvent<CheckboxGroupValue>) => void;
     /**
      * Value that identify this checkbox group
      */
@@ -491,11 +495,11 @@ declare namespace LocalJSX {
     /**
      * Event triggered when the chips is removed
      */
-    onRemoveChipsCallback?: (event: CustomEvent<any>) => void;
+    onRemoveChipsCallback?: (event: CustomEvent<ChipsValueRemove>) => void;
     /**
      * Event triggered when the chips is selected
      */
-    onSelectChipsCallback?: (event: CustomEvent<any>) => void;
+    onSelectChipsCallback?: (event: CustomEvent<ChipsValueSelect>) => void;
     /**
      * If true the chips will be removed when user click on left image inside chips and removeChipsCallback event is triggered
      */
@@ -518,7 +522,7 @@ declare namespace LocalJSX {
     value: string;
   }
   interface WeChipsGroup {
-    onChipsGroupCallback?: (event: CustomEvent<ChipsValue>) => void;
+    onChipsGroupCallback?: (event: CustomEvent<ChipsGroupValue>) => void;
     /**
      * Value that identify this chips group
      */
@@ -600,7 +604,7 @@ declare namespace LocalJSX {
     /**
      * Event triggered when this radio button is checked/not checked returning the value prop for payload
      */
-    onRadioCallback?: (event: CustomEvent<any>) => void;
+    onRadioCallback?: (event: CustomEvent<RadioValue>) => void;
     /**
      * Value returned when the input is submitted if this radio button is checked
      */
@@ -610,7 +614,7 @@ declare namespace LocalJSX {
     /**
      * Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked
      */
-    onRadioGroupCallback?: (event: CustomEvent<RadioValue>) => void;
+    onRadioGroupCallback?: (event: CustomEvent<RadioGroupValue>) => void;
     /**
      * Value that identify this radio group
      */
@@ -658,7 +662,7 @@ declare namespace LocalJSX {
     /**
      * Event triggered any time user change the state of the switch putting in the payload value and status
      */
-    onSwitchCallback?: (event: CustomEvent<any>) => void;
+    onSwitchCallback?: (event: CustomEvent<SwitchValue>) => void;
     /**
      * Value of switch, put in the payload of changeCallback event
      */
@@ -668,7 +672,7 @@ declare namespace LocalJSX {
     /**
      * Function called when a switch inside change it's state
      */
-    onSwitchGroupCallback?: (event: CustomEvent<SwitchValue>) => void;
+    onSwitchGroupCallback?: (event: CustomEvent<SwitchGroupValue>) => void;
     /**
      * Name that identify this switch group
      */
