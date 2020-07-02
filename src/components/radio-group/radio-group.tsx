@@ -11,7 +11,7 @@ import {
   EventEmitter
 } from '@stencil/core';
 
-export interface RadioValue {
+export interface RadioGroupValue {
   value: string;
   children: Array<any>;
 }
@@ -25,7 +25,7 @@ export class RadioGroup implements ComponentInterface {
   /** Value that identify this radio group */
   @Prop() value!: string;
   /** Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked */
-  @Event() radioGroupCallback: EventEmitter<RadioValue>;
+  @Event() radioGroupCallback: EventEmitter<RadioGroupValue>;
   @State() children = [];
 
   @Listen('radioCallback')

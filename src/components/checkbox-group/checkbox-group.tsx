@@ -11,7 +11,7 @@ import {
   EventEmitter
 } from '@stencil/core';
 
-export interface CheckboxValue {
+export interface CheckboxGroupValue {
   value: string;
   children: Array<any>;
 }
@@ -25,7 +25,7 @@ export class CheckboxGroup implements ComponentInterface {
   /** Value that identify this checkbox group */
   @Prop() value!: string;
   /** Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed */
-  @Event() checkboxGroupCallback: EventEmitter<CheckboxValue>;
+  @Event() checkboxGroupCallback: EventEmitter<CheckboxGroupValue>;
   @State() children = [];
 
   @Listen('checkboxCallback')

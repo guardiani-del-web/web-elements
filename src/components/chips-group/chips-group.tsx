@@ -11,7 +11,7 @@ import {
   EventEmitter
 } from '@stencil/core';
 
-export interface ChipsValue {
+export interface ChipsGroupValue {
   value: string;
   children: Array<any>;
 }
@@ -26,7 +26,7 @@ export class ChipsGroup implements ComponentInterface {
   /** Value that identify this chips group */
   @Prop() value!: string;
   /* Event triggered when a chipd is added in the gruop, a chips is selected or removed passing the value of the group and an array with children state*/
-  @Event() chipsGroupCallback: EventEmitter<ChipsValue>;
+  @Event() chipsGroupCallback: EventEmitter<ChipsGroupValue>;
   @State() children = [];
 
   @Listen('removeChipsCallback')

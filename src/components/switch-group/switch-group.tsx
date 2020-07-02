@@ -11,7 +11,7 @@ import {
   EventEmitter
 } from '@stencil/core';
 
-export interface SwitchValue {
+export interface SwitchGroupValue {
   value: string;
   children: Array<any>;
 }
@@ -26,7 +26,7 @@ export class SwitchGroup implements ComponentInterface {
   /** Name that identify this switch group */
   @Prop() value!: string;
   /** Function called when a switch inside change it's state */
-  @Event() switchGroupCallback: EventEmitter<SwitchValue>;
+  @Event() switchGroupCallback: EventEmitter<SwitchGroupValue>;
   @State() children = [];
 
   @Listen('switchCallback')
