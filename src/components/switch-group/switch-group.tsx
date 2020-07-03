@@ -6,9 +6,15 @@ import {
   Prop,
   State,
   Element,
-  Listen
+  Listen,
+  Event,
+  EventEmitter
 } from '@stencil/core';
-import { parseFunction } from '@utils';
+
+export interface SwitchGroupValue {
+  value: string;
+  children: Array<any>;
+}
 
 @Component({
   tag: 'we-switch-group',
@@ -18,36 +24,32 @@ import { parseFunction } from '@utils';
 export class SwitchGroup implements ComponentInterface {
   @Element() el: HTMLWeSwitchGroupElement;
   /** Name that identify this switch group */
-  @Prop() name!: string;
+  @Prop() value!: string;
   /** Function called when a switch inside change it's state */
-  @Prop() changeSwitchCallback: any;
-  @State() childrenState: any = {};
+  @Event() switchGroupCallback: EventEmitter<SwitchGroupValue>;
+  @State() children = [];
 
-  findAllChildren() {
-    const items = this.el.querySelectorAll(':scope > we-switch');
-    const children = {};
-    items.forEach((i) => {
-      const name = i.getAttribute('name');
-      const checked = i.getAttribute('checked');
-      children[name] = checked === 'false' ? false : true;
-    });
-    this.childrenState = { name: this.name, children };
-    this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-    this.changeSwitchCallback(this.childrenState);
-  }
-
-  @Listen('changeSwitchCallback')
+  @Listen('switchCallback')
   changeSwitchCallbackHandler(prop) {
-    const { name, checked } = prop.detail;
-    if (this.childrenState.children[name] != checked) {
-      this.childrenState.children[name] = checked;
-      this.changeSwitchCallback = parseFunction(this.changeSwitchCallback);
-      this.changeSwitchCallback(this.childrenState);
-    }
+    const { value, checked } = prop.detail;
+    this.children.forEach((child) => {
+      if (child['value'] == value) {
+        child['checked'] = checked;
+      }
+    });
+    this.switchGroupCallback.emit({ value: this.value, children: this.children });
   }
 
   componentDidLoad() {
-    this.findAllChildren();
+    const items = this.el.querySelectorAll(':scope > we-switch');
+    items.forEach((i) => {
+      const child = {};
+      const value = i.getAttribute('value');
+      child['value'] = value;
+      const checked = i.getAttribute('checked');
+      child['checked'] = checked === 'false' ? false : true;
+      this.children.push(child);
+    });
   }
 
   render() {

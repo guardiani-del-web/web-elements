@@ -23,9 +23,9 @@
 
 ## Events
 
-| Event           | Description                                                                                        | Type               |
-| --------------- | -------------------------------------------------------------------------------------------------- | ------------------ |
-| `radioCallback` | Event triggered when this radio button is checked/not checked returning the value prop for payload | `CustomEvent<any>` |
+| Event           | Description                                                                                        | Type                      |
+| --------------- | -------------------------------------------------------------------------------------------------- | ------------------------- |
+| `radioCallback` | Event triggered when this radio button is checked/not checked returning the value prop for payload | `CustomEvent<RadioValue>` |
 
 
 ----------------------------------------------

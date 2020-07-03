@@ -22,9 +22,9 @@
 
 ## Events
 
-| Event              | Description                                                                                    | Type               |
-| ------------------ | ---------------------------------------------------------------------------------------------- | ------------------ |
-| `checkboxCallback` | Event triggered when this checkbox is checked/not checked returning the value prop for payload | `CustomEvent<any>` |
+| Event              | Description                                                                                    | Type                         |
+| ------------------ | ---------------------------------------------------------------------------------------------- | ---------------------------- |
+| `checkboxCallback` | Event triggered when this checkbox is checked/not checked returning the value prop for payload | `CustomEvent<CheckboxValue>` |
 
 
 ## CSS Custom Properties
