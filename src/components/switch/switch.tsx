@@ -1,5 +1,13 @@
-import { ComponentInterface, Component, Host, h, Prop, Event, State } from '@stencil/core';
-import { EventEmitter } from 'dist-storybook/dist/types/stencil-public-runtime';
+import {
+  ComponentInterface,
+  Component,
+  Host,
+  h,
+  Prop,
+  Event,
+  State,
+  EventEmitter
+} from '@stencil/core';
 
 export interface SwitchValue {
   value: string;
