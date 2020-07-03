@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-22T07:07:23",
+  "timestamp": "2020-07-02T21:18:18",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -576,7 +576,7 @@
       "events": [
         {
           "event": "checkboxCallback",
-          "detail": "any",
+          "detail": "CheckboxValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -667,7 +667,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\checkbox-group\\we-checkbox-group.tsx",
+      "filePath": "src\\components\\checkbox-group\\checkbox-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox-group",
       "readme": "# we-checkbox-group\r\n\r\n\r\n\r",
@@ -676,28 +676,12 @@
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this checkbox group",
+          "docs": "Value that identify this checkbox group",
           "docsTags": [],
           "values": [
             {
@@ -709,7 +693,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "checkboxGroupCallback",
+          "detail": "CheckboxGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed",
+          "docsTags": []
+        }
+      ],
       "styles": [],
       "slots": [],
       "dependents": [],
@@ -842,7 +836,7 @@
       "events": [
         {
           "event": "removeChipsCallback",
-          "detail": "any",
+          "detail": "ChipsValueRemove",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -851,7 +845,7 @@
         },
         {
           "event": "selectChipsCallback",
-          "detail": "any",
+          "detail": "ChipsValueSelect",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -1020,18 +1014,18 @@
       "filePath": "src\\components\\chips-group\\chips-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-chips-group",
-      "readme": "# we-chips-group\n\n\n",
+      "readme": "# we-chips-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this chips group",
+          "docs": "Value that identify this chips group",
           "docsTags": [],
           "values": [
             {
@@ -1040,42 +1034,20 @@
           ],
           "optional": false,
           "required": true
-        },
-        {
-          "name": "removeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "remove-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is removed",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "selectCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "select-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is selected",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "chipsGroupCallback",
+          "detail": "ChipsGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "styles": [
         {
           "name": "--align-items",
@@ -1900,7 +1872,7 @@
       "events": [
         {
           "event": "radioCallback",
-          "detail": "any",
+          "detail": "RadioValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -1924,28 +1896,12 @@
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this radio group",
+          "docs": "Value that identify this radio group",
           "docsTags": [],
           "values": [
             {
@@ -1957,7 +1913,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "radioGroupCallback",
+          "detail": "RadioGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
+          "docsTags": []
+        }
+      ],
       "styles": [],
       "slots": [],
       "dependents": [],
@@ -2199,12 +2165,12 @@
           "required": false
         },
         {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name of switch, put in the payload of changeCallback event",
+          "docs": "Value of switch, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
@@ -2218,12 +2184,12 @@
       "methods": [],
       "events": [
         {
-          "event": "changeSwitchCallback",
-          "detail": "any",
+          "event": "switchCallback",
+          "detail": "SwitchValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
+          "docs": "Event triggered any time user change the state of the switch putting in the payload value and status",
           "docsTags": []
         }
       ],
@@ -2313,32 +2279,16 @@
       "filePath": "src\\components\\switch-group\\switch-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-switch-group",
-      "readme": "# we-switch-group\n\n\n",
+      "readme": "# we-switch-group\r\n\r\n\r\n\r",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "changeSwitchCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-switch-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a switch inside change it's state",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
           "docs": "Name that identify this switch group",
           "docsTags": [],
@@ -2352,7 +2302,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "switchGroupCallback",
+          "detail": "SwitchGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Function called when a switch inside change it's state",
+          "docsTags": []
+        }
+      ],
       "styles": [
         {
           "name": "--align-items",
