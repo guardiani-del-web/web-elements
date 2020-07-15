@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-06-22T07:07:23",
+  "timestamp": "2020-07-03T18:55:17",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.2",
@@ -7,11 +7,11 @@
   },
   "components": [
     {
-      "filePath": "src\\components\\accordion\\accordion.tsx",
+      "filePath": "src/components/accordion/accordion.tsx",
       "encapsulation": "shadow",
       "tag": "we-accordion",
-      "readme": "# we-accordion\r\n\r\n```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>\r\n\r\n\r",
-      "docs": "```html\r\n<we-accordion-group>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 1</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n    <we-accordion>\r\n    <div slot=\"title\">Accordion 2</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n  <we-accordion>\r\n    <div slot=\"title\">Accordion 3</div>\r\n    <div slot=\"content\">\r\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n    </div>\r\n  </we-accordion>\r\n</we-accordion-group>\r\n```\r\n<br>",
+      "readme": "# we-accordion\n\n```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>\n\n",
+      "docs": "```html\n<we-accordion-group>\n  <we-accordion>\n    <div slot=\"title\">Accordion 1</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n    <we-accordion>\n    <div slot=\"title\">Accordion 2</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n  <we-accordion>\n    <div slot=\"title\">Accordion 3</div>\n    <div slot=\"content\">\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n    </div>\n  </we-accordion>\n</we-accordion-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -197,10 +197,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\accordion-group\\accordion-group.tsx",
+      "filePath": "src/components/accordion-group/accordion-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-accordion-group",
-      "readme": "# we-accordion-group\r\n\r\n\r\n\r",
+      "readme": "# we-accordion-group\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -231,10 +231,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\button\\button.tsx",
+      "filePath": "src/components/button/button.tsx",
       "encapsulation": "shadow",
       "tag": "we-button",
-      "readme": "# we-button\r\n\r\n\r\n\r",
+      "readme": "# we-button\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -367,11 +367,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\card\\card.tsx",
+      "filePath": "src/components/card/card.tsx",
       "encapsulation": "shadow",
       "tag": "we-card",
-      "readme": "# we-card\r\n\r\n```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```\r\n\r",
-      "docs": "```html\r\n     <we-card>\r\n      <div slot=\"title\">Title</div>\r\n      <div slot=\"subtitle\">Subtitle</div>\r\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\r\n    </we-card>\r\n```",
+      "readme": "# we-card\n\n```html\n     <we-card>\n      <div slot=\"title\">Title</div>\n      <div slot=\"subtitle\">Subtitle</div>\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\n    </we-card>\n```\n",
+      "docs": "```html\n     <we-card>\n      <div slot=\"title\">Title</div>\n      <div slot=\"subtitle\">Subtitle</div>\n      <div slot=\"texts\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>\n    </we-card>\n```",
       "docsTags": [],
       "usage": {},
       "props": [],
@@ -515,11 +515,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\checkbox\\checkbox.tsx",
+      "filePath": "src/components/checkbox/checkbox.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox",
-      "readme": "# we-checkbox\r\n\r\n```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>\r",
-      "docs": "```html\r\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\r\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\r\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\r\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\r\n</we-checkbox-group>\r\n```\r\n<br>",
+      "readme": "# we-checkbox\n\n```html\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
+      "docs": "```html\n<we-checkbox-group name=\"fruits\" change-callback=checkboxHandler>\n  <we-checkbox value=\"banana\">Banana</we-checkbox>\n  <we-checkbox value=\"apple\">Apple</we-checkbox>\n  <we-checkbox value=\"pear\">Pear</we-checkbox>\n</we-checkbox-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -576,7 +576,7 @@
       "events": [
         {
           "event": "checkboxCallback",
-          "detail": "any",
+          "detail": "CheckboxValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -667,37 +667,21 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\checkbox-group\\we-checkbox-group.tsx",
+      "filePath": "src/components/checkbox-group/checkbox-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-checkbox-group",
-      "readme": "# we-checkbox-group\r\n\r\n\r\n\r",
+      "readme": "# we-checkbox-group\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "Event triggered when a checkbox inside change its state that returning the name of checkbox group and the value of checkbox changed",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this checkbox group",
+          "docs": "Value that identify this checkbox group",
           "docsTags": [],
           "values": [
             {
@@ -709,7 +693,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "checkboxGroupCallback",
+          "detail": "CheckboxGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when a checkbox inside change its state that returning the value of checkbox group and the value of checkbox changed",
+          "docsTags": []
+        }
+      ],
       "styles": [],
       "slots": [],
       "dependents": [],
@@ -717,10 +711,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\chips\\chips.tsx",
+      "filePath": "src/components/chips/chips.tsx",
       "encapsulation": "shadow",
       "tag": "we-chips",
-      "readme": "# we-chips\r\n\r\n\r\n\r",
+      "readme": "# we-chips\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -842,7 +836,7 @@
       "events": [
         {
           "event": "removeChipsCallback",
-          "detail": "any",
+          "detail": "ChipsValueRemove",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -851,7 +845,7 @@
         },
         {
           "event": "selectChipsCallback",
-          "detail": "any",
+          "detail": "ChipsValueSelect",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -1017,7 +1011,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\chips-group\\chips-group.tsx",
+      "filePath": "src/components/chips-group/chips-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-chips-group",
       "readme": "# we-chips-group\n\n\n",
@@ -1026,12 +1020,12 @@
       "usage": {},
       "props": [
         {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this chips group",
+          "docs": "Value that identify this chips group",
           "docsTags": [],
           "values": [
             {
@@ -1040,42 +1034,20 @@
           ],
           "optional": false,
           "required": true
-        },
-        {
-          "name": "removeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "remove-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is removed",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "selectCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "select-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a chip is selected",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "chipsGroupCallback",
+          "detail": "ChipsGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
       "styles": [
         {
           "name": "--align-items",
@@ -1104,11 +1076,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\divider\\divider.tsx",
+      "filePath": "src/components/divider/divider.tsx",
       "encapsulation": "shadow",
       "tag": "we-divider",
-      "readme": "# we-divider\r\n```html\r\n<we-divider></we-divider>\r\n```\r\n\r\n\r",
-      "docs": "```html\r\n<we-divider></we-divider>\r\n```",
+      "readme": "# we-divider\n```html\n<we-divider></we-divider>\n```\n\n",
+      "docs": "```html\n<we-divider></we-divider>\n```",
       "docsTags": [],
       "usage": {},
       "props": [],
@@ -1147,10 +1119,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\dropdown-group\\dropdown-group.tsx",
+      "filePath": "src/components/dropdown-group/dropdown-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-dropdown-group",
-      "readme": "# we-dropdown-group\r\n\r\n\r\n\r",
+      "readme": "# we-dropdown-group\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1213,10 +1185,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\dropdown-item\\dropdown-item.tsx",
+      "filePath": "src/components/dropdown-item/dropdown-item.tsx",
       "encapsulation": "shadow",
       "tag": "we-dropdown-item",
-      "readme": "# we-dropdown-item\r\n\r\n\r\n\r",
+      "readme": "# we-dropdown-item\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1475,10 +1447,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\list\\list.tsx",
+      "filePath": "src/components/list/list.tsx",
       "encapsulation": "shadow",
       "tag": "we-list",
-      "readme": "# we-list\r\n\r\n\r\n\r",
+      "readme": "# we-list\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1528,10 +1500,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\list-item\\list-item.tsx",
+      "filePath": "src/components/list-item/list-item.tsx",
       "encapsulation": "shadow",
       "tag": "we-list-item",
-      "readme": "# we-list-item\r\n\r\n\r\n\r",
+      "readme": "# we-list-item\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1618,10 +1590,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\modal\\modal.tsx",
+      "filePath": "src/components/modal/modal.tsx",
       "encapsulation": "shadow",
       "tag": "we-modal",
-      "readme": "# we-modal\r\n\r\n\r\n\r",
+      "readme": "# we-modal\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1723,10 +1695,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\navigation-drawer\\navigation-drawer.tsx",
+      "filePath": "src/components/navigation-drawer/navigation-drawer.tsx",
       "encapsulation": "shadow",
       "tag": "we-navigation-drawer",
-      "readme": "# we-navigation-drawer\r\n\r\n\r\n\r",
+      "readme": "# we-navigation-drawer\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1839,11 +1811,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\radio\\radio.tsx",
+      "filePath": "src/components/radio/radio.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio",
-      "readme": "# we-radio\r\n\r\n```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>\r\n\r",
-      "docs": "```html\r\n<we-radio-group change-callback=myFuncion>\r\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\r\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\r\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\r\n</we-radio-group>\r\n```\r\n<br>",
+      "readme": "# we-radio\n\n```html\n<we-radio-group change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>\n",
+      "docs": "```html\n<we-radio-group change-callback=myFuncion>\n  <we-radio name=\"country\" checked=\"true\" value=\"pe\">Peru</we-radio>\n  <we-radio name=\"country\" value=\"it\">Italia</we-radio>\n  <we-radio name=\"country\" value=\"de\">Germany</we-radio>\n</we-radio-group>\n```\n<br>",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1900,7 +1872,7 @@
       "events": [
         {
           "event": "radioCallback",
-          "detail": "any",
+          "detail": "RadioValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -1915,37 +1887,21 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\radio-group\\radio-group.tsx",
+      "filePath": "src/components/radio-group/radio-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-radio-group",
-      "readme": "# we-radio-group\r\n\r\n\r\n\r",
+      "readme": "# we-radio-group\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "changeCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-callback",
-          "reflectToAttr": false,
-          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name that identify this radio group",
+          "docs": "Value that identify this radio group",
           "docsTags": [],
           "values": [
             {
@@ -1957,7 +1913,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "radioGroupCallback",
+          "detail": "RadioGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Event triggered when a radio button inside change its state that returning the name of radio group and the value of radio button checked",
+          "docsTags": []
+        }
+      ],
       "styles": [],
       "slots": [],
       "dependents": [],
@@ -1965,11 +1931,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\slider\\slider.tsx",
+      "filePath": "src/components/slider/slider.tsx",
       "encapsulation": "shadow",
       "tag": "we-slider",
-      "readme": "# we-slider\r\n\r\n```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```\r\n\r",
-      "docs": "```html\r\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\r\n```",
+      "readme": "# we-slider\n\n```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```\n",
+      "docs": "```html\n<we-slider value=10 min=0 max=50>Slider 1</we-slider>\n```",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -2141,10 +2107,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\switch\\switch.tsx",
+      "filePath": "src/components/switch/switch.tsx",
       "encapsulation": "shadow",
       "tag": "we-switch",
-      "readme": "# we-switch\r\n\r\n\r\n\r",
+      "readme": "# we-switch\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2199,12 +2165,12 @@
           "required": false
         },
         {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
-          "docs": "Name of switch, put in the payload of changeCallback event",
+          "docs": "Value of switch, put in the payload of changeCallback event",
           "docsTags": [],
           "values": [
             {
@@ -2218,12 +2184,12 @@
       "methods": [],
       "events": [
         {
-          "event": "changeSwitchCallback",
-          "detail": "any",
+          "event": "switchCallback",
+          "detail": "SwitchValue",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
-          "docs": "Event triggered any time user change the state of the switch putting in the payload name and status",
+          "docs": "Event triggered any time user change the state of the switch putting in the payload value and status",
           "docsTags": []
         }
       ],
@@ -2310,7 +2276,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\switch-group\\switch-group.tsx",
+      "filePath": "src/components/switch-group/switch-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-switch-group",
       "readme": "# we-switch-group\n\n\n",
@@ -2319,26 +2285,10 @@
       "usage": {},
       "props": [
         {
-          "name": "changeSwitchCallback",
-          "type": "any",
-          "mutable": false,
-          "attr": "change-switch-callback",
-          "reflectToAttr": false,
-          "docs": "Function called when a switch inside change it's state",
-          "docsTags": [],
-          "values": [
-            {
-              "type": "any"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "name",
+          "name": "value",
           "type": "string",
           "mutable": false,
-          "attr": "name",
+          "attr": "value",
           "reflectToAttr": false,
           "docs": "Name that identify this switch group",
           "docsTags": [],
@@ -2352,7 +2302,17 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "switchGroupCallback",
+          "detail": "SwitchGroupValue",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Function called when a switch inside change it's state",
+          "docsTags": []
+        }
+      ],
       "styles": [
         {
           "name": "--align-items",
@@ -2381,11 +2341,11 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\tab\\tab.tsx",
+      "filePath": "src/components/tab/tab.tsx",
       "encapsulation": "shadow",
       "tag": "we-tab",
-      "readme": "# we-tab\r\n\r\n```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>\r\n\r\n\r\n\r",
-      "docs": "```html\r\n<we-tab-group>\r\n  <we-tab>\r\n    <div slot=\"header\">Tab 1</div>\r\n    <div slot=\"content\">\r\n      <h3>Tab 1</h3>\r\n        <p>There really are a lot of features.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 2</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 2</h3>\r\n        <p>The project started in 2018 when someone needed something.</p>\r\n    </div>\r\n    </we-tab>\r\n    <we-tab>\r\n    <div slot=\"header\">Tab 3</div>\r\n    <div slot=\"content\">\r\n        <h3>Tab 3</h3>\r\n        <p>Amazing product. I don't know how it works.</p>\r\n    </div>\r\n    </we-tab>\r\n</we-tab-group>\r\n```\r\n<br>",
+      "readme": "# we-tab\n\n```html\n<we-tab-group>\n  <we-tab>\n    <div slot=\"header\">Tab 1</div>\n    <div slot=\"content\">\n      <h3>Tab 1</h3>\n        <p>There really are a lot of features.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 2</div>\n    <div slot=\"content\">\n        <h3>Tab 2</h3>\n        <p>The project started in 2018 when someone needed something.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 3</div>\n    <div slot=\"content\">\n        <h3>Tab 3</h3>\n        <p>Amazing product. I don't know how it works.</p>\n    </div>\n    </we-tab>\n</we-tab-group>\n```\n<br>\n\n\n",
+      "docs": "```html\n<we-tab-group>\n  <we-tab>\n    <div slot=\"header\">Tab 1</div>\n    <div slot=\"content\">\n      <h3>Tab 1</h3>\n        <p>There really are a lot of features.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 2</div>\n    <div slot=\"content\">\n        <h3>Tab 2</h3>\n        <p>The project started in 2018 when someone needed something.</p>\n    </div>\n    </we-tab>\n    <we-tab>\n    <div slot=\"header\">Tab 3</div>\n    <div slot=\"content\">\n        <h3>Tab 3</h3>\n        <p>Amazing product. I don't know how it works.</p>\n    </div>\n    </we-tab>\n</we-tab-group>\n```\n<br>",
       "docsTags": [
         {
           "text": "header - Slot for the title",
@@ -2504,10 +2464,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\tab-group\\tab-group.tsx",
+      "filePath": "src/components/tab-group/tab-group.tsx",
       "encapsulation": "shadow",
       "tag": "we-tab-group",
-      "readme": "# we-tabs-group\r\n\r\n\r\n\r",
+      "readme": "# we-tabs-group\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2521,10 +2481,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\textarea\\textarea.tsx",
+      "filePath": "src/components/textarea/textarea.tsx",
       "encapsulation": "shadow",
       "tag": "we-textarea",
-      "readme": "# we-textarea\r\n\r\n\r\n\r",
+      "readme": "# we-textarea\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2781,10 +2741,10 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "src\\components\\tooltip\\tooltip.tsx",
+      "filePath": "src/components/tooltip/tooltip.tsx",
       "encapsulation": "shadow",
       "tag": "we-tooltip",
-      "readme": "# we-tooltip\r\n\r\n\r\n\r",
+      "readme": "# we-tooltip\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},

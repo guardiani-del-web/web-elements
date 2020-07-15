@@ -20,10 +20,10 @@
 
 ## Events
 
-| Event                 | Description                                | Type               |
-| --------------------- | ------------------------------------------ | ------------------ |
-| `removeChipsCallback` | Event triggered when the chips is removed  | `CustomEvent<any>` |
-| `selectChipsCallback` | Event triggered when the chips is selected | `CustomEvent<any>` |
+| Event                 | Description                                | Type                            |
+| --------------------- | ------------------------------------------ | ------------------------------- |
+| `removeChipsCallback` | Event triggered when the chips is removed  | `CustomEvent<ChipsValueRemove>` |
+| `selectChipsCallback` | Event triggered when the chips is selected | `CustomEvent<ChipsValueSelect>` |
 
 
 ## CSS Custom Properties

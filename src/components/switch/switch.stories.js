@@ -16,22 +16,20 @@ export default {
 export const Basic = () => {
   const cssVariables = getCssVariables('we-switch', color, text);
   
-  const nameGroup = text('nameGroup', 'nameGroup', KNOBS_LIVE);
+  const valueGroup = text('valueGroup', 'valueGroup', KNOBS_LIVE);
 
-  const name1 = text('Switch 1', 'Switch 1', KNOBS_LIVE);
-  const name2 = text('Switch 2', 'Switch 2', KNOBS_LIVE);
-  const name3 = text('Switch 3', 'Switch 3', KNOBS_LIVE);
+  const value1 = text('Switch 1', 'Switch 1', KNOBS_LIVE);
+  const value2 = text('Switch 2', 'Switch 2', KNOBS_LIVE);
+  const value3 = text('Switch 3', 'Switch 3', KNOBS_LIVE);
   const checked = boolean('checked', false, KNOBS_LIVE);
 
-  const switchHandler = value => {
-    console.log('switchHandler', value);
-  }
+  window.addEventListener('switchGroupCallback', (data) => console.log("switchGroupCallback listener",data));
 
   return html`
-  <we-switch-group name=${nameGroup} change-switch-callback=${switchHandler}>
-    <we-switch name=${name1} checked=${checked}></we-switch>
-    <we-switch name=${name2} checked=${checked}></we-switch>
-    <we-switch name=${name3} checked=${checked}></we-switch>
+  <we-switch-group value=${valueGroup}>
+    <we-switch value=${value1} checked=${checked}></we-switch>
+    <we-switch value=${value2} checked=${checked}></we-switch>
+    <we-switch value=${value3} checked=${checked}></we-switch>
   </we-switch-group>
     <style>
       html {

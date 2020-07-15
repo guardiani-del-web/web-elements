@@ -27,7 +27,6 @@ export class Tab implements ComponentInterface {
   @Event() tabCallback: EventEmitter;
 
   handleChange(event: { target: HTMLInputElement }) {
-    console.log(event.target.value);
     this.tabCallback.emit(event.target.value);
   }
 

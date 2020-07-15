@@ -1,4 +1,18 @@
-import { Component, ComponentInterface, Host, h, Prop, EventEmitter, Event } from '@stencil/core';
+import {
+  Component,
+  ComponentInterface,
+  Host,
+  h,
+  Prop,
+  EventEmitter,
+  Event,
+  State
+} from '@stencil/core';
+
+export interface CheckboxValue {
+  value: string;
+  checked: boolean;
+}
 
 @Component({
   tag: 'we-checkbox',
@@ -12,11 +26,13 @@ export class Checkbox implements ComponentInterface {
   @Prop() disabled: boolean;
   /** identify if this checkbox is checked or not when the page is loaded*/
   @Prop() checked: boolean;
+  @State() checkedState = this.checked;
   /** Event triggered when this checkbox is checked/not checked returning the value prop for payload */
-  @Event() checkboxCallback: EventEmitter;
+  @Event() checkboxCallback: EventEmitter<CheckboxValue>;
 
-  handleChange(event: { target: HTMLInputElement }) {
-    this.checkboxCallback.emit(event.target.value);
+  handleChange() {
+    this.checkedState = !this.checkedState;
+    this.checkboxCallback.emit({ value: this.value, checked: this.checkedState });
   }
 
   render() {

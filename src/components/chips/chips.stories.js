@@ -33,20 +33,14 @@ export const Basic = () => {
   const value3 = text('Value3', 'chip 3', KNOBS_LIVE);
 
 
-  const selectCallback = value => {
-    console.log('selectCallback', value);
-  }
-
-  const removeCallback = value => {
-    console.log('removeCallback', value);
-  }
+  window.addEventListener('chipsGroupCallback', (data) => console.log("chipsGroupCallback",data));
 
   return html`
-    <we-chips-group name=${nameGroup} select-callback=${selectCallback} remove-callback=${removeCallback}>
+    <we-chips-group value=${nameGroup}>
       <we-chips value=${value1} src-img-left=${image1} src-img-right=${image2} label=${label1} remove-left=${removeLeft} is-selectable=${isSelectable}></we-chips>
       <we-chips value=${value2} src-img-left=${image1} src-img-right=${image2} label=${label2} remove-left=${removeLeft} is-selectable=${isSelectable}>></we-chips>
       <we-chips value=${value3} src-img-left=${image1} src-img-right=${image2} label=${label3} remove-left=${removeLeft} is-selectable=${isSelectable}>></we-chips>
-      <we-chips-group/>
+      </we-chips-group>
     <style>
       html {
         ${cssVariables}
