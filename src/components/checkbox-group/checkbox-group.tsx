@@ -18,6 +18,7 @@ export interface CheckboxGroupValue {
 
 @Component({
   tag: 'we-checkbox-group',
+  styleUrl: 'checkbox-group.scss',
   shadow: true
 })
 export class CheckboxGroup implements ComponentInterface {

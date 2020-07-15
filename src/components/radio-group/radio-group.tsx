@@ -18,6 +18,7 @@ export interface RadioGroupValue {
 
 @Component({
   tag: 'we-radio-group',
+  styleUrl: 'radio-group.scss',
   shadow: true
 })
 export class RadioGroup implements ComponentInterface {

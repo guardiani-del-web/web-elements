@@ -3,6 +3,7 @@
 /**
   * @prop --container--width: Width of container  <br> Default: 3em
   * @prop --container--height: Height of container <br> Default: 1.5em
+  * @prop --container--margin: Margin of container <br> Default: 0.3em
   * @prop --switch--cursor: Cursor on switch <br> Default: pointer
   * @prop --switch--background: Background color of switch when in initial condition <br> Default: rgba(128, 128, 128, 1)
   * @prop --background-checked: Background color of switch when change from initial condition <br> Default: #3F51B5
@@ -23,6 +24,7 @@
   position: relative;
   width: var(--container--width, 3em);
   height: var(--container--height, 1.5em);
+  margin: var(--container-margin, 0.3em);
 
   input[type='checkbox'] {
     display: none;
