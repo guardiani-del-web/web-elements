@@ -8,3 +8,10 @@ $background-color: #d7dcdf;
 $card-border-color-a125: rgba(0, 0, 0, 0.125);
 $card-shadow-color: rgb(0, 0, 0);
 $divider-line-color: rgba(0, 0, 0, 0.12);
+
+@mixin basic-group {
+  display: var(--display, flex);
+  justify-content: var(--justify-content, unset);
+  align-items: var(--align-items, unset);
+  flex-direction: var(--flex-direction, column);
+}

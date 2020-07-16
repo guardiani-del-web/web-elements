@@ -56,7 +56,7 @@
 | `--label--text-align`         | Text align of label <br> Default: left                                |
 | `--label--text-decoration`    | Text decoration of label <br> Default: unset                          |
 | `--label--text-transform`     | Text trasform of label <br> Default: unset                            |
-| `--margin`                    | Margin of chips <br> Default: 0                                       |
+| `--margin`                    | Margin of chips <br> Default: 0.3em                                   |
 | `--padding`                   | Padding of chips <br> Default: 0.25rem                                |
 | `--selected-background`       | Background of chips when selected <br> Default: rgba(65, 169, 192, 1) |
 | `--width`                     | Width of chips <br> Default: auto                                     |

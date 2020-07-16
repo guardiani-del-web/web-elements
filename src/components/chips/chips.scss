@@ -6,7 +6,7 @@
 * @prop --width: Width of chips  <br> Default: auto
 * @prop --heigth: Height of chips  <br> Default: auto
 * @prop --padding: Padding of chips  <br> Default: 0.25rem
-* @prop --margin: Margin of chips  <br> Default: 0
+* @prop --margin: Margin of chips  <br> Default: 0.3em
 * @prop --display: Display of chips  <br> Default: inline-block
 * @prop --selected-background: Background of chips when selected  <br> Default: rgba(65, 169, 192, 1)
 * @prop --imageLeft--cursor: Cursor type of image left <br> Default: auto
@@ -39,7 +39,7 @@
   width: var(--width, auto);
   height: var(--heigth, auto);
   padding: var(--padding, 0.25rem);
-  margin: var(--margin, 0);
+  margin: var(--margin, 0.3em);
   display: var(--display, inline-block);
 
   &.selected {

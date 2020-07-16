@@ -1,13 +1,5 @@
-/**
-* @prop --display: Display of switch group <br> Default: flex
-* @prop --justify-content: Justify content of switch grou <br> Default: unset
-* @prop --align-items: Align items of switch group <br> Default: unset
-* @prop --flex-direction: Flex direction of switch group <br> Default: row
-*/
+@import '../../scss/index.scss';
 
 :host {
-  display: var(--display, flex);
-  justify-content: var(--justify-content, unset);
-  align-items: var(--align-items, unset);
-  flex-direction: var(--flex-direction, row);
+  @include basic-group;
 }
